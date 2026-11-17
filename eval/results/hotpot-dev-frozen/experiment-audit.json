@@ -1,0 +1,24 @@
+{
+  "complete_run_matrix": true,
+  "unique_tasks": 2,
+  "recorded_runs": 10,
+  "actual_repeats": 1,
+  "split": "dev",
+  "dataset": "hotpotqa",
+  "scenario": "clean",
+  "failures_in_denominator": 0,
+  "provider_returned_models": [
+    "deepseek-flash"
+  ],
+  "live_web_executions": 0,
+  "budget_violations": [],
+  "configuration_mismatches": [],
+  "human_citation_judgments": "pending",
+  "human_task_judgments": "pending",
+  "source_hash_unchanged": true,
+  "model_calls_total_latest_attempts": 31,
+  "input_tokens_total_latest_attempts": 65994,
+  "output_tokens_total_latest_attempts": 6309,
+  "protocol_checks_passed": true,
+  "blinded_claim_passage_items": 52
+}

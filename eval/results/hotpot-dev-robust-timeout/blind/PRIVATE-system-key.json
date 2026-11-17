@@ -1,0 +1,42 @@
+[
+  {
+    "item_id": "daae44a5d418e46f794b",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "9bbad182a69545c8bc39a29a12684f19",
+    "claim_id": "A0",
+    "evidence_id": "E9",
+    "mode": "verified",
+    "scenario": "timeout",
+    "repeat": 0
+  },
+  {
+    "item_id": "005e645e231ecb97edd3",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "9bbad182a69545c8bc39a29a12684f19",
+    "claim_id": "A0",
+    "evidence_id": "E1",
+    "mode": "verified",
+    "scenario": "timeout",
+    "repeat": 0
+  },
+  {
+    "item_id": "c2c4e62647b0d0603723",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "9bbad182a69545c8bc39a29a12684f19",
+    "claim_id": "C1",
+    "evidence_id": "E9",
+    "mode": "verified",
+    "scenario": "timeout",
+    "repeat": 0
+  },
+  {
+    "item_id": "7e39f94257714c66f70a",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "9bbad182a69545c8bc39a29a12684f19",
+    "claim_id": "C2",
+    "evidence_id": "E1",
+    "mode": "verified",
+    "scenario": "timeout",
+    "repeat": 0
+  }
+]

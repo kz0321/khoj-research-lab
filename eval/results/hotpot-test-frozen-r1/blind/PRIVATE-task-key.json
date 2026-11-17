@@ -1,0 +1,2002 @@
+[
+  {
+    "item_id": "f0003813a7c3f0bf671a",
+    "task_id": "hotpot-5add6b595542992200553b0c",
+    "run_id": "c5f8633cd36f4fc59737a6e6ddc181a8",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "2d718b25bb604e7639ee",
+    "task_id": "hotpot-5add6b595542992200553b0c",
+    "run_id": "d307dded54054a1b8e5c1f6a3444fb92",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "fc22f48c58e71ac516b6",
+    "task_id": "hotpot-5add6b595542992200553b0c",
+    "run_id": "e6090a18922b44acbef82c6e1588e8ef",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "852577f0197611a15dc7",
+    "task_id": "hotpot-5add6b595542992200553b0c",
+    "run_id": "9df0900ea7804ffdadf6c21fb1faa7d3",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "2682fce9bb480448afb0",
+    "task_id": "hotpot-5add6b595542992200553b0c",
+    "run_id": "0f283dadec154d44a9f106386844d479",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "4493ad54b0cf365e3603",
+    "task_id": "hotpot-5ac01e77554299012d1db5ac",
+    "run_id": "8e6fb94ea5bd4b68baa324e06a0015da",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "066fa9f03c4cdfc24d7e",
+    "task_id": "hotpot-5ac01e77554299012d1db5ac",
+    "run_id": "50bebb8263ec4042822fe6df7b7cefb2",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "2b5a0d39b39539da08ea",
+    "task_id": "hotpot-5ac01e77554299012d1db5ac",
+    "run_id": "34a75eb3541c48d1bbd5198e28625987",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "931902c0955dd969ba60",
+    "task_id": "hotpot-5ac01e77554299012d1db5ac",
+    "run_id": "cdfc9f4d9d5341deae519cde4e53c07c",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "0712b0eb912bfdb57068",
+    "task_id": "hotpot-5ac01e77554299012d1db5ac",
+    "run_id": "9b4d4c803d0443c1a9c8d74c9f29292f",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "4738dee139f92f68c47d",
+    "task_id": "hotpot-5a7d6a2d5542991319bc93c6",
+    "run_id": "966324e3344d4fcd8d3f55f8da24e98e",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "af61a3a25072932942ea",
+    "task_id": "hotpot-5a7d6a2d5542991319bc93c6",
+    "run_id": "2de36c05374640bd92176f58792a77b5",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "33d211db926c1d8af9dd",
+    "task_id": "hotpot-5a7d6a2d5542991319bc93c6",
+    "run_id": "c99b2fe9db344ec0904f4509105b6862",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "ed0ea0fdef56e7dc0dfc",
+    "task_id": "hotpot-5a7d6a2d5542991319bc93c6",
+    "run_id": "512ed6063dc04ac287955f8a1eacb916",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "9b04f07782848f8a4c8f",
+    "task_id": "hotpot-5a7d6a2d5542991319bc93c6",
+    "run_id": "adb4e018819140c8b967362dc521b7f7",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "e2685df0fa72a9995dc2",
+    "task_id": "hotpot-5ab5e4e15542997d4ad1f229",
+    "run_id": "16383e74b2734f709a84fe839ffb3a4b",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "e3cbb3ef14450b794358",
+    "task_id": "hotpot-5ab5e4e15542997d4ad1f229",
+    "run_id": "ac1ac55e49b14d0ea98e3655018f7a1f",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "fb16562c787965c9fca1",
+    "task_id": "hotpot-5ab5e4e15542997d4ad1f229",
+    "run_id": "08f80d5d40184c62892fa9c2bc8d0717",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "e9645f4f5758618b13f8",
+    "task_id": "hotpot-5ab5e4e15542997d4ad1f229",
+    "run_id": "90af74fffe1d48fbba6e699f76c5eb8f",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "87968da59547ce197ba2",
+    "task_id": "hotpot-5ab5e4e15542997d4ad1f229",
+    "run_id": "0f2cee10e062498a81b522989c4d6165",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "527277faf8874374a5fa",
+    "task_id": "hotpot-5a74d92555429929fddd84fa",
+    "run_id": "243c34b7c49f4852a4021c3dc428b683",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b4f8d5b99c745ef49845",
+    "task_id": "hotpot-5a74d92555429929fddd84fa",
+    "run_id": "941748b23a9a43b7b33491af4bff82dc",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "e53025387005399660f2",
+    "task_id": "hotpot-5a74d92555429929fddd84fa",
+    "run_id": "d9e33c69104b45a6a81d87cf8782a5c4",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "062561fb3ea58dcead93",
+    "task_id": "hotpot-5a74d92555429929fddd84fa",
+    "run_id": "b7d0a9ee81e941b587c0f2e50d39ba02",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "3e17ff0cfa021276d7fc",
+    "task_id": "hotpot-5a74d92555429929fddd84fa",
+    "run_id": "0301ce9ee05e46df9f503dcfe3ace519",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "da89731a9c0ee625c36c",
+    "task_id": "hotpot-5a887898554299206df2b2a2",
+    "run_id": "898d2801ce5f4b9a882ac8ab946a8298",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "09abc467abb316108e28",
+    "task_id": "hotpot-5a887898554299206df2b2a2",
+    "run_id": "31979156306643879c82d84139c10851",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "c0c4e81c849dc15b79ac",
+    "task_id": "hotpot-5a887898554299206df2b2a2",
+    "run_id": "cca9ed616dbb4dc8a4658a4d85e12e5d",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "7096944d91e1e02344dc",
+    "task_id": "hotpot-5a887898554299206df2b2a2",
+    "run_id": "2e901b93206449698b001f659b2a403a",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "76daf1b3215911c81e11",
+    "task_id": "hotpot-5a887898554299206df2b2a2",
+    "run_id": "96293ae9e99d45bea53b58504c920ed5",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "ba15f3747bc0e6d2724a",
+    "task_id": "hotpot-5a8e41735542995085b37406",
+    "run_id": "8b33cefdaa66484bbaa4288644531fd7",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "fa3c1d9a8f7006708dc7",
+    "task_id": "hotpot-5a8e41735542995085b37406",
+    "run_id": "8d3f4ea6648245d0bc7b4ba66e786cb8",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "c5f66c12dee00410dab5",
+    "task_id": "hotpot-5a8e41735542995085b37406",
+    "run_id": "60058794b73b46d4b3359ef5094a335c",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "df5524967050c21d6139",
+    "task_id": "hotpot-5a8e41735542995085b37406",
+    "run_id": "2130a5fffc0e438fb38a2a5a14780232",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b1d87eaa625b893fc5f5",
+    "task_id": "hotpot-5a8e41735542995085b37406",
+    "run_id": "06e4694aee9441fab7bb8098f7a33b90",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "5b8ed8e2eb7664d0282f",
+    "task_id": "hotpot-5ae81032554299540e5a572a",
+    "run_id": "1a523c218aed4e3f8d70efb614e708d8",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "5e4f2b2abff4db8e5bd4",
+    "task_id": "hotpot-5ae81032554299540e5a572a",
+    "run_id": "37297e2ed0b64f90b041a127b9f01a63",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "fcc6a948ff327c4c2fd4",
+    "task_id": "hotpot-5ae81032554299540e5a572a",
+    "run_id": "e6fb6a44ee944a12a1defae5b9d87ffe",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "9dc6edd821f05d68f3a8",
+    "task_id": "hotpot-5ae81032554299540e5a572a",
+    "run_id": "64719a2792c14c6a9048b6eb630788d8",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "1357004cf60b14dbf473",
+    "task_id": "hotpot-5ae81032554299540e5a572a",
+    "run_id": "b3caebad60564f7aa674c2d89f996720",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "22c9ae0e3d2be188e1b5",
+    "task_id": "hotpot-5a7a8a9c554299042af8f666",
+    "run_id": "9526c5b66a6f4fe9bf07b0ef1666e3ce",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "f680b45af659eba038b0",
+    "task_id": "hotpot-5a7a8a9c554299042af8f666",
+    "run_id": "9c8e713a9aee4af282ecf0a60b97c5e3",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "112567ecfcacbc937f32",
+    "task_id": "hotpot-5a7a8a9c554299042af8f666",
+    "run_id": "4eea9fd2e54b49adb1e99b5a42fb84fb",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b5083e0a9306894bf71a",
+    "task_id": "hotpot-5a7a8a9c554299042af8f666",
+    "run_id": "14f343375d92498faeb290cbb9033a70",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "9691b683072f19b565e9",
+    "task_id": "hotpot-5a7a8a9c554299042af8f666",
+    "run_id": "43e7e0625ff34d3cb3dbb195e3aac7f0",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "713f915d44c7ef9832ee",
+    "task_id": "hotpot-5a7cff5755429907fabef09d",
+    "run_id": "ec7eb51cd6f24c3fb2694e091a6eb251",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "e6a49547f8e9352d2eff",
+    "task_id": "hotpot-5a7cff5755429907fabef09d",
+    "run_id": "4400b46474ef41eab5dd3f8582c63194",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "a4897d770ad9c00a5cfd",
+    "task_id": "hotpot-5a7cff5755429907fabef09d",
+    "run_id": "709c6cdac8704c8d8d3640bc0684b5aa",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "77d16641e5bd7e7e25fa",
+    "task_id": "hotpot-5a7cff5755429907fabef09d",
+    "run_id": "3a354fc80e3e4753aa4ee6319fce914d",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "243ff614abcbd96bfc15",
+    "task_id": "hotpot-5a7cff5755429907fabef09d",
+    "run_id": "53459c601137480b8ff777b7b2a8ad1a",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "fe78e84b347bede67a3f",
+    "task_id": "hotpot-5a7e05635542995f4f40238f",
+    "run_id": "639f9e17538e47c4971757ac5a2b654b",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "adb8f356e6c8043c524a",
+    "task_id": "hotpot-5a7e05635542995f4f40238f",
+    "run_id": "dee04eab672d4ec2991c3e1df42c8f56",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "53ef3f1f6726af6473dd",
+    "task_id": "hotpot-5a7e05635542995f4f40238f",
+    "run_id": "b4d04bdf1c774bb39f850fe1dc784189",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "d20b41782382e5684d0a",
+    "task_id": "hotpot-5a7e05635542995f4f40238f",
+    "run_id": "71a238e524784f7ab07ff82dd60fc201",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b335538172e9437ccd31",
+    "task_id": "hotpot-5a7e05635542995f4f40238f",
+    "run_id": "ca2d800e60db48b3b629e6323e9c8b9a",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "9aafedbde03259d4cbf2",
+    "task_id": "hotpot-5ae773eb5542997b22f6a777",
+    "run_id": "9c461f99c8f749aab0a2794fb9f16b08",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b3538edde63566a94bbe",
+    "task_id": "hotpot-5ae773eb5542997b22f6a777",
+    "run_id": "8e7071645e2c4c919151a13e13a77838",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "8196b16bac56a8355c7e",
+    "task_id": "hotpot-5ae773eb5542997b22f6a777",
+    "run_id": "4bb0d4baef5742c2bfc21ffb45036b4f",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "753590cc293ebbb99671",
+    "task_id": "hotpot-5ae773eb5542997b22f6a777",
+    "run_id": "1925032f4cf04bfb9a890261bd1693f6",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b44e56580a979a78b2ba",
+    "task_id": "hotpot-5ae773eb5542997b22f6a777",
+    "run_id": "fb1b35df7e9043eb9ebcdaa15a35ca02",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "04c8875dc772760f11f4",
+    "task_id": "hotpot-5ab9b4a555429970cfb8eb75",
+    "run_id": "40999d34f5e64339b71a6550f0a32e3d",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b4ad367d16925c25a280",
+    "task_id": "hotpot-5ab9b4a555429970cfb8eb75",
+    "run_id": "1c1170783da24ad5a8afcd10ade7fdb3",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "766a32997bd107e3ecaa",
+    "task_id": "hotpot-5ab9b4a555429970cfb8eb75",
+    "run_id": "efa7e72081f74dfba3145346b224d880",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b9bd360600cb01e42eda",
+    "task_id": "hotpot-5ab9b4a555429970cfb8eb75",
+    "run_id": "5c58c1ebaff34532b2bff33c8ea81e3a",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "f8bbc4e1c40e69b8c975",
+    "task_id": "hotpot-5ab9b4a555429970cfb8eb75",
+    "run_id": "1c2d835a3ea04e09908ead548ed91dda",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "5d174edd67a18fd9adb6",
+    "task_id": "hotpot-5a87ab9b5542996e4f3088c2",
+    "run_id": "fb052d531e7746a7a6189e1c651142a7",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "0b521130a59a0a01bef4",
+    "task_id": "hotpot-5a87ab9b5542996e4f3088c2",
+    "run_id": "63bf15e5d73045e989811b8fd4355752",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "f579eed8b07af84322e7",
+    "task_id": "hotpot-5a87ab9b5542996e4f3088c2",
+    "run_id": "a1d724aa950d42ec8b46cad38729952d",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "7dba4aecf3cf54629d1b",
+    "task_id": "hotpot-5a87ab9b5542996e4f3088c2",
+    "run_id": "36cb152852814951b0f450765ae0a313",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "756cd5c0c784bb7dca2f",
+    "task_id": "hotpot-5a87ab9b5542996e4f3088c2",
+    "run_id": "29f1d0281dce48ea924564db4437d929",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "3154e87c1a69d5534bb4",
+    "task_id": "hotpot-5a808afb5542992bc0c4a76b",
+    "run_id": "5166fe6abafb4dd586fefb4679bd2678",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "872072fb0d0fa0e43fbd",
+    "task_id": "hotpot-5a808afb5542992bc0c4a76b",
+    "run_id": "b8569b6667ad480da34a1d614ec8ff67",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "93f0997d08938168fffe",
+    "task_id": "hotpot-5a808afb5542992bc0c4a76b",
+    "run_id": "2e9b31d905bf4b7bab776af70e72c31a",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "cfd92977e6210370602b",
+    "task_id": "hotpot-5a808afb5542992bc0c4a76b",
+    "run_id": "c776775a8e7845dc84cabb51d37151e0",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "9cf9985a9bed5db3fb79",
+    "task_id": "hotpot-5a808afb5542992bc0c4a76b",
+    "run_id": "6f22cf7af0f74467aa4d10a75d38bd53",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "97875417a9e479b959e5",
+    "task_id": "hotpot-5a7e22ed5542995ed0d166a7",
+    "run_id": "14d14cb1d2924eab93a49114cbe58b1d",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "990705598bf5ca60b606",
+    "task_id": "hotpot-5a7e22ed5542995ed0d166a7",
+    "run_id": "f0b40be61376468f87ca40feef004ec7",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "8fd703370fb347ae0a78",
+    "task_id": "hotpot-5a7e22ed5542995ed0d166a7",
+    "run_id": "0f5af5e0cceb4bbfbe799eafb3cbf754",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "09dbbec7946825258f49",
+    "task_id": "hotpot-5a7e22ed5542995ed0d166a7",
+    "run_id": "198657c942c842f0b4087d8903b6b068",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "645bcc7e5c796b95ab1c",
+    "task_id": "hotpot-5a7e22ed5542995ed0d166a7",
+    "run_id": "56e8993250eb4d929b12ef2504835f09",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "f7c8e68bb33afdad942a",
+    "task_id": "hotpot-5abbf698554299114383a0b5",
+    "run_id": "68f7db080b564fc299b00a41093fd02c",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "002c56a100f7cbc1d9ce",
+    "task_id": "hotpot-5abbf698554299114383a0b5",
+    "run_id": "f99ce920528641c5bc69d36842e33045",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "e9fb6957bc579a149599",
+    "task_id": "hotpot-5abbf698554299114383a0b5",
+    "run_id": "a82c6054c0f24546a1f1b6d8bcbf9579",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "675d93844599d1a52c77",
+    "task_id": "hotpot-5abbf698554299114383a0b5",
+    "run_id": "3023c079be3141e0b088c3ef1e7fb31f",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "375cd74445e185b96664",
+    "task_id": "hotpot-5abbf698554299114383a0b5",
+    "run_id": "5ca36221551648b58f64b3d66f2896da",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "e5b59ed4164ce92d3adf",
+    "task_id": "hotpot-5a7bcbc8554299294a54aae2",
+    "run_id": "5c273b87775944199c5f44d55b37e79b",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "a5a0d14c68ad6414bbb0",
+    "task_id": "hotpot-5a7bcbc8554299294a54aae2",
+    "run_id": "dc3ca90433944a46ad96c66fabb1a436",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "d49405dcec5ee12133e4",
+    "task_id": "hotpot-5a7bcbc8554299294a54aae2",
+    "run_id": "564509d7fa964c5288d6a98560c065c1",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "592d3d3f9c0af50cb1ae",
+    "task_id": "hotpot-5a7bcbc8554299294a54aae2",
+    "run_id": "005b7a4a8dbc44eaa9fe2775bc46af0a",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "4ab153488f2fffd5d9b9",
+    "task_id": "hotpot-5a7bcbc8554299294a54aae2",
+    "run_id": "7fbd99c74f70419b815f51a391111cd6",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b772cc2630a89ecfe774",
+    "task_id": "hotpot-5adc020a5542994650320c4c",
+    "run_id": "5f6798eae70e43a38ca8a800b5e7d629",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "7ba048d60b34cf267025",
+    "task_id": "hotpot-5adc020a5542994650320c4c",
+    "run_id": "24b2e13e6e8748d29af798115d0a666c",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "495bf9937ddb12538fed",
+    "task_id": "hotpot-5adc020a5542994650320c4c",
+    "run_id": "95645f59794a405b9b27583f4cff6809",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "1312aff04373304523e4",
+    "task_id": "hotpot-5adc020a5542994650320c4c",
+    "run_id": "aafb4ffc15e1455dbe22a5ec2c9b6e6b",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "30a235ec0535ce9b748c",
+    "task_id": "hotpot-5adc020a5542994650320c4c",
+    "run_id": "00e83714f63e4922b3d580cffb7dfa11",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "43c38818437c82255c00",
+    "task_id": "hotpot-5a74167455429929fddd83dc",
+    "run_id": "780290012af84dafb03ec7b8d6e0642e",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "39267ae993ab007068f7",
+    "task_id": "hotpot-5a74167455429929fddd83dc",
+    "run_id": "f6371c293a814611bd9c89946a6d5e2a",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "e9d154444c4db6854365",
+    "task_id": "hotpot-5a74167455429929fddd83dc",
+    "run_id": "6cc05ed981f649eaa6cc22e8d2c0eec2",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "30ab6e6c4dfb73f3fa0d",
+    "task_id": "hotpot-5a74167455429929fddd83dc",
+    "run_id": "a9ea5201c3014bffb5949ee2389e90c1",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "a6d591561c09b4ab146f",
+    "task_id": "hotpot-5a74167455429929fddd83dc",
+    "run_id": "2ce2bc196c784c28a146379cdf2d9b18",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "a7106de72522bb155d6c",
+    "task_id": "hotpot-5a7a276d5542996c55b2dd27",
+    "run_id": "79308bc9da0240d0a54324353841628e",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "7c1e0c3e345abf7a7e56",
+    "task_id": "hotpot-5a7a276d5542996c55b2dd27",
+    "run_id": "1edfb66b47234fc986e85dbd97b08814",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "a112f584daba4e79e11a",
+    "task_id": "hotpot-5a7a276d5542996c55b2dd27",
+    "run_id": "e3ea0aeda1a840c297eb2f708dd63723",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b0cb5762fd0298d92b12",
+    "task_id": "hotpot-5a7a276d5542996c55b2dd27",
+    "run_id": "f490ef9247474570bdbfeffc50e2ffff",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "c0c67c4a653994258b58",
+    "task_id": "hotpot-5a7a276d5542996c55b2dd27",
+    "run_id": "1f5f8408ca3b4ea7ad0d2469f1f76944",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "f524fd933c7f6457523b",
+    "task_id": "hotpot-5ac3a049554299741d48a2ba",
+    "run_id": "a1ff501e789d4bd6ac944eff2ddfa3ec",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "7362ba1f6a1a9fab7a32",
+    "task_id": "hotpot-5ac3a049554299741d48a2ba",
+    "run_id": "1348100e87d1415f81ad490ed65ae3a2",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "ca171f0836ba222c37d5",
+    "task_id": "hotpot-5ac3a049554299741d48a2ba",
+    "run_id": "5fc3191eecc3435fb1006b1e0a331ce5",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "2ba4f2237d723719a15b",
+    "task_id": "hotpot-5ac3a049554299741d48a2ba",
+    "run_id": "cbf5a71847dd4e1c9c0b4eeabe1336cc",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "48444388c96db8dead34",
+    "task_id": "hotpot-5ac3a049554299741d48a2ba",
+    "run_id": "6ffd315450784e64915ad999462c2300",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "d9009f903d71e4c18cf5",
+    "task_id": "hotpot-5adf860e5542993344016cbc",
+    "run_id": "baf8c640d918460e89063cc5365a2e7c",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "12df1f93d807bbc0cd2c",
+    "task_id": "hotpot-5adf860e5542993344016cbc",
+    "run_id": "a09e06e426d746059229c8853a49c78e",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "08bb53ed9c80efecc0fa",
+    "task_id": "hotpot-5adf860e5542993344016cbc",
+    "run_id": "01f5f442e0ae44a085c72c0c8331616a",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "4fc131f9bd90613d8fce",
+    "task_id": "hotpot-5adf860e5542993344016cbc",
+    "run_id": "fc7116f4929649f18f64537a1d27d976",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "3fb0b80d417d6877efbc",
+    "task_id": "hotpot-5adf860e5542993344016cbc",
+    "run_id": "31082e7aadea4de9af86d04e713e6e8b",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "c778c9e75e1f208553fb",
+    "task_id": "hotpot-5ae4ad375542995dadf243a4",
+    "run_id": "cef4a722c1f44023876db9af33c06f72",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "834117ac414d64dc594d",
+    "task_id": "hotpot-5ae4ad375542995dadf243a4",
+    "run_id": "f4d58191f6d1425caf42f93dcfc7f619",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "c416d7563a676dbe16de",
+    "task_id": "hotpot-5ae4ad375542995dadf243a4",
+    "run_id": "2a8b806758de41eda9dc770153b21514",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "2442c7111fa053fc5005",
+    "task_id": "hotpot-5ae4ad375542995dadf243a4",
+    "run_id": "e570da8aa404404ba1cd2e2f1ee993bc",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "669e7c7806ce630d926a",
+    "task_id": "hotpot-5ae4ad375542995dadf243a4",
+    "run_id": "71e303a9e7304a4ba94ec0f70d2ecf06",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "cb8d3d99056b2dc6c3e4",
+    "task_id": "hotpot-5abba664554299642a094b02",
+    "run_id": "b9bc53cbb15343399770c463c557dbdb",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "bb5e41089cf0ca1c0c81",
+    "task_id": "hotpot-5abba664554299642a094b02",
+    "run_id": "507dc892791248608fafbdbde83f0b11",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "2f7a8f883b229f61c4c1",
+    "task_id": "hotpot-5abba664554299642a094b02",
+    "run_id": "d720643262c84ffaaf3073c533034772",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b6f2ab504744b7dc87c6",
+    "task_id": "hotpot-5abba664554299642a094b02",
+    "run_id": "51f59af02a4749b1994152ef26365fe2",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "7c669005387b8295ab45",
+    "task_id": "hotpot-5abba664554299642a094b02",
+    "run_id": "bce111a881504dcaaed40ef51c550844",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "6248463d01e96432ad3b",
+    "task_id": "hotpot-5a88940055429938390d3f7b",
+    "run_id": "c9e6d9991a6b4f05a9075e9b8021fecd",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "414cbfce1be6b98e1033",
+    "task_id": "hotpot-5a88940055429938390d3f7b",
+    "run_id": "613101ee5d124d8e85a5f66c357e4c10",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "50cced271838c7eb191c",
+    "task_id": "hotpot-5a88940055429938390d3f7b",
+    "run_id": "eb6b49678b884c888f89dceae73ba1e2",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "57db9ea92de8ff95956e",
+    "task_id": "hotpot-5a88940055429938390d3f7b",
+    "run_id": "b76ddca9ab844c3a9eefc55c0a673816",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "88de0689820777ad365a",
+    "task_id": "hotpot-5a88940055429938390d3f7b",
+    "run_id": "aa536dd7503740ce9a79f00b4201ff3b",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "6810dcc79f4c0cd6c60e",
+    "task_id": "hotpot-5a8e83545542990e94052b28",
+    "run_id": "891cbdf8aa48448fbda1cc54f58223a4",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "129fc418df711e1d0350",
+    "task_id": "hotpot-5a8e83545542990e94052b28",
+    "run_id": "c64dc5bcb81a438696f7122772ef1acf",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "bfe27ebbcf6a4ed91fb6",
+    "task_id": "hotpot-5a8e83545542990e94052b28",
+    "run_id": "4b2b83bcd1db47e6a435d4f344fc4f0e",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "d0f051b50d13f0bc9790",
+    "task_id": "hotpot-5a8e83545542990e94052b28",
+    "run_id": "6567d128b693418eb7522b785c74f388",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "75e7670a21337ed2a9de",
+    "task_id": "hotpot-5a8e83545542990e94052b28",
+    "run_id": "4d820af311384d2db80572e0750f36b1",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "5e81ac89ada8100ed1a8",
+    "task_id": "hotpot-5a7fb1b25542992097ad2fb2",
+    "run_id": "7c707059c3714fdeb3632bd8adb821b8",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "c98d8946bb9abdfc6090",
+    "task_id": "hotpot-5a7fb1b25542992097ad2fb2",
+    "run_id": "e1e8c9bb00d24cdc9226ed6a31086ab5",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "f7fe9aa767dcc57c5d10",
+    "task_id": "hotpot-5a7fb1b25542992097ad2fb2",
+    "run_id": "2fae7a043e0b43fa9c553d9736e50d37",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "ecfb12ad0c9a0be5c0c6",
+    "task_id": "hotpot-5a7fb1b25542992097ad2fb2",
+    "run_id": "2a61db094c514b908677c3fd31a7165d",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "fc1cc4f5e948d846e0f6",
+    "task_id": "hotpot-5a7fb1b25542992097ad2fb2",
+    "run_id": "7dc1d0ddee2041dab1ee44a65c00618f",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "48821b679fa39cbee98d",
+    "task_id": "hotpot-5a74e8a25542996c70cfae37",
+    "run_id": "8888bb38b5d1492dafc71115c98c584e",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "8c62994cd15912bb50ec",
+    "task_id": "hotpot-5a74e8a25542996c70cfae37",
+    "run_id": "1e9d01563a7949798f2b01c588195de4",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "8f793e5196ae306a091a",
+    "task_id": "hotpot-5a74e8a25542996c70cfae37",
+    "run_id": "0d37356850d145119712b675fad1844f",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "98f214b2af8404304839",
+    "task_id": "hotpot-5a74e8a25542996c70cfae37",
+    "run_id": "d7f70577761e4c2aba78ba93e16a620c",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "73c747b636f18df2d584",
+    "task_id": "hotpot-5a74e8a25542996c70cfae37",
+    "run_id": "1394c66746ab4016b6ee4ff38160346a",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "ee4a364aa56cbe6fe332",
+    "task_id": "hotpot-5abb9ad4554299642a094abe",
+    "run_id": "9c11f0063bce4e9ca4969c30bed031b0",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "16b53aa9918bfdac45b8",
+    "task_id": "hotpot-5abb9ad4554299642a094abe",
+    "run_id": "53931b7e6008418ab6b83bd8e050ce0f",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "56697b0563cc1ea56f4d",
+    "task_id": "hotpot-5abb9ad4554299642a094abe",
+    "run_id": "5fa9f3b1643846c4883a73cb28c972f0",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "8bfb65100c6824e26e03",
+    "task_id": "hotpot-5abb9ad4554299642a094abe",
+    "run_id": "92f145daa291488d9f18ca56ec83a25f",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "2e5f448346f3797ecf3a",
+    "task_id": "hotpot-5abb9ad4554299642a094abe",
+    "run_id": "620f601887b74ccbb94666f1e066589e",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "a06a3fa4dc23389466d2",
+    "task_id": "hotpot-5a8a17685542993b751ca9f3",
+    "run_id": "207cd5c38d654527aaacf65e240dd834",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "4ad7a0a3303fd0ba5da2",
+    "task_id": "hotpot-5a8a17685542993b751ca9f3",
+    "run_id": "74f99919607641fc83f25b519a9cf69f",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "5984c48118feda2ad0d5",
+    "task_id": "hotpot-5a8a17685542993b751ca9f3",
+    "run_id": "1670e844831e4c9bb426fd78e79ccf92",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "4d0ef2a873952879385b",
+    "task_id": "hotpot-5a8a17685542993b751ca9f3",
+    "run_id": "91bc6aed235c4c92a99b942d63d1394d",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "60008d018d8d375314f5",
+    "task_id": "hotpot-5a8a17685542993b751ca9f3",
+    "run_id": "6bff83f0728a46ad8a90d190a3558783",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "7eeabb538d4a7c114571",
+    "task_id": "hotpot-5a875154554299211dda2be7",
+    "run_id": "187c99cdd9484c2282a371a5afb603ed",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "5fb323c1d42819c29975",
+    "task_id": "hotpot-5a875154554299211dda2be7",
+    "run_id": "3c91870a7f2c4cb483eae58f9b75c73f",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "4daa56a17b77dd1d1a1d",
+    "task_id": "hotpot-5a875154554299211dda2be7",
+    "run_id": "0435588126e94a0fad1694d4e5177fd4",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "89fc9be79fd99f987423",
+    "task_id": "hotpot-5a875154554299211dda2be7",
+    "run_id": "960f799122fb43c69e4817855181ecf9",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "70b6c61933bf43eea45f",
+    "task_id": "hotpot-5a875154554299211dda2be7",
+    "run_id": "45645a7d0a6f4cf6b4c945b0eefc06f4",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "1b29419bb7fadf103e4b",
+    "task_id": "hotpot-5ac54ca45542993e66e822d5",
+    "run_id": "5351360314ae4b1982798f8a93f0f7ba",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "0af1800cbe6f14d45a9b",
+    "task_id": "hotpot-5ac54ca45542993e66e822d5",
+    "run_id": "c4d2983cb854420785f8c6670f22b0ba",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "586d4cb37174deb7e49b",
+    "task_id": "hotpot-5ac54ca45542993e66e822d5",
+    "run_id": "db476cabcdc04079a8f7296b927a0502",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "c61ebcddd0ca0de7e6c7",
+    "task_id": "hotpot-5ac54ca45542993e66e822d5",
+    "run_id": "f6e43e1f65cf4187b58752c7112c2ba4",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "a357dd9c61b7bb43a37e",
+    "task_id": "hotpot-5ac54ca45542993e66e822d5",
+    "run_id": "bdf4160d153141008a82d3e83cd62326",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "09f06a7937a07dff648e",
+    "task_id": "hotpot-5adf0d2d5542993a75d263e1",
+    "run_id": "7a1784396a3c42fd95cdc3d5dd5517aa",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "3c90f7f223e936f426ba",
+    "task_id": "hotpot-5adf0d2d5542993a75d263e1",
+    "run_id": "c4c666bcd550416e8a7772d593a0705c",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "abe513948ee2dd78792f",
+    "task_id": "hotpot-5adf0d2d5542993a75d263e1",
+    "run_id": "4e3be09928d94cd99b8972d540bdf957",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "effcd391a1cc50901feb",
+    "task_id": "hotpot-5adf0d2d5542993a75d263e1",
+    "run_id": "1194d7b3295947bfaecc2c2897ab0638",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "50940f6beef5e4d8ff9f",
+    "task_id": "hotpot-5adf0d2d5542993a75d263e1",
+    "run_id": "d562a592ac3e4695baec2d93432d6e83",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "fcfbdfdf88faac4f50ca",
+    "task_id": "hotpot-5adf99065542992d7e9f93b0",
+    "run_id": "06d1f53a34e74e45b3b3f408ee7a0dee",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "6304987015dc6a9b57fb",
+    "task_id": "hotpot-5adf99065542992d7e9f93b0",
+    "run_id": "5e5a4c78cde24fa488890f84589d6b11",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "e220c195038555acbd5c",
+    "task_id": "hotpot-5adf99065542992d7e9f93b0",
+    "run_id": "c33da3c48e224a3ba73c9b9587686e23",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "93c110526929a9607bd3",
+    "task_id": "hotpot-5adf99065542992d7e9f93b0",
+    "run_id": "376537e747064ef88518e0b57d9a4969",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "7a7ff5497f0021d37fbf",
+    "task_id": "hotpot-5adf99065542992d7e9f93b0",
+    "run_id": "009a21e596be452aae60b02bde0e21aa",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "56b810c6c18dbc9fba11",
+    "task_id": "hotpot-5ae3a3835542990afbd1e19c",
+    "run_id": "744dcc037f034411bca219ab1d7f55de",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "f5106c922c8afd6e99de",
+    "task_id": "hotpot-5ae3a3835542990afbd1e19c",
+    "run_id": "52a7e274f0d7486aaf3089ef83c4473c",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "3b4dc7ceca7d1f70de59",
+    "task_id": "hotpot-5ae3a3835542990afbd1e19c",
+    "run_id": "5f7872c9b622409ea4e96616fa643e19",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "3cd3f4a2b157a3089aef",
+    "task_id": "hotpot-5ae3a3835542990afbd1e19c",
+    "run_id": "6aa9ece176b749918d1ff78ebdeed343",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "da1304ef7cc8930c6e97",
+    "task_id": "hotpot-5ae3a3835542990afbd1e19c",
+    "run_id": "e59ccb03cc96471dbf02ec5df3b39c64",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "99a0186a247ca7960c7b",
+    "task_id": "hotpot-5a8d0e4e5542994ba4e3dbbf",
+    "run_id": "c3cbcff46516489d99801c367939af14",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "855eebba43901cacb711",
+    "task_id": "hotpot-5a8d0e4e5542994ba4e3dbbf",
+    "run_id": "da039d7395544a2c9a54723521f0fcb2",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "3835ed696d5d6a034cb2",
+    "task_id": "hotpot-5a8d0e4e5542994ba4e3dbbf",
+    "run_id": "5c0ef50c1487406e89e33be2760e11e7",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "b8197489aa9aa25dea02",
+    "task_id": "hotpot-5a8d0e4e5542994ba4e3dbbf",
+    "run_id": "3e6f9f5139a04d3e88edd00d116c3a82",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "a5aa670b1c40981b132d",
+    "task_id": "hotpot-5a8d0e4e5542994ba4e3dbbf",
+    "run_id": "6c1b92461ab4451285ae9751fcd81af0",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "bb80b70f71ea4fa55b9f",
+    "task_id": "hotpot-5ae50c345542993aec5ec11f",
+    "run_id": "844b68168b2742bf8d38eab2f6e0cbed",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "546e96fd2c0e73cb59ae",
+    "task_id": "hotpot-5ae50c345542993aec5ec11f",
+    "run_id": "f168be5d95b948da9ad98bb7713939ba",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "8baf3fb962f5fb038b62",
+    "task_id": "hotpot-5ae50c345542993aec5ec11f",
+    "run_id": "96b453940d6f4386ba52393fd412750a",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "e21a4e9fe3870965648a",
+    "task_id": "hotpot-5ae50c345542993aec5ec11f",
+    "run_id": "a8b71c46aedc4f1a825f0137129a2c96",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "d553c45debe13dedbd3c",
+    "task_id": "hotpot-5ae50c345542993aec5ec11f",
+    "run_id": "8701ae238a194716b0d5bb3f508de066",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "00166f5d92f987f14eaf",
+    "task_id": "hotpot-5a716c415542994082a3e827",
+    "run_id": "66e638035e9c40e485b12685ff4fc6bd",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "54717a8c497a23992bfa",
+    "task_id": "hotpot-5a716c415542994082a3e827",
+    "run_id": "80cc852a8e534290b96ddb7f0ecc8fc3",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "abca223e2395bb46c239",
+    "task_id": "hotpot-5a716c415542994082a3e827",
+    "run_id": "552bc59cb5e340cd970288f90689d4c1",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "0a49df9980dfcbf08918",
+    "task_id": "hotpot-5a716c415542994082a3e827",
+    "run_id": "e5742654ff7b47c3a5a239736dbe89a7",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "e2455ee5d84c0933db8d",
+    "task_id": "hotpot-5a716c415542994082a3e827",
+    "run_id": "d86e1e9ee7f44e51a06ba190058b4251",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "594fd27cb6d61d402f2b",
+    "task_id": "hotpot-5a7292385542994cef4bc342",
+    "run_id": "0cd2432912a54ee9be20db1dc75062f5",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "d4487caaea84b78e72af",
+    "task_id": "hotpot-5a7292385542994cef4bc342",
+    "run_id": "7d80041f8a524bcb9a13adff83d2c852",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "ca7e48be8d58f3abffe1",
+    "task_id": "hotpot-5a7292385542994cef4bc342",
+    "run_id": "8d8adcb8140542408cff2680f3296330",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "06be6ae5c72b5c29741d",
+    "task_id": "hotpot-5a7292385542994cef4bc342",
+    "run_id": "830f8879c72f43bc87e8585743de237d",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "d967037d296df53a3a07",
+    "task_id": "hotpot-5a7292385542994cef4bc342",
+    "run_id": "431a2b0e8dba4928a259e388479e5d5a",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  }
+]

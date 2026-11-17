@@ -1,0 +1,65 @@
+{
+  "query": "RSIGym recursive self improvement",
+  "seconds": 5.437,
+  "results": [
+    {
+      "title": "Recursive self-improvement - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
+      "snippet": "Recursive self-improvement (RSI) is a hypothetical process in which an artificial intelligence (AI) system iteratively designs a more capable successor. It is claimed that this may trigger an intelligence explosion, where such iterative improvements cause ever more capable AI systems, potentially resulting in the creation of an artificial ...",
+      "citable": false,
+      "provider": "ddgs_auto",
+      "provider_scope": "general web metasearch",
+      "search_query": "RSIGym recursive self improvement",
+      "search_attempts": [
+        {
+          "provider": "ddgs_auto",
+          "status": "completed",
+          "elapsed_seconds": 5.437,
+          "results": 5
+        }
+      ]
+    },
+    {
+      "title": "RSIGym: A Flexible Environment for Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2610.10310",
+      "snippet": "Oct 7, 2026 · RSIGym exposes training, inference, rollout, evaluation, and sandbox execution through reusable services, with shared budget and permission controls supporting Data, Harness, and Joint improvement tracks.",
+      "citable": false,
+      "provider": "ddgs_auto",
+      "provider_scope": "general web metasearch",
+      "search_query": "RSIGym recursive self improvement"
+    },
+    {
+      "title": "RSIGym: A Flexible Environment for Recursive Self-Improvement",
+      "url": "https://github.com/evolvent-ai/RSIGym",
+      "snippet": "RSIGym gives a research agent reusable tools to generate data, train models, evaluate candidates, and revise execution harnesses. The agent chooses the experiments; the platform handles the infrastructure, permissions, and service budget.",
+      "citable": false,
+      "provider": "ddgs_auto",
+      "provider_scope": "general web metasearch",
+      "search_query": "RSIGym recursive self improvement"
+    },
+    {
+      "title": "RSIGym: A Flexible Environment for Recursive Self-Improvement",
+      "url": "https://arxiv.org/pdf/2610.10310",
+      "snippet": "Recursive self-improvement requires carrying accepted changes into later improvement cycles, while studying agent-proposed changes also requires substantial research infrastructure.",
+      "citable": false,
+      "provider": "ddgs_auto",
+      "provider_scope": "general web metasearch",
+      "search_query": "RSIGym recursive self improvement"
+    },
+    {
+      "title": "RSIGym: An Environment Built for Agents to Improve AI Systems",
+      "url": "https://evolvent.co/en/blog/RSIGym",
+      "snippet": "Oct 8, 2026 · The vision of Recursive Self-Improvement (RSI) is for AI to act as an agent that can sustain its own research: identify capability bottlenecks in itself or a target system, propose hypotheses for improvement, design and run experiments, and use the results to decide what to try next.",
+      "citable": false,
+      "provider": "ddgs_auto",
+      "provider_scope": "general web metasearch",
+      "search_query": "RSIGym recursive self improvement"
+    }
+  ],
+  "readback": {
+    "passages": 6,
+    "title": "Recursive self-improvement - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
+    "has_RSIGym": false
+  }
+}

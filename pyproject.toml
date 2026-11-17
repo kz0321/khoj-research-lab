@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "khoj-research-lab"
+version = "1.0.0"
+description = "Evidence-grounded personal research: a Windows-native Khoj course adaptation"
+requires-python = ">=3.10,<3.13"
+license = {text = "AGPL-3.0-or-later"}
+dependencies = [
+    "fastapi==0.162.5", "uvicorn==0.54.0", "httpx==0.28.1", "pydantic==2.14.3",
+    "python-dotenv==1.2.4", "python-multipart==0.0.32", "pypdf==7.1.0",
+    "numpy==2.2.6", "fastembed==0.9.1", "rank-bm25==0.2.2",
+    "beautifulsoup4==4.15.0", "ddgs==9.16.1"
+]
+
+[tool.setuptools.packages.find]
+include = ["app*", "eval*"]
+
+[tool.setuptools.package-data]
+app = ["static/*"]

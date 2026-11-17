@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "collection": {
+    "id": "frames-frozen",
+    "name": "FRAMES frozen corpus (395 documents)",
+    "created_at": "2026-11-16T06:01:32.227855+00:00",
+    "documents": 395,
+    "chunks": 9742
+  },
+  "expected_documents": 395,
+  "processed_this_session": 395,
+  "cached_this_session": 160,
+  "indexing_session_seconds": 901.047,
+  "wall_seconds_since_collection_creation_including_pauses": 3386.669,
+  "api_llm_calls": 0,
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "note": "Local embedding/indexing only; no benchmark generation or temporal audit. Session time includes hash-cache checks; wall time also includes pauses/restarts."
+}

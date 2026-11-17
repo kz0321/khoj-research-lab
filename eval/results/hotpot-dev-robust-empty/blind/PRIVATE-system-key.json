@@ -1,0 +1,22 @@
+[
+  {
+    "item_id": "0f3128f522079019c297",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "8809c70829bc4fd0af47b3d24acac1e9",
+    "claim_id": "A0",
+    "evidence_id": "E1",
+    "mode": "verified",
+    "scenario": "empty",
+    "repeat": 0
+  },
+  {
+    "item_id": "261826f78c598f308340",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "8809c70829bc4fd0af47b3d24acac1e9",
+    "claim_id": "C1",
+    "evidence_id": "E1",
+    "mode": "verified",
+    "scenario": "empty",
+    "repeat": 0
+  }
+]

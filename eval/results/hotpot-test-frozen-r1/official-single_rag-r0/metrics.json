@@ -1,0 +1,31 @@
+{
+  "mode": "single_rag",
+  "split": "test",
+  "repeat": 0,
+  "scenario": "clean",
+  "attempted_tasks": 40,
+  "metrics": {
+    "em": 0.6,
+    "f1": 0.7610714285714286,
+    "prec": 0.7737500000000002,
+    "recall": 0.7625000000000001,
+    "sp_em": 0.275,
+    "sp_f1": 0.6957142857142856,
+    "sp_prec": 0.7304166666666665,
+    "sp_recall": 0.7041666666666666,
+    "joint_em": 0.225,
+    "joint_f1": 0.5323465277412646,
+    "joint_prec": 0.5710416666666667,
+    "joint_recall": 0.5371527777777777
+  },
+  "scorer": "Pinned HotpotQA official evaluator; only ujson import replaced with stdlib json",
+  "source": {
+    "url": "https://raw.githubusercontent.com/hotpotqa/hotpot/3635853403a8735609ee997664e1528f4480762a/hotpot_evaluate_v1.py",
+    "commit": "3635853403a8735609ee997664e1528f4480762a",
+    "original_sha256": "d35fc91a6db21d791dbdda11daf3856e9359f5701d54e3eefba20d88fecc02c0",
+    "local_sha256": "afc28f4cc2e87d1499bb60bf594851e48e0b7f65bc8531aba2dad9fbca5d7f1e",
+    "modification": "Only replace import ujson as json with import json; original scoring logic unchanged.",
+    "attribution": "HotpotQA official evaluation script, Zhilin Yang, Peng Qi and contributors. https://hotpotqa.github.io/",
+    "license_note": "Upstream repository has no root LICENSE at pinned commit; public academic evaluation script retained with attribution. Dataset license is separately recorded in data/licenses/hotpotqa-dataset-card.md."
+  }
+}

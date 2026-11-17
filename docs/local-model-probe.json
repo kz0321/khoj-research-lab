@@ -1,0 +1,39 @@
+{
+  "tested_at_utc": "2026-11-16T06:08:30.142919+00:00",
+  "endpoint": "http://127.0.0.1:8999/v1/chat/completions",
+  "model": "qwen2.5-1.5b-instruct",
+  "purpose": "Single local transport and structured-output smoke test; not an agent or benchmark score",
+  "http_success": true,
+  "json_parse_success": true,
+  "response": {
+    "answer": "No",
+    "evidence_ids": [
+      "E1",
+      "E2"
+    ],
+    "reason": "The evidence provided does not allow for a direct comparison of Aurora's 82% accuracy and Boreal's 75% accuracy. The accuracy is not related to the same dataset or question count."
+  },
+  "evidence_id_format_valid": true,
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 70,
+    "prompt_tokens": 122,
+    "total_tokens": 192,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "wall_seconds": 0.469,
+  "end_to_end_output_tokens_per_second": 149.25,
+  "server_timings": {
+    "cache_n": 0,
+    "prompt_n": 122,
+    "prompt_ms": 52.094,
+    "prompt_per_token_ms": 0.427,
+    "prompt_per_second": 2341.9203747072597,
+    "predicted_n": 70,
+    "predicted_ms": 379.47,
+    "predicted_per_token_ms": 5.4995652173913046,
+    "predicted_per_second": 181.83255593327533
+  }
+}

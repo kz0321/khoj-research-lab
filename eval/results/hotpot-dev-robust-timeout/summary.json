@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "dataset": "hotpotqa",
+      "split": "dev",
+      "scenario": "timeout",
+      "mode": "verified",
+      "attempted_runs": 1,
+      "unique_tasks": 1,
+      "failed_runs": 0,
+      "recorded_attempts_including_explicit_reruns": 1,
+      "failed_attempts_including_explicit_reruns": 0,
+      "answer_rate": 1.0,
+      "actual_repeats_per_task": {
+        "hotpot-5ab95d3d5542996be20204a7": 1
+      },
+      "answer_em": 1.0,
+      "answer_f1": 1.0,
+      "supporting_em": 1.0,
+      "supporting_f1": 1.0,
+      "latency_median_seconds": 10.782,
+      "latency_p95_seconds": 10.782,
+      "input_tokens_total": 16371,
+      "output_tokens_total": 1026,
+      "tool_calls_total": 4,
+      "model_calls_total": 6,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "unsupported_claim_rate": null,
+      "task_success": null,
+      "correct_abstention_rate": null,
+      "recovery_rate": null,
+      "human_judging_status": "not_scored_until_blinded_two_rater_annotations_are_resolved",
+      "tokens_median": 17397,
+      "estimated_cost_usd_total": null,
+      "unknown_usage_attempts": 0,
+      "pricing_dates": []
+    }
+  ],
+  "paired_comparisons": [],
+  "notice": "Automatic EM/F1 and measured resource use are not human evidence-support judgments. Development pilot results are not held-out benchmark claims. Quality uses the last explicit attempt per task/mode/repeat; total tokens/calls/cost preserve all attempts including reruns."
+}

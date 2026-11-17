@@ -1,0 +1,9 @@
+{
+  "status": "development_iteration_before_final_prompt_freeze",
+  "n_tasks": 2,
+  "recorded_runs": 10,
+  "actual_repeats": 1,
+  "held_out_results": false,
+  "human_judgments": "not_completed",
+  "note": "Preserve this complete iteration; later prompt changes must use a distinct output directory."
+}

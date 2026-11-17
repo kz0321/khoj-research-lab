@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-16",
+  "kind": "real_network_tool_smoke_test_without_generation",
+  "search": {
+    "tool": "search_web",
+    "query": "retrieval augmented generation original paper Lewis 2020",
+    "success": true,
+    "result_count": 5,
+    "first_url": "https://arxiv.org/abs/2005.11401",
+    "search_snippets_citable": false
+  },
+  "read": {
+    "tool": "read_webpage",
+    "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+    "success": true,
+    "passage_count": 6,
+    "text_snapshot_captured": true
+  },
+  "limits": "One network smoke test establishes tool availability at that time, not general web reliability or benchmark quality."
+}

@@ -1,0 +1,522 @@
+[
+  {
+    "item_id": "2fc6a159fe555fd7ed52",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "011cf746b9de468dbf88ac706378b3ca",
+    "claim_id": "A0",
+    "evidence_id": "",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "7b87014bf144a989678a",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "011cf746b9de468dbf88ac706378b3ca",
+    "claim_id": "C1",
+    "evidence_id": "",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "0a13ee397905957dc263",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "011cf746b9de468dbf88ac706378b3ca",
+    "claim_id": "C2",
+    "evidence_id": "",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "1531c605b33c68c842d2",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "2b744de758a8451197e02f44c4c22a2d",
+    "claim_id": "A0",
+    "evidence_id": "E1",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "4dbcfbcf6a7b37ccf986",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "2b744de758a8451197e02f44c4c22a2d",
+    "claim_id": "C1",
+    "evidence_id": "E1",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "f46d939dfd0bdddc99c4",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "2b744de758a8451197e02f44c4c22a2d",
+    "claim_id": "C2",
+    "evidence_id": "E6",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "4084068b007c35e925e4",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "ef34edf695844fd49174bc49ee4a77c1",
+    "claim_id": "A0",
+    "evidence_id": "E2",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "e94a6a16929a180eb7a9",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "ef34edf695844fd49174bc49ee4a77c1",
+    "claim_id": "A0",
+    "evidence_id": "E3",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "fb581bd1d7334b672035",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "ef34edf695844fd49174bc49ee4a77c1",
+    "claim_id": "C1",
+    "evidence_id": "E1",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "1b1c72d44baed060261e",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "ef34edf695844fd49174bc49ee4a77c1",
+    "claim_id": "C2",
+    "evidence_id": "E3",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "67ef08a9cbb2520ece5c",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "ef34edf695844fd49174bc49ee4a77c1",
+    "claim_id": "C3",
+    "evidence_id": "E2",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "cf927a226e8c55064312",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "77e8c99419e8441795182a15a62126e3",
+    "claim_id": "A0",
+    "evidence_id": "E2",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "6e8ed95a6f68494a1d6e",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "77e8c99419e8441795182a15a62126e3",
+    "claim_id": "A0",
+    "evidence_id": "E3",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "02a6d48ba655e7b4825c",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "77e8c99419e8441795182a15a62126e3",
+    "claim_id": "C1",
+    "evidence_id": "E1",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "27c60065a985d6ab5ba6",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "77e8c99419e8441795182a15a62126e3",
+    "claim_id": "C2",
+    "evidence_id": "E3",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "790de17384aa12bfd6c7",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "77e8c99419e8441795182a15a62126e3",
+    "claim_id": "C3",
+    "evidence_id": "E2",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "5d8e5760cb6cafb9b294",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "e7a48a8690d9490399f967010e938cd7",
+    "claim_id": "A0",
+    "evidence_id": "E2",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "97e6b062d1aaa282e540",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "e7a48a8690d9490399f967010e938cd7",
+    "claim_id": "A0",
+    "evidence_id": "E3",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "e0e2019fd14eb05b5100",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "e7a48a8690d9490399f967010e938cd7",
+    "claim_id": "C1",
+    "evidence_id": "E1",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "c58ba84855a624c65f60",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "e7a48a8690d9490399f967010e938cd7",
+    "claim_id": "C2",
+    "evidence_id": "E3",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "381f9f94c7332a6a1375",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "e7a48a8690d9490399f967010e938cd7",
+    "claim_id": "C3",
+    "evidence_id": "E2",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "debd4376a299ebf258a7",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "6f7d08a4d44a4751a28293963f48de75",
+    "claim_id": "A0",
+    "evidence_id": "",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "e481ea7033021ce0c3db",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "6f7d08a4d44a4751a28293963f48de75",
+    "claim_id": "C1",
+    "evidence_id": "",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "42b0593e090c0072367d",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "6f7d08a4d44a4751a28293963f48de75",
+    "claim_id": "C2",
+    "evidence_id": "",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "6bb3d40a0d4c61e82252",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "6f7d08a4d44a4751a28293963f48de75",
+    "claim_id": "C3",
+    "evidence_id": "",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "896918f9c505c606b3c7",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "d85dc06cc3d24cbeb38e13cf4d2e0b45",
+    "claim_id": "A0",
+    "evidence_id": "",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "214993b8c99c47dd0a3a",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "d85dc06cc3d24cbeb38e13cf4d2e0b45",
+    "claim_id": "C1",
+    "evidence_id": "E2",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "489d635602e1c05e1fe1",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "d85dc06cc3d24cbeb38e13cf4d2e0b45",
+    "claim_id": "C1",
+    "evidence_id": "E3",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "2a79073e856c450d08e6",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "d85dc06cc3d24cbeb38e13cf4d2e0b45",
+    "claim_id": "C2",
+    "evidence_id": "E5",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "508ee038090ec047f977",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "d85dc06cc3d24cbeb38e13cf4d2e0b45",
+    "claim_id": "C3",
+    "evidence_id": "E4",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "399091d0da274331f835",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "d85dc06cc3d24cbeb38e13cf4d2e0b45",
+    "claim_id": "C4",
+    "evidence_id": "E6",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "cf9411b24a44eb314677",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "A0",
+    "evidence_id": "E5",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "38ae0bf02ba4bd3f0157",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "A0",
+    "evidence_id": "E2",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "1e4d3a43ebdc438f989c",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "A0",
+    "evidence_id": "E8",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "b7d5fafd54dfab45cada",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "A0",
+    "evidence_id": "E6",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "0dffc4f99c64255fbef7",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "C1",
+    "evidence_id": "E6",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "23eea83379ce0a667243",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "C1",
+    "evidence_id": "E1",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "e519405358987ecf3f12",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "C2",
+    "evidence_id": "E3",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "244d7b16027a28dc7b02",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "C3",
+    "evidence_id": "E2",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "06944df317cf55370a95",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "C3",
+    "evidence_id": "E8",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "b73315d9f633480ec4cf",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "3a45de63035149ebaafd7578b0a43faa",
+    "claim_id": "C4",
+    "evidence_id": "E5",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "db0e792c6054340eb1b6",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "c2e73ba7a718423291a34208abccbe30",
+    "claim_id": "C1",
+    "evidence_id": "E6",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "0bbd8169aa9b3e5c1032",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "c2e73ba7a718423291a34208abccbe30",
+    "claim_id": "C1",
+    "evidence_id": "E1",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "01e30ed10c2ccbf69e1b",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "c2e73ba7a718423291a34208abccbe30",
+    "claim_id": "C2",
+    "evidence_id": "E3",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "2aa7107f881c5bc8128c",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "c2e73ba7a718423291a34208abccbe30",
+    "claim_id": "C3",
+    "evidence_id": "E2",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "846e42ca6823bc783494",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "c2e73ba7a718423291a34208abccbe30",
+    "claim_id": "C4",
+    "evidence_id": "E8",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "e70d9a3e9f7242e2d6f0",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "c2e73ba7a718423291a34208abccbe30",
+    "claim_id": "C5",
+    "evidence_id": "E5",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "b7c41ec07133dfeb0218",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "4472a5ef3ff24d6f9c7f411e5d455e4d",
+    "claim_id": "C1",
+    "evidence_id": "E5",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "884ca0a7d7654cfa926e",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "4472a5ef3ff24d6f9c7f411e5d455e4d",
+    "claim_id": "C1",
+    "evidence_id": "E1",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "357814846d4a34eda261",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "4472a5ef3ff24d6f9c7f411e5d455e4d",
+    "claim_id": "C2",
+    "evidence_id": "E4",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "33211f91582d5feacddb",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "4472a5ef3ff24d6f9c7f411e5d455e4d",
+    "claim_id": "C3",
+    "evidence_id": "E3",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  },
+  {
+    "item_id": "c9cda39d20e00851e031",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "4472a5ef3ff24d6f9c7f411e5d455e4d",
+    "claim_id": "C4",
+    "evidence_id": "E2",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0
+  }
+]

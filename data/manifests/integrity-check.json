@@ -1,0 +1,13 @@
+{
+  "valid": true,
+  "tasks": 180,
+  "collections": 61,
+  "canonical_documents": 995,
+  "hotpot_sentences": 2499,
+  "all_gold_support_sentences_found": true,
+  "gold_fields_absent_from_corpus": true,
+  "manifest_hashes_match": true,
+  "unreferenced_collection_count": 28,
+  "frames_human_audits_pending": 120,
+  "note": "Integrity checks establish dataset structure and source isolation, not semantic answer correctness or temporal validity."
+}

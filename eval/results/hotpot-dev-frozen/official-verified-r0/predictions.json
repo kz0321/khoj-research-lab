@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "5ab95d3d5542996be20204a7": "Kurt Wise",
+    "5abfeed15542997ec76fd471": ""
+  },
+  "sp": {
+    "5ab95d3d5542996be20204a7": [
+      [
+        "Grand Canyon: A Different View",
+        0
+      ],
+      [
+        "Kurt Wise",
+        0
+      ],
+      [
+        "Grand Canyon: A Different View",
+        1
+      ]
+    ],
+    "5abfeed15542997ec76fd471": [
+      [
+        "Alma Mahler",
+        1
+      ],
+      [
+        "The Bride of the Wind",
+        0
+      ],
+      [
+        "Alma Mahler",
+        2
+      ],
+      [
+        "Murderer, the Hope of Women",
+        0
+      ],
+      [
+        "Alma Mahler",
+        0
+      ],
+      [
+        "The Bride of the Wind",
+        2
+      ]
+    ]
+  }
+}

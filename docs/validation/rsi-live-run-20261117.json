@@ -1,0 +1,1197 @@
+{
+  "id": "85d8a66d37ee494ba415b06d20003943",
+  "question": "RSI-Index（RSIGym，Recursive Self-Improvement，递归自我改进）有哪些现存的相关工作？请区分 RSI-Index 本身与递归自我改进领域的相关研究，列出论文或项目名称、主要贡献和来源链接。",
+  "collection_id": "demo",
+  "mode": "verified",
+  "status": "completed",
+  "created_at": "2026-11-17T03:45:27.490786+00:00",
+  "request": {
+    "question": "RSI-Index（RSIGym，Recursive Self-Improvement，递归自我改进）有哪些现存的相关工作？请区分 RSI-Index 本身与递归自我改进领域的相关研究，列出论文或项目名称、主要贡献和来源链接。",
+    "collection_id": "demo",
+    "mode": "verified",
+    "allow_web": true,
+    "perturbation": null
+  },
+  "result": {
+    "question": "RSI-Index（RSIGym，Recursive Self-Improvement，递归自我改进）有哪些现存的相关工作？请区分 RSI-Index 本身与递归自我改进领域的相关研究，列出论文或项目名称、主要贡献和来源链接。",
+    "mode": "verified",
+    "answer": "现有证据中，RSI-Index 是 RSIGym 论文（arXiv:2610.10310）定义的评估指标，而非一个独立项目；RSIGym 是配套的 agent-native 研究环境。递归自我改进领域的相关工作在证据中包括三篇综述：Awesome-RSI-Research 的《Towards AI That Improves Itself: A Survey of Recursive Self-Improvement》、arXiv:2607.07663《Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops》和 arXiv:2610.35193《Trustworthy Recursive Self-Improvement in the Era of Large Models》。证据未提供 STOP、Gödel Agent、Darwin Gödel Machine、AlphaEvolve、SEAL、Self-Rewarding 等具体系统的名称、贡献或链接。",
+    "claims": [
+      {
+        "id": "A0",
+        "text": "现有证据中，RSI-Index 是 RSIGym 论文（arXiv:2610.10310）定义的评估指标，而非一个独立项目；RSIGym 是配套的 agent-native 研究环境。递归自我改进领域的相关工作在证据中包括三篇综述：Awesome-RSI-Research 的《Towards AI That Improves Itself: A Survey of Recursive Self-Improvement》、arXiv:2607.07663《Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops》和 arXiv:2610.35193《Trustworthy Recursive Self-Improvement in the Era of Large Models》。证据未提供 STOP、Gödel Agent、Darwin Gödel Machine、AlphaEvolve、SEAL、Self-Rewarding 等具体系统的名称、贡献或链接。",
+        "evidence_ids": [
+          "E1",
+          "E3",
+          "E6",
+          "E7",
+          "E12",
+          "E13",
+          "E18",
+          "E19"
+        ],
+        "status": "supported",
+        "reason": "E1/E3 establish RSI-Index as a metric defined in the RSIGym paper and RSIGym as the agent-native environment; E6/E7, E12/E13, E18/E19 confirm the three surveys. The absence of STOP, Gödel Agent, etc. is consistent with the supplied evidence (absence of evidence, not evidence of absence).",
+        "quotes": [
+          "We define RSI-Index as the mean fraction of the remaining performance gap closed across five benchmarks covering software engineering, terminal interaction, mathematics, scientific reasoning, and skill-based tasks.",
+          "We introduce RSIGym, an agent-native research environment based on Everything as a ",
+          "Towards AI That Improves Itself\nA Survey of Recursive Self-Improvement",
+          "This survey defines RSI boundaries, distinguishes four stages (evolution,\n          self-evolution, meta-evolution, and recursive self-improvement)",
+          "We survey 1,250 arXiv papers (2024-2026) along two axes",
+          "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+          "Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+          "This survey presents an operational definition and process framework for RSI and organizes the requirements for trustworthy RSI into four interconnected themes"
+        ]
+      },
+      {
+        "id": "C1",
+        "text": "RSI-Index 是 RSIGym 论文（arXiv:2610.10310）中定义的指标：五个基准上剩余性能差距被弥合的平均比例；RSIGym 是基于 Everything as a Service 的 agent-native 研究环境，支持 Data、Harness、Joint 改进轨道。",
+        "evidence_ids": [
+          "E1",
+          "E3"
+        ],
+        "status": "supported",
+        "reason": "E1 defines RSI-Index as mean fraction of remaining gap closed across five benchmarks; E3 describes RSIGym as agent-native environment based on EaaS. The Data/Harness/Joint tracks appear in E1.",
+        "quotes": [
+          "We define RSI-Index as the mean fraction of the remaining performance gap closed across five benchmarks covering software engineering, terminal interaction, mathematics, scientific reasoning, and skill-based tasks.",
+          "We introduce RSIGym, an agent-native research environment based on Everything as a "
+        ]
+      },
+      {
+        "id": "C2",
+        "text": "RSIGym 论文报告 Opus 5 在独立 Joint 运行中取得最高 RSI-Index 0.4809（每基准运行 500 美元平台服务预算），并将 SWE-bench Verified 从 17.67% 提升到 50.33%、AIME 从 31.67% 提升到 97.78%。",
+        "evidence_ids": [
+          "E1"
+        ],
+        "status": "supported",
+        "reason": "E1 states Opus 5 achieves highest RSI-Index 0.4809 under $500 budget per benchmark run, and reports SWE-bench Verified 17.67%→50.33% and AIME 31.67%→97.78%.",
+        "quotes": [
+          "Comparing six frontier research models in independent Joint runs, Opus 5 achieves the highest RSI-Index of 0.4809 under a $500 platform-service budget per benchmark run. Its selected systems improve all five benchmarks, raising SWE-bench Verified from 17.67% to 50.33% and AIME from 31.67% to 97.78%."
+        ]
+      },
+      {
+        "id": "C3",
+        "text": "Awesome-RSI-Research 的综述《Towards AI That Improves Itself: A Survey of Recursive Self-Improvement》（作者 Hanjing Li、Qiguang Chen 等）界定 RSI 边界，区分 evolution、self-evolution、meta-evolution、recursive self-improvement 四阶段，以状态继承锚定递归，并提出 Proposal → Feedback → Optimization 循环。来源：https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "evidence_ids": [
+          "E6",
+          "E7"
+        ],
+        "status": "supported",
+        "reason": "E6 gives title and authors; E7 gives the four stages, state-inheritance anchoring, and Proposal→Feedback→Optimization loop. Source URL matches source_id.",
+        "quotes": [
+          "Towards AI That Improves Itself\nA Survey of Recursive Self-Improvement\nHanjing Li, Qiguang Chen",
+          "This survey defines RSI boundaries, distinguishes four stages (evolution,\n          self-evolution, meta-evolution, and recursive self-improvement) and anchors\n          recursion in state inheritance"
+        ]
+      },
+      {
+        "id": "C4",
+        "text": "arXiv:2607.07663《Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops》（Mingguang Chen、Licheng Wang、Bo Qu）调查 1,250 篇 2024–2026 年 arXiv 论文，沿“改进对象”和“闭环程度”两轴分类，区分有界自我精炼与开放式 RSI，并建立从形式验证器到内在自评的验证层级。来源：https://arxiv.org/abs/2607.07663",
+        "evidence_ids": [
+          "E12",
+          "E13"
+        ],
+        "status": "supported",
+        "reason": "E13 gives title and authors; E12 gives 1,250 papers 2024-2026, two axes, bounded vs open-ended RSI, and verification hierarchy from formal verifiers to intrinsic self-assessment.",
+        "quotes": [
+          "We survey 1,250 arXiv papers (2024-2026) along two axes: what the system improves -- its behavior in deployment, its policy through training, its evaluator, or the research process itself -- and the degree of loop closure (human-in-the-loop to fully closed). The taxonomy separates bounded self-refinement -- convergent, evaluable, and industrial practice -- from open-ended recursive self-improvement (RSI)",
+          "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\nAuthors:\nMingguang Chen\n,\nLicheng Wang\n,\nBo Qu"
+        ]
+      },
+      {
+        "id": "C5",
+        "text": "arXiv:2610.35193《Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges》（Jiayue Pu 等）提出 RSI 的操作性定义与流程框架，将可信 RSI 要求组织为真实持续改进、行为约束/对齐/公平、系统安全与隐私、透明与可控四个主题。来源：https://arxiv.org/abs/2610.35193",
+        "evidence_ids": [
+          "E18",
+          "E19"
+        ],
+        "status": "supported",
+        "reason": "E18 gives title and authors; E19 gives operational definition/process framework and the four themes.",
+        "quotes": [
+          "Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\nAuthors:\nJiayue Pu",
+          "This survey presents an operational definition and process framework for RSI and organizes the requirements for trustworthy RSI into four interconnected themes: genuine and sustained improvement; behavioral constraints, alignment, and fairness; system security and privacy; and transparency and controllability."
+        ]
+      },
+      {
+        "id": "C6",
+        "text": "区分方式：RSI-Index 是 RSIGym 论文提出的量化评估指标（衡量跨五个基准的差距弥合比例），RSIGym 是其配套环境；而上述综述属于对 RSI 领域方法、分类与可信性要求的整体梳理，并非 RSI-Index 本身。",
+        "evidence_ids": [
+          "E1",
+          "E3",
+          "E7",
+          "E12",
+          "E19"
+        ],
+        "status": "supported",
+        "reason": "E1 defines RSI-Index as gap-closure metric; E3 identifies RSIGym as the environment; E7, E12, E19 show the surveys are field-level overviews, not the metric itself.",
+        "quotes": [
+          "We define RSI-Index as the mean fraction of the remaining performance gap closed across five benchmarks",
+          "We introduce RSIGym, an agent-native research environment based on Everything as a ",
+          "This survey defines RSI boundaries, distinguishes four stages",
+          "We survey 1,250 arXiv papers (2024-2026) along two axes",
+          "This survey presents an operational definition and process framework for RSI"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "Service (EaaS). RSIGym exposes training, inference, rollout, evaluation, and sandbox execution through reusable services, with shared budget and permission controls supporting Data, Harness, and Joint improvement tracks. This design enables agents to investigate individual interventions and jointly optimize data, training settings, and execution harnesses within the same environment. We define RSI-Index as the mean fraction of the remaining performance gap closed across five benchmarks covering software engineering, terminal interaction, mathematics, scientific reasoning, and skill-based tasks. Comparing six frontier research models in independent Joint runs, Opus 5 achieves the highest RSI-Index of 0.4809 under a $500 platform-service budget per benchmark run. Its selected systems improve all five benchmarks, raising SWE-bench Verified from 17.67% to 50.33% and AIME from 31.67% to 97.78%. Additional experiments examine DSH-harness refinement, budget variation, and restricted network ",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 997,
+          "end_char": 1996
+        },
+        "retrieved_at": "2026-11-17T03:45:52.327729+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "8460b2e5f286189fdd34734c"
+      },
+      {
+        "id": "E2",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "access, while recorded trajectories reveal how agents diagnose failures and select candidates. We open-source the full RSIGym codebase and results to support reproducibility and further research.\nSubjects:\nMachine Learning (cs.LG)\nCite as:\narXiv:2610.10310\n[cs.LG]\n(or\narXiv:2610.10310v1\n[cs.LG]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2610.10310\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Fanqing Meng [\nview email\n]\n[v1]\nWed, 7 Oct 2026 16:05:15 UTC (96 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nAdditional Features\nAudio Summary\nCurrent browse context:\ncs.LG\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2026-10\nChange to browse by:\ncs\nReferences & Citations\nSciX\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\n",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 1996,
+          "end_char": 2989
+        },
+        "retrieved_at": "2026-11-17T03:45:52.327729+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "ca43ec4dae29085bce68d963"
+      },
+      {
+        "id": "E3",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Machine Learning\narXiv:2610.10310\n(cs)\n[Submitted on 7 Oct 2026]\nTitle:\nRSIGym: A Flexible Environment for Recursive Self-Improvement\nAuthors:\nFanqing Meng\n,\nLingxiao Du\n,\nHaocheng Lu\n,\nQiguang Chen\n,\nZiqi Zhao\n,\nZijian Wu\n,\nJiayuan Zhuo\n,\nMengkang Hu\n,\nMichael Qizhe Shieh\nView a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\nView PDF\nHTML (experimental)\nAbstract:\nRecursive self-improvement requires carrying accepted changes into later improvement cycles, while studying agent-proposed changes also requires substantial research infrastructure. Existing settings often leave agents to rebuild routine infrastructure or restrict exploration to individual components. We introduce RSIGym, an agent-native research environment based on Everything as a ",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 0,
+          "end_char": 997
+        },
+        "retrieved_at": "2026-11-17T03:45:52.327729+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "3f734209cd10060a66e0a51b"
+      },
+      {
+        "id": "E4",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "Core recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nIArxiv recommender toggle\nIArxiv Recommender\n(\nWhat is IArxiv?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 3988,
+          "end_char": 4759
+        },
+        "retrieved_at": "2026-11-17T03:45:52.327729+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "0be3fbc351bcb41ecf0a1c3c"
+      },
+      {
+        "id": "E5",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "Bookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\n",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 2989,
+          "end_char": 3988
+        },
+        "retrieved_at": "2026-11-17T03:45:52.327729+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "3e065bc8c6d5e366779376ee"
+      },
+      {
+        "id": "E6",
+        "source_id": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "title": "Towards AI That Improves Itself | RSI Survey",
+        "text": "Towards AI That Improves Itself | RSI Survey\nSurvey paper\nTowards AI That Improves Itself\nA Survey of Recursive Self-Improvement\nHanjing Li, Qiguang Chen, Chenyuan Zhang, Qionglin Qiu, Fanqing Meng,\n            Mengkang Hu, Libo Qin, Min Zhang\nHarbin Institute of Technology (Shenzhen)\nUniversity of Hong Kong\nNational University of Singapore\nShanghai Innovation Institute\nRead PDF\nRSI moves from local revision toward persistent improvement loops across behavior,\n            agent systems, models, data, and research processes.\n3-stage loop\nProposal -> Feedback -> Optimization\n4 evolution targets\nBehavior, agents, model/data, research\n7 frontier dimensions\nReliability through generalization\nAbstract\nFrom single-step revision to verifiable improvement loops\nRecent advances in agentic systems allow AI systems to conduct experiments,\n          interpret feedback, and modify their own workflows, transforming Recursive\n          Self-Improvement from a theoretical concept into an engineering ",
+        "url": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "location": {
+          "start_char": 0,
+          "end_char": 998
+        },
+        "retrieved_at": "2026-11-17T03:45:52.877845+00:00",
+        "source_sha256": "01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663",
+        "chunk_id": "72dbf715ebc1f46705f3ff7f"
+      },
+      {
+        "id": "E7",
+        "source_id": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "title": "Towards AI That Improves Itself | RSI Survey",
+        "text": "problem.\n          Yet the field still lacks a unified account of what constitutes RSI and\n          how its improvement loop should be evaluated.\nThis survey defines RSI boundaries, distinguishes four stages (evolution,\n          self-evolution, meta-evolution, and recursive self-improvement) and anchors\n          recursion in state inheritance: an accepted improvement\n          from one cycle becomes the starting state of a later cycle, while\n          “recursive progress” is reserved for the stronger claim that\n          the inherited state also improves the improver. It introduces a common\n          Proposal → Feedback → Optimization loop, organizes methods\n          across four evolution targets, and identifies research gaps around\n          evidence-based acceptance, reuse across cycles, and transfer beyond the\n          tasks or evaluators that produced the gains.\nDefinition\nA common loop for modern RSI systems\nRSI is anchored in state inheritance: an improvement accepted in ",
+        "url": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "location": {
+          "start_char": 998,
+          "end_char": 1995
+        },
+        "retrieved_at": "2026-11-17T03:45:52.877845+00:00",
+        "source_sha256": "01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663",
+        "chunk_id": "d5bf2d42f45e2c7a8179e110"
+      },
+      {
+        "id": "E8",
+        "source_id": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "title": "Towards AI That Improves Itself | RSI Survey",
+        "text": "Evolution\nScientific operation agents, AI4AI, MLE, and end-to-end AI scientist systems\n                automate the research loop around AI improvement.\nScientific operation agents\nAI4AI and MLE\nEnd-to-end AI scientist systems\nAn evidence ladder: from local repair to compounding\nSelf-improvement claims differ in strength, and the ladder orders\n            them by the evidence each one needs.\nLocal repair\nfixes the current output and stops there;\npersistent\n            transfer\nmakes a change outlive the current run and help\n            later instances;\nrecursive inheritance\n(the\n            minimal RSI claim) makes an accepted improvement the starting\n            state of a later cycle; and\nrecursive progress\nfurther shows that the inherited state improves the improver itself.\nCausal attribution\nsupplies the supporting evidence\n            (a counterfactual control against a frozen or no-retention\n            baseline) that a retained intervention, not an unrelated\n            ",
+        "url": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "location": {
+          "start_char": 4979,
+          "end_char": 5971
+        },
+        "retrieved_at": "2026-11-17T03:45:52.877845+00:00",
+        "source_sha256": "01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663",
+        "chunk_id": "e4a14d40653e55cd20ed7183"
+      },
+      {
+        "id": "E9",
+        "source_id": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "title": "Towards AI That Improves Itself | RSI Survey",
+        "text": "evaluator?\nThe strongest claim is transfer of the improvement procedure itself: later generations should search, evaluate, or optimize better because of what was retained.\nRecursive self-improvement has moved from theory to engineering practice;\n          the remaining challenge is to make its gains credible, reusable, and\n          transferable beyond the tasks and evaluators that produced them.\nClose",
+        "url": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "location": {
+          "start_char": 7962,
+          "end_char": 8367
+        },
+        "retrieved_at": "2026-11-17T03:45:52.877845+00:00",
+        "source_sha256": "01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663",
+        "chunk_id": "d09a057efe95621c22dc69ae"
+      },
+      {
+        "id": "E10",
+        "source_id": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "title": "Towards AI That Improves Itself | RSI Survey",
+        "text": "one\n              cycle is retained as the starting state of a later cycle. Recursive\n              progress (the stronger claim that the inherited state also\n              improves the improver) is treated separately.\nProposal\nSelect an editable target and generate a candidate change through\n                  prompting, search, evolution, program synthesis, training, or experimentation.\nTarget selection identifies what the loop is allowed to change.\nCandidate generation creates concrete artifacts such as prompts, tools, memory, code, data, or checkpoints.\nFeedback\nExpose consequences in a repository, simulator, benchmark, training run,\n                  or live environment, then convert outcomes into evidence.\nExecution environments reveal behavioral effects of a candidate.\nVerification signals judge the evidence through tests, rewards, model judges, formal checks, or review.\nOptimization\nRetain, revise, reject, promote, or roll back the candidate while preserving\n                  ",
+        "url": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "location": {
+          "start_char": 1995,
+          "end_char": 2993
+        },
+        "retrieved_at": "2026-11-17T03:45:52.877845+00:00",
+        "source_sha256": "01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663",
+        "chunk_id": "41d81ba62a1d169ba3e8f3f2"
+      },
+      {
+        "id": "E11",
+        "source_id": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "title": "Towards AI That Improves Itself | RSI Survey",
+        "text": "Diversity\nDo proposals cover meaningfully different hypotheses and execution paths?\nDiversity is about causal independence, not just different wording; systems should preserve disagreement, branch distance, and failure coverage.\nPersistence\nDoes a successful intervention remain available and useful later?\nRetained artifacts need provenance, scope conditions, retirement criteria, and evidence that they contribute downstream rather than drifting into noise.\nAdaptability\nCan the system respond to changing tasks, tools, evaluators, and environments?\nThe key split is frozen evidence for comparison versus adaptive evidence for discovering new weaknesses as the environment changes.\nControllability\nAre authority, review, monitoring, and rollback coupled to risk?\nUpdate authority should track target scope, verifier strength, deployment context, and failure severity, with intervention points preserved across the loop.\nGeneralization\nDoes the improvement transfer beyond its original task and ",
+        "url": "https://lee1003-lee.github.io/Awesome-RSI-Research/",
+        "location": {
+          "start_char": 6966,
+          "end_char": 7962
+        },
+        "retrieved_at": "2026-11-17T03:45:52.877845+00:00",
+        "source_sha256": "01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663",
+        "chunk_id": "9fec6419048591989c0413af"
+      },
+      {
+        "id": "E12",
+        "source_id": "https://arxiv.org/abs/2607.07663",
+        "title": "[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+        "text": "ambitions. We survey 1,250 arXiv papers (2024-2026) along two axes: what the system improves -- its behavior in deployment, its policy through training, its evaluator, or the research process itself -- and the degree of loop closure (human-in-the-loop to fully closed). The taxonomy separates bounded self-refinement -- convergent, evaluable, and industrial practice -- from open-ended recursive self-improvement (RSI), which remains bounded by grounding requirements, collapse dynamics, and compute constraints on every measured axis. Its distinctive feature is a dedicated category for self-evaluation: every improvement loop is a claim that some signal can substitute for human judgment. We survey the evaluator design space -- judges, process reward models, verifiers, rubrics, meta-evaluation -- order the signals into a verification hierarchy from formal verifiers (strongest) to intrinsic self-assessment (weakest), and observe that demonstrated self-improvement strength tracks this ",
+        "url": "https://arxiv.org/abs/2607.07663",
+        "location": {
+          "start_char": 997,
+          "end_char": 1988
+        },
+        "retrieved_at": "2026-11-17T03:45:55.536263+00:00",
+        "source_sha256": "2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65",
+        "chunk_id": "5f379240e0a9ccf2978701bf"
+      },
+      {
+        "id": "E13",
+        "source_id": "https://arxiv.org/abs/2607.07663",
+        "title": "[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+        "text": "[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Artificial Intelligence\narXiv:2607.07663\n(cs)\n[Submitted on 8 Jul 2026 (\nv1\n), last revised 6 Sep 2026 (this version, v2)]\nTitle:\nRecursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\nAuthors:\nMingguang Chen\n,\nLicheng Wang\n,\nBo Qu\nView a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\nView PDF\nHTML (experimental)\nAbstract:\nAI systems increasingly participate in their own improvement: revising their outputs, adapting their harnesses during deployment, training on data they generate, and conducting AI research itself. This literature uses a vocabulary (\"self-refine,\" \"self-reward,\" \"self-play,\" \"self-evolve\") that conflates fundamentally different ",
+        "url": "https://arxiv.org/abs/2607.07663",
+        "location": {
+          "start_char": 0,
+          "end_char": 997
+        },
+        "retrieved_at": "2026-11-17T03:45:55.536263+00:00",
+        "source_sha256": "2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65",
+        "chunk_id": "b91a08113bea35a55aa12c57"
+      },
+      {
+        "id": "E14",
+        "source_id": "https://arxiv.org/abs/2607.07663",
+        "title": "[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+        "text": "Access Paper:\nView a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nAdditional Features\nAudio Summary\nCurrent browse context:\ncs.AI\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2026-07\nChange to browse by:\ncs\nReferences & Citations\nSciX\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n",
+        "url": "https://arxiv.org/abs/2607.07663",
+        "location": {
+          "start_char": 2986,
+          "end_char": 3986
+        },
+        "retrieved_at": "2026-11-17T03:45:55.536263+00:00",
+        "source_sha256": "2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65",
+        "chunk_id": "160af804cfb314c33b36acdb"
+      },
+      {
+        "id": "E15",
+        "source_id": "https://arxiv.org/abs/2607.07663",
+        "title": "[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+        "text": "hierarchy, that its failure modes (self-confirming loops, model and diversity collapse) follow from its violations, and that the \"research direction-setting\" bottleneck keeping humans in the loop divides into a verification problem the hierarchy indexes and a prior one -- choosing what deserves evaluation at all -- that it does not. We connect the literature to the theory of RSI limits and to the safety and governance questions raised by frontier-lab accounts of closing the loop, and identify governance-grade measurement of self-improvement as the field's most underpopulated niche.\nComments:\n44 pages, 6 figures\nSubjects:\nArtificial Intelligence (cs.AI)\nCite as:\narXiv:2607.07663\n[cs.AI]\n(or\narXiv:2607.07663v2\n[cs.AI]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2607.07663\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Mingguang Chen [\nview email\n]\n[v1]\nWed, 8 Jul 2026 17:19:50 UTC (5,164 KB)\n[v2]\nSun, 6 Sep 2026 11:44:06 UTC (5,189 KB)\nFull-text links:\n",
+        "url": "https://arxiv.org/abs/2607.07663",
+        "location": {
+          "start_char": 1988,
+          "end_char": 2986
+        },
+        "retrieved_at": "2026-11-17T03:45:55.536263+00:00",
+        "source_sha256": "2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65",
+        "chunk_id": "9b0193fe1a7bcfee022e1422"
+      },
+      {
+        "id": "E16",
+        "source_id": "https://arxiv.org/abs/2607.07663",
+        "title": "[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+        "text": "(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works ",
+        "url": "https://arxiv.org/abs/2607.07663",
+        "location": {
+          "start_char": 3986,
+          "end_char": 4983
+        },
+        "retrieved_at": "2026-11-17T03:45:55.536263+00:00",
+        "source_sha256": "2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65",
+        "chunk_id": "8b38bc4934fa3ecc60b31b6b"
+      },
+      {
+        "id": "E17",
+        "source_id": "https://arxiv.org/abs/2607.07663",
+        "title": "[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+        "text": "with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "url": "https://arxiv.org/abs/2607.07663",
+        "location": {
+          "start_char": 4983,
+          "end_char": 5198
+        },
+        "retrieved_at": "2026-11-17T03:45:55.536263+00:00",
+        "source_sha256": "2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65",
+        "chunk_id": "483c602c5c05c93872219122"
+      },
+      {
+        "id": "E18",
+        "source_id": "https://arxiv.org/abs/2610.35193",
+        "title": "[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+        "text": "[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Artificial Intelligence\narXiv:2610.35193\n(cs)\n[Submitted on 26 Oct 2026]\nTitle:\nTrustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\nAuthors:\nJiayue Pu\n,\nAng Gao\n,\nJinyi Bai\n,\nQipeng Wang\n,\nTongyu Wen\n,\nJiahao Zhao\n,\nKeyu Qu\n,\nJunhao Zhang\n,\nChenglei Shen\n,\nZhongxiang Sun\n,\nJun Xu\n,\nXiao Zhang\nView a PDF of the paper titled Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges, by Jiayue Pu and 11 other authors\nView PDF\nHTML (experimental)\nAbstract:\nAI systems built around large models increasingly use experience and feedback to make persistent changes to models, prompts, memories, tools, and workflows. Recursive self-improvement (RSI) ",
+        "url": "https://arxiv.org/abs/2610.35193",
+        "location": {
+          "start_char": 0,
+          "end_char": 994
+        },
+        "retrieved_at": "2026-11-17T03:46:36.155201+00:00",
+        "source_sha256": "510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814",
+        "chunk_id": "889a7905a28aa293bb5c1d13"
+      },
+      {
+        "id": "E19",
+        "source_id": "https://arxiv.org/abs/2610.35193",
+        "title": "[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+        "text": "extends this process to inductive biases and to the mechanisms that govern future updates, which can themselves be revised and reused across improvement cycles. Yet self-modification alone does not guarantee trustworthy improvement. Reported gains may reflect flawed evaluations, previously acquired capabilities may deteriorate, and compliance with behavioral constraints may weaken. Compromised artifacts or sensitive information may also persist in successor systems. Changes to improvement mechanisms may invalidate earlier verification results and make human oversight less effective. This survey presents an operational definition and process framework for RSI and organizes the requirements for trustworthy RSI into four interconnected themes: genuine and sustained improvement; behavioral constraints, alignment, and fairness; system security and privacy; and transparency and controllability. We examine these themes from three perspectives: Improvement Validity, Constraint Preservation, ",
+        "url": "https://arxiv.org/abs/2610.35193",
+        "location": {
+          "start_char": 994,
+          "end_char": 1992
+        },
+        "retrieved_at": "2026-11-17T03:46:36.155201+00:00",
+        "source_sha256": "510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814",
+        "chunk_id": "ea1aad33d0026b1db9c61831"
+      },
+      {
+        "id": "E20",
+        "source_id": "https://arxiv.org/abs/2610.35193",
+        "title": "[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+        "text": "Full-text links:\nAccess Paper:\nView a PDF of the paper titled Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges, by Jiayue Pu and 11 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nAdditional Features\nAudio Summary\nCurrent browse context:\ncs.AI\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2026-10\nChange to browse by:\ncs\ncs.CR\nReferences & Citations\nSciX\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to ",
+        "url": "https://arxiv.org/abs/2610.35193",
+        "location": {
+          "start_char": 2990,
+          "end_char": 3989
+        },
+        "retrieved_at": "2026-11-17T03:46:36.155201+00:00",
+        "source_sha256": "510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814",
+        "chunk_id": "f52a86dc11ad0087b5229e23"
+      },
+      {
+        "id": "E21",
+        "source_id": "https://arxiv.org/abs/2610.35193",
+        "title": "[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+        "text": "and Effective Oversight. This analysis covers improvement diagnosis, proposal generation, proposal evaluation, and update implementation (S1--S4), including the recursive application of these stages to improvement mechanisms (RI). We review risks, safeguards, and evaluation evidence for individual updates, effects inherited by successor systems, and revisions to improvement mechanisms, while distinguishing direct RSI findings from evidence in related systems. Finally, we examine evaluation settings, identify requirements for independent and longitudinal assessment, and discuss applications and open research problems.\nSubjects:\nArtificial Intelligence (cs.AI)\n; Cryptography and Security (cs.CR)\nCite as:\narXiv:2610.35193\n[cs.AI]\n(or\narXiv:2610.35193v1\n[cs.AI]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2610.35193\nFocus to learn more\narXiv-issued DOI via DataCite (pending registration)\nSubmission history\nFrom: Jiayue Pu [\nview email\n]\n[v1]\nMon, 26 Oct 2026 10:46:03 UTC (18,922 KB)\n",
+        "url": "https://arxiv.org/abs/2610.35193",
+        "location": {
+          "start_char": 1992,
+          "end_char": 2990
+        },
+        "retrieved_at": "2026-11-17T03:46:36.155201+00:00",
+        "source_sha256": "510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814",
+        "chunk_id": "5951b8e5c8582a3e352b5df3"
+      },
+      {
+        "id": "E22",
+        "source_id": "https://arxiv.org/abs/2610.35193",
+        "title": "[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+        "text": "Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv ",
+        "url": "https://arxiv.org/abs/2610.35193",
+        "location": {
+          "start_char": 3989,
+          "end_char": 4987
+        },
+        "retrieved_at": "2026-11-17T03:46:36.155201+00:00",
+        "source_sha256": "510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814",
+        "chunk_id": "b226c7b663be067036a9f9af"
+      },
+      {
+        "id": "E23",
+        "source_id": "https://arxiv.org/abs/2610.35193",
+        "title": "[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+        "text": "is committed to these values and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "url": "https://arxiv.org/abs/2610.35193",
+        "location": {
+          "start_char": 4987,
+          "end_char": 5246
+        },
+        "retrieved_at": "2026-11-17T03:46:36.155201+00:00",
+        "source_sha256": "510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814",
+        "chunk_id": "4e9dc1efc04664b8f169dbcb"
+      }
+    ],
+    "unresolved": [
+      "证据中未出现 STOP、Gödel Agent、Darwin Gödel Machine、AlphaEvolve、SEAL、Self-Rewarding 等具体 RSI 系统的名称、主要贡献或来源链接，因此无法列出这些条目。",
+      "未检索到除 RSIGym 论文外其他使用或定义 RSI-Index 的工作。"
+    ],
+    "subquestions": [
+      "What are the key named RSI systems/methods (STOP, Gödel Agent, Darwin Gödel Machine, AlphaEvolve, SEAL, Self-Rewarding) with contributions and links?",
+      "How to clearly distinguish RSI-Index/RSIGym from general RSI research?"
+    ],
+    "evidence_requirements": [
+      "Named RSI systems with contributions and arXiv/URL links",
+      "Confirmation of RSI-Index definition as RSIGym metric"
+    ],
+    "trace": [
+      {
+        "step": 1,
+        "round": 1,
+        "tool": "search_web",
+        "args": {
+          "query": "RSI-Index RSIGym recursive self-improvement benchmark"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "search_attempts": [
+          {
+            "provider": "ddgs_auto",
+            "status": "empty_or_unavailable",
+            "elapsed_seconds": 5.578,
+            "results": 0,
+            "error": "No parseable results; provider blocking or parser changes can also cause this."
+          },
+          {
+            "provider": "arxiv_search",
+            "status": "completed",
+            "elapsed_seconds": 8.547,
+            "results": 1
+          }
+        ],
+        "search_provider": "arxiv_search",
+        "search_scope": "arXiv scholarly papers; not a general web index",
+        "evidence_ids": [],
+        "result_count": 1,
+        "elapsed_ms": 14125
+      },
+      {
+        "step": 2,
+        "round": 1,
+        "tool": "search_web",
+        "args": {
+          "query": "recursive self-improvement AI papers survey"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "search_attempts": [
+          {
+            "provider": "ddgs_auto",
+            "status": "completed",
+            "elapsed_seconds": 5.735,
+            "results": 5
+          }
+        ],
+        "search_provider": "ddgs_auto",
+        "search_scope": "general web metasearch",
+        "evidence_ids": [],
+        "result_count": 5,
+        "elapsed_ms": 5735
+      },
+      {
+        "step": 3,
+        "round": 2,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2610.10310"
+          ],
+          "query": "RSIGym RSI-Index paper: authors, contributions, definition of RSI-Index, benchmarks, results"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ],
+        "result_count": 5,
+        "elapsed_ms": 843
+      },
+      {
+        "step": 4,
+        "round": 2,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://lee1003-lee.github.io/Awesome-RSI-Research/"
+          ],
+          "query": "List of recursive self-improvement papers/projects with names, contributions, and links"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10",
+          "E11"
+        ],
+        "result_count": 6,
+        "elapsed_ms": 547
+      },
+      {
+        "step": 5,
+        "round": 3,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2607.07663"
+          ],
+          "query": "List representative recursive self-improvement works/methods named in this survey (e.g., STOP, Gödel Agent, Darwin Gödel Machine, AlphaEvolve, self-rewarding, SEAL), their contributions, and the four evolution targets taxonomy"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E12",
+          "E13",
+          "E14",
+          "E15",
+          "E16",
+          "E17"
+        ],
+        "result_count": 6,
+        "elapsed_ms": 391
+      },
+      {
+        "step": 6,
+        "round": 3,
+        "tool": "search_web",
+        "args": {
+          "query": "Darwin Gödel Machine self-improving agent paper arxiv"
+        },
+        "attempt": 1,
+        "status": "failed",
+        "error": "Web search found no usable results from the configured providers (ddgs_auto=empty_or_unavailable; arxiv_search=no_results). This does not establish that no relevant work exists. The fallback covers arXiv papers only.",
+        "search_attempts": [
+          {
+            "provider": "ddgs_auto",
+            "status": "empty_or_unavailable",
+            "elapsed_seconds": 4.609,
+            "results": 0,
+            "error": "No parseable results; provider blocking or parser changes can also cause this."
+          },
+          {
+            "provider": "arxiv_search",
+            "status": "no_results",
+            "elapsed_seconds": 1.219,
+            "results": 0
+          }
+        ],
+        "elapsed_ms": 5828
+      },
+      {
+        "step": 7,
+        "round": 4,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2607.07663"
+          ],
+          "query": "List the specific named recursive self-improvement methods/systems cited as representative works (e.g., STOP, Gödel Agent, Darwin Gödel Machine, AlphaEvolve, Self-Rewarding Language Models, SEAL, Voyager, Reflexion, self-refine) with their contributions and any arXiv IDs or links mentioned"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E13",
+          "E12",
+          "E15",
+          "E14",
+          "E16",
+          "E17"
+        ],
+        "result_count": 6,
+        "elapsed_ms": 406
+      },
+      {
+        "step": 8,
+        "round": 5,
+        "tool": "search_web",
+        "args": {
+          "query": "Darwin Gödel Machine self-improving agent arXiv 2505"
+        },
+        "attempt": 1,
+        "status": "failed",
+        "error": "Web search found no usable results from the configured providers (ddgs_auto=empty_or_unavailable; arxiv_search=no_results). This does not establish that no relevant work exists. The fallback covers arXiv papers only.",
+        "search_attempts": [
+          {
+            "provider": "ddgs_auto",
+            "status": "empty_or_unavailable",
+            "elapsed_seconds": 5.906,
+            "results": 0,
+            "error": "No parseable results; provider blocking or parser changes can also cause this."
+          },
+          {
+            "provider": "arxiv_search",
+            "status": "no_results",
+            "elapsed_seconds": 1.329,
+            "results": 0
+          }
+        ],
+        "elapsed_ms": 7235
+      },
+      {
+        "step": 9,
+        "round": 5,
+        "tool": "search_web",
+        "args": {
+          "query": "AlphaEvolve DeepMind evolutionary coding agent paper"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "search_attempts": [
+          {
+            "provider": "ddgs_auto",
+            "status": "empty_or_unavailable",
+            "elapsed_seconds": 5.812,
+            "results": 0,
+            "error": "No parseable results; provider blocking or parser changes can also cause this."
+          },
+          {
+            "provider": "arxiv_search",
+            "status": "completed",
+            "elapsed_seconds": 1.266,
+            "results": 1
+          }
+        ],
+        "search_provider": "arxiv_search",
+        "search_scope": "arXiv scholarly papers; not a general web index",
+        "evidence_ids": [],
+        "result_count": 1,
+        "elapsed_ms": 7078
+      },
+      {
+        "step": 10,
+        "round": 6,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2610.35193"
+          ],
+          "query": "List named recursive self-improvement systems/methods cited (e.g., STOP, Gödel Agent, Darwin Gödel Machine, AlphaEvolve, SEAL, Self-Rewarding Language Models) with their contributions and any arXiv IDs or links; also note how RSI-Index or RSIGym is referenced if at all"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E18",
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E23"
+        ],
+        "result_count": 6,
+        "elapsed_ms": 407
+      }
+    ],
+    "model_calls": [
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 1915,
+        "output_tokens": 200,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.0
+      },
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 3241,
+        "output_tokens": 250,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.11
+      },
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 7726,
+        "output_tokens": 259,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.266
+      },
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 10447,
+        "output_tokens": 244,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.172
+      },
+      {
+        "stage": "draft",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 7677,
+        "output_tokens": 1242,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 6.625
+      },
+      {
+        "stage": "verify",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 8222,
+        "output_tokens": 1544,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 6.407
+      },
+      {
+        "stage": "repair_plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 11987,
+        "output_tokens": 264,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.312
+      },
+      {
+        "stage": "repair_plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 12637,
+        "output_tokens": 211,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.14
+      },
+      {
+        "stage": "draft",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 10114,
+        "output_tokens": 1171,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 5.828
+      },
+      {
+        "stage": "verify",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 10752,
+        "output_tokens": 1355,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 5.438
+      }
+    ],
+    "usage": {
+      "calls": 10,
+      "input_tokens": 84718,
+      "output_tokens": 6740,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "estimated_cost_usd": null,
+      "pricing_date": null,
+      "cost_note": "Token counts include all received usage; failed requests without usage remain unknown. No tariff configured."
+    },
+    "elapsed_seconds": 79.938,
+    "stop_reason": "no_new_evidence",
+    "rounds": 6,
+    "tool_calls": 10,
+    "repair_rounds": 2,
+    "configuration": {
+      "model": "deepseek-flash",
+      "temperature": 0,
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "thinking": "disabled for official DeepSeek API",
+      "structured_output": "json_object",
+      "limits": {
+        "decision_rounds": 6,
+        "tool_calls": 12,
+        "repair_rounds": 2,
+        "elapsed_seconds": 240,
+        "model_calls": 16,
+        "retrieval_top_k": 6,
+        "max_claims": 8,
+        "max_evidence": 30,
+        "final_answer_tokens": 1800
+      },
+      "allow_web": true,
+      "upstream_commit": "ae229ca894c0b80ad84664afcfdde523b5e87057"
+    },
+    "source_snapshots": {
+      "https://arxiv.org/abs/2610.10310": {
+        "text": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Machine Learning\narXiv:2610.10310\n(cs)\n[Submitted on 7 Oct 2026]\nTitle:\nRSIGym: A Flexible Environment for Recursive Self-Improvement\nAuthors:\nFanqing Meng\n,\nLingxiao Du\n,\nHaocheng Lu\n,\nQiguang Chen\n,\nZiqi Zhao\n,\nZijian Wu\n,\nJiayuan Zhuo\n,\nMengkang Hu\n,\nMichael Qizhe Shieh\nView a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\nView PDF\nHTML (experimental)\nAbstract:\nRecursive self-improvement requires carrying accepted changes into later improvement cycles, while studying agent-proposed changes also requires substantial research infrastructure. Existing settings often leave agents to rebuild routine infrastructure or restrict exploration to individual components. We introduce RSIGym, an agent-native research environment based on Everything as a Service (EaaS). RSIGym exposes training, inference, rollout, evaluation, and sandbox execution through reusable services, with shared budget and permission controls supporting Data, Harness, and Joint improvement tracks. This design enables agents to investigate individual interventions and jointly optimize data, training settings, and execution harnesses within the same environment. We define RSI-Index as the mean fraction of the remaining performance gap closed across five benchmarks covering software engineering, terminal interaction, mathematics, scientific reasoning, and skill-based tasks. Comparing six frontier research models in independent Joint runs, Opus 5 achieves the highest RSI-Index of 0.4809 under a $500 platform-service budget per benchmark run. Its selected systems improve all five benchmarks, raising SWE-bench Verified from 17.67% to 50.33% and AIME from 31.67% to 97.78%. Additional experiments examine DSH-harness refinement, budget variation, and restricted network access, while recorded trajectories reveal how agents diagnose failures and select candidates. We open-source the full RSIGym codebase and results to support reproducibility and further research.\nSubjects:\nMachine Learning (cs.LG)\nCite as:\narXiv:2610.10310\n[cs.LG]\n(or\narXiv:2610.10310v1\n[cs.LG]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2610.10310\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Fanqing Meng [\nview email\n]\n[v1]\nWed, 7 Oct 2026 16:05:15 UTC (96 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nAdditional Features\nAudio Summary\nCurrent browse context:\ncs.LG\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2026-10\nChange to browse by:\ncs\nReferences & Citations\nSciX\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nIArxiv recommender toggle\nIArxiv Recommender\n(\nWhat is IArxiv?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73"
+      },
+      "https://lee1003-lee.github.io/Awesome-RSI-Research/": {
+        "text": "Towards AI That Improves Itself | RSI Survey\nSurvey paper\nTowards AI That Improves Itself\nA Survey of Recursive Self-Improvement\nHanjing Li, Qiguang Chen, Chenyuan Zhang, Qionglin Qiu, Fanqing Meng,\n            Mengkang Hu, Libo Qin, Min Zhang\nHarbin Institute of Technology (Shenzhen)\nUniversity of Hong Kong\nNational University of Singapore\nShanghai Innovation Institute\nRead PDF\nRSI moves from local revision toward persistent improvement loops across behavior,\n            agent systems, models, data, and research processes.\n3-stage loop\nProposal -> Feedback -> Optimization\n4 evolution targets\nBehavior, agents, model/data, research\n7 frontier dimensions\nReliability through generalization\nAbstract\nFrom single-step revision to verifiable improvement loops\nRecent advances in agentic systems allow AI systems to conduct experiments,\n          interpret feedback, and modify their own workflows, transforming Recursive\n          Self-Improvement from a theoretical concept into an engineering problem.\n          Yet the field still lacks a unified account of what constitutes RSI and\n          how its improvement loop should be evaluated.\nThis survey defines RSI boundaries, distinguishes four stages (evolution,\n          self-evolution, meta-evolution, and recursive self-improvement) and anchors\n          recursion in state inheritance: an accepted improvement\n          from one cycle becomes the starting state of a later cycle, while\n          “recursive progress” is reserved for the stronger claim that\n          the inherited state also improves the improver. It introduces a common\n          Proposal → Feedback → Optimization loop, organizes methods\n          across four evolution targets, and identifies research gaps around\n          evidence-based acceptance, reuse across cycles, and transfer beyond the\n          tasks or evaluators that produced the gains.\nDefinition\nA common loop for modern RSI systems\nRSI is anchored in state inheritance: an improvement accepted in one\n              cycle is retained as the starting state of a later cycle. Recursive\n              progress (the stronger claim that the inherited state also\n              improves the improver) is treated separately.\nProposal\nSelect an editable target and generate a candidate change through\n                  prompting, search, evolution, program synthesis, training, or experimentation.\nTarget selection identifies what the loop is allowed to change.\nCandidate generation creates concrete artifacts such as prompts, tools, memory, code, data, or checkpoints.\nFeedback\nExpose consequences in a repository, simulator, benchmark, training run,\n                  or live environment, then convert outcomes into evidence.\nExecution environments reveal behavioral effects of a candidate.\nVerification signals judge the evidence through tests, rewards, model judges, formal checks, or review.\nOptimization\nRetain, revise, reject, promote, or roll back the candidate while preserving\n                  memory, provenance, versioning, and validation evidence.\nUpdate policies decide whether an apparent gain should persist.\nMemory and lineage determine whether later cycles can reuse or audit the change.\nSystem Structure\nWhat changes, how it is tested, and what persists\nAcross the systems we survey, the same anatomy recurs: a target is\n            edited, the edit is exposed to an environment that produces evidence,\n            and a decision layer retains or discards it. Six components organize\n            these concerns into three stages: what can be modified, how it is\n            tested, and what persists.\nProposal\nChoose what to change, then generate a candidate through prompting, search, evolution, synthesis, or training.\nFeedback\nRun the change and turn its consequences into evidence via reference, rubric, and judge.\nOptimization\nDecide what persists and what is saved, tracked, and reused across cycles.\nTaxonomy\nFour targets of RSI-related evolution\nThe four targets form a progression by persistence: behavior-level\n            gains last for a single trajectory, agent-level changes outlive the\n            current run, model-and-data changes transfer across tasks, and\n            research-process evolution aims to improve the loop that produces\n            improvements itself.\nBehavior Evolution\nOutput self-refine, test-time evolution, and state optimization improve\n                behavior around the current task or trajectory.\nOutput self-refine\nTest-time evolution\nState optimization\nAgent-System Evolution\nWorkflow, memory, code rewriting, and harness evolution change the machinery\n                that produces future agent behavior.\nWorkflow evolution\nMemory evolution\nCode rewriting and harness evolution\nModel and Data Evolution\nSynthetic data, meta-rewarding, post-training, and self-play alter the\n                learning signal or model parameters themselves.\nSynthetic data\nMeta-rewarding and post-training\nSelf-play evolution\nResearch-Process Evolution\nScientific operation agents, AI4AI, MLE, and end-to-end AI scientist systems\n                automate the research loop around AI improvement.\nScientific operation agents\nAI4AI and MLE\nEnd-to-end AI scientist systems\nAn evidence ladder: from local repair to compounding\nSelf-improvement claims differ in strength, and the ladder orders\n            them by the evidence each one needs.\nLocal repair\nfixes the current output and stops there;\npersistent\n            transfer\nmakes a change outlive the current run and help\n            later instances;\nrecursive inheritance\n(the\n            minimal RSI claim) makes an accepted improvement the starting\n            state of a later cycle; and\nrecursive progress\nfurther shows that the inherited state improves the improver itself.\nCausal attribution\nsupplies the supporting evidence\n            (a counterfactual control against a frozen or no-retention\n            baseline) that a retained intervention, not an unrelated\n            confound, produced the gain;\ncompounding\nis the\n            claim that recursive-progress gains repeat across cycles.\nFuture Directions\nAn evidence-oriented evaluation profile\nThe seven properties below form a single evidence-oriented evaluation\n              profile rather than seven independent capabilities. The organizing test\n              is acceptance, reuse, and transfer: an accepted change must be credible,\n              usable in later cycles, and helpful beyond the evaluator that admitted it.\nReliability\nDoes the change improve the intended capability, not just the measured score?\nFalse positives can be written into memory, skills, or release pipelines; evaluations should report exploit resistance, calibration, trajectory integrity, and held-out transfer.\nEfficiency\nCan the loop improve within finite compute, time, and review budgets?\nRSI needs cost frontiers: gains should be measured against compute, wall-clock time, failed attempts, deployment cost, and review burden.\nDiversity\nDo proposals cover meaningfully different hypotheses and execution paths?\nDiversity is about causal independence, not just different wording; systems should preserve disagreement, branch distance, and failure coverage.\nPersistence\nDoes a successful intervention remain available and useful later?\nRetained artifacts need provenance, scope conditions, retirement criteria, and evidence that they contribute downstream rather than drifting into noise.\nAdaptability\nCan the system respond to changing tasks, tools, evaluators, and environments?\nThe key split is frozen evidence for comparison versus adaptive evidence for discovering new weaknesses as the environment changes.\nControllability\nAre authority, review, monitoring, and rollback coupled to risk?\nUpdate authority should track target scope, verifier strength, deployment context, and failure severity, with intervention points preserved across the loop.\nGeneralization\nDoes the improvement transfer beyond its original task and evaluator?\nThe strongest claim is transfer of the improvement procedure itself: later generations should search, evaluate, or optimize better because of what was retained.\nRecursive self-improvement has moved from theory to engineering practice;\n          the remaining challenge is to make its gains credible, reusable, and\n          transferable beyond the tasks and evaluators that produced them.\nClose",
+        "sha256": "01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663"
+      },
+      "https://arxiv.org/abs/2607.07663": {
+        "text": "[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Artificial Intelligence\narXiv:2607.07663\n(cs)\n[Submitted on 8 Jul 2026 (\nv1\n), last revised 6 Sep 2026 (this version, v2)]\nTitle:\nRecursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\nAuthors:\nMingguang Chen\n,\nLicheng Wang\n,\nBo Qu\nView a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\nView PDF\nHTML (experimental)\nAbstract:\nAI systems increasingly participate in their own improvement: revising their outputs, adapting their harnesses during deployment, training on data they generate, and conducting AI research itself. This literature uses a vocabulary (\"self-refine,\" \"self-reward,\" \"self-play,\" \"self-evolve\") that conflates fundamentally different ambitions. We survey 1,250 arXiv papers (2024-2026) along two axes: what the system improves -- its behavior in deployment, its policy through training, its evaluator, or the research process itself -- and the degree of loop closure (human-in-the-loop to fully closed). The taxonomy separates bounded self-refinement -- convergent, evaluable, and industrial practice -- from open-ended recursive self-improvement (RSI), which remains bounded by grounding requirements, collapse dynamics, and compute constraints on every measured axis. Its distinctive feature is a dedicated category for self-evaluation: every improvement loop is a claim that some signal can substitute for human judgment. We survey the evaluator design space -- judges, process reward models, verifiers, rubrics, meta-evaluation -- order the signals into a verification hierarchy from formal verifiers (strongest) to intrinsic self-assessment (weakest), and observe that demonstrated self-improvement strength tracks this hierarchy, that its failure modes (self-confirming loops, model and diversity collapse) follow from its violations, and that the \"research direction-setting\" bottleneck keeping humans in the loop divides into a verification problem the hierarchy indexes and a prior one -- choosing what deserves evaluation at all -- that it does not. We connect the literature to the theory of RSI limits and to the safety and governance questions raised by frontier-lab accounts of closing the loop, and identify governance-grade measurement of self-improvement as the field's most underpopulated niche.\nComments:\n44 pages, 6 figures\nSubjects:\nArtificial Intelligence (cs.AI)\nCite as:\narXiv:2607.07663\n[cs.AI]\n(or\narXiv:2607.07663v2\n[cs.AI]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2607.07663\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Mingguang Chen [\nview email\n]\n[v1]\nWed, 8 Jul 2026 17:19:50 UTC (5,164 KB)\n[v2]\nSun, 6 Sep 2026 11:44:06 UTC (5,189 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nAdditional Features\nAudio Summary\nCurrent browse context:\ncs.AI\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2026-07\nChange to browse by:\ncs\nReferences & Citations\nSciX\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "sha256": "2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65"
+      },
+      "https://arxiv.org/abs/2610.35193": {
+        "text": "[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Artificial Intelligence\narXiv:2610.35193\n(cs)\n[Submitted on 26 Oct 2026]\nTitle:\nTrustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\nAuthors:\nJiayue Pu\n,\nAng Gao\n,\nJinyi Bai\n,\nQipeng Wang\n,\nTongyu Wen\n,\nJiahao Zhao\n,\nKeyu Qu\n,\nJunhao Zhang\n,\nChenglei Shen\n,\nZhongxiang Sun\n,\nJun Xu\n,\nXiao Zhang\nView a PDF of the paper titled Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges, by Jiayue Pu and 11 other authors\nView PDF\nHTML (experimental)\nAbstract:\nAI systems built around large models increasingly use experience and feedback to make persistent changes to models, prompts, memories, tools, and workflows. Recursive self-improvement (RSI) extends this process to inductive biases and to the mechanisms that govern future updates, which can themselves be revised and reused across improvement cycles. Yet self-modification alone does not guarantee trustworthy improvement. Reported gains may reflect flawed evaluations, previously acquired capabilities may deteriorate, and compliance with behavioral constraints may weaken. Compromised artifacts or sensitive information may also persist in successor systems. Changes to improvement mechanisms may invalidate earlier verification results and make human oversight less effective. This survey presents an operational definition and process framework for RSI and organizes the requirements for trustworthy RSI into four interconnected themes: genuine and sustained improvement; behavioral constraints, alignment, and fairness; system security and privacy; and transparency and controllability. We examine these themes from three perspectives: Improvement Validity, Constraint Preservation, and Effective Oversight. This analysis covers improvement diagnosis, proposal generation, proposal evaluation, and update implementation (S1--S4), including the recursive application of these stages to improvement mechanisms (RI). We review risks, safeguards, and evaluation evidence for individual updates, effects inherited by successor systems, and revisions to improvement mechanisms, while distinguishing direct RSI findings from evidence in related systems. Finally, we examine evaluation settings, identify requirements for independent and longitudinal assessment, and discuss applications and open research problems.\nSubjects:\nArtificial Intelligence (cs.AI)\n; Cryptography and Security (cs.CR)\nCite as:\narXiv:2610.35193\n[cs.AI]\n(or\narXiv:2610.35193v1\n[cs.AI]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2610.35193\nFocus to learn more\narXiv-issued DOI via DataCite (pending registration)\nSubmission history\nFrom: Jiayue Pu [\nview email\n]\n[v1]\nMon, 26 Oct 2026 10:46:03 UTC (18,922 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges, by Jiayue Pu and 11 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nAdditional Features\nAudio Summary\nCurrent browse context:\ncs.AI\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2026-10\nChange to browse by:\ncs\ncs.CR\nReferences & Citations\nSciX\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "sha256": "510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814"
+      }
+    },
+    "khoj_iteration_history": [
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_1",
+            "type": "function",
+            "function": {
+              "name": "search_web",
+              "arguments": "{\"query\": \"RSI-Index RSIGym recursive self-improvement benchmark\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_1",
+        "content": "[{\"title\": \"RSIGym : A Flexible Environment for Recursive Self - Improvement\", \"url\": \"https://arxiv.org/abs/2610.10310\", \"snippet\": \"Recursive self - improvement requires carrying accepted changes into later improvement cycles, while studying agent-proposed changes also requires substantial research infrastructure. Existing settings often leave agents to rebuild routine infrastructure or restrict exploration to individual components. We introduce RSIGym , an agent-native research environment based on Everything as a Service (EaaS). RSIGym exposes training, inference, rollout, evaluation, and sandbox execution through reusable services, with shared budget and permission controls supporting Data, Harness, and Joint improvement tracks. This design enables agents to investigate individual interventions and jointly optimize data, training settings, and execution harnesses within the same environment. We define RSI - Index as the mean fraction of the remaining performance gap closed across five benchmarks covering software engineering, terminal interaction, mathematics, scientific reasoning, and skill-based tasks. Comparing six frontier research models in independent Joint runs, Opus 5 achieves the highest RSI - Index of 0.4809 under a $500 platform-service budget per benchmark run. Its selected systems improve all five benchmarks , raising SWE-bench Verified from 17.67% to 50.33% and AIME from 31.67% to 97.78%. Additional experiments examine DSH-harness refinement, budget variation, and restricted network access, while recorded trajectories reveal how agents diagnose failures and select candidates. We open-source the full RSIGym codebase and results to support reproducibility and further research.\", \"citable\": false, \"provider\": \"arxiv_search\", \"provider_scope\": \"arXiv scholarly papers; not a general web index\", \"search_query\": \"RSI-Index RSIGym recursive self-improvement benchmark\", \"search_attempts\": [{\"provider\": \"ddgs_auto\", \"status\": \"empty_or_unavailable\", \"elapsed_seconds\": 5.578, \"results\": 0, \"error\": \"No parseable results; provider blocking or parser changes can also cause this.\"}, {\"provider\": \"arxiv_search\", \"status\": \"completed\", \"elapsed_seconds\": 8.547, \"results\": 1}]}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_2",
+            "type": "function",
+            "function": {
+              "name": "search_web",
+              "arguments": "{\"query\": \"recursive self-improvement AI papers survey\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_2",
+        "content": "[{\"title\": \"Recursive Self-Improvement in AI: From Bounded Self ...\", \"url\": \"https://arxiv.org/abs/2607.07663\", \"snippet\": \"Jul 8, 2026 · We survey 1,250 arXiv papers (2024-2026) along two axes: what the system improves -- its behavior in deployment, its policy through training, its evaluator, or the research process itself -- and the degree of loop closure (human-in-the-loop to fully closed).\", \"citable\": false, \"provider\": \"ddgs_auto\", \"provider_scope\": \"general web metasearch\", \"search_query\": \"recursive self-improvement AI papers survey\", \"search_attempts\": [{\"provider\": \"ddgs_auto\", \"status\": \"completed\", \"elapsed_seconds\": 5.735, \"results\": 5}]}, {\"title\": \"[2610.35193] Trustworthy Recursive Self-Improvement in the ...\", \"url\": \"https://arxiv.org/abs/2610.35193\", \"snippet\": \"Oct 26, 2026 · We review risks, safeguards, and evaluation evidence for individual updates, effects inherited by successor systems, and revisions to improvement mechanisms, while distinguishing direct RSI findings from evidence in related systems.\", \"citable\": false, \"provider\": \"ddgs_auto\", \"provider_scope\": \"general web metasearch\", \"search_query\": \"recursive self-improvement AI papers survey\"}, {\"title\": \"Autonomous AI agents and recursive self-improvement: a ...\", \"url\": \"https://link.springer.com/article/10.1007/s10586-026-06537-4\", \"snippet\": \"Sep 18, 2026 · Autonomous artificial intelligence agents capable of reasoning, planning, tool use, and self-improvement mark a rapidly advancing frontier of AI research, yet no unified framework has systematically examined the intersections of their core paradigms. This systematic review examines 249 papers, spanning large language model-based agents, recursive self-improvement, multi-agent coordination, and ...\", \"citable\": false, \"provider\": \"ddgs_auto\", \"provider_scope\": \"general web metasearch\", \"search_query\": \"recursive self-improvement AI papers survey\"}, {\"title\": \"Towards AI That Improves Itself | RSI Survey\", \"url\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"snippet\": \"Project page for Towards AI That Improves Itself: A Survey of Recursive Self-Improvement.\", \"citable\": false, \"provider\": \"ddgs_auto\", \"provider_scope\": \"general web metasearch\", \"search_query\": \"recursive self-improvement AI papers survey\"}, {\"title\": \"Towards AI That Improves Itself: A Survey of Recursive Self ...\", \"url\": \"https://openreview.net/pdf/31dec7fbd91569b094bab29e73f62a44cf28094c.pdf\", \"snippet\": \"In this survey, we distinguish four stages of self-improvement: evolution, self-evolution, meta-evolution, and recursive self-improvement (RSI).\", \"citable\": false, \"provider\": \"ddgs_auto\", \"provider_scope\": \"general web metasearch\", \"search_query\": \"recursive self-improvement AI papers survey\"}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_3",
+            "type": "function",
+            "function": {
+              "name": "read_webpage",
+              "arguments": "{\"urls\": [\"https://arxiv.org/abs/2610.10310\"], \"query\": \"RSIGym RSI-Index paper: authors, contributions, definition of RSI-Index, benchmarks, results\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_3",
+        "content": "[{\"id\": \"E1\", \"source_id\": \"https://arxiv.org/abs/2610.10310\", \"title\": \"[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\", \"text\": \"Service (EaaS). RSIGym exposes training, inference, rollout, evaluation, and sandbox execution through reusable services, with shared budget and permission controls supporting Data, Harness, and Joint improvement tracks. This design enables agents to investigate individual interventions and jointly optimize data, training settings, and execution harnesses within the same environment. We define RSI-Index as the mean fraction of the remaining performance gap closed across five benchmarks covering software engineering, terminal interaction, mathematics, scientific reasoning, and skill-based tasks. Comparing six frontier research models in independent Joint runs, Opus 5 achieves the highest RSI-Index of 0.4809 under a $500 platform-service budget per benchmark run. Its selected systems improve all five benchmarks, raising SWE-bench Verified from 17.67% to 50.33% and AIME from 31.67% to 97.78%. Additional experiments examine DSH-harness refinement, budget variation, and restricted network \", \"url\": \"https://arxiv.org/abs/2610.10310\", \"location\": {\"start_char\": 997, \"end_char\": 1996}, \"retrieved_at\": \"2026-11-17T03:45:52.327729+00:00\", \"source_sha256\": \"2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73\", \"chunk_id\": \"8460b2e5f286189fdd34734c\"}, {\"id\": \"E2\", \"source_id\": \"https://arxiv.org/abs/2610.10310\", \"title\": \"[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\", \"text\": \"access, while recorded trajectories reveal how agents diagnose failures and select candidates. We open-source the full RSIGym codebase and results to support reproducibility and further research.\\nSubjects:\\nMachine Learning (cs.LG)\\nCite as:\\narXiv:2610.10310\\n[cs.LG]\\n(or\\narXiv:2610.10310v1\\n[cs.LG]\\nfor this version)\\nhttps://doi.org/10.48550/arXiv.2610.10310\\nFocus to learn more\\narXiv-issued DOI via DataCite\\nSubmission history\\nFrom: Fanqing Meng [\\nview email\\n]\\n[v1]\\nWed, 7 Oct 2026 16:05:15 UTC (96 KB)\\nFull-text links:\\nAccess Paper:\\nView a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\\nView PDF\\nHTML (experimental)\\nTeX Source\\nview license\\nAdditional Features\\nAudio Summary\\nCurrent browse context:\\ncs.LG\\n< prev\\n|\\nnext >\\nnew\\n|\\nrecent\\n|\\n2026-10\\nChange to browse by:\\ncs\\nReferences & Citations\\nSciX\\nGoogle Scholar\\nSemantic Scholar\\nexport BibTeX citation\\nLoading...\\nBibTeX formatted citation\\n×\\nloading...\\nData provided by:\\n\", \"url\": \"https://arxiv.org/abs/2610.10310\", \"location\": {\"start_char\": 1996, \"end_char\": 2989}, \"retrieved_at\": \"2026-11-17T03:45:52.327729+00:00\", \"source_sha256\": \"2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73\", \"chunk_id\": \"ca43ec4dae29085bce68d963\"}, {\"id\": \"E3\", \"source_id\": \"https://arxiv.org/abs/2610.10310\", \"title\": \"[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\", \"text\": \"[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\\nSkip to main content\\nSearch arXiv\\nPress Enter to search ·\\nAdvanced search\\nComputer Science > Machine Learning\\narXiv:2610.10310\\n(cs)\\n[Submitted on 7 Oct 2026]\\nTitle:\\nRSIGym: A Flexible Environment for Recursive Self-Improvement\\nAuthors:\\nFanqing Meng\\n,\\nLingxiao Du\\n,\\nHaocheng Lu\\n,\\nQiguang Chen\\n,\\nZiqi Zhao\\n,\\nZijian Wu\\n,\\nJiayuan Zhuo\\n,\\nMengkang Hu\\n,\\nMichael Qizhe Shieh\\nView a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\\nView PDF\\nHTML (experimental)\\nAbstract:\\nRecursive self-improvement requires carrying accepted changes into later improvement cycles, while studying agent-proposed changes also requires substantial research infrastructure. Existing settings often leave agents to rebuild routine infrastructure or restrict exploration to individual components. We introduce RSIGym, an agent-native research environment based on Everything as a \", \"url\": \"https://arxiv.org/abs/2610.10310\", \"location\": {\"start_char\": 0, \"end_char\": 997}, \"retrieved_at\": \"2026-11-17T03:45:52.327729+00:00\", \"source_sha256\": \"2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73\", \"chunk_id\": \"3f734209cd10060a66e0a51b\"}, {\"id\": \"E4\", \"source_id\": \"https://arxiv.org/abs/2610.10310\", \"title\": \"[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\", \"text\": \"Core recommender toggle\\nCORE Recommender\\n(\\nWhat is CORE?\\n)\\nIArxiv recommender toggle\\nIArxiv Recommender\\n(\\nWhat is IArxiv?\\n)\\nAuthor\\nVenue\\nInstitution\\nTopic\\nAbout arXivLabs\\narXivLabs: experimental projects with community collaborators\\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\\nHave an idea for a project that will add value for arXiv's community?\\nLearn more about arXivLabs\\n.\\nWhich authors of this paper are endorsers?\\n|\\nDisable MathJax\\n(\\nWhat is MathJax?\\n)\", \"url\": \"https://arxiv.org/abs/2610.10310\", \"location\": {\"start_char\": 3988, \"end_char\": 4759}, \"retrieved_at\": \"2026-11-17T03:45:52.327729+00:00\", \"source_sha256\": \"2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73\", \"chunk_id\": \"0be3fbc351bcb41ecf0a1c3c\"}, {\"id\": \"E5\", \"source_id\": \"https://arxiv.org/abs/2610.10310\", \"title\": \"[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\", \"text\": \"Bookmark\\nBibliographic Tools\\nBibliographic and Citation Tools\\nBibliographic Explorer Toggle\\nBibliographic Explorer\\n(\\nWhat is the Explorer?\\n)\\nConnected Papers Toggle\\nConnected Papers\\n(\\nWhat is Connected Papers?\\n)\\nLitmaps Toggle\\nLitmaps\\n(\\nWhat is Litmaps?\\n)\\nscite.ai Toggle\\nscite Smart Citations\\n(\\nWhat are Smart Citations?\\n)\\nCode, Data, Media\\nCode, Data and Media Associated with this Article\\nalphaXiv Toggle\\nalphaXiv\\n(\\nWhat is alphaXiv?\\n)\\nLinks to Code Toggle\\nCatalyzeX Code Finder for Papers\\n(\\nWhat is CatalyzeX?\\n)\\nDagsHub Toggle\\nDagsHub\\n(\\nWhat is DagsHub?\\n)\\nGotitPub Toggle\\nGotit.pub\\n(\\nWhat is GotitPub?\\n)\\nHuggingface Toggle\\nHugging Face\\n(\\nWhat is Huggingface?\\n)\\nScienceCast Toggle\\nScienceCast\\n(\\nWhat is ScienceCast?\\n)\\nDemos\\nDemos\\nReplicate Toggle\\nReplicate\\n(\\nWhat is Replicate?\\n)\\nSpaces Toggle\\nHugging Face Spaces\\n(\\nWhat is Spaces?\\n)\\nSpaces Toggle\\nTXYZ.AI\\n(\\nWhat is TXYZ.AI?\\n)\\nRelated Papers\\nRecommenders and Search Tools\\nLink to Influence Flower\\nInfluence Flower\\n(\\nWhat are Influence Flowers?\\n)\\n\", \"url\": \"https://arxiv.org/abs/2610.10310\", \"location\": {\"start_char\": 2989, \"end_char\": 3988}, \"retrieved_at\": \"2026-11-17T03:45:52.327729+00:00\", \"source_sha256\": \"2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73\", \"chunk_id\": \"3e065bc8c6d5e366779376ee\"}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_4",
+            "type": "function",
+            "function": {
+              "name": "read_webpage",
+              "arguments": "{\"urls\": [\"https://lee1003-lee.github.io/Awesome-RSI-Research/\"], \"query\": \"List of recursive self-improvement papers/projects with names, contributions, and links\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_4",
+        "content": "[{\"id\": \"E6\", \"source_id\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"title\": \"Towards AI That Improves Itself | RSI Survey\", \"text\": \"Towards AI That Improves Itself | RSI Survey\\nSurvey paper\\nTowards AI That Improves Itself\\nA Survey of Recursive Self-Improvement\\nHanjing Li, Qiguang Chen, Chenyuan Zhang, Qionglin Qiu, Fanqing Meng,\\n            Mengkang Hu, Libo Qin, Min Zhang\\nHarbin Institute of Technology (Shenzhen)\\nUniversity of Hong Kong\\nNational University of Singapore\\nShanghai Innovation Institute\\nRead PDF\\nRSI moves from local revision toward persistent improvement loops across behavior,\\n            agent systems, models, data, and research processes.\\n3-stage loop\\nProposal -> Feedback -> Optimization\\n4 evolution targets\\nBehavior, agents, model/data, research\\n7 frontier dimensions\\nReliability through generalization\\nAbstract\\nFrom single-step revision to verifiable improvement loops\\nRecent advances in agentic systems allow AI systems to conduct experiments,\\n          interpret feedback, and modify their own workflows, transforming Recursive\\n          Self-Improvement from a theoretical concept into an engineering \", \"url\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"location\": {\"start_char\": 0, \"end_char\": 998}, \"retrieved_at\": \"2026-11-17T03:45:52.877845+00:00\", \"source_sha256\": \"01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663\", \"chunk_id\": \"72dbf715ebc1f46705f3ff7f\"}, {\"id\": \"E7\", \"source_id\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"title\": \"Towards AI That Improves Itself | RSI Survey\", \"text\": \"problem.\\n          Yet the field still lacks a unified account of what constitutes RSI and\\n          how its improvement loop should be evaluated.\\nThis survey defines RSI boundaries, distinguishes four stages (evolution,\\n          self-evolution, meta-evolution, and recursive self-improvement) and anchors\\n          recursion in state inheritance: an accepted improvement\\n          from one cycle becomes the starting state of a later cycle, while\\n          “recursive progress” is reserved for the stronger claim that\\n          the inherited state also improves the improver. It introduces a common\\n          Proposal → Feedback → Optimization loop, organizes methods\\n          across four evolution targets, and identifies research gaps around\\n          evidence-based acceptance, reuse across cycles, and transfer beyond the\\n          tasks or evaluators that produced the gains.\\nDefinition\\nA common loop for modern RSI systems\\nRSI is anchored in state inheritance: an improvement accepted in \", \"url\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"location\": {\"start_char\": 998, \"end_char\": 1995}, \"retrieved_at\": \"2026-11-17T03:45:52.877845+00:00\", \"source_sha256\": \"01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663\", \"chunk_id\": \"d5bf2d42f45e2c7a8179e110\"}, {\"id\": \"E8\", \"source_id\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"title\": \"Towards AI That Improves Itself | RSI Survey\", \"text\": \"Evolution\\nScientific operation agents, AI4AI, MLE, and end-to-end AI scientist systems\\n                automate the research loop around AI improvement.\\nScientific operation agents\\nAI4AI and MLE\\nEnd-to-end AI scientist systems\\nAn evidence ladder: from local repair to compounding\\nSelf-improvement claims differ in strength, and the ladder orders\\n            them by the evidence each one needs.\\nLocal repair\\nfixes the current output and stops there;\\npersistent\\n            transfer\\nmakes a change outlive the current run and help\\n            later instances;\\nrecursive inheritance\\n(the\\n            minimal RSI claim) makes an accepted improvement the starting\\n            state of a later cycle; and\\nrecursive progress\\nfurther shows that the inherited state improves the improver itself.\\nCausal attribution\\nsupplies the supporting evidence\\n            (a counterfactual control against a frozen or no-retention\\n            baseline) that a retained intervention, not an unrelated\\n            \", \"url\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"location\": {\"start_char\": 4979, \"end_char\": 5971}, \"retrieved_at\": \"2026-11-17T03:45:52.877845+00:00\", \"source_sha256\": \"01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663\", \"chunk_id\": \"e4a14d40653e55cd20ed7183\"}, {\"id\": \"E9\", \"source_id\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"title\": \"Towards AI That Improves Itself | RSI Survey\", \"text\": \"evaluator?\\nThe strongest claim is transfer of the improvement procedure itself: later generations should search, evaluate, or optimize better because of what was retained.\\nRecursive self-improvement has moved from theory to engineering practice;\\n          the remaining challenge is to make its gains credible, reusable, and\\n          transferable beyond the tasks and evaluators that produced them.\\nClose\", \"url\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"location\": {\"start_char\": 7962, \"end_char\": 8367}, \"retrieved_at\": \"2026-11-17T03:45:52.877845+00:00\", \"source_sha256\": \"01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663\", \"chunk_id\": \"d09a057efe95621c22dc69ae\"}, {\"id\": \"E10\", \"source_id\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"title\": \"Towards AI That Improves Itself | RSI Survey\", \"text\": \"one\\n              cycle is retained as the starting state of a later cycle. Recursive\\n              progress (the stronger claim that the inherited state also\\n              improves the improver) is treated separately.\\nProposal\\nSelect an editable target and generate a candidate change through\\n                  prompting, search, evolution, program synthesis, training, or experimentation.\\nTarget selection identifies what the loop is allowed to change.\\nCandidate generation creates concrete artifacts such as prompts, tools, memory, code, data, or checkpoints.\\nFeedback\\nExpose consequences in a repository, simulator, benchmark, training run,\\n                  or live environment, then convert outcomes into evidence.\\nExecution environments reveal behavioral effects of a candidate.\\nVerification signals judge the evidence through tests, rewards, model judges, formal checks, or review.\\nOptimization\\nRetain, revise, reject, promote, or roll back the candidate while preserving\\n                  \", \"url\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"location\": {\"start_char\": 1995, \"end_char\": 2993}, \"retrieved_at\": \"2026-11-17T03:45:52.877845+00:00\", \"source_sha256\": \"01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663\", \"chunk_id\": \"41d81ba62a1d169ba3e8f3f2\"}, {\"id\": \"E11\", \"source_id\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"title\": \"Towards AI That Improves Itself | RSI Survey\", \"text\": \"Diversity\\nDo proposals cover meaningfully different hypotheses and execution paths?\\nDiversity is about causal independence, not just different wording; systems should preserve disagreement, branch distance, and failure coverage.\\nPersistence\\nDoes a successful intervention remain available and useful later?\\nRetained artifacts need provenance, scope conditions, retirement criteria, and evidence that they contribute downstream rather than drifting into noise.\\nAdaptability\\nCan the system respond to changing tasks, tools, evaluators, and environments?\\nThe key split is frozen evidence for comparison versus adaptive evidence for discovering new weaknesses as the environment changes.\\nControllability\\nAre authority, review, monitoring, and rollback coupled to risk?\\nUpdate authority should track target scope, verifier strength, deployment context, and failure severity, with intervention points preserved across the loop.\\nGeneralization\\nDoes the improvement transfer beyond its original task and \", \"url\": \"https://lee1003-lee.github.io/Awesome-RSI-Research/\", \"location\": {\"start_char\": 6966, \"end_char\": 7962}, \"retrieved_at\": \"2026-11-17T03:45:52.877845+00:00\", \"source_sha256\": \"01deda846225719acb5c3404886d5e6c3f0ac35a3d32890baeec33ef2db2a663\", \"chunk_id\": \"9fec6419048591989c0413af\"}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_5",
+            "type": "function",
+            "function": {
+              "name": "read_webpage",
+              "arguments": "{\"urls\": [\"https://arxiv.org/abs/2607.07663\"], \"query\": \"List representative recursive self-improvement works/methods named in this survey (e.g., STOP, Gödel Agent, Darwin Gödel Machine, AlphaEvolve, self-rewarding, SEAL), their contributions, and the four evolution targets taxonomy\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_5",
+        "content": "[{\"id\": \"E12\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"ambitions. We survey 1,250 arXiv papers (2024-2026) along two axes: what the system improves -- its behavior in deployment, its policy through training, its evaluator, or the research process itself -- and the degree of loop closure (human-in-the-loop to fully closed). The taxonomy separates bounded self-refinement -- convergent, evaluable, and industrial practice -- from open-ended recursive self-improvement (RSI), which remains bounded by grounding requirements, collapse dynamics, and compute constraints on every measured axis. Its distinctive feature is a dedicated category for self-evaluation: every improvement loop is a claim that some signal can substitute for human judgment. We survey the evaluator design space -- judges, process reward models, verifiers, rubrics, meta-evaluation -- order the signals into a verification hierarchy from formal verifiers (strongest) to intrinsic self-assessment (weakest), and observe that demonstrated self-improvement strength tracks this \", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 997, \"end_char\": 1988}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"5f379240e0a9ccf2978701bf\"}, {\"id\": \"E13\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\\nSkip to main content\\nSearch arXiv\\nPress Enter to search ·\\nAdvanced search\\nComputer Science > Artificial Intelligence\\narXiv:2607.07663\\n(cs)\\n[Submitted on 8 Jul 2026 (\\nv1\\n), last revised 6 Sep 2026 (this version, v2)]\\nTitle:\\nRecursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\\nAuthors:\\nMingguang Chen\\n,\\nLicheng Wang\\n,\\nBo Qu\\nView a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\\nView PDF\\nHTML (experimental)\\nAbstract:\\nAI systems increasingly participate in their own improvement: revising their outputs, adapting their harnesses during deployment, training on data they generate, and conducting AI research itself. This literature uses a vocabulary (\\\"self-refine,\\\" \\\"self-reward,\\\" \\\"self-play,\\\" \\\"self-evolve\\\") that conflates fundamentally different \", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 0, \"end_char\": 997}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"b91a08113bea35a55aa12c57\"}, {\"id\": \"E14\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"Access Paper:\\nView a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\\nView PDF\\nHTML (experimental)\\nTeX Source\\nview license\\nAdditional Features\\nAudio Summary\\nCurrent browse context:\\ncs.AI\\n< prev\\n|\\nnext >\\nnew\\n|\\nrecent\\n|\\n2026-07\\nChange to browse by:\\ncs\\nReferences & Citations\\nSciX\\nGoogle Scholar\\nSemantic Scholar\\nexport BibTeX citation\\nLoading...\\nBibTeX formatted citation\\n×\\nloading...\\nData provided by:\\nBookmark\\nBibliographic Tools\\nBibliographic and Citation Tools\\nBibliographic Explorer Toggle\\nBibliographic Explorer\\n(\\nWhat is the Explorer?\\n)\\nConnected Papers Toggle\\nConnected Papers\\n(\\nWhat is Connected Papers?\\n)\\nLitmaps Toggle\\nLitmaps\\n(\\nWhat is Litmaps?\\n)\\nscite.ai Toggle\\nscite Smart Citations\\n(\\nWhat are Smart Citations?\\n)\\nCode, Data, Media\\nCode, Data and Media Associated with this Article\\nalphaXiv Toggle\\nalphaXiv\\n(\\nWhat is alphaXiv?\\n)\\nLinks to Code Toggle\\nCatalyzeX Code Finder for Papers\\n\", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 2986, \"end_char\": 3986}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"160af804cfb314c33b36acdb\"}, {\"id\": \"E15\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"hierarchy, that its failure modes (self-confirming loops, model and diversity collapse) follow from its violations, and that the \\\"research direction-setting\\\" bottleneck keeping humans in the loop divides into a verification problem the hierarchy indexes and a prior one -- choosing what deserves evaluation at all -- that it does not. We connect the literature to the theory of RSI limits and to the safety and governance questions raised by frontier-lab accounts of closing the loop, and identify governance-grade measurement of self-improvement as the field's most underpopulated niche.\\nComments:\\n44 pages, 6 figures\\nSubjects:\\nArtificial Intelligence (cs.AI)\\nCite as:\\narXiv:2607.07663\\n[cs.AI]\\n(or\\narXiv:2607.07663v2\\n[cs.AI]\\nfor this version)\\nhttps://doi.org/10.48550/arXiv.2607.07663\\nFocus to learn more\\narXiv-issued DOI via DataCite\\nSubmission history\\nFrom: Mingguang Chen [\\nview email\\n]\\n[v1]\\nWed, 8 Jul 2026 17:19:50 UTC (5,164 KB)\\n[v2]\\nSun, 6 Sep 2026 11:44:06 UTC (5,189 KB)\\nFull-text links:\\n\", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 1988, \"end_char\": 2986}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"9b0193fe1a7bcfee022e1422\"}, {\"id\": \"E16\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"(\\nWhat is CatalyzeX?\\n)\\nDagsHub Toggle\\nDagsHub\\n(\\nWhat is DagsHub?\\n)\\nGotitPub Toggle\\nGotit.pub\\n(\\nWhat is GotitPub?\\n)\\nHuggingface Toggle\\nHugging Face\\n(\\nWhat is Huggingface?\\n)\\nScienceCast Toggle\\nScienceCast\\n(\\nWhat is ScienceCast?\\n)\\nDemos\\nDemos\\nReplicate Toggle\\nReplicate\\n(\\nWhat is Replicate?\\n)\\nSpaces Toggle\\nHugging Face Spaces\\n(\\nWhat is Spaces?\\n)\\nSpaces Toggle\\nTXYZ.AI\\n(\\nWhat is TXYZ.AI?\\n)\\nRelated Papers\\nRecommenders and Search Tools\\nLink to Influence Flower\\nInfluence Flower\\n(\\nWhat are Influence Flowers?\\n)\\nCore recommender toggle\\nCORE Recommender\\n(\\nWhat is CORE?\\n)\\nAuthor\\nVenue\\nInstitution\\nTopic\\nAbout arXivLabs\\narXivLabs: experimental projects with community collaborators\\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works \", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 3986, \"end_char\": 4983}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"8b38bc4934fa3ecc60b31b6b\"}, {\"id\": \"E17\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"with partners that adhere to them.\\nHave an idea for a project that will add value for arXiv's community?\\nLearn more about arXivLabs\\n.\\nWhich authors of this paper are endorsers?\\n|\\nDisable MathJax\\n(\\nWhat is MathJax?\\n)\", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 4983, \"end_char\": 5198}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"483c602c5c05c93872219122\"}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_6",
+            "type": "function",
+            "function": {
+              "name": "search_web",
+              "arguments": "{\"query\": \"Darwin Gödel Machine self-improving agent paper arxiv\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_6",
+        "content": "{\"documents\": [], \"web\": {}, \"warning\": \"Web search found no usable results from the configured providers (ddgs_auto=empty_or_unavailable; arxiv_search=no_results). This does not establish that no relevant work exists. The fallback covers arXiv papers only.\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_7",
+            "type": "function",
+            "function": {
+              "name": "read_webpage",
+              "arguments": "{\"urls\": [\"https://arxiv.org/abs/2607.07663\"], \"query\": \"List the specific named recursive self-improvement methods/systems cited as representative works (e.g., STOP, Gödel Agent, Darwin Gödel Machine, AlphaEvolve, Self-Rewarding Language Models, SEAL, Voyager, Reflexion, self-refine) with their contributions and any arXiv IDs or links mentioned\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_7",
+        "content": "[{\"id\": \"E13\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\\nSkip to main content\\nSearch arXiv\\nPress Enter to search ·\\nAdvanced search\\nComputer Science > Artificial Intelligence\\narXiv:2607.07663\\n(cs)\\n[Submitted on 8 Jul 2026 (\\nv1\\n), last revised 6 Sep 2026 (this version, v2)]\\nTitle:\\nRecursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\\nAuthors:\\nMingguang Chen\\n,\\nLicheng Wang\\n,\\nBo Qu\\nView a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\\nView PDF\\nHTML (experimental)\\nAbstract:\\nAI systems increasingly participate in their own improvement: revising their outputs, adapting their harnesses during deployment, training on data they generate, and conducting AI research itself. This literature uses a vocabulary (\\\"self-refine,\\\" \\\"self-reward,\\\" \\\"self-play,\\\" \\\"self-evolve\\\") that conflates fundamentally different \", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 0, \"end_char\": 997}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"b91a08113bea35a55aa12c57\"}, {\"id\": \"E12\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"ambitions. We survey 1,250 arXiv papers (2024-2026) along two axes: what the system improves -- its behavior in deployment, its policy through training, its evaluator, or the research process itself -- and the degree of loop closure (human-in-the-loop to fully closed). The taxonomy separates bounded self-refinement -- convergent, evaluable, and industrial practice -- from open-ended recursive self-improvement (RSI), which remains bounded by grounding requirements, collapse dynamics, and compute constraints on every measured axis. Its distinctive feature is a dedicated category for self-evaluation: every improvement loop is a claim that some signal can substitute for human judgment. We survey the evaluator design space -- judges, process reward models, verifiers, rubrics, meta-evaluation -- order the signals into a verification hierarchy from formal verifiers (strongest) to intrinsic self-assessment (weakest), and observe that demonstrated self-improvement strength tracks this \", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 997, \"end_char\": 1988}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"5f379240e0a9ccf2978701bf\"}, {\"id\": \"E15\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"hierarchy, that its failure modes (self-confirming loops, model and diversity collapse) follow from its violations, and that the \\\"research direction-setting\\\" bottleneck keeping humans in the loop divides into a verification problem the hierarchy indexes and a prior one -- choosing what deserves evaluation at all -- that it does not. We connect the literature to the theory of RSI limits and to the safety and governance questions raised by frontier-lab accounts of closing the loop, and identify governance-grade measurement of self-improvement as the field's most underpopulated niche.\\nComments:\\n44 pages, 6 figures\\nSubjects:\\nArtificial Intelligence (cs.AI)\\nCite as:\\narXiv:2607.07663\\n[cs.AI]\\n(or\\narXiv:2607.07663v2\\n[cs.AI]\\nfor this version)\\nhttps://doi.org/10.48550/arXiv.2607.07663\\nFocus to learn more\\narXiv-issued DOI via DataCite\\nSubmission history\\nFrom: Mingguang Chen [\\nview email\\n]\\n[v1]\\nWed, 8 Jul 2026 17:19:50 UTC (5,164 KB)\\n[v2]\\nSun, 6 Sep 2026 11:44:06 UTC (5,189 KB)\\nFull-text links:\\n\", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 1988, \"end_char\": 2986}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"9b0193fe1a7bcfee022e1422\"}, {\"id\": \"E14\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"Access Paper:\\nView a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\\nView PDF\\nHTML (experimental)\\nTeX Source\\nview license\\nAdditional Features\\nAudio Summary\\nCurrent browse context:\\ncs.AI\\n< prev\\n|\\nnext >\\nnew\\n|\\nrecent\\n|\\n2026-07\\nChange to browse by:\\ncs\\nReferences & Citations\\nSciX\\nGoogle Scholar\\nSemantic Scholar\\nexport BibTeX citation\\nLoading...\\nBibTeX formatted citation\\n×\\nloading...\\nData provided by:\\nBookmark\\nBibliographic Tools\\nBibliographic and Citation Tools\\nBibliographic Explorer Toggle\\nBibliographic Explorer\\n(\\nWhat is the Explorer?\\n)\\nConnected Papers Toggle\\nConnected Papers\\n(\\nWhat is Connected Papers?\\n)\\nLitmaps Toggle\\nLitmaps\\n(\\nWhat is Litmaps?\\n)\\nscite.ai Toggle\\nscite Smart Citations\\n(\\nWhat are Smart Citations?\\n)\\nCode, Data, Media\\nCode, Data and Media Associated with this Article\\nalphaXiv Toggle\\nalphaXiv\\n(\\nWhat is alphaXiv?\\n)\\nLinks to Code Toggle\\nCatalyzeX Code Finder for Papers\\n\", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 2986, \"end_char\": 3986}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"160af804cfb314c33b36acdb\"}, {\"id\": \"E16\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"(\\nWhat is CatalyzeX?\\n)\\nDagsHub Toggle\\nDagsHub\\n(\\nWhat is DagsHub?\\n)\\nGotitPub Toggle\\nGotit.pub\\n(\\nWhat is GotitPub?\\n)\\nHuggingface Toggle\\nHugging Face\\n(\\nWhat is Huggingface?\\n)\\nScienceCast Toggle\\nScienceCast\\n(\\nWhat is ScienceCast?\\n)\\nDemos\\nDemos\\nReplicate Toggle\\nReplicate\\n(\\nWhat is Replicate?\\n)\\nSpaces Toggle\\nHugging Face Spaces\\n(\\nWhat is Spaces?\\n)\\nSpaces Toggle\\nTXYZ.AI\\n(\\nWhat is TXYZ.AI?\\n)\\nRelated Papers\\nRecommenders and Search Tools\\nLink to Influence Flower\\nInfluence Flower\\n(\\nWhat are Influence Flowers?\\n)\\nCore recommender toggle\\nCORE Recommender\\n(\\nWhat is CORE?\\n)\\nAuthor\\nVenue\\nInstitution\\nTopic\\nAbout arXivLabs\\narXivLabs: experimental projects with community collaborators\\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works \", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 3986, \"end_char\": 4983}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"8b38bc4934fa3ecc60b31b6b\"}, {\"id\": \"E17\", \"source_id\": \"https://arxiv.org/abs/2607.07663\", \"title\": \"[2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\", \"text\": \"with partners that adhere to them.\\nHave an idea for a project that will add value for arXiv's community?\\nLearn more about arXivLabs\\n.\\nWhich authors of this paper are endorsers?\\n|\\nDisable MathJax\\n(\\nWhat is MathJax?\\n)\", \"url\": \"https://arxiv.org/abs/2607.07663\", \"location\": {\"start_char\": 4983, \"end_char\": 5198}, \"retrieved_at\": \"2026-11-17T03:45:55.536263+00:00\", \"source_sha256\": \"2e60c2cafd80961caa7b44ff5bc1a0923cab6eb1506431f24f19a1975046de65\", \"chunk_id\": \"483c602c5c05c93872219122\"}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_8",
+            "type": "function",
+            "function": {
+              "name": "search_web",
+              "arguments": "{\"query\": \"Darwin Gödel Machine self-improving agent arXiv 2505\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_8",
+        "content": "{\"documents\": [], \"web\": {}, \"warning\": \"Web search found no usable results from the configured providers (ddgs_auto=empty_or_unavailable; arxiv_search=no_results). This does not establish that no relevant work exists. The fallback covers arXiv papers only.\"}"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_9",
+            "type": "function",
+            "function": {
+              "name": "search_web",
+              "arguments": "{\"query\": \"AlphaEvolve DeepMind evolutionary coding agent paper\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_9",
+        "content": "[{\"title\": \"On the number of symmetric chain decompositions of the minuscule lattices $L(m,n)$ and $M(n)$\", \"url\": \"https://arxiv.org/abs/2606.15891\", \"snippet\": \"We study the problem of enumerating symmetric chain decompositions (SCDs) of the minuscule lattices $L(m,n)$ of partitions in an $m$ by $n$ box and $M(n)$ of partitions into distinct parts at most $n$. We shift the focus from constructing a single SCD to analyzing the global structure of the set of SCDs. Let $\\\\#SCD(P)$ be the number of symmetric chain decompositions of $P$. We give an explicit formula for $\\\\#SCD(L(2,n))$ based on inversion sets of permutations and conjecture that for fixed $m>1$ both $\\\\#SCD(L(m,n))$ and $\\\\#SCD(M(n))$ grow super-exponentially. These conjectures are supported by data produced by AlphaEvolve , an evolutionary coding agent from Google DeepMind , and are in the same vein as a recent paper of Tomon on the growth rate of $\\\\#SCD$ for the Boolean lattice and hypergrid. We make connections with crystal bases and show that the Lusztig involution (evacuation) extends to an involution on SCDs, which we use to show that $\\\\#SCD(M(n))$ is even for $n>2$. We use skew tableaux sequences, which are equivalent to SCDs, and describe a potential path forward for finding SCDs through a notion of tableaux avoidance. We discuss implications of the conjectures for the problem of computing plethysm coefficients and discuss connections to physics and geometry. We end with a list of conjectures, questions and open problems.\", \"citable\": false, \"provider\": \"arxiv_search\", \"provider_scope\": \"arXiv scholarly papers; not a general web index\", \"search_query\": \"AlphaEvolve DeepMind evolutionary coding agent paper\", \"search_attempts\": [{\"provider\": \"ddgs_auto\", \"status\": \"empty_or_unavailable\", \"elapsed_seconds\": 5.812, \"results\": 0, \"error\": \"No parseable results; provider blocking or parser changes can also cause this.\"}, {\"provider\": \"arxiv_search\", \"status\": \"completed\", \"elapsed_seconds\": 1.266, \"results\": 1}]}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_10",
+            "type": "function",
+            "function": {
+              "name": "read_webpage",
+              "arguments": "{\"urls\": [\"https://arxiv.org/abs/2610.35193\"], \"query\": \"List named recursive self-improvement systems/methods cited (e.g., STOP, Gödel Agent, Darwin Gödel Machine, AlphaEvolve, SEAL, Self-Rewarding Language Models) with their contributions and any arXiv IDs or links; also note how RSI-Index or RSIGym is referenced if at all\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_10",
+        "content": "[{\"id\": \"E18\", \"source_id\": \"https://arxiv.org/abs/2610.35193\", \"title\": \"[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\", \"text\": \"[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\\nSkip to main content\\nSearch arXiv\\nPress Enter to search ·\\nAdvanced search\\nComputer Science > Artificial Intelligence\\narXiv:2610.35193\\n(cs)\\n[Submitted on 26 Oct 2026]\\nTitle:\\nTrustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\\nAuthors:\\nJiayue Pu\\n,\\nAng Gao\\n,\\nJinyi Bai\\n,\\nQipeng Wang\\n,\\nTongyu Wen\\n,\\nJiahao Zhao\\n,\\nKeyu Qu\\n,\\nJunhao Zhang\\n,\\nChenglei Shen\\n,\\nZhongxiang Sun\\n,\\nJun Xu\\n,\\nXiao Zhang\\nView a PDF of the paper titled Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges, by Jiayue Pu and 11 other authors\\nView PDF\\nHTML (experimental)\\nAbstract:\\nAI systems built around large models increasingly use experience and feedback to make persistent changes to models, prompts, memories, tools, and workflows. Recursive self-improvement (RSI) \", \"url\": \"https://arxiv.org/abs/2610.35193\", \"location\": {\"start_char\": 0, \"end_char\": 994}, \"retrieved_at\": \"2026-11-17T03:46:36.155201+00:00\", \"source_sha256\": \"510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814\", \"chunk_id\": \"889a7905a28aa293bb5c1d13\"}, {\"id\": \"E19\", \"source_id\": \"https://arxiv.org/abs/2610.35193\", \"title\": \"[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\", \"text\": \"extends this process to inductive biases and to the mechanisms that govern future updates, which can themselves be revised and reused across improvement cycles. Yet self-modification alone does not guarantee trustworthy improvement. Reported gains may reflect flawed evaluations, previously acquired capabilities may deteriorate, and compliance with behavioral constraints may weaken. Compromised artifacts or sensitive information may also persist in successor systems. Changes to improvement mechanisms may invalidate earlier verification results and make human oversight less effective. This survey presents an operational definition and process framework for RSI and organizes the requirements for trustworthy RSI into four interconnected themes: genuine and sustained improvement; behavioral constraints, alignment, and fairness; system security and privacy; and transparency and controllability. We examine these themes from three perspectives: Improvement Validity, Constraint Preservation, \", \"url\": \"https://arxiv.org/abs/2610.35193\", \"location\": {\"start_char\": 994, \"end_char\": 1992}, \"retrieved_at\": \"2026-11-17T03:46:36.155201+00:00\", \"source_sha256\": \"510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814\", \"chunk_id\": \"ea1aad33d0026b1db9c61831\"}, {\"id\": \"E20\", \"source_id\": \"https://arxiv.org/abs/2610.35193\", \"title\": \"[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\", \"text\": \"Full-text links:\\nAccess Paper:\\nView a PDF of the paper titled Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges, by Jiayue Pu and 11 other authors\\nView PDF\\nHTML (experimental)\\nTeX Source\\nview license\\nAdditional Features\\nAudio Summary\\nCurrent browse context:\\ncs.AI\\n< prev\\n|\\nnext >\\nnew\\n|\\nrecent\\n|\\n2026-10\\nChange to browse by:\\ncs\\ncs.CR\\nReferences & Citations\\nSciX\\nGoogle Scholar\\nSemantic Scholar\\nexport BibTeX citation\\nLoading...\\nBibTeX formatted citation\\n×\\nloading...\\nData provided by:\\nBookmark\\nBibliographic Tools\\nBibliographic and Citation Tools\\nBibliographic Explorer Toggle\\nBibliographic Explorer\\n(\\nWhat is the Explorer?\\n)\\nConnected Papers Toggle\\nConnected Papers\\n(\\nWhat is Connected Papers?\\n)\\nLitmaps Toggle\\nLitmaps\\n(\\nWhat is Litmaps?\\n)\\nscite.ai Toggle\\nscite Smart Citations\\n(\\nWhat are Smart Citations?\\n)\\nCode, Data, Media\\nCode, Data and Media Associated with this Article\\nalphaXiv Toggle\\nalphaXiv\\n(\\nWhat is alphaXiv?\\n)\\nLinks to \", \"url\": \"https://arxiv.org/abs/2610.35193\", \"location\": {\"start_char\": 2990, \"end_char\": 3989}, \"retrieved_at\": \"2026-11-17T03:46:36.155201+00:00\", \"source_sha256\": \"510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814\", \"chunk_id\": \"f52a86dc11ad0087b5229e23\"}, {\"id\": \"E21\", \"source_id\": \"https://arxiv.org/abs/2610.35193\", \"title\": \"[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\", \"text\": \"and Effective Oversight. This analysis covers improvement diagnosis, proposal generation, proposal evaluation, and update implementation (S1--S4), including the recursive application of these stages to improvement mechanisms (RI). We review risks, safeguards, and evaluation evidence for individual updates, effects inherited by successor systems, and revisions to improvement mechanisms, while distinguishing direct RSI findings from evidence in related systems. Finally, we examine evaluation settings, identify requirements for independent and longitudinal assessment, and discuss applications and open research problems.\\nSubjects:\\nArtificial Intelligence (cs.AI)\\n; Cryptography and Security (cs.CR)\\nCite as:\\narXiv:2610.35193\\n[cs.AI]\\n(or\\narXiv:2610.35193v1\\n[cs.AI]\\nfor this version)\\nhttps://doi.org/10.48550/arXiv.2610.35193\\nFocus to learn more\\narXiv-issued DOI via DataCite (pending registration)\\nSubmission history\\nFrom: Jiayue Pu [\\nview email\\n]\\n[v1]\\nMon, 26 Oct 2026 10:46:03 UTC (18,922 KB)\\n\", \"url\": \"https://arxiv.org/abs/2610.35193\", \"location\": {\"start_char\": 1992, \"end_char\": 2990}, \"retrieved_at\": \"2026-11-17T03:46:36.155201+00:00\", \"source_sha256\": \"510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814\", \"chunk_id\": \"5951b8e5c8582a3e352b5df3\"}, {\"id\": \"E22\", \"source_id\": \"https://arxiv.org/abs/2610.35193\", \"title\": \"[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\", \"text\": \"Code Toggle\\nCatalyzeX Code Finder for Papers\\n(\\nWhat is CatalyzeX?\\n)\\nDagsHub Toggle\\nDagsHub\\n(\\nWhat is DagsHub?\\n)\\nGotitPub Toggle\\nGotit.pub\\n(\\nWhat is GotitPub?\\n)\\nHuggingface Toggle\\nHugging Face\\n(\\nWhat is Huggingface?\\n)\\nScienceCast Toggle\\nScienceCast\\n(\\nWhat is ScienceCast?\\n)\\nDemos\\nDemos\\nReplicate Toggle\\nReplicate\\n(\\nWhat is Replicate?\\n)\\nSpaces Toggle\\nHugging Face Spaces\\n(\\nWhat is Spaces?\\n)\\nSpaces Toggle\\nTXYZ.AI\\n(\\nWhat is TXYZ.AI?\\n)\\nRelated Papers\\nRecommenders and Search Tools\\nLink to Influence Flower\\nInfluence Flower\\n(\\nWhat are Influence Flowers?\\n)\\nCore recommender toggle\\nCORE Recommender\\n(\\nWhat is CORE?\\n)\\nAuthor\\nVenue\\nInstitution\\nTopic\\nAbout arXivLabs\\narXivLabs: experimental projects with community collaborators\\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv \", \"url\": \"https://arxiv.org/abs/2610.35193\", \"location\": {\"start_char\": 3989, \"end_char\": 4987}, \"retrieved_at\": \"2026-11-17T03:46:36.155201+00:00\", \"source_sha256\": \"510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814\", \"chunk_id\": \"b226c7b663be067036a9f9af\"}, {\"id\": \"E23\", \"source_id\": \"https://arxiv.org/abs/2610.35193\", \"title\": \"[2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\", \"text\": \"is committed to these values and only works with partners that adhere to them.\\nHave an idea for a project that will add value for arXiv's community?\\nLearn more about arXivLabs\\n.\\nWhich authors of this paper are endorsers?\\n|\\nDisable MathJax\\n(\\nWhat is MathJax?\\n)\", \"url\": \"https://arxiv.org/abs/2610.35193\", \"location\": {\"start_char\": 4987, \"end_char\": 5246}, \"retrieved_at\": \"2026-11-17T03:46:36.155201+00:00\", \"source_sha256\": \"510ea1b5360689a7e9860144a613eae6795c82f50d8ce8e09815ba4356262814\", \"chunk_id\": \"4e9dc1efc04664b8f169dbcb\"}]"
+      }
+    ],
+    "checker_is_ground_truth": false,
+    "report": "# Research report\n\nRSI-Index（RSIGym，Recursive Self-Improvement，递归自我改进）有哪些现存的相关工作？请区分 RSI-Index 本身与递归自我改进领域的相关研究，列出论文或项目名称、主要贡献和来源链接。\n\n## Answer\n\n现有证据中，RSI-Index 是 RSIGym 论文（arXiv:2610.10310）定义的评估指标，而非一个独立项目；RSIGym 是配套的 agent-native 研究环境。递归自我改进领域的相关工作在证据中包括三篇综述：Awesome-RSI-Research 的《Towards AI That Improves Itself: A Survey of Recursive Self-Improvement》、arXiv:2607.07663《Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops》和 arXiv:2610.35193《Trustworthy Recursive Self-Improvement in the Era of Large Models》。证据未提供 STOP、Gödel Agent、Darwin Gödel Machine、AlphaEvolve、SEAL、Self-Rewarding 等具体系统的名称、贡献或链接。 [E1] [E3] [E6] [E7] [E12] [E13] [E18] [E19]\n\n## Supported findings\n\n- RSI-Index 是 RSIGym 论文（arXiv:2610.10310）中定义的指标：五个基准上剩余性能差距被弥合的平均比例；RSIGym 是基于 Everything as a Service 的 agent-native 研究环境，支持 Data、Harness、Joint 改进轨道。 [E1] [E3]\n- RSIGym 论文报告 Opus 5 在独立 Joint 运行中取得最高 RSI-Index 0.4809（每基准运行 500 美元平台服务预算），并将 SWE-bench Verified 从 17.67% 提升到 50.33%、AIME 从 31.67% 提升到 97.78%。 [E1]\n- Awesome-RSI-Research 的综述《Towards AI That Improves Itself: A Survey of Recursive Self-Improvement》（作者 Hanjing Li、Qiguang Chen 等）界定 RSI 边界，区分 evolution、self-evolution、meta-evolution、recursive self-improvement 四阶段，以状态继承锚定递归，并提出 Proposal → Feedback → Optimization 循环。来源：https://lee1003-lee.github.io/Awesome-RSI-Research/ [E6] [E7]\n- arXiv:2607.07663《Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops》（Mingguang Chen、Licheng Wang、Bo Qu）调查 1,250 篇 2024–2026 年 arXiv 论文，沿“改进对象”和“闭环程度”两轴分类，区分有界自我精炼与开放式 RSI，并建立从形式验证器到内在自评的验证层级。来源：https://arxiv.org/abs/2607.07663 [E12] [E13]\n- arXiv:2610.35193《Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges》（Jiayue Pu 等）提出 RSI 的操作性定义与流程框架，将可信 RSI 要求组织为真实持续改进、行为约束/对齐/公平、系统安全与隐私、透明与可控四个主题。来源：https://arxiv.org/abs/2610.35193 [E18] [E19]\n- 区分方式：RSI-Index 是 RSIGym 论文提出的量化评估指标（衡量跨五个基准的差距弥合比例），RSIGym 是其配套环境；而上述综述属于对 RSI 领域方法、分类与可信性要求的整体梳理，并非 RSI-Index 本身。 [E1] [E3] [E7] [E12] [E19]\n\n## Unresolved questions\n\n- 证据中未出现 STOP、Gödel Agent、Darwin Gödel Machine、AlphaEvolve、SEAL、Self-Rewarding 等具体 RSI 系统的名称、主要贡献或来源链接，因此无法列出这些条目。\n- 未检索到除 RSIGym 论文外其他使用或定义 RSI-Index 的工作。\n\n## Evidence\n\n### [E1] [2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\n{\"start_char\": 997, \"end_char\": 1996}\n\n> Service (EaaS). RSIGym exposes training, inference, rollout, evaluation, and sandbox execution through reusable services, with shared budget and permission controls supporting Data, Harness, and Joint improvement tracks. This design enables agents to investigate individual interventions and jointly optimize data, training settings, and execution harnesses within the same environment. We define RSI-Index as the mean fraction of the remaining performance gap closed across five benchmarks covering software engineering, terminal interaction, mathematics, scientific reasoning, and skill-based tasks. Comparing six frontier research models in independent Joint runs, Opus 5 achieves the highest RSI-Index of 0.4809 under a $500 platform-service budget per benchmark run. Its selected systems improve all five benchmarks, raising SWE-bench Verified from 17.67% to 50.33% and AIME from 31.67% to 97.78%. Additional experiments examine DSH-harness refinement, budget variation, and restricted network \n\nhttps://arxiv.org/abs/2610.10310\n### [E2] [2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\n{\"start_char\": 1996, \"end_char\": 2989}\n\n> access, while recorded trajectories reveal how agents diagnose failures and select candidates. We open-source the full RSIGym codebase and results to support reproducibility and further research.\n> Subjects:\n> Machine Learning (cs.LG)\n> Cite as:\n> arXiv:2610.10310\n> [cs.LG]\n> (or\n> arXiv:2610.10310v1\n> [cs.LG]\n> for this version)\n> https://doi.org/10.48550/arXiv.2610.10310\n> Focus to learn more\n> arXiv-issued DOI via DataCite\n> Submission history\n> From: Fanqing Meng [\n> view email\n> ]\n> [v1]\n> Wed, 7 Oct 2026 16:05:15 UTC (96 KB)\n> Full-text links:\n> Access Paper:\n> View a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\n> View PDF\n> HTML (experimental)\n> TeX Source\n> view license\n> Additional Features\n> Audio Summary\n> Current browse context:\n> cs.LG\n> < prev\n> |\n> next >\n> new\n> |\n> recent\n> |\n> 2026-10\n> Change to browse by:\n> cs\n> References & Citations\n> SciX\n> Google Scholar\n> Semantic Scholar\n> export BibTeX citation\n> Loading...\n> BibTeX formatted citation\n> ×\n> loading...\n> Data provided by:\n> \n\nhttps://arxiv.org/abs/2610.10310\n### [E3] [2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\n{\"start_char\": 0, \"end_char\": 997}\n\n> [2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\n> Skip to main content\n> Search arXiv\n> Press Enter to search ·\n> Advanced search\n> Computer Science > Machine Learning\n> arXiv:2610.10310\n> (cs)\n> [Submitted on 7 Oct 2026]\n> Title:\n> RSIGym: A Flexible Environment for Recursive Self-Improvement\n> Authors:\n> Fanqing Meng\n> ,\n> Lingxiao Du\n> ,\n> Haocheng Lu\n> ,\n> Qiguang Chen\n> ,\n> Ziqi Zhao\n> ,\n> Zijian Wu\n> ,\n> Jiayuan Zhuo\n> ,\n> Mengkang Hu\n> ,\n> Michael Qizhe Shieh\n> View a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\n> View PDF\n> HTML (experimental)\n> Abstract:\n> Recursive self-improvement requires carrying accepted changes into later improvement cycles, while studying agent-proposed changes also requires substantial research infrastructure. Existing settings often leave agents to rebuild routine infrastructure or restrict exploration to individual components. We introduce RSIGym, an agent-native research environment based on Everything as a \n\nhttps://arxiv.org/abs/2610.10310\n### [E4] [2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\n{\"start_char\": 3988, \"end_char\": 4759}\n\n> Core recommender toggle\n> CORE Recommender\n> (\n> What is CORE?\n> )\n> IArxiv recommender toggle\n> IArxiv Recommender\n> (\n> What is IArxiv?\n> )\n> Author\n> Venue\n> Institution\n> Topic\n> About arXivLabs\n> arXivLabs: experimental projects with community collaborators\n> arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\n> Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\n> Have an idea for a project that will add value for arXiv's community?\n> Learn more about arXivLabs\n> .\n> Which authors of this paper are endorsers?\n> |\n> Disable MathJax\n> (\n> What is MathJax?\n> )\n\nhttps://arxiv.org/abs/2610.10310\n### [E5] [2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\n{\"start_char\": 2989, \"end_char\": 3988}\n\n> Bookmark\n> Bibliographic Tools\n> Bibliographic and Citation Tools\n> Bibliographic Explorer Toggle\n> Bibliographic Explorer\n> (\n> What is the Explorer?\n> )\n> Connected Papers Toggle\n> Connected Papers\n> (\n> What is Connected Papers?\n> )\n> Litmaps Toggle\n> Litmaps\n> (\n> What is Litmaps?\n> )\n> scite.ai Toggle\n> scite Smart Citations\n> (\n> What are Smart Citations?\n> )\n> Code, Data, Media\n> Code, Data and Media Associated with this Article\n> alphaXiv Toggle\n> alphaXiv\n> (\n> What is alphaXiv?\n> )\n> Links to Code Toggle\n> CatalyzeX Code Finder for Papers\n> (\n> What is CatalyzeX?\n> )\n> DagsHub Toggle\n> DagsHub\n> (\n> What is DagsHub?\n> )\n> GotitPub Toggle\n> Gotit.pub\n> (\n> What is GotitPub?\n> )\n> Huggingface Toggle\n> Hugging Face\n> (\n> What is Huggingface?\n> )\n> ScienceCast Toggle\n> ScienceCast\n> (\n> What is ScienceCast?\n> )\n> Demos\n> Demos\n> Replicate Toggle\n> Replicate\n> (\n> What is Replicate?\n> )\n> Spaces Toggle\n> Hugging Face Spaces\n> (\n> What is Spaces?\n> )\n> Spaces Toggle\n> TXYZ.AI\n> (\n> What is TXYZ.AI?\n> )\n> Related Papers\n> Recommenders and Search Tools\n> Link to Influence Flower\n> Influence Flower\n> (\n> What are Influence Flowers?\n> )\n> \n\nhttps://arxiv.org/abs/2610.10310\n### [E6] Towards AI That Improves Itself | RSI Survey\n{\"start_char\": 0, \"end_char\": 998}\n\n> Towards AI That Improves Itself | RSI Survey\n> Survey paper\n> Towards AI That Improves Itself\n> A Survey of Recursive Self-Improvement\n> Hanjing Li, Qiguang Chen, Chenyuan Zhang, Qionglin Qiu, Fanqing Meng,\n>             Mengkang Hu, Libo Qin, Min Zhang\n> Harbin Institute of Technology (Shenzhen)\n> University of Hong Kong\n> National University of Singapore\n> Shanghai Innovation Institute\n> Read PDF\n> RSI moves from local revision toward persistent improvement loops across behavior,\n>             agent systems, models, data, and research processes.\n> 3-stage loop\n> Proposal -> Feedback -> Optimization\n> 4 evolution targets\n> Behavior, agents, model/data, research\n> 7 frontier dimensions\n> Reliability through generalization\n> Abstract\n> From single-step revision to verifiable improvement loops\n> Recent advances in agentic systems allow AI systems to conduct experiments,\n>           interpret feedback, and modify their own workflows, transforming Recursive\n>           Self-Improvement from a theoretical concept into an engineering \n\nhttps://lee1003-lee.github.io/Awesome-RSI-Research/\n### [E7] Towards AI That Improves Itself | RSI Survey\n{\"start_char\": 998, \"end_char\": 1995}\n\n> problem.\n>           Yet the field still lacks a unified account of what constitutes RSI and\n>           how its improvement loop should be evaluated.\n> This survey defines RSI boundaries, distinguishes four stages (evolution,\n>           self-evolution, meta-evolution, and recursive self-improvement) and anchors\n>           recursion in state inheritance: an accepted improvement\n>           from one cycle becomes the starting state of a later cycle, while\n>           “recursive progress” is reserved for the stronger claim that\n>           the inherited state also improves the improver. It introduces a common\n>           Proposal → Feedback → Optimization loop, organizes methods\n>           across four evolution targets, and identifies research gaps around\n>           evidence-based acceptance, reuse across cycles, and transfer beyond the\n>           tasks or evaluators that produced the gains.\n> Definition\n> A common loop for modern RSI systems\n> RSI is anchored in state inheritance: an improvement accepted in \n\nhttps://lee1003-lee.github.io/Awesome-RSI-Research/\n### [E8] Towards AI That Improves Itself | RSI Survey\n{\"start_char\": 4979, \"end_char\": 5971}\n\n> Evolution\n> Scientific operation agents, AI4AI, MLE, and end-to-end AI scientist systems\n>                 automate the research loop around AI improvement.\n> Scientific operation agents\n> AI4AI and MLE\n> End-to-end AI scientist systems\n> An evidence ladder: from local repair to compounding\n> Self-improvement claims differ in strength, and the ladder orders\n>             them by the evidence each one needs.\n> Local repair\n> fixes the current output and stops there;\n> persistent\n>             transfer\n> makes a change outlive the current run and help\n>             later instances;\n> recursive inheritance\n> (the\n>             minimal RSI claim) makes an accepted improvement the starting\n>             state of a later cycle; and\n> recursive progress\n> further shows that the inherited state improves the improver itself.\n> Causal attribution\n> supplies the supporting evidence\n>             (a counterfactual control against a frozen or no-retention\n>             baseline) that a retained intervention, not an unrelated\n>             \n\nhttps://lee1003-lee.github.io/Awesome-RSI-Research/\n### [E9] Towards AI That Improves Itself | RSI Survey\n{\"start_char\": 7962, \"end_char\": 8367}\n\n> evaluator?\n> The strongest claim is transfer of the improvement procedure itself: later generations should search, evaluate, or optimize better because of what was retained.\n> Recursive self-improvement has moved from theory to engineering practice;\n>           the remaining challenge is to make its gains credible, reusable, and\n>           transferable beyond the tasks and evaluators that produced them.\n> Close\n\nhttps://lee1003-lee.github.io/Awesome-RSI-Research/\n### [E10] Towards AI That Improves Itself | RSI Survey\n{\"start_char\": 1995, \"end_char\": 2993}\n\n> one\n>               cycle is retained as the starting state of a later cycle. Recursive\n>               progress (the stronger claim that the inherited state also\n>               improves the improver) is treated separately.\n> Proposal\n> Select an editable target and generate a candidate change through\n>                   prompting, search, evolution, program synthesis, training, or experimentation.\n> Target selection identifies what the loop is allowed to change.\n> Candidate generation creates concrete artifacts such as prompts, tools, memory, code, data, or checkpoints.\n> Feedback\n> Expose consequences in a repository, simulator, benchmark, training run,\n>                   or live environment, then convert outcomes into evidence.\n> Execution environments reveal behavioral effects of a candidate.\n> Verification signals judge the evidence through tests, rewards, model judges, formal checks, or review.\n> Optimization\n> Retain, revise, reject, promote, or roll back the candidate while preserving\n>                   \n\nhttps://lee1003-lee.github.io/Awesome-RSI-Research/\n### [E11] Towards AI That Improves Itself | RSI Survey\n{\"start_char\": 6966, \"end_char\": 7962}\n\n> Diversity\n> Do proposals cover meaningfully different hypotheses and execution paths?\n> Diversity is about causal independence, not just different wording; systems should preserve disagreement, branch distance, and failure coverage.\n> Persistence\n> Does a successful intervention remain available and useful later?\n> Retained artifacts need provenance, scope conditions, retirement criteria, and evidence that they contribute downstream rather than drifting into noise.\n> Adaptability\n> Can the system respond to changing tasks, tools, evaluators, and environments?\n> The key split is frozen evidence for comparison versus adaptive evidence for discovering new weaknesses as the environment changes.\n> Controllability\n> Are authority, review, monitoring, and rollback coupled to risk?\n> Update authority should track target scope, verifier strength, deployment context, and failure severity, with intervention points preserved across the loop.\n> Generalization\n> Does the improvement transfer beyond its original task and \n\nhttps://lee1003-lee.github.io/Awesome-RSI-Research/\n### [E12] [2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\n{\"start_char\": 997, \"end_char\": 1988}\n\n> ambitions. We survey 1,250 arXiv papers (2024-2026) along two axes: what the system improves -- its behavior in deployment, its policy through training, its evaluator, or the research process itself -- and the degree of loop closure (human-in-the-loop to fully closed). The taxonomy separates bounded self-refinement -- convergent, evaluable, and industrial practice -- from open-ended recursive self-improvement (RSI), which remains bounded by grounding requirements, collapse dynamics, and compute constraints on every measured axis. Its distinctive feature is a dedicated category for self-evaluation: every improvement loop is a claim that some signal can substitute for human judgment. We survey the evaluator design space -- judges, process reward models, verifiers, rubrics, meta-evaluation -- order the signals into a verification hierarchy from formal verifiers (strongest) to intrinsic self-assessment (weakest), and observe that demonstrated self-improvement strength tracks this \n\nhttps://arxiv.org/abs/2607.07663\n### [E13] [2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\n{\"start_char\": 0, \"end_char\": 997}\n\n> [2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\n> Skip to main content\n> Search arXiv\n> Press Enter to search ·\n> Advanced search\n> Computer Science > Artificial Intelligence\n> arXiv:2607.07663\n> (cs)\n> [Submitted on 8 Jul 2026 (\n> v1\n> ), last revised 6 Sep 2026 (this version, v2)]\n> Title:\n> Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\n> Authors:\n> Mingguang Chen\n> ,\n> Licheng Wang\n> ,\n> Bo Qu\n> View a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\n> View PDF\n> HTML (experimental)\n> Abstract:\n> AI systems increasingly participate in their own improvement: revising their outputs, adapting their harnesses during deployment, training on data they generate, and conducting AI research itself. This literature uses a vocabulary (\"self-refine,\" \"self-reward,\" \"self-play,\" \"self-evolve\") that conflates fundamentally different \n\nhttps://arxiv.org/abs/2607.07663\n### [E14] [2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\n{\"start_char\": 2986, \"end_char\": 3986}\n\n> Access Paper:\n> View a PDF of the paper titled Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops, by Mingguang Chen and 2 other authors\n> View PDF\n> HTML (experimental)\n> TeX Source\n> view license\n> Additional Features\n> Audio Summary\n> Current browse context:\n> cs.AI\n> < prev\n> |\n> next >\n> new\n> |\n> recent\n> |\n> 2026-07\n> Change to browse by:\n> cs\n> References & Citations\n> SciX\n> Google Scholar\n> Semantic Scholar\n> export BibTeX citation\n> Loading...\n> BibTeX formatted citation\n> ×\n> loading...\n> Data provided by:\n> Bookmark\n> Bibliographic Tools\n> Bibliographic and Citation Tools\n> Bibliographic Explorer Toggle\n> Bibliographic Explorer\n> (\n> What is the Explorer?\n> )\n> Connected Papers Toggle\n> Connected Papers\n> (\n> What is Connected Papers?\n> )\n> Litmaps Toggle\n> Litmaps\n> (\n> What is Litmaps?\n> )\n> scite.ai Toggle\n> scite Smart Citations\n> (\n> What are Smart Citations?\n> )\n> Code, Data, Media\n> Code, Data and Media Associated with this Article\n> alphaXiv Toggle\n> alphaXiv\n> (\n> What is alphaXiv?\n> )\n> Links to Code Toggle\n> CatalyzeX Code Finder for Papers\n> \n\nhttps://arxiv.org/abs/2607.07663\n### [E15] [2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\n{\"start_char\": 1988, \"end_char\": 2986}\n\n> hierarchy, that its failure modes (self-confirming loops, model and diversity collapse) follow from its violations, and that the \"research direction-setting\" bottleneck keeping humans in the loop divides into a verification problem the hierarchy indexes and a prior one -- choosing what deserves evaluation at all -- that it does not. We connect the literature to the theory of RSI limits and to the safety and governance questions raised by frontier-lab accounts of closing the loop, and identify governance-grade measurement of self-improvement as the field's most underpopulated niche.\n> Comments:\n> 44 pages, 6 figures\n> Subjects:\n> Artificial Intelligence (cs.AI)\n> Cite as:\n> arXiv:2607.07663\n> [cs.AI]\n> (or\n> arXiv:2607.07663v2\n> [cs.AI]\n> for this version)\n> https://doi.org/10.48550/arXiv.2607.07663\n> Focus to learn more\n> arXiv-issued DOI via DataCite\n> Submission history\n> From: Mingguang Chen [\n> view email\n> ]\n> [v1]\n> Wed, 8 Jul 2026 17:19:50 UTC (5,164 KB)\n> [v2]\n> Sun, 6 Sep 2026 11:44:06 UTC (5,189 KB)\n> Full-text links:\n> \n\nhttps://arxiv.org/abs/2607.07663\n### [E16] [2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\n{\"start_char\": 3986, \"end_char\": 4983}\n\n> (\n> What is CatalyzeX?\n> )\n> DagsHub Toggle\n> DagsHub\n> (\n> What is DagsHub?\n> )\n> GotitPub Toggle\n> Gotit.pub\n> (\n> What is GotitPub?\n> )\n> Huggingface Toggle\n> Hugging Face\n> (\n> What is Huggingface?\n> )\n> ScienceCast Toggle\n> ScienceCast\n> (\n> What is ScienceCast?\n> )\n> Demos\n> Demos\n> Replicate Toggle\n> Replicate\n> (\n> What is Replicate?\n> )\n> Spaces Toggle\n> Hugging Face Spaces\n> (\n> What is Spaces?\n> )\n> Spaces Toggle\n> TXYZ.AI\n> (\n> What is TXYZ.AI?\n> )\n> Related Papers\n> Recommenders and Search Tools\n> Link to Influence Flower\n> Influence Flower\n> (\n> What are Influence Flowers?\n> )\n> Core recommender toggle\n> CORE Recommender\n> (\n> What is CORE?\n> )\n> Author\n> Venue\n> Institution\n> Topic\n> About arXivLabs\n> arXivLabs: experimental projects with community collaborators\n> arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\n> Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works \n\nhttps://arxiv.org/abs/2607.07663\n### [E17] [2607.07663] Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops\n{\"start_char\": 4983, \"end_char\": 5198}\n\n> with partners that adhere to them.\n> Have an idea for a project that will add value for arXiv's community?\n> Learn more about arXivLabs\n> .\n> Which authors of this paper are endorsers?\n> |\n> Disable MathJax\n> (\n> What is MathJax?\n> )\n\nhttps://arxiv.org/abs/2607.07663\n### [E18] [2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\n{\"start_char\": 0, \"end_char\": 994}\n\n> [2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\n> Skip to main content\n> Search arXiv\n> Press Enter to search ·\n> Advanced search\n> Computer Science > Artificial Intelligence\n> arXiv:2610.35193\n> (cs)\n> [Submitted on 26 Oct 2026]\n> Title:\n> Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\n> Authors:\n> Jiayue Pu\n> ,\n> Ang Gao\n> ,\n> Jinyi Bai\n> ,\n> Qipeng Wang\n> ,\n> Tongyu Wen\n> ,\n> Jiahao Zhao\n> ,\n> Keyu Qu\n> ,\n> Junhao Zhang\n> ,\n> Chenglei Shen\n> ,\n> Zhongxiang Sun\n> ,\n> Jun Xu\n> ,\n> Xiao Zhang\n> View a PDF of the paper titled Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges, by Jiayue Pu and 11 other authors\n> View PDF\n> HTML (experimental)\n> Abstract:\n> AI systems built around large models increasingly use experience and feedback to make persistent changes to models, prompts, memories, tools, and workflows. Recursive self-improvement (RSI) \n\nhttps://arxiv.org/abs/2610.35193\n### [E19] [2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\n{\"start_char\": 994, \"end_char\": 1992}\n\n> extends this process to inductive biases and to the mechanisms that govern future updates, which can themselves be revised and reused across improvement cycles. Yet self-modification alone does not guarantee trustworthy improvement. Reported gains may reflect flawed evaluations, previously acquired capabilities may deteriorate, and compliance with behavioral constraints may weaken. Compromised artifacts or sensitive information may also persist in successor systems. Changes to improvement mechanisms may invalidate earlier verification results and make human oversight less effective. This survey presents an operational definition and process framework for RSI and organizes the requirements for trustworthy RSI into four interconnected themes: genuine and sustained improvement; behavioral constraints, alignment, and fairness; system security and privacy; and transparency and controllability. We examine these themes from three perspectives: Improvement Validity, Constraint Preservation, \n\nhttps://arxiv.org/abs/2610.35193\n### [E20] [2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\n{\"start_char\": 2990, \"end_char\": 3989}\n\n> Full-text links:\n> Access Paper:\n> View a PDF of the paper titled Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges, by Jiayue Pu and 11 other authors\n> View PDF\n> HTML (experimental)\n> TeX Source\n> view license\n> Additional Features\n> Audio Summary\n> Current browse context:\n> cs.AI\n> < prev\n> |\n> next >\n> new\n> |\n> recent\n> |\n> 2026-10\n> Change to browse by:\n> cs\n> cs.CR\n> References & Citations\n> SciX\n> Google Scholar\n> Semantic Scholar\n> export BibTeX citation\n> Loading...\n> BibTeX formatted citation\n> ×\n> loading...\n> Data provided by:\n> Bookmark\n> Bibliographic Tools\n> Bibliographic and Citation Tools\n> Bibliographic Explorer Toggle\n> Bibliographic Explorer\n> (\n> What is the Explorer?\n> )\n> Connected Papers Toggle\n> Connected Papers\n> (\n> What is Connected Papers?\n> )\n> Litmaps Toggle\n> Litmaps\n> (\n> What is Litmaps?\n> )\n> scite.ai Toggle\n> scite Smart Citations\n> (\n> What are Smart Citations?\n> )\n> Code, Data, Media\n> Code, Data and Media Associated with this Article\n> alphaXiv Toggle\n> alphaXiv\n> (\n> What is alphaXiv?\n> )\n> Links to \n\nhttps://arxiv.org/abs/2610.35193\n### [E21] [2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\n{\"start_char\": 1992, \"end_char\": 2990}\n\n> and Effective Oversight. This analysis covers improvement diagnosis, proposal generation, proposal evaluation, and update implementation (S1--S4), including the recursive application of these stages to improvement mechanisms (RI). We review risks, safeguards, and evaluation evidence for individual updates, effects inherited by successor systems, and revisions to improvement mechanisms, while distinguishing direct RSI findings from evidence in related systems. Finally, we examine evaluation settings, identify requirements for independent and longitudinal assessment, and discuss applications and open research problems.\n> Subjects:\n> Artificial Intelligence (cs.AI)\n> ; Cryptography and Security (cs.CR)\n> Cite as:\n> arXiv:2610.35193\n> [cs.AI]\n> (or\n> arXiv:2610.35193v1\n> [cs.AI]\n> for this version)\n> https://doi.org/10.48550/arXiv.2610.35193\n> Focus to learn more\n> arXiv-issued DOI via DataCite (pending registration)\n> Submission history\n> From: Jiayue Pu [\n> view email\n> ]\n> [v1]\n> Mon, 26 Oct 2026 10:46:03 UTC (18,922 KB)\n> \n\nhttps://arxiv.org/abs/2610.35193\n### [E22] [2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\n{\"start_char\": 3989, \"end_char\": 4987}\n\n> Code Toggle\n> CatalyzeX Code Finder for Papers\n> (\n> What is CatalyzeX?\n> )\n> DagsHub Toggle\n> DagsHub\n> (\n> What is DagsHub?\n> )\n> GotitPub Toggle\n> Gotit.pub\n> (\n> What is GotitPub?\n> )\n> Huggingface Toggle\n> Hugging Face\n> (\n> What is Huggingface?\n> )\n> ScienceCast Toggle\n> ScienceCast\n> (\n> What is ScienceCast?\n> )\n> Demos\n> Demos\n> Replicate Toggle\n> Replicate\n> (\n> What is Replicate?\n> )\n> Spaces Toggle\n> Hugging Face Spaces\n> (\n> What is Spaces?\n> )\n> Spaces Toggle\n> TXYZ.AI\n> (\n> What is TXYZ.AI?\n> )\n> Related Papers\n> Recommenders and Search Tools\n> Link to Influence Flower\n> Influence Flower\n> (\n> What are Influence Flowers?\n> )\n> Core recommender toggle\n> CORE Recommender\n> (\n> What is CORE?\n> )\n> Author\n> Venue\n> Institution\n> Topic\n> About arXivLabs\n> arXivLabs: experimental projects with community collaborators\n> arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\n> Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv \n\nhttps://arxiv.org/abs/2610.35193\n### [E23] [2610.35193] Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges\n{\"start_char\": 4987, \"end_char\": 5246}\n\n> is committed to these values and only works with partners that adhere to them.\n> Have an idea for a project that will add value for arXiv's community?\n> Learn more about arXivLabs\n> .\n> Which authors of this paper are endorsers?\n> |\n> Disable MathJax\n> (\n> What is MathJax?\n> )\n\nhttps://arxiv.org/abs/2610.35193"
+  },
+  "error": null,
+  "progress": [
+    {
+      "stage": "start",
+      "message": "Research started",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 1/6",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "stage": "retrieve",
+      "message": "search_web · 1/12",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "stage": "retrieve",
+      "message": "search_web · 2/12",
+      "elapsed_seconds": 16.1
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 2/6",
+      "elapsed_seconds": 21.9
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 3/12",
+      "elapsed_seconds": 24.0
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 4/12",
+      "elapsed_seconds": 24.8
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 3/6",
+      "elapsed_seconds": 25.4
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 5/12",
+      "elapsed_seconds": 27.6
+    },
+    {
+      "stage": "retrieve",
+      "message": "search_web · 6/12",
+      "elapsed_seconds": 28.0
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 4/6",
+      "elapsed_seconds": 33.9
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 7/12",
+      "elapsed_seconds": 36.0
+    },
+    {
+      "stage": "draft",
+      "message": "Drafting individually cited claims",
+      "elapsed_seconds": 36.4
+    },
+    {
+      "stage": "verify",
+      "message": "Checking IDs, numbers, exact quotes and semantic support",
+      "elapsed_seconds": 43.1
+    },
+    {
+      "stage": "repair",
+      "message": "Decision 5/6",
+      "elapsed_seconds": 49.5
+    },
+    {
+      "stage": "retrieve",
+      "message": "search_web · 8/12",
+      "elapsed_seconds": 51.8
+    },
+    {
+      "stage": "retrieve",
+      "message": "search_web · 9/12",
+      "elapsed_seconds": 59.0
+    },
+    {
+      "stage": "repair",
+      "message": "Decision 6/6",
+      "elapsed_seconds": 66.1
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 10/12",
+      "elapsed_seconds": 68.2
+    },
+    {
+      "stage": "draft",
+      "message": "Drafting individually cited claims",
+      "elapsed_seconds": 68.7
+    },
+    {
+      "stage": "verify",
+      "message": "Checking IDs, numbers, exact quotes and semantic support",
+      "elapsed_seconds": 74.5
+    },
+    {
+      "stage": "complete",
+      "message": "Research complete; inspect citations and unresolved points",
+      "elapsed_seconds": 79.9
+    }
+  ]
+}

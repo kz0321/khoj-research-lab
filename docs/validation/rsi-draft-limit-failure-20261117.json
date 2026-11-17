@@ -1,0 +1,793 @@
+{
+  "id": "a56c11f0a45e405aaa9188c39b38c808",
+  "question": "RSI-Index（RSIGym，Recursive Self-Improvement，递归自我改进）有哪些现存的相关工作？请区分 RSI-Index 本身与递归自我改进领域的相关研究，列出论文或项目名称、主要贡献和来源链接。",
+  "collection_id": "demo",
+  "mode": "verified",
+  "status": "failed",
+  "created_at": "2026-11-17T03:41:43.605986+00:00",
+  "request": {
+    "question": "RSI-Index（RSIGym，Recursive Self-Improvement，递归自我改进）有哪些现存的相关工作？请区分 RSI-Index 本身与递归自我改进领域的相关研究，列出论文或项目名称、主要贡献和来源链接。",
+    "collection_id": "demo",
+    "mode": "verified",
+    "allow_web": true,
+    "perturbation": null
+  },
+  "result": {
+    "question": "RSI-Index（RSIGym，Recursive Self-Improvement，递归自我改进）有哪些现存的相关工作？请区分 RSI-Index 本身与递归自我改进领域的相关研究，列出论文或项目名称、主要贡献和来源链接。",
+    "mode": "verified",
+    "answer": "",
+    "report": "Run did not complete. Inspect the failure trace; this is not a verified report.",
+    "claims": [],
+    "evidence": [
+      {
+        "id": "E1",
+        "source_id": "02-boreal-study",
+        "title": "02-boreal-study.md",
+        "text": "# Boreal semantic retrieval study\nThis is a synthetic teaching document, not a published scientific result.\n\n## Experiment\nBoreal uses a dense embedding retriever. The experiment used Dataset Forest v2 with 800 English questions. The metric was Recall@10. Boreal achieved 84.0% Recall@10 on Dataset Forest v2. A cross-encoder reranker was applied. Measurements were made on 2025-04-15 using a GPU.\n\n## Latency\nThe median retrieval latency was 24 ms per query, excluding document indexing. The corpus contained 50,000 passages. The publication did not measure evidence-grounded answer quality.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 593,
+          "heading": "# Boreal semantic retrieval study"
+        },
+        "url": null,
+        "score": 0.03252247488101534,
+        "semantic_score": 0.6088908314704895,
+        "chunk_id": "2161784bd4e853e14a0b5aa1",
+        "retrieved_at": "2026-11-17T03:41:53.312745+00:00"
+      },
+      {
+        "id": "E2",
+        "source_id": "03-comparison-protocol",
+        "title": "03-comparison-protocol.md",
+        "text": "# Retrieval comparison protocol\nThis is a synthetic teaching document.\n\n## Required controls\nA direct accuracy comparison requires the same dataset version, question split, corpus, relevance labels and metric cutoff. Recall@5 and Recall@10 measure different operating points. A higher Recall@10 on a different dataset does not establish a better retrieval method. A comparison should also state whether a reranker is used.\n\n## Runtime controls\nLatency comparisons must use the same hardware, corpus size, batch size and timing boundary. Indexing cost should be reported separately. These controls have not yet been applied jointly to Aurora and Boreal. A controlled head-to-head evaluation is still required.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 709,
+          "heading": "# Retrieval comparison protocol"
+        },
+        "url": null,
+        "score": 0.03177805800756621,
+        "semantic_score": 0.6141498684883118,
+        "chunk_id": "c092cf278e5f7f9c90520fb7",
+        "retrieved_at": "2026-11-17T03:41:53.312745+00:00"
+      },
+      {
+        "id": "E3",
+        "source_id": "01-aurora-study",
+        "title": "01-aurora-study.md",
+        "text": "# Aurora lexical retrieval study\nThis is a synthetic teaching document, not a published scientific result.\n\n## Experiment\nAurora uses BM25 lexical retrieval. The experiment used Dataset River v1 with 500 English questions. The metric was Recall@5. Aurora achieved 72.0% Recall@5 on Dataset River v1. There was no reranker. Measurements were made on 2025-03-01 using an eight-core CPU.\n\n## Latency\nThe median retrieval latency was 18 ms per query, excluding document indexing. The corpus contained 10,000 passages. No generation model was evaluated in this experiment.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 568,
+          "heading": "# Aurora lexical retrieval study"
+        },
+        "url": null,
+        "score": 0.031754032258064516,
+        "semantic_score": 0.5817824006080627,
+        "chunk_id": "72c2a651c955a09226b0e8bb",
+        "retrieved_at": "2026-11-17T03:41:53.312745+00:00"
+      },
+      {
+        "id": "E4",
+        "source_id": "04-lab-notes",
+        "title": "04-lab-notes.md",
+        "text": "# Lab meeting notes\nThis is a synthetic teaching document.\n\n## Draft interpretation\nThe team initially wrote that Boreal's reported 84.0% score proved it outperformed Aurora's reported 72.0% score. This was an unreviewed interpretation.\n\n## Correction\nThe reviewer rejected that conclusion because the datasets, metric cutoffs, hardware and reranker settings differ. The team agreed to withdraw the superiority claim. No common-corpus follow-up experiment has been completed. Neither study reports the final answer citation-support precision.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 543,
+          "heading": "# Lab meeting notes"
+        },
+        "url": null,
+        "score": 0.031746031746031744,
+        "semantic_score": 0.5863734483718872,
+        "chunk_id": "8a6e175c0100e61df61acfb4",
+        "retrieved_at": "2026-11-17T03:41:53.312745+00:00"
+      },
+      {
+        "id": "E5",
+        "source_id": "05-evidence-checking",
+        "title": "05-evidence-checking.md",
+        "text": "# Evidence checking handbook\nThis is a synthetic teaching document.\n\n## Claim-level checks\nA citation must support the associated claim, not merely discuss the same topic. Numerical matching is necessary for literal score claims but does not validate experimental comparability. A system should distinguish supported findings, direct contradictions, and missing information. When essential information is missing, it should state the limitation instead of inventing an answer.\n\n## Project question\nCan explicit checking improve support precision without materially reducing answer completeness? The current demo documents do not contain measured results answering this research question. That claim requires the project's controlled evaluation and human annotations.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 767,
+          "heading": "# Evidence checking handbook"
+        },
+        "url": null,
+        "score": 0.031009615384615385,
+        "semantic_score": 0.5493537187576294,
+        "chunk_id": "91cb92cb5b10ed539ee8963e",
+        "retrieved_at": "2026-11-17T03:41:53.312745+00:00"
+      },
+      {
+        "id": "E6",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Machine Learning\narXiv:2610.10310\n(cs)\n[Submitted on 7 Oct 2026]\nTitle:\nRSIGym: A Flexible Environment for Recursive Self-Improvement\nAuthors:\nFanqing Meng\n,\nLingxiao Du\n,\nHaocheng Lu\n,\nQiguang Chen\n,\nZiqi Zhao\n,\nZijian Wu\n,\nJiayuan Zhuo\n,\nMengkang Hu\n,\nMichael Qizhe Shieh\nView a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\nView PDF\nHTML (experimental)\nAbstract:\nRecursive self-improvement requires carrying accepted changes into later improvement cycles, while studying agent-proposed changes also requires substantial research infrastructure. Existing settings often leave agents to rebuild routine infrastructure or restrict exploration to individual components. We introduce RSIGym, an agent-native research environment based on Everything as a ",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 0,
+          "end_char": 997
+        },
+        "retrieved_at": "2026-11-17T03:41:55.541161+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "3f734209cd10060a66e0a51b"
+      },
+      {
+        "id": "E7",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "Service (EaaS). RSIGym exposes training, inference, rollout, evaluation, and sandbox execution through reusable services, with shared budget and permission controls supporting Data, Harness, and Joint improvement tracks. This design enables agents to investigate individual interventions and jointly optimize data, training settings, and execution harnesses within the same environment. We define RSI-Index as the mean fraction of the remaining performance gap closed across five benchmarks covering software engineering, terminal interaction, mathematics, scientific reasoning, and skill-based tasks. Comparing six frontier research models in independent Joint runs, Opus 5 achieves the highest RSI-Index of 0.4809 under a $500 platform-service budget per benchmark run. Its selected systems improve all five benchmarks, raising SWE-bench Verified from 17.67% to 50.33% and AIME from 31.67% to 97.78%. Additional experiments examine DSH-harness refinement, budget variation, and restricted network ",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 997,
+          "end_char": 1996
+        },
+        "retrieved_at": "2026-11-17T03:41:55.541161+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "8460b2e5f286189fdd34734c"
+      },
+      {
+        "id": "E8",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "access, while recorded trajectories reveal how agents diagnose failures and select candidates. We open-source the full RSIGym codebase and results to support reproducibility and further research.\nSubjects:\nMachine Learning (cs.LG)\nCite as:\narXiv:2610.10310\n[cs.LG]\n(or\narXiv:2610.10310v1\n[cs.LG]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2610.10310\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Fanqing Meng [\nview email\n]\n[v1]\nWed, 7 Oct 2026 16:05:15 UTC (96 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled RSIGym: A Flexible Environment for Recursive Self-Improvement, by Fanqing Meng and 8 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nAdditional Features\nAudio Summary\nCurrent browse context:\ncs.LG\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2026-10\nChange to browse by:\ncs\nReferences & Citations\nSciX\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\n",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 1996,
+          "end_char": 2989
+        },
+        "retrieved_at": "2026-11-17T03:41:55.541161+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "ca43ec4dae29085bce68d963"
+      },
+      {
+        "id": "E9",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "Core recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nIArxiv recommender toggle\nIArxiv Recommender\n(\nWhat is IArxiv?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 3988,
+          "end_char": 4759
+        },
+        "retrieved_at": "2026-11-17T03:41:55.541161+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "0be3fbc351bcb41ecf0a1c3c"
+      },
+      {
+        "id": "E10",
+        "source_id": "https://arxiv.org/abs/2610.10310",
+        "title": "[2610.10310] RSIGym: A Flexible Environment for Recursive Self-Improvement",
+        "text": "Bookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\n",
+        "url": "https://arxiv.org/abs/2610.10310",
+        "location": {
+          "start_char": 2989,
+          "end_char": 3988
+        },
+        "retrieved_at": "2026-11-17T03:41:55.541161+00:00",
+        "source_sha256": "2d6ea734fde9a0577f38fe4842595cf3a38d9ffcd7486354e8cd673dfb961c73",
+        "chunk_id": "3e065bc8c6d5e366779376ee"
+      },
+      {
+        "id": "E11",
+        "source_id": "https://arxiv.org/abs/2505.22954",
+        "title": "[2505.22954] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+        "text": "[2505.22954] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Artificial Intelligence\narXiv:2505.22954\n(cs)\n[Submitted on 29 May 2025 (\nv1\n), last revised 12 Mar 2026 (this version, v3)]\nTitle:\nDarwin Godel Machine: Open-Ended Evolution of Self-Improving Agents\nAuthors:\nJenny Zhang\n,\nShengran Hu\n,\nCong Lu\n,\nRobert Lange\n,\nJeff Clune\nView a PDF of the paper titled Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents, by Jenny Zhang and 4 other authors\nView PDF\nHTML (experimental)\nAbstract:\nToday's AI systems have human-designed, fixed architectures and cannot autonomously and continuously improve themselves. The advance of AI could itself be automated. If done safely, that would accelerate AI development and allow us to reap its benefits much sooner. Meta-learning can automate the discovery of novel algorithms, but is limited by first-order improvements and the ",
+        "url": "https://arxiv.org/abs/2505.22954",
+        "location": {
+          "start_char": 0,
+          "end_char": 1000
+        },
+        "retrieved_at": "2026-11-17T03:42:01.575331+00:00",
+        "source_sha256": "507bef59c553f57c4d17da61106550a8c16e1671e0b49cdd5cef78990399221a",
+        "chunk_id": "5f0905cec3f3ed01ab83292d"
+      },
+      {
+        "id": "E12",
+        "source_id": "https://arxiv.org/abs/2505.22954",
+        "title": "[2505.22954] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+        "text": "human design of a suitable search space. The Gödel machine proposed a theoretical alternative: a self-improving AI that repeatedly modifies itself in a provably beneficial manner. Unfortunately, proving that most changes are net beneficial is impossible in practice. We introduce the Darwin Gödel Machine (DGM), a self-improving system that iteratively modifies its own code (thereby also improving its ability to modify its own codebase) and empirically validates each change using coding benchmarks. Inspired by Darwinian evolution and open-endedness research, the DGM maintains an archive of generated coding agents. It grows the archive by sampling an agent from it and using a foundation model to create a new, interesting, version of the sampled agent. This open-ended exploration forms a growing tree of diverse, high-quality agents and allows the parallel exploration of many different paths through the search space. Empirically, the DGM automatically improves its coding capabilities ",
+        "url": "https://arxiv.org/abs/2505.22954",
+        "location": {
+          "start_char": 1000,
+          "end_char": 1994
+        },
+        "retrieved_at": "2026-11-17T03:42:01.575331+00:00",
+        "source_sha256": "507bef59c553f57c4d17da61106550a8c16e1671e0b49cdd5cef78990399221a",
+        "chunk_id": "5bebcd12f3339e59d7e82060"
+      },
+      {
+        "id": "E13",
+        "source_id": "https://arxiv.org/abs/2505.22954",
+        "title": "[2505.22954] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+        "text": "Access Paper:\nView a PDF of the paper titled Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents, by Jenny Zhang and 4 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nCurrent browse context:\ncs.AI\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2025-05\nChange to browse by:\ncs\nReferences & Citations\nNASA ADS\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is ",
+        "url": "https://arxiv.org/abs/2505.22954",
+        "location": {
+          "start_char": 2991,
+          "end_char": 3990
+        },
+        "retrieved_at": "2026-11-17T03:42:01.575331+00:00",
+        "source_sha256": "507bef59c553f57c4d17da61106550a8c16e1671e0b49cdd5cef78990399221a",
+        "chunk_id": "88f96a6f8b7c7cf23d5f5d06"
+      },
+      {
+        "id": "E14",
+        "source_id": "https://arxiv.org/abs/2505.22954",
+        "title": "[2505.22954] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+        "text": "project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "url": "https://arxiv.org/abs/2505.22954",
+        "location": {
+          "start_char": 4985,
+          "end_char": 5146
+        },
+        "retrieved_at": "2026-11-17T03:42:01.575331+00:00",
+        "source_sha256": "507bef59c553f57c4d17da61106550a8c16e1671e0b49cdd5cef78990399221a",
+        "chunk_id": "8347d640de3748692dd0b345"
+      },
+      {
+        "id": "E15",
+        "source_id": "https://arxiv.org/abs/2505.22954",
+        "title": "[2505.22954] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+        "text": "(e.g., better code editing tools, long-context window management, peer-review mechanisms), increasing performance on SWE-bench from 20.0% to 50.0%, and on Polyglot from 14.2% to 30.7%. Furthermore, the DGM significantly outperforms baselines without self-improvement or open-ended exploration. All experiments were done with safety precautions (e.g., sandboxing, human oversight). The DGM is a significant step toward self-improving AI, capable of gathering its own stepping stones along paths that unfold into endless innovation.\nComments:\nCode at\nthis https URL\nSubjects:\nArtificial Intelligence (cs.AI)\nCite as:\narXiv:2505.22954\n[cs.AI]\n(or\narXiv:2505.22954v3\n[cs.AI]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2505.22954\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Jenny Zhuoting Zhang [\nview email\n]\n[v1]\nThu, 29 May 2025 00:26:15 UTC (2,231 KB)\n[v2]\nFri, 26 Sep 2025 16:36:03 UTC (2,259 KB)\n[v3]\nThu, 12 Mar 2026 23:47:40 UTC (2,241 KB)\nFull-text links:\n",
+        "url": "https://arxiv.org/abs/2505.22954",
+        "location": {
+          "start_char": 1994,
+          "end_char": 2991
+        },
+        "retrieved_at": "2026-11-17T03:42:01.575331+00:00",
+        "source_sha256": "507bef59c553f57c4d17da61106550a8c16e1671e0b49cdd5cef78990399221a",
+        "chunk_id": "e8cc6bedb752d8320ce535c1"
+      },
+      {
+        "id": "E16",
+        "source_id": "https://arxiv.org/abs/2505.22954",
+        "title": "[2505.22954] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+        "text": "DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\nHave an idea for a ",
+        "url": "https://arxiv.org/abs/2505.22954",
+        "location": {
+          "start_char": 3990,
+          "end_char": 4985
+        },
+        "retrieved_at": "2026-11-17T03:42:01.575331+00:00",
+        "source_sha256": "507bef59c553f57c4d17da61106550a8c16e1671e0b49cdd5cef78990399221a",
+        "chunk_id": "1fb23ed5a84a32145d933558"
+      },
+      {
+        "id": "E17",
+        "source_id": "https://arxiv.org/abs/2410.04444",
+        "title": "[2410.04444] Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
+        "text": "[2410.04444] Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Artificial Intelligence\narXiv:2410.04444\n(cs)\n[Submitted on 6 Oct 2024 (\nv1\n), last revised 31 May 2025 (this version, v4)]\nTitle:\nGödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement\nAuthors:\nXunjian Yin\n,\nXinyi Wang\n,\nLiangming Pan\n,\nLi Lin\n,\nXiaojun Wan\n,\nWilliam Yang Wang\nView a PDF of the paper titled G\\\"odel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement, by Xunjian Yin and Xinyi Wang and Liangming Pan and Li Lin and Xiaojun Wan and William Yang Wang\nView PDF\nHTML (experimental)\nAbstract:\nThe rapid advancement of large language models (LLMs) has significantly enhanced the capabilities of AI-driven agents across various tasks. However, existing agentic systems, whether based on fixed pipeline algorithms or pre-defined meta-learning frameworks, ",
+        "url": "https://arxiv.org/abs/2410.04444",
+        "location": {
+          "start_char": 0,
+          "end_char": 996
+        },
+        "retrieved_at": "2026-11-17T03:42:03.034875+00:00",
+        "source_sha256": "c6af4ff0001fb1dc78db64fb5c46ce2955e45e584075b353077cf74979515437",
+        "chunk_id": "f932bcc0a49911c8f62dd030"
+      },
+      {
+        "id": "E18",
+        "source_id": "https://arxiv.org/abs/2410.04444",
+        "title": "[2410.04444] Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
+        "text": "cannot search the whole agent design space due to the restriction of human-designed components, and thus might miss the globally optimal agent design. In this paper, we introduce Gödel Agent, a self-evolving framework inspired by the Gödel machine, enabling agents to recursively improve themselves without relying on predefined routines or fixed optimization algorithms. Gödel Agent leverages LLMs to dynamically modify its own logic and behavior, guided solely by high-level objectives through prompting. Experimental results on mathematical reasoning and complex agent tasks demonstrate that implementation of Gödel Agent can achieve continuous self-improvement, surpassing manually crafted agents in performance, efficiency, and generalizability.\nComments:\nACL 2025 main. The code can be found at\nthis https URL\nSubjects:\nArtificial Intelligence (cs.AI)\nCite as:\narXiv:2410.04444\n[cs.AI]\n(or\narXiv:2410.04444v4\n[cs.AI]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2410.04444\nFocus to learn ",
+        "url": "https://arxiv.org/abs/2410.04444",
+        "location": {
+          "start_char": 996,
+          "end_char": 1994
+        },
+        "retrieved_at": "2026-11-17T03:42:03.034875+00:00",
+        "source_sha256": "c6af4ff0001fb1dc78db64fb5c46ce2955e45e584075b353077cf74979515437",
+        "chunk_id": "e2ce0216292b7f308422f54c"
+      },
+      {
+        "id": "E19",
+        "source_id": "https://arxiv.org/abs/2410.04444",
+        "title": "[2410.04444] Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
+        "text": "more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Xunjian Yin [\nview email\n]\n[v1]\nSun, 6 Oct 2024 10:49:40 UTC (715 KB)\n[v2]\nFri, 18 Oct 2024 01:57:51 UTC (715 KB)\n[v3]\nTue, 18 Feb 2025 06:44:29 UTC (679 KB)\n[v4]\nSat, 31 May 2025 07:33:17 UTC (680 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled G\\\"odel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement, by Xunjian Yin and Xinyi Wang and Liangming Pan and Li Lin and Xiaojun Wan and William Yang Wang\nView PDF\nHTML (experimental)\nTeX Source\nview license\nAdditional Features\nAudio Summary\nCurrent browse context:\ncs.AI\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2024-10\nChange to browse by:\ncs\nReferences & Citations\nSciX\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\n",
+        "url": "https://arxiv.org/abs/2410.04444",
+        "location": {
+          "start_char": 1994,
+          "end_char": 2993
+        },
+        "retrieved_at": "2026-11-17T03:42:03.034875+00:00",
+        "source_sha256": "c6af4ff0001fb1dc78db64fb5c46ce2955e45e584075b353077cf74979515437",
+        "chunk_id": "d8b755f5e0b5005a0eb86484"
+      },
+      {
+        "id": "E20",
+        "source_id": "https://arxiv.org/abs/2410.04444",
+        "title": "[2410.04444] Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
+        "text": "collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "url": "https://arxiv.org/abs/2410.04444",
+        "location": {
+          "start_char": 3981,
+          "end_char": 4533
+        },
+        "retrieved_at": "2026-11-17T03:42:03.034875+00:00",
+        "source_sha256": "c6af4ff0001fb1dc78db64fb5c46ce2955e45e584075b353077cf74979515437",
+        "chunk_id": "e25a9036f7ed5249d8b4d410"
+      },
+      {
+        "id": "E21",
+        "source_id": "https://arxiv.org/abs/2410.04444",
+        "title": "[2410.04444] Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
+        "text": "Connected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community ",
+        "url": "https://arxiv.org/abs/2410.04444",
+        "location": {
+          "start_char": 2993,
+          "end_char": 3981
+        },
+        "retrieved_at": "2026-11-17T03:42:03.034875+00:00",
+        "source_sha256": "c6af4ff0001fb1dc78db64fb5c46ce2955e45e584075b353077cf74979515437",
+        "chunk_id": "57c5b9b1b1f161033550a163"
+      },
+      {
+        "id": "E22",
+        "source_id": "https://arxiv.org/abs/2310.02304",
+        "title": "[2310.02304] Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation",
+        "text": "[2310.02304] Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Computation and Language\narXiv:2310.02304\n(cs)\n[Submitted on 3 Oct 2023 (\nv1\n), last revised 16 Aug 2024 (this version, v3)]\nTitle:\nSelf-Taught Optimizer (STOP): Recursively Self-Improving Code Generation\nAuthors:\nEric Zelikman\n,\nEliana Lorch\n,\nLester Mackey\n,\nAdam Tauman Kalai\nView a PDF of the paper titled Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation, by Eric Zelikman and 3 other authors\nView PDF\nAbstract:\nSeveral recent advances in AI systems solve problems by providing a \"scaffolding\" program that structures multiple calls to language models (LMs) to generate better outputs. A scaffolding program is written in a programming language such as Python. In this work, we use a language-model-infused scaffolding program to improve itself. We start with a seed \"improver\" that improves ",
+        "url": "https://arxiv.org/abs/2310.02304",
+        "location": {
+          "start_char": 0,
+          "end_char": 999
+        },
+        "retrieved_at": "2026-11-17T03:42:06.313715+00:00",
+        "source_sha256": "3cd22cf021d13ef4c4977587de555721071e888adf80a363f4e1d7c981c2f051",
+        "chunk_id": "c2a5a9f0fb43edcf9874931b"
+      },
+      {
+        "id": "E23",
+        "source_id": "https://arxiv.org/abs/2310.02304",
+        "title": "[2310.02304] Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation",
+        "text": "(cs.AI); Machine Learning (cs.LG); Machine Learning (stat.ML)\nCite as:\narXiv:2310.02304\n[cs.CL]\n(or\narXiv:2310.02304v3\n[cs.CL]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2310.02304\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Lester Mackey [\nview email\n]\n[v1]\nTue, 3 Oct 2023 17:59:32 UTC (198 KB)\n[v2]\nFri, 1 Mar 2024 17:11:21 UTC (217 KB)\n[v3]\nFri, 16 Aug 2024 17:28:08 UTC (214 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation, by Eric Zelikman and 3 other authors\nView PDF\nTeX Source\nview license\nAdditional Features\nAudio Summary\nCurrent browse context:\ncs.CL\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2023-10\nChange to browse by:\ncs\ncs.AI\ncs.LG\nstat\nstat.ML\nReferences & Citations\nSciX\nGoogle Scholar\nSemantic Scholar\n1 blog link\n(\nwhat is this?\n)\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\n",
+        "url": "https://arxiv.org/abs/2310.02304",
+        "location": {
+          "start_char": 1994,
+          "end_char": 2983
+        },
+        "retrieved_at": "2026-11-17T03:42:06.313715+00:00",
+        "source_sha256": "3cd22cf021d13ef4c4977587de555721071e888adf80a363f4e1d7c981c2f051",
+        "chunk_id": "de1b51a197ae35d2bfc120fe"
+      },
+      {
+        "id": "E24",
+        "source_id": "https://arxiv.org/abs/2310.02304",
+        "title": "[2310.02304] Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation",
+        "text": "an input program according to a given utility function by querying an LM several times and returning the best solution. We then run this seed improver to improve itself. Across a small set of downstream tasks, the resulting improved improver generates programs with significantly better performance than its seed improver. A variety of self-improvement strategies are proposed by the language model, including beam search, genetic algorithms, and simulated annealing. Since the language models themselves are not altered, this is not full recursive self-improvement. Nonetheless, it demonstrates that a modern language model, GPT-4 in our experiments, is capable of writing code that can call itself to improve itself. We consider concerns around the development of self-improving technologies and evaluate the frequency with which the generated code bypasses a sandbox.\nComments:\nPublished as a conference paper at COLM 2024\nSubjects:\nComputation and Language (cs.CL)\n; Artificial Intelligence ",
+        "url": "https://arxiv.org/abs/2310.02304",
+        "location": {
+          "start_char": 999,
+          "end_char": 1994
+        },
+        "retrieved_at": "2026-11-17T03:42:06.313715+00:00",
+        "source_sha256": "3cd22cf021d13ef4c4977587de555721071e888adf80a363f4e1d7c981c2f051",
+        "chunk_id": "42bcec771169979e39b19fca"
+      },
+      {
+        "id": "E25",
+        "source_id": "https://arxiv.org/abs/2310.02304",
+        "title": "[2310.02304] Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation",
+        "text": "Recommender\n(\nWhat is CORE?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "url": "https://arxiv.org/abs/2310.02304",
+        "location": {
+          "start_char": 3982,
+          "end_char": 4659
+        },
+        "retrieved_at": "2026-11-17T03:42:06.313715+00:00",
+        "source_sha256": "3cd22cf021d13ef4c4977587de555721071e888adf80a363f4e1d7c981c2f051",
+        "chunk_id": "d598a270853bc0e7f2b85e04"
+      },
+      {
+        "id": "E26",
+        "source_id": "https://arxiv.org/abs/2310.02304",
+        "title": "[2310.02304] Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation",
+        "text": "Bibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE ",
+        "url": "https://arxiv.org/abs/2310.02304",
+        "location": {
+          "start_char": 2983,
+          "end_char": 3982
+        },
+        "retrieved_at": "2026-11-17T03:42:06.313715+00:00",
+        "source_sha256": "3cd22cf021d13ef4c4977587de555721071e888adf80a363f4e1d7c981c2f051",
+        "chunk_id": "ef4ff5b2ad1e71585e357d10"
+      },
+      {
+        "id": "E27",
+        "source_id": "https://arxiv.org/abs/2401.10020",
+        "title": "[2401.10020] Self-Rewarding Language Models",
+        "text": "[2401.10020] Self-Rewarding Language Models\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Computation and Language\narXiv:2401.10020\n(cs)\n[Submitted on 18 Jan 2024 (\nv1\n), last revised 28 Mar 2025 (this version, v3)]\nTitle:\nSelf-Rewarding Language Models\nAuthors:\nWeizhe Yuan\n,\nRichard Yuanzhe Pang\n,\nKyunghyun Cho\n,\nXian Li\n,\nSainbayar Sukhbaatar\n,\nJing Xu\n,\nJason Weston\nView a PDF of the paper titled Self-Rewarding Language Models, by Weizhe Yuan and 6 other authors\nView PDF\nHTML (experimental)\nAbstract:\nWe posit that to achieve superhuman agents, future models require superhuman feedback in order to provide an adequate training signal. Current approaches commonly train reward models from human preferences, which may then be bottlenecked by human performance level, and secondly these separate frozen reward models cannot then learn to improve during LLM training. In this work, we study Self-Rewarding Language Models, where the language ",
+        "url": "https://arxiv.org/abs/2401.10020",
+        "location": {
+          "start_char": 0,
+          "end_char": 995
+        },
+        "retrieved_at": "2026-11-17T03:42:06.745390+00:00",
+        "source_sha256": "c5e62b33c695efab1fcd6062258ef4f4810fd63c250a3dc554bbec62ee26e103",
+        "chunk_id": "b12263bda5c28cf71cfb96a3"
+      },
+      {
+        "id": "E28",
+        "source_id": "https://arxiv.org/abs/2401.10020",
+        "title": "[2401.10020] Self-Rewarding Language Models",
+        "text": "(1,048 KB)\n[v3]\nFri, 28 Mar 2025 00:06:51 UTC (1,061 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled Self-Rewarding Language Models, by Weizhe Yuan and 6 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nCurrent browse context:\ncs.CL\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2024-01\nChange to browse by:\ncs\ncs.AI\nReferences & Citations\nNASA ADS\nGoogle Scholar\nSemantic Scholar\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is ",
+        "url": "https://arxiv.org/abs/2401.10020",
+        "location": {
+          "start_char": 1993,
+          "end_char": 2989
+        },
+        "retrieved_at": "2026-11-17T03:42:06.745390+00:00",
+        "source_sha256": "c5e62b33c695efab1fcd6062258ef4f4810fd63c250a3dc554bbec62ee26e103",
+        "chunk_id": "ae70e533ac43178622bf8123"
+      },
+      {
+        "id": "E29",
+        "source_id": "https://arxiv.org/abs/2401.10020",
+        "title": "[2401.10020] Self-Rewarding Language Models",
+        "text": "model itself is used via LLM-as-a-Judge prompting to provide its own rewards during training. We show that during Iterative DPO training that not only does instruction following ability improve, but also the ability to provide high-quality rewards to itself. Fine-tuning Llama 2 70B on three iterations of our approach yields a model that outperforms many existing systems on the AlpacaEval 2.0 leaderboard, including Claude 2, Gemini Pro, and GPT-4 0613. While there is much left still to explore, this work opens the door to the possibility of models that can continually improve in both axes.\nComments:\nICML 2024\nSubjects:\nComputation and Language (cs.CL)\n; Artificial Intelligence (cs.AI)\nCite as:\narXiv:2401.10020\n[cs.CL]\n(or\narXiv:2401.10020v3\n[cs.CL]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2401.10020\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Weizhe Yuan [\nview email\n]\n[v1]\nThu, 18 Jan 2024 14:43:47 UTC (402 KB)\n[v2]\nThu, 8 Feb 2024 10:19:53 UTC ",
+        "url": "https://arxiv.org/abs/2401.10020",
+        "location": {
+          "start_char": 995,
+          "end_char": 1993
+        },
+        "retrieved_at": "2026-11-17T03:42:06.745390+00:00",
+        "source_sha256": "c5e62b33c695efab1fcd6062258ef4f4810fd63c250a3dc554bbec62ee26e103",
+        "chunk_id": "2d78601c23ec34dd23c94404"
+      },
+      {
+        "id": "E30",
+        "source_id": "https://arxiv.org/abs/2401.10020",
+        "title": "[2401.10020] Self-Rewarding Language Models",
+        "text": "partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "url": "https://arxiv.org/abs/2401.10020",
+        "location": {
+          "start_char": 3981,
+          "end_char": 4191
+        },
+        "retrieved_at": "2026-11-17T03:42:06.745390+00:00",
+        "source_sha256": "c5e62b33c695efab1fcd6062258ef4f4810fd63c250a3dc554bbec62ee26e103",
+        "chunk_id": "93b8a816ad36a5066625f4c3"
+      }
+    ],
+    "trace": [
+      {
+        "step": 1,
+        "round": 1,
+        "tool": "search_web",
+        "args": {
+          "query": "RSI-Index RSIGym recursive self-improvement benchmark"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "search_attempts": [
+          {
+            "provider": "ddgs_auto",
+            "status": "empty_or_unavailable",
+            "elapsed_seconds": 5.485,
+            "results": 0,
+            "error": "No parseable results; provider blocking or parser changes can also cause this."
+          },
+          {
+            "provider": "arxiv_search",
+            "status": "completed",
+            "elapsed_seconds": 1.531,
+            "results": 1
+          }
+        ],
+        "search_provider": "arxiv_search",
+        "search_scope": "arXiv scholarly papers; not a general web index",
+        "evidence_ids": [],
+        "result_count": 1,
+        "elapsed_ms": 7016
+      },
+      {
+        "step": 2,
+        "round": 1,
+        "tool": "semantic_search_files",
+        "args": {
+          "q": "RSI-Index RSIGym recursive self-improvement"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ],
+        "result_count": 5,
+        "elapsed_ms": 969
+      },
+      {
+        "step": 3,
+        "round": 2,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2610.10310"
+          ],
+          "query": "RSIGym paper: RSI-Index definition, main contributions, authors, publication details"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10"
+        ],
+        "result_count": 5,
+        "elapsed_ms": 407
+      },
+      {
+        "step": 4,
+        "round": 2,
+        "tool": "search_web",
+        "args": {
+          "query": "recursive self-improvement LLM agents papers STOP Self-Rewarding Absolute Zero Darwin Godel Machine AlphaEvolve"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "search_attempts": [
+          {
+            "provider": "ddgs_auto",
+            "status": "completed",
+            "elapsed_seconds": 3.562,
+            "results": 5
+          }
+        ],
+        "search_provider": "ddgs_auto",
+        "search_scope": "general web metasearch",
+        "evidence_ids": [],
+        "result_count": 5,
+        "elapsed_ms": 3562
+      },
+      {
+        "step": 5,
+        "round": 3,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2505.22954"
+          ],
+          "query": "Darwin Gödel Machine: main contributions, method, results, authors, publication date"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E11",
+          "E12",
+          "E13",
+          "E14",
+          "E15",
+          "E16"
+        ],
+        "result_count": 6,
+        "elapsed_ms": 390
+      },
+      {
+        "step": 6,
+        "round": 3,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2410.04444"
+          ],
+          "query": "Gödel Agent: main contributions, method, results, authors, publication date"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E17",
+          "E18",
+          "E19",
+          "E20",
+          "E21"
+        ],
+        "result_count": 5,
+        "elapsed_ms": 1454
+      },
+      {
+        "step": 7,
+        "round": 4,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2310.02304"
+          ],
+          "query": "STOP: Self-Taught Optimizer - main contributions, method, results, authors, publication date"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E22",
+          "E23",
+          "E24",
+          "E25",
+          "E26"
+        ],
+        "result_count": 5,
+        "elapsed_ms": 375
+      },
+      {
+        "step": 8,
+        "round": 4,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2401.10020"
+          ],
+          "query": "Self-Rewarding Language Models - main contributions, method, results, authors, publication date"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E27",
+          "E28",
+          "E29",
+          "E30"
+        ],
+        "result_count": 5,
+        "elapsed_ms": 437
+      }
+    ],
+    "usage": {
+      "calls": 5,
+      "input_tokens": 39112,
+      "output_tokens": 2224,
+      "failed_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "estimated_cost_usd": null,
+      "pricing_date": null,
+      "cost_note": "Token counts include all received usage; failed requests without usage remain unknown. No tariff configured."
+    },
+    "model_calls": [
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 1915,
+        "output_tokens": 159,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 1.703
+      },
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 3938,
+        "output_tokens": 232,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 1.812
+      },
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 7768,
+        "output_tokens": 243,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.094
+      },
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 12576,
+        "output_tokens": 265,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.906
+      },
+      {
+        "stage": "draft",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "failed",
+        "input_tokens": 12915,
+        "output_tokens": 1325,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "error": "1 validation error for Draft\nanswer_evidence_ids\n  List should have at most 8 items after validation, not 12 [type=too_long, input_value=['E6', 'E7', 'E8', 'E11',...2', 'E24', 'E27', 'E29'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+        "elapsed_seconds": 6.813
+      }
+    ],
+    "stop_reason": "error",
+    "unresolved": [
+      "draft: 1 validation error for Draft\nanswer_evidence_ids\n  List should have at most 8 items after validation, not 12 [type=too_long, input_value=['E6', 'E7', 'E8', 'E11',...2', 'E24', 'E27', 'E29'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long"
+    ]
+  },
+  "error": "draft: 1 validation error for Draft\nanswer_evidence_ids\n  List should have at most 8 items after validation, not 12 [type=too_long, input_value=['E6', 'E7', 'E8', 'E11',...2', 'E24', 'E27', 'E29'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+  "progress": [
+    {
+      "stage": "start",
+      "message": "Research started",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 1/6",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "stage": "retrieve",
+      "message": "search_web · 1/12",
+      "elapsed_seconds": 1.7
+    },
+    {
+      "stage": "retrieve",
+      "message": "semantic_search_files · 2/12",
+      "elapsed_seconds": 8.7
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 2/6",
+      "elapsed_seconds": 9.7
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 3/12",
+      "elapsed_seconds": 11.5
+    },
+    {
+      "stage": "retrieve",
+      "message": "search_web · 4/12",
+      "elapsed_seconds": 11.9
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 3/6",
+      "elapsed_seconds": 15.5
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 5/12",
+      "elapsed_seconds": 17.6
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 6/12",
+      "elapsed_seconds": 18.0
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 4/6",
+      "elapsed_seconds": 19.4
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 7/12",
+      "elapsed_seconds": 22.3
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 8/12",
+      "elapsed_seconds": 22.7
+    },
+    {
+      "stage": "draft",
+      "message": "Drafting individually cited claims",
+      "elapsed_seconds": 23.1
+    }
+  ]
+}

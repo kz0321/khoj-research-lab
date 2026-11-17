@@ -1,0 +1,32 @@
+{
+  "captured_at_utc": "2026-11-16T06:18:00.283Z",
+  "source_url": "http://127.0.0.1:8778/?run=269e5d2713aa40039cb2b1906075d160",
+  "run_id": "269e5d2713aa40039cb2b1906075d160",
+  "actual_saved_run_status": "completed",
+  "model": "deepseek-flash",
+  "elapsed_seconds": 13.282,
+  "claims": 7,
+  "evidence": 5,
+  "check_note": "Actual model output and automated checker statuses; not human ground truth or benchmark scores.",
+  "submitted_research_requests": 0,
+  "checks": [
+    "history expansion and selecting exact saved run",
+    "existing-run deep link and reload",
+    "report citations open original evidence",
+    "ledger matches saved claims",
+    "checker-not-ground-truth notice visible",
+    "action trace expansion",
+    "JSON export matches run",
+    "390px no horizontal overflow",
+    "no browser JS errors"
+  ],
+  "images": [
+    "dashboard.png",
+    "research-completed.png",
+    "research-report.png",
+    "source-inspection.png",
+    "evidence-ledger.png",
+    "action-trace.png",
+    "mobile-report.png"
+  ]
+}

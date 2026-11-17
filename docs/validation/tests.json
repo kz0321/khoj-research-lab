@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-16",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "passed": 88,
+  "failed": 0,
+  "duration_seconds": 3.51,
+  "scope": "Automated software tests; model and network responses mocked unless a test is explicitly a local HTTP or PDF parsing test; not semantic quality evidence."
+}

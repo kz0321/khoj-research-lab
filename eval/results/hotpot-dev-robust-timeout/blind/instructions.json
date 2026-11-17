@@ -1,0 +1,14 @@
+{
+  "raters": 2,
+  "items": 4,
+  "blinding": "Keep PRIVATE-system-key.json away from raters; exported rows hide mode, checker status and verifier reasoning.",
+  "rubric": {
+    "supported": "The quoted passage supports the entire factual claim including numbers, units, dates and qualifications.",
+    "unsupported": "Missing citation, insufficient passage, missing condition, or inference unsupported by that passage.",
+    "contradicted": "The passage explicitly conflicts with the claim.",
+    "not_verifiable": "Not an externally verifiable factual claim; exclude from factual-claim denominator with recorded rationale."
+  },
+  "process": "Raters label independently. Compute agreement before reconciliation. Resolve disagreements into resolved.csv with item_id,label,notes. Separately audit answer equivalence, task success and evidence-insufficient variants.",
+  "task_rubric": "Complete citation judging first, then separate task forms. answer_correct: yes/no (semantic equivalents count yes); required_claims_supported: yes/no (all necessary factual claims supported); evidence_sufficient: yes/no/uncertain based on the ENTIRE available corpus, not just retrieved passages; abstention_correct: yes/no/not_applicable. failure_category: retrieval_miss/unsupported_synthesis/missed_contradiction/incorrect_verification/tool_failure/budget_exhaustion/other/none. Two raters independently assess and resolve disagreements.",
+  "warning": "Do not expose gold answers or verifier labels before independent citation judging. These blank forms are not completed human evaluation."
+}

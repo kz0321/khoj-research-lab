@@ -1,0 +1,6 @@
+﻿mode,attempted_runs,failed_runs,answer_em,answer_f1,supporting_f1,answer_rate,abstained_runs,runs_with_repair,latency_median_seconds,latency_p95_seconds,tokens_median,input_tokens_total,output_tokens_total,tool_calls_total,model_calls_total,estimated_cost_usd_total
+multi_step,2,0,0.5,0.5,0.7333333333333334,1.0,0,0,5.7965,6.583550000000001,8318.5,15559,1078,3,7,
+no_tools,2,0,0.0,0.0,0.0,1.0,0,0,1.492,1.5414999999999999,590.5,927,254,0,2,
+single_rag,2,0,0.5,0.5,0.625,1.0,0,0,2.008,2.4085,2055.0,3632,478,2,2,
+verified,2,0,0.5,0.5,0.7333333333333334,0.5,1,1,10.585999999999999,12.8432,12786.5,23206,2367,4,10,
+verified_no_repair,2,0,0.5,0.5,0.7749999999999999,0.5,1,0,9.5155,9.684249999999999,12401.0,22670,2132,4,10,

@@ -1,0 +1,451 @@
+{
+  "dataset": "hotpotqa/hotpot_qa",
+  "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+  "configuration": "distractor",
+  "seed": 20261116,
+  "dev": 20,
+  "test": 40,
+  "sampling": "uniform random row indices without replacement within official train/validation; retain exactly-ten-paragraph contexts and remove duplicate questions before model runs",
+  "excluded_structure": [],
+  "test_description": "40 held-out items from the publicly released official development (HF validation) split; not an official hidden-test submission",
+  "type_counts": {
+    "dev": {
+      "bridge": 16,
+      "comparison": 4
+    },
+    "test": {
+      "bridge": 34,
+      "comparison": 6
+    }
+  },
+  "collections": [
+    {
+      "collection_id": "hotpot-5ab95d3d5542996be20204a7",
+      "documents": 10,
+      "sha256": "9800381f43ae4d417aca9c2c78ded9644efae9308c6cc556d9f98c08c2289f39",
+      "source_split": "train",
+      "source_row": 27573
+    },
+    {
+      "collection_id": "hotpot-5abfeed15542997ec76fd471",
+      "documents": 10,
+      "sha256": "fc84f04a6e5d4cdb6389cc16a8c0e76555f6b0062d5b0f79f1af7118d9cf6bb4",
+      "source_split": "train",
+      "source_row": 28045
+    },
+    {
+      "collection_id": "hotpot-5a8bb29e5542996e8ac889e3",
+      "documents": 10,
+      "sha256": "df6ee13e88f2fcf7020cef4bbbd9ac099182629c80fd243fbd1d353faa01c538",
+      "source_split": "train",
+      "source_row": 83288
+    },
+    {
+      "collection_id": "hotpot-5ab4189555429969a97a8240",
+      "documents": 10,
+      "sha256": "69b204d88c48b274add2ca027192bde13f77f4a08d2e8a88cb4b0501b42b4d49",
+      "source_split": "train",
+      "source_row": 53022
+    },
+    {
+      "collection_id": "hotpot-5a732b5e5542992359bc325c",
+      "documents": 10,
+      "sha256": "afa5769c3b5f4148ad5f973c3e8f587e7b4d3a8b752af96cf47677e5f498984d",
+      "source_split": "train",
+      "source_row": 44215
+    },
+    {
+      "collection_id": "hotpot-5a7a563555429941d65f25bc",
+      "documents": 10,
+      "sha256": "5fe37807a938bccba635b9221346abec7da102fd1da7fbd13c8a2002630287b1",
+      "source_split": "train",
+      "source_row": 66091
+    },
+    {
+      "collection_id": "hotpot-5a7c930255429907fabeefb3",
+      "documents": 10,
+      "sha256": "7b516a26305e203f1635fd1329d9aee075e6da775cf15f756457c2968f5d5c10",
+      "source_split": "train",
+      "source_row": 84815
+    },
+    {
+      "collection_id": "hotpot-5ade00385542997545bbbdf2",
+      "documents": 10,
+      "sha256": "c043a4638552455d93a29d30f85b1bb13191beeeff9354dfe92cc56a7d7327fc",
+      "source_split": "train",
+      "source_row": 42167
+    },
+    {
+      "collection_id": "hotpot-5ac10bb3554299012d1db68b",
+      "documents": 10,
+      "sha256": "7dce7363d15eb2937f22193092a716e01b33a718ee061fd829853e4e56ed8afd",
+      "source_split": "train",
+      "source_row": 75326
+    },
+    {
+      "collection_id": "hotpot-5ab99950554299131ca42392",
+      "documents": 10,
+      "sha256": "48353c1e7aa5fa28354a0ff73d8eafb370880740f82027ac0df824b08539c54c",
+      "source_split": "train",
+      "source_row": 1724
+    },
+    {
+      "collection_id": "hotpot-5abb98d855429966062416f8",
+      "documents": 10,
+      "sha256": "c8229b3a27630e6067c1e65f6f830c370f32c5b3e9e3f238fce4b7617c3582b5",
+      "source_split": "train",
+      "source_row": 66313
+    },
+    {
+      "collection_id": "hotpot-5ae3ebac5542995ad6573c9a",
+      "documents": 10,
+      "sha256": "fddf3727f547ab2b6e6500524789f437403865db1c8e91dcd8ebb86683d6a37f",
+      "source_split": "train",
+      "source_row": 24750
+    },
+    {
+      "collection_id": "hotpot-5ab2a4d1554299295394678c",
+      "documents": 10,
+      "sha256": "e2a788ebf2fc4c0893daa4ab14ced93e9fddd2627163eb9cfe55990a7b38b549",
+      "source_split": "train",
+      "source_row": 90125
+    },
+    {
+      "collection_id": "hotpot-5a89fdc555429946c8d6ea32",
+      "documents": 10,
+      "sha256": "deeec54499a526994d02d93a2a710d18eccb3bba8ffece8032c019a4b91ac67b",
+      "source_split": "train",
+      "source_row": 859
+    },
+    {
+      "collection_id": "hotpot-5a8665cd5542991e77181639",
+      "documents": 10,
+      "sha256": "74750ad7bd20cd4cde9cefa7b834ab7904adc7ebcb336f10b198e16edefe9b81",
+      "source_split": "train",
+      "source_row": 68340
+    },
+    {
+      "collection_id": "hotpot-5ae234845542992decbdcc5b",
+      "documents": 10,
+      "sha256": "57e92bebc62feb58d1d936c0cbbd3837c888637658e009e1cdb0ac6da1f9a441",
+      "source_split": "train",
+      "source_row": 65793
+    },
+    {
+      "collection_id": "hotpot-5a8c44ce5542995e66a47589",
+      "documents": 10,
+      "sha256": "3b1baf57f8324e711968d91d2b17e5ea317e7ff76234cc175a507f21c6751085",
+      "source_split": "train",
+      "source_row": 82332
+    },
+    {
+      "collection_id": "hotpot-5adcf4005542992c1e3a24d2",
+      "documents": 10,
+      "sha256": "ac0b1687d445984c2d3dff63a2d8b515ec1f599c941cecf71e2b16f21872c3cb",
+      "source_split": "train",
+      "source_row": 75287
+    },
+    {
+      "collection_id": "hotpot-5ac240f755429951e9e684f0",
+      "documents": 10,
+      "sha256": "48d8db417f90123f99ad28d64609b24510b7fa13f1633dc217ee9ff21dba3bad",
+      "source_split": "train",
+      "source_row": 47720
+    },
+    {
+      "collection_id": "hotpot-5adbdefa5542996e6852526a",
+      "documents": 10,
+      "sha256": "e22abfb5c786ca03b587e257120ab73a9c413b1016aac70c2d44f85168063842",
+      "source_split": "train",
+      "source_row": 65834
+    },
+    {
+      "collection_id": "hotpot-5add6b595542992200553b0c",
+      "documents": 10,
+      "sha256": "d2205d8f3b3ea9f6a69a73e71e4b27b31e98540f87035eca2610ae416c0f80ea",
+      "source_split": "validation",
+      "source_row": 3622
+    },
+    {
+      "collection_id": "hotpot-5ac01e77554299012d1db5ac",
+      "documents": 10,
+      "sha256": "b17622691a25ebf5a0d554cf48a137fbcf7b8339a086f4b09316c6c817035131",
+      "source_split": "validation",
+      "source_row": 2915
+    },
+    {
+      "collection_id": "hotpot-5a7d6a2d5542991319bc93c6",
+      "documents": 10,
+      "sha256": "9151a215d1ac2ea5dafa3b79b8b9494967285a0aec7f688fdb7879f373b57089",
+      "source_split": "validation",
+      "source_row": 4372
+    },
+    {
+      "collection_id": "hotpot-5ab5e4e15542997d4ad1f229",
+      "documents": 10,
+      "sha256": "b162d12589761930962c385827b2fa2435a9258f471d97dad2c3b0368c529dcc",
+      "source_split": "validation",
+      "source_row": 5662
+    },
+    {
+      "collection_id": "hotpot-5a74d92555429929fddd84fa",
+      "documents": 10,
+      "sha256": "65d39666bd0d4c8235419e9ef826f1cb2bccd4d4a76dd8515ecd949a7ffbc7f1",
+      "source_split": "validation",
+      "source_row": 2326
+    },
+    {
+      "collection_id": "hotpot-5a887898554299206df2b2a2",
+      "documents": 10,
+      "sha256": "b4c0a56ad4ebfe1bf011b80f9ea99e9ca91fdae79e3465c7c2c5d274bef3c5d7",
+      "source_split": "validation",
+      "source_row": 1854
+    },
+    {
+      "collection_id": "hotpot-5a8e41735542995085b37406",
+      "documents": 10,
+      "sha256": "8387c9711bf3bad366d617d314cbdbf343c8feb193733695f3e52bf2a0f5dea3",
+      "source_split": "validation",
+      "source_row": 2428
+    },
+    {
+      "collection_id": "hotpot-5ae81032554299540e5a572a",
+      "documents": 10,
+      "sha256": "336dfd178adb37f1e6b4ad3bd7c12cbac0e5905c1fda2f42393d3dfe41f6e1d6",
+      "source_split": "validation",
+      "source_row": 3002
+    },
+    {
+      "collection_id": "hotpot-5a7a8a9c554299042af8f666",
+      "documents": 10,
+      "sha256": "d54cf2d9f5fa8f34c4948f6e16a3325ae747c75cbc73e5fbc171eb1566b4eaf6",
+      "source_split": "validation",
+      "source_row": 152
+    },
+    {
+      "collection_id": "hotpot-5a7cff5755429907fabef09d",
+      "documents": 10,
+      "sha256": "8ccf5ccdfd0850fd8de9ac70b06967a18164d04cc52526d0224a49993e83961f",
+      "source_split": "validation",
+      "source_row": 3475
+    },
+    {
+      "collection_id": "hotpot-5a7e05635542995f4f40238f",
+      "documents": 10,
+      "sha256": "1f1f2579b5fa35969a7642c55cf0e691a45543abe007d47dd9adf5981e72bd93",
+      "source_split": "validation",
+      "source_row": 1912
+    },
+    {
+      "collection_id": "hotpot-5ae773eb5542997b22f6a777",
+      "documents": 10,
+      "sha256": "0baa1e13c2f5cc5e4aeed40fc240227a471951f1536a7dc2fbdfba3cb962ab42",
+      "source_split": "validation",
+      "source_row": 5509
+    },
+    {
+      "collection_id": "hotpot-5ab9b4a555429970cfb8eb75",
+      "documents": 10,
+      "sha256": "6f72f2a2bebea3a9c48a7985bd4a1df141673d3813e1e3e4f44acfbe4fb594f5",
+      "source_split": "validation",
+      "source_row": 4380
+    },
+    {
+      "collection_id": "hotpot-5a87ab9b5542996e4f3088c2",
+      "documents": 10,
+      "sha256": "facd6efb9794f006621fd2f461dc847b7680c3034adb8f89f7f529d2aef3b4d3",
+      "source_split": "validation",
+      "source_row": 223
+    },
+    {
+      "collection_id": "hotpot-5a808afb5542992bc0c4a76b",
+      "documents": 10,
+      "sha256": "91e081078e8f35da760d6a4c7f9b8a36b1ccea0ea6f422caf537984978cdde61",
+      "source_split": "validation",
+      "source_row": 6566
+    },
+    {
+      "collection_id": "hotpot-5a7e22ed5542995ed0d166a7",
+      "documents": 10,
+      "sha256": "1dcc464f8f84a82783ce4cd49378e93ec96cfd3154d62e80cce36e0e47ad57a1",
+      "source_split": "validation",
+      "source_row": 1819
+    },
+    {
+      "collection_id": "hotpot-5abbf698554299114383a0b5",
+      "documents": 10,
+      "sha256": "70c5a840f95a06ac0fbff59b9fe04669f10bbf040cc5afee365305d176064d16",
+      "source_split": "validation",
+      "source_row": 49
+    },
+    {
+      "collection_id": "hotpot-5a7bcbc8554299294a54aae2",
+      "documents": 10,
+      "sha256": "dfd5cc394a90fc035e098fe860c14f4eb2344819551bc585b16ca1d8041581e1",
+      "source_split": "validation",
+      "source_row": 1325
+    },
+    {
+      "collection_id": "hotpot-5adc020a5542994650320c4c",
+      "documents": 10,
+      "sha256": "b0f6aa0aaa972586935d11e846eca82f525c7a111a20b285c9e89893e572625e",
+      "source_split": "validation",
+      "source_row": 2455
+    },
+    {
+      "collection_id": "hotpot-5a74167455429929fddd83dc",
+      "documents": 10,
+      "sha256": "435578b64a9d6ab563c67b803cca04e13ab7e452e587fd5880288d46390cc5c9",
+      "source_split": "validation",
+      "source_row": 5087
+    },
+    {
+      "collection_id": "hotpot-5a7a276d5542996c55b2dd27",
+      "documents": 10,
+      "sha256": "ce0818fe4d171eb7582291905701e10cfdc77c8ad04ee59c92a413412542281f",
+      "source_split": "validation",
+      "source_row": 207
+    },
+    {
+      "collection_id": "hotpot-5ac3a049554299741d48a2ba",
+      "documents": 10,
+      "sha256": "f895a4424935b5084d6453d14a97d046bfd16d3e6dcb81e67d3966fd0dc913a0",
+      "source_split": "validation",
+      "source_row": 6131
+    },
+    {
+      "collection_id": "hotpot-5adf860e5542993344016cbc",
+      "documents": 10,
+      "sha256": "876dd83d9bb0c4134844cfe3947d3940dc861dfff716c0864e51cb327853cfdf",
+      "source_split": "validation",
+      "source_row": 504
+    },
+    {
+      "collection_id": "hotpot-5ae4ad375542995dadf243a4",
+      "documents": 10,
+      "sha256": "ec1c61262f95cc4899cf57d6d82e91204feb66d31ebd8838eb936b5fa23fef2a",
+      "source_split": "validation",
+      "source_row": 2223
+    },
+    {
+      "collection_id": "hotpot-5abba664554299642a094b02",
+      "documents": 10,
+      "sha256": "335daea8ed7a4260360f8a4b765af07b9c291431cc4d2565298effe971a4be5d",
+      "source_split": "validation",
+      "source_row": 3413
+    },
+    {
+      "collection_id": "hotpot-5a88940055429938390d3f7b",
+      "documents": 10,
+      "sha256": "0d3eda9baec95904c41c822297a623106aba7acb302c5b4527c1bd6faf42c83f",
+      "source_split": "validation",
+      "source_row": 3707
+    },
+    {
+      "collection_id": "hotpot-5a8e83545542990e94052b28",
+      "documents": 10,
+      "sha256": "bd7901dbfd96c8737abc9a089bd36046649471d022d3b11df5b80d1a1ac5907f",
+      "source_split": "validation",
+      "source_row": 2808
+    },
+    {
+      "collection_id": "hotpot-5a7fb1b25542992097ad2fb2",
+      "documents": 10,
+      "sha256": "973a09c75e066e1317db0bea9cacac8b58848eefb102a19172b43d34925d3166",
+      "source_split": "validation",
+      "source_row": 1601
+    },
+    {
+      "collection_id": "hotpot-5a74e8a25542996c70cfae37",
+      "documents": 10,
+      "sha256": "d2034e48ce748e094abac39232cbf7370b9b753a15db6a3253fb7dbdb0d9a62c",
+      "source_split": "validation",
+      "source_row": 4308
+    },
+    {
+      "collection_id": "hotpot-5abb9ad4554299642a094abe",
+      "documents": 10,
+      "sha256": "a543448409075637bb65375611bbdd88d39d34209aff9bb9882930e4d481fd6e",
+      "source_split": "validation",
+      "source_row": 4639
+    },
+    {
+      "collection_id": "hotpot-5a8a17685542993b751ca9f3",
+      "documents": 10,
+      "sha256": "2dab1907a8182ee98c1dbfe24940c080a8e741da98f8e04e578aded3054065b6",
+      "source_split": "validation",
+      "source_row": 2504
+    },
+    {
+      "collection_id": "hotpot-5a875154554299211dda2be7",
+      "documents": 10,
+      "sha256": "cbd9959406e3d6317ce3f446dfbc0abfbae6b731c669d3347a9e75c7f0df4ccd",
+      "source_split": "validation",
+      "source_row": 905
+    },
+    {
+      "collection_id": "hotpot-5ac54ca45542993e66e822d5",
+      "documents": 10,
+      "sha256": "6695b814227f787f1226ca837964148533b0e9eda2b4ea422701bf18f65f89c3",
+      "source_split": "validation",
+      "source_row": 1097
+    },
+    {
+      "collection_id": "hotpot-5adf0d2d5542993a75d263e1",
+      "documents": 10,
+      "sha256": "a0b486cd338e140e418eb161aa3cac126c9e82ff04aceb707240d50babfee3df",
+      "source_split": "validation",
+      "source_row": 6181
+    },
+    {
+      "collection_id": "hotpot-5adf99065542992d7e9f93b0",
+      "documents": 10,
+      "sha256": "55647fd2615508f20b77cebfde7b79487295ab5475ef57c3761ff459fdf3f238",
+      "source_split": "validation",
+      "source_row": 2381
+    },
+    {
+      "collection_id": "hotpot-5ae3a3835542990afbd1e19c",
+      "documents": 10,
+      "sha256": "859a5e7a7ca9630f22c541a3b8007c18e9cdd2060b3fa6e0d150a3eef6939aef",
+      "source_split": "validation",
+      "source_row": 6908
+    },
+    {
+      "collection_id": "hotpot-5a8d0e4e5542994ba4e3dbbf",
+      "documents": 10,
+      "sha256": "3845af0f5b927f7bc1510f818741c6dbb763a2160fe476f045a50cfa59e38a02",
+      "source_split": "validation",
+      "source_row": 1355
+    },
+    {
+      "collection_id": "hotpot-5ae50c345542993aec5ec11f",
+      "documents": 10,
+      "sha256": "a055bf93de0f4df843c7f346232122993e51d2b6d7cd4b295243bb7a7f3b8223",
+      "source_split": "validation",
+      "source_row": 1852
+    },
+    {
+      "collection_id": "hotpot-5a716c415542994082a3e827",
+      "documents": 10,
+      "sha256": "86697411bb367b9f0b8cf85647e7514b532e499549b147f970a28a7e2f80ef6d",
+      "source_split": "validation",
+      "source_row": 3947
+    },
+    {
+      "collection_id": "hotpot-5a7292385542994cef4bc342",
+      "documents": 10,
+      "sha256": "ee77b15cfdcdb6cac3355d894a11c2d2437591b820fbd3917e993a8ffc0f33d2",
+      "source_split": "validation",
+      "source_row": 3382
+    }
+  ],
+  "documents": 600,
+  "created_utc": "2026-11-16T05:53:14.286308+00:00",
+  "perturbation_task_count": 8,
+  "status": "prepared_not_benchmark_evaluated",
+  "limitations": [
+    "Dataset-server responses are saved as the source-of-truth snapshot; its API is not revision-pinned.",
+    "Withholding annotated sentences is not proof of insufficiency; two humans must audit other accessible passages."
+  ]
+}

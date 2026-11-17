@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-11-16T06:58:32.580494+00:00",
+  "url": "http://127.0.0.1:8778",
+  "health": {
+    "ok": true,
+    "service": "Khoj Research Lab"
+  },
+  "status": {
+    "model": "deepseek-flash",
+    "configured": true,
+    "thinking": "disabled for official DeepSeek API",
+    "structured_output": "json_object",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "limits": {
+      "decision_rounds": 6,
+      "tool_calls": 12,
+      "repair_rounds": 2,
+      "elapsed_seconds": 240,
+      "model_calls": 16,
+      "retrieval_top_k": 6,
+      "max_claims": 8,
+      "max_evidence": 30,
+      "final_answer_tokens": 1800
+    },
+    "upstream_commit": "ae229ca894c0b80ad84664afcfdde523b5e87057",
+    "binding": "127.0.0.1",
+    "implementation": "Khoj-derived Windows course runtime (not the full upstream server)"
+  },
+  "demo_run": {
+    "id": "269e5d2713aa40039cb2b1906075d160",
+    "status": "completed",
+    "mode": "verified"
+  },
+  "frames_collection": {
+    "id": "frames-frozen",
+    "name": "FRAMES frozen corpus (395 documents)",
+    "created_at": "2026-11-16T06:01:32.227855+00:00",
+    "documents": 395,
+    "chunks": 9742
+  },
+  "frames_index_manifest": "data/manifests/frames-frozen-local-index.json",
+  "experiment_runs": 200,
+  "experiment_protocol_checks_passed": true,
+  "application_source_hash_mismatches": [],
+  "service_left_running": true
+}

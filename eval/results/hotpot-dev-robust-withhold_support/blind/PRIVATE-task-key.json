@@ -1,0 +1,12 @@
+[
+  {
+    "item_id": "d42328df910032769b7f",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "054cc9477e3f41139e265811c2005366",
+    "mode": "verified",
+    "scenario": "withhold_support",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  }
+]

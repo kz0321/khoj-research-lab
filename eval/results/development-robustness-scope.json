@@ -1,0 +1,20 @@
+{
+  "dataset": "hotpotqa",
+  "split": "dev",
+  "task_ids": [
+    "hotpot-5ab95d3d5542996be20204a7"
+  ],
+  "modes": [
+    "verified"
+  ],
+  "scenarios": [
+    "timeout",
+    "empty",
+    "irrelevant",
+    "withhold_support"
+  ],
+  "clean_baseline": "hotpot-dev-frozen/runs.jsonl first task verified",
+  "n_runs": 4,
+  "human_abstention_audit": "not_completed",
+  "held_out_robustness_claim": false
+}

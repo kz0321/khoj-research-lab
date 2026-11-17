@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-16",
+  "scope": "Application/controller Python sources frozen before held-out HotpotQA evaluation; frontend/documentation may be edited independently.",
+  "sha256": {
+    "app/__init__.py": "47c0af8b2037f9f1d63a9bab4fb02c20a3eb36ba7a374bdc03e35c945d35c99c",
+    "app/agent.py": "0e3891ff03ab42b6b977ebaadfc624c79da4af84fc937e321ee92d75fd31f2f2",
+    "app/config.py": "04f7e089b40ae32939c032c168006526205c1ce4175444f7e204a029fb9791f4",
+    "app/khoj_core.py": "d1769889544dab05b06e599bd8c6e2a3b3daa9a5200c386d272bef229d339998",
+    "app/llm.py": "192f62025c9ae6559b24c1a9985430460295d778e36160dc83f08337b267073f",
+    "app/main.py": "1089dc2a006b61c0c35576db53fd479e267181cf1912d9157dfd5453b67e424a",
+    "app/retrieval.py": "0d64295a5df8ad63a4fa0f9b8c9853d5717bb3f3835314cb615f3a37bd5771d4",
+    "app/schemas.py": "5b6c39991c3b9048bfcb116075b5446ad12cb894141c0115ccfb714d58074c55",
+    "app/store.py": "fa5d1ae2633b5ebd7551fcb3b022b3e98aff9e024f1258eb1963d3526b13d04a",
+    "app/web_tools.py": "c6fdef20e06630dbdbb4df79a76cc2a09c2f864f1ea25f611682d37ee424c0a7"
+  }
+}

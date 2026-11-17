@@ -1,0 +1,15 @@
+.venv/
+.env
+.env.local
+__pycache__/
+.pytest_cache/
+*.pyc
+runtime/
+models/
+data/raw/
+*.zip
+.audit/
+tmp/
+outputs/
+.env.*
+!.env.example

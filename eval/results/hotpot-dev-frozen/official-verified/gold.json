@@ -1,0 +1,34 @@
+[
+  {
+    "_id": "5ab95d3d5542996be20204a7",
+    "answer": "Kurt Wise",
+    "supporting_facts": [
+      [
+        "Grand Canyon: A Different View",
+        1
+      ],
+      [
+        "Kurt Wise",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5abfeed15542997ec76fd471",
+    "answer": "oil on canvas",
+    "supporting_facts": [
+      [
+        "The Bride of the Wind",
+        0
+      ],
+      [
+        "Alma Mahler",
+        0
+      ],
+      [
+        "Alma Mahler",
+        1
+      ]
+    ]
+  }
+]

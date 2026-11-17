@@ -1,0 +1,646 @@
+[
+  {
+    "_id": "5add6b595542992200553b0c",
+    "answer": "Atlanta, Georgia",
+    "supporting_facts": [
+      [
+        "Shit (song)",
+        0
+      ],
+      [
+        "Future (rapper)",
+        1
+      ]
+    ]
+  },
+  {
+    "_id": "5ac01e77554299012d1db5ac",
+    "answer": "Tudor music and English folk-song",
+    "supporting_facts": [
+      [
+        "Ella Mary Leather",
+        1
+      ],
+      [
+        "Ralph Vaughan Williams",
+        0
+      ],
+      [
+        "Ralph Vaughan Williams",
+        2
+      ]
+    ]
+  },
+  {
+    "_id": "5a7d6a2d5542991319bc93c6",
+    "answer": "Southern Isles",
+    "supporting_facts": [
+      [
+        "Magnus Barefoot",
+        0
+      ],
+      [
+        "Magnus Barefoot",
+        1
+      ],
+      [
+        "Kingdom of the Isles",
+        1
+      ],
+      [
+        "Kingdom of the Isles",
+        4
+      ]
+    ]
+  },
+  {
+    "_id": "5ab5e4e15542997d4ad1f229",
+    "answer": "1885",
+    "supporting_facts": [
+      [
+        "Walter Davis (footballer)",
+        0
+      ],
+      [
+        "Millwall F.C.",
+        0
+      ],
+      [
+        "Millwall F.C.",
+        2
+      ]
+    ]
+  },
+  {
+    "_id": "5a74d92555429929fddd84fa",
+    "answer": "Wojtek",
+    "supporting_facts": [
+      [
+        "Wojtek Memorial Trust",
+        0
+      ],
+      [
+        "Wojtek (bear)",
+        0
+      ],
+      [
+        "Wojtek (bear)",
+        1
+      ]
+    ]
+  },
+  {
+    "_id": "5a887898554299206df2b2a2",
+    "answer": "no",
+    "supporting_facts": [
+      [
+        "Broughtonia",
+        0
+      ],
+      [
+        "Perilla",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a8e41735542995085b37406",
+    "answer": "Shawnee",
+    "supporting_facts": [
+      [
+        "Keokuk Falls, Oklahoma",
+        0
+      ],
+      [
+        "Keokuk Falls, Oklahoma",
+        1
+      ],
+      [
+        "Shawnee, Oklahoma",
+        0
+      ],
+      [
+        "Shawnee, Oklahoma",
+        2
+      ]
+    ]
+  },
+  {
+    "_id": "5ae81032554299540e5a572a",
+    "answer": "Pakenham",
+    "supporting_facts": [
+      [
+        "Electoral district of Bass",
+        1
+      ],
+      [
+        "Electoral district of Bass",
+        2
+      ],
+      [
+        "Pakenham, Victoria",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a7a8a9c554299042af8f666",
+    "answer": "Argand lamp",
+    "supporting_facts": [
+      [
+        "Lewis lamp",
+        0
+      ],
+      [
+        "Argand lamp",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a7cff5755429907fabef09d",
+    "answer": "1st Duke of Lancaster",
+    "supporting_facts": [
+      [
+        "Farleigh Hungerford Castle",
+        1
+      ],
+      [
+        "John of Gaunt",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a7e05635542995f4f40238f",
+    "answer": "January 2016",
+    "supporting_facts": [
+      [
+        "Katherine Ann Dettwyler",
+        1
+      ],
+      [
+        "Otto Warmbier",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5ae773eb5542997b22f6a777",
+    "answer": "April 6, 2014",
+    "supporting_facts": [
+      [
+        "Alice Wetterlund",
+        0
+      ],
+      [
+        "Alice Wetterlund",
+        1
+      ],
+      [
+        "Silicon Valley (TV series)",
+        2
+      ]
+    ]
+  },
+  {
+    "_id": "5ab9b4a555429970cfb8eb75",
+    "answer": "Grand Forks International Airport",
+    "supporting_facts": [
+      [
+        "Rick Husband Amarillo International Airport",
+        0
+      ],
+      [
+        "Grand Forks International Airport",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a87ab9b5542996e4f3088c2",
+    "answer": "nineteenth",
+    "supporting_facts": [
+      [
+        "Tippecanoe order of battle",
+        0
+      ],
+      [
+        "Tecumseh",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a808afb5542992bc0c4a76b",
+    "answer": "Maurice Level",
+    "supporting_facts": [
+      [
+        "Maurice Level",
+        0
+      ],
+      [
+        "John Dufresne",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a7e22ed5542995ed0d166a7",
+    "answer": "Bernard Malamud",
+    "supporting_facts": [
+      [
+        "Bernard Malamud",
+        0
+      ],
+      [
+        "Lois McMaster Bujold",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5abbf698554299114383a0b5",
+    "answer": "English Electric Canberra",
+    "supporting_facts": [
+      [
+        "No. 2 Squadron RAAF",
+        5
+      ],
+      [
+        "English Electric Canberra",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a7bcbc8554299294a54aae2",
+    "answer": "Sir Syed University of Engineering and Technology",
+    "supporting_facts": [
+      [
+        "Sir Syed University of Engineering and Technology",
+        0
+      ],
+      [
+        "Sir Syed University of Engineering and Technology",
+        1
+      ],
+      [
+        "Manhattan College",
+        1
+      ]
+    ]
+  },
+  {
+    "_id": "5adc020a5542994650320c4c",
+    "answer": "no",
+    "supporting_facts": [
+      [
+        "Jeff Ragsdale",
+        0
+      ],
+      [
+        "Millard Webb",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a74167455429929fddd83dc",
+    "answer": "Australia",
+    "supporting_facts": [
+      [
+        "Pia Miller",
+        1
+      ],
+      [
+        "Dolly (magazine)",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a7a276d5542996c55b2dd27",
+    "answer": "Colonel Charles Hastings Judd",
+    "supporting_facts": [
+      [
+        "Charles Hastings Judd",
+        0
+      ],
+      [
+        "Charles Hastings Judd",
+        1
+      ],
+      [
+        "Kalākaua",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5ac3a049554299741d48a2ba",
+    "answer": "Brian Patrick Friel",
+    "supporting_facts": [
+      [
+        "Philadelphia, Here I Come!",
+        0
+      ],
+      [
+        "Brian Friel",
+        0
+      ],
+      [
+        "Brian Friel",
+        2
+      ]
+    ]
+  },
+  {
+    "_id": "5adf860e5542993344016cbc",
+    "answer": "1964 to 1974",
+    "supporting_facts": [
+      [
+        "Pentastar: In the Style of Demons",
+        0
+      ],
+      [
+        "Pentastar: In the Style of Demons",
+        4
+      ],
+      [
+        "Plymouth Barracuda",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5ae4ad375542995dadf243a4",
+    "answer": "Sony Studio Liverpool",
+    "supporting_facts": [
+      [
+        "Formula One 2001 (video game)",
+        0
+      ],
+      [
+        "PlayStation 2",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5abba664554299642a094b02",
+    "answer": "Alfonso Cuarón",
+    "supporting_facts": [
+      [
+        "Jason O'Bryan",
+        1
+      ],
+      [
+        "Y Tu Mamá También",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a88940055429938390d3f7b",
+    "answer": "Port Vila",
+    "supporting_facts": [
+      [
+        "Bauerfield International Airport",
+        0
+      ],
+      [
+        "Air Vanuatu",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a8e83545542990e94052b28",
+    "answer": "Detroit, Michigan",
+    "supporting_facts": [
+      [
+        "Trussed Concrete Steel Company",
+        0
+      ],
+      [
+        "Julius Kahn (inventor)",
+        1
+      ]
+    ]
+  },
+  {
+    "_id": "5a7fb1b25542992097ad2fb2",
+    "answer": "University of Nevada, Reno",
+    "supporting_facts": [
+      [
+        "2010 Nevada Wolf Pack football team",
+        0
+      ],
+      [
+        "University of Nevada, Reno",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a74e8a25542996c70cfae37",
+    "answer": "Robert Arthur Mould",
+    "supporting_facts": [
+      [
+        "Voice of Reason (Rifle Sport album)",
+        0
+      ],
+      [
+        "Voice of Reason (Rifle Sport album)",
+        1
+      ],
+      [
+        "Bob Mould",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5abb9ad4554299642a094abe",
+    "answer": "al-Qaeda",
+    "supporting_facts": [
+      [
+        "Mark E. Mitchell",
+        2
+      ],
+      [
+        "Battle of Qala-i-Jangi",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a8a17685542993b751ca9f3",
+    "answer": "Eminem",
+    "supporting_facts": [
+      [
+        "Luis Resto (musician)",
+        0
+      ],
+      [
+        "Luis Resto (musician)",
+        3
+      ],
+      [
+        "8 Mile (film)",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a875154554299211dda2be7",
+    "answer": "Mickey Gilley",
+    "supporting_facts": [
+      [
+        "Urban Cowboy",
+        2
+      ],
+      [
+        "Urban Cowboy",
+        3
+      ],
+      [
+        "Gilley's Club",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5ac54ca45542993e66e822d5",
+    "answer": "The Blue Album",
+    "supporting_facts": [
+      [
+        "Weezer discography",
+        1
+      ],
+      [
+        "Buddy Holly (song)",
+        1
+      ]
+    ]
+  },
+  {
+    "_id": "5adf0d2d5542993a75d263e1",
+    "answer": "Saint Joseph's College",
+    "supporting_facts": [
+      [
+        "Don Ashley Turlington",
+        0
+      ],
+      [
+        "Saint Joseph's College of Maine",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5adf99065542992d7e9f93b0",
+    "answer": "45%",
+    "supporting_facts": [
+      [
+        "Ouachita Baptist Tigers football",
+        0
+      ],
+      [
+        "Ouachita Baptist University",
+        3
+      ]
+    ]
+  },
+  {
+    "_id": "5ae3a3835542990afbd1e19c",
+    "answer": "Kyle Busch",
+    "supporting_facts": [
+      [
+        "2009 NASCAR Nationwide Series",
+        2
+      ],
+      [
+        "2009 NASCAR Nationwide Series",
+        3
+      ],
+      [
+        "Carl Edwards",
+        4
+      ]
+    ]
+  },
+  {
+    "_id": "5a8d0e4e5542994ba4e3dbbf",
+    "answer": "Gary Earl Johnson",
+    "supporting_facts": [
+      [
+        "2012 Libertarian National Convention",
+        0
+      ],
+      [
+        "2012 Libertarian National Convention",
+        1
+      ],
+      [
+        "Gary Johnson",
+        0
+      ],
+      [
+        "Gary Johnson",
+        1
+      ]
+    ]
+  },
+  {
+    "_id": "5ae50c345542993aec5ec11f",
+    "answer": "Bambi: Eine Lebensgeschichte aus dem Walde",
+    "supporting_facts": [
+      [
+        "Felix Salten",
+        0
+      ],
+      [
+        "Bambi, a Life in the Woods",
+        0
+      ]
+    ]
+  },
+  {
+    "_id": "5a716c415542994082a3e827",
+    "answer": "Virgin Atlantic",
+    "supporting_facts": [
+      [
+        "Gogo Inflight Internet",
+        0
+      ],
+      [
+        "Gogo Inflight Internet",
+        1
+      ],
+      [
+        "Virgin Atlantic",
+        3
+      ]
+    ]
+  },
+  {
+    "_id": "5a7292385542994cef4bc342",
+    "answer": "Howard Elliott Ashman",
+    "supporting_facts": [
+      [
+        "Be Our Guest",
+        0
+      ],
+      [
+        "Howard Ashman",
+        0
+      ],
+      [
+        "Howard Ashman",
+        3
+      ]
+    ]
+  }
+]

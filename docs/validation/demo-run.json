@@ -1,0 +1,515 @@
+{
+  "id": "269e5d2713aa40039cb2b1906075d160",
+  "question": "Compare Aurora and Boreal. Are their reported scores directly comparable, and what evidence is still missing?",
+  "collection_id": "demo",
+  "mode": "verified",
+  "status": "completed",
+  "created_at": "2026-11-16T06:14:36.947569+00:00",
+  "request": {
+    "question": "Compare Aurora and Boreal. Are their reported scores directly comparable, and what evidence is still missing?",
+    "collection_id": "demo",
+    "mode": "verified",
+    "allow_web": false,
+    "perturbation": null
+  },
+  "result": {
+    "question": "Compare Aurora and Boreal. Are their reported scores directly comparable, and what evidence is still missing?",
+    "mode": "verified",
+    "answer": "No. Aurora's 72.0% Recall@5 on Dataset River v1 (500 questions, BM25, no reranker, CPU) and Boreal's 84.0% Recall@10 on Dataset Forest v2 (800 questions, dense retriever with cross-encoder reranker, GPU) differ in dataset, metric cutoff, reranker setting and hardware, so they are not directly comparable; a controlled head-to-head evaluation, common-corpus follow-up, full results tables and citation-support precision measurements are still missing.",
+    "claims": [
+      {
+        "id": "A0",
+        "text": "No. Aurora's 72.0% Recall@5 on Dataset River v1 (500 questions, BM25, no reranker, CPU) and Boreal's 84.0% Recall@10 on Dataset Forest v2 (800 questions, dense retriever with cross-encoder reranker, GPU) differ in dataset, metric cutoff, reranker setting and hardware, so they are not directly comparable; a controlled head-to-head evaluation, common-corpus follow-up, full results tables and citation-support precision measurements are still missing.",
+        "evidence_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ],
+        "status": "supported",
+        "reason": "E3 and E4 establish the differing dataset, metric cutoff, reranker and hardware; E1 confirms the reviewer rejected comparability on those grounds and that no common-corpus follow-up exists; E2 confirms a controlled head-to-head is still required. The 'full results tables' element is not directly evidenced, but the core comparability and missing-evidence claims are entailed.",
+        "quotes": [
+          "The reviewer rejected that conclusion because the datasets, metric cutoffs, hardware and reranker settings differ. The team agreed to withdraw the superiority claim. No common-corpus follow-up experiment has been completed.",
+          "These controls have not yet been applied jointly to Aurora and Boreal. A controlled head-to-head evaluation is still required.",
+          "Aurora uses BM25 lexical retrieval. The experiment used Dataset River v1 with 500 English questions. The metric was Recall@5. Aurora achieved 72.0% Recall@5 on Dataset River v1. There was no reranker. Measurements were made on 2025-03-01 using an eight-core CPU.",
+          "Boreal uses a dense embedding retriever. The experiment used Dataset Forest v2 with 800 English questions. The metric was Recall@10. Boreal achieved 84.0% Recall@10 on Dataset Forest v2. A cross-encoder reranker was applied. Measurements were made on 2025-04-15 using a GPU."
+        ]
+      },
+      {
+        "id": "C1",
+        "text": "Aurora is a BM25 lexical retrieval study reporting 72.0% Recall@5 on Dataset River v1 with 500 English questions, no reranker, and an eight-core CPU.",
+        "evidence_ids": [
+          "E3"
+        ],
+        "status": "supported",
+        "reason": "E3 directly states BM25, 72.0% Recall@5 on Dataset River v1, 500 English questions, no reranker, eight-core CPU.",
+        "quotes": [
+          "Aurora uses BM25 lexical retrieval. The experiment used Dataset River v1 with 500 English questions. The metric was Recall@5. Aurora achieved 72.0% Recall@5 on Dataset River v1. There was no reranker. Measurements were made on 2025-03-01 using an eight-core CPU."
+        ]
+      },
+      {
+        "id": "C2",
+        "text": "Boreal is a dense embedding retrieval study reporting 84.0% Recall@10 on Dataset Forest v2 with 800 English questions, a cross-encoder reranker, and a GPU.",
+        "evidence_ids": [
+          "E4"
+        ],
+        "status": "supported",
+        "reason": "E4 directly states dense embedding retriever, 84.0% Recall@10 on Dataset Forest v2, 800 English questions, cross-encoder reranker, GPU.",
+        "quotes": [
+          "Boreal uses a dense embedding retriever. The experiment used Dataset Forest v2 with 800 English questions. The metric was Recall@10. Boreal achieved 84.0% Recall@10 on Dataset Forest v2. A cross-encoder reranker was applied. Measurements were made on 2025-04-15 using a GPU."
+        ]
+      },
+      {
+        "id": "C3",
+        "text": "A direct accuracy comparison requires the same dataset version, question split, corpus, relevance labels and metric cutoff, and Recall@5 and Recall@10 measure different operating points.",
+        "evidence_ids": [
+          "E2"
+        ],
+        "status": "supported",
+        "reason": "E2 states the required controls and that Recall@5 and Recall@10 measure different operating points.",
+        "quotes": [
+          "A direct accuracy comparison requires the same dataset version, question split, corpus, relevance labels and metric cutoff. Recall@5 and Recall@10 measure different operating points."
+        ]
+      },
+      {
+        "id": "C4",
+        "text": "The reviewer rejected the superiority claim because datasets, metric cutoffs, hardware and reranker settings differ, and the team withdrew it.",
+        "evidence_ids": [
+          "E1"
+        ],
+        "status": "supported",
+        "reason": "E1 states the reviewer rejected the conclusion because datasets, metric cutoffs, hardware and reranker settings differ, and the team withdrew the superiority claim.",
+        "quotes": [
+          "The reviewer rejected that conclusion because the datasets, metric cutoffs, hardware and reranker settings differ. The team agreed to withdraw the superiority claim."
+        ]
+      },
+      {
+        "id": "C5",
+        "text": "No common-corpus follow-up experiment has been completed, and the required controls have not yet been applied jointly to Aurora and Boreal; a controlled head-to-head evaluation is still required.",
+        "evidence_ids": [
+          "E1",
+          "E2"
+        ],
+        "status": "supported",
+        "reason": "E1 confirms no common-corpus follow-up completed; E2 confirms controls not applied jointly and a controlled head-to-head still required.",
+        "quotes": [
+          "No common-corpus follow-up experiment has been completed.",
+          "These controls have not yet been applied jointly to Aurora and Boreal. A controlled head-to-head evaluation is still required."
+        ]
+      },
+      {
+        "id": "C6",
+        "text": "Neither study reports the final answer citation-support precision, and Boreal's publication did not measure evidence-grounded answer quality.",
+        "evidence_ids": [
+          "E1",
+          "E4"
+        ],
+        "status": "supported",
+        "reason": "E1 states neither study reports final answer citation-support precision; E4 states Boreal's publication did not measure evidence-grounded answer quality.",
+        "quotes": [
+          "Neither study reports the final answer citation-support precision.",
+          "The publication did not measure evidence-grounded answer quality."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "source_id": "04-lab-notes",
+        "title": "04-lab-notes.md",
+        "text": "# Lab meeting notes\nThis is a synthetic teaching document.\n\n## Draft interpretation\nThe team initially wrote that Boreal's reported 84.0% score proved it outperformed Aurora's reported 72.0% score. This was an unreviewed interpretation.\n\n## Correction\nThe reviewer rejected that conclusion because the datasets, metric cutoffs, hardware and reranker settings differ. The team agreed to withdraw the superiority claim. No common-corpus follow-up experiment has been completed. Neither study reports the final answer citation-support precision.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 543,
+          "heading": "# Lab meeting notes"
+        },
+        "url": null,
+        "score": 0.03252247488101534,
+        "semantic_score": 0.8023483753204346,
+        "chunk_id": "8a6e175c0100e61df61acfb4",
+        "retrieved_at": "2026-11-16T06:14:40.621548+00:00"
+      },
+      {
+        "id": "E2",
+        "source_id": "03-comparison-protocol",
+        "title": "03-comparison-protocol.md",
+        "text": "# Retrieval comparison protocol\nThis is a synthetic teaching document.\n\n## Required controls\nA direct accuracy comparison requires the same dataset version, question split, corpus, relevance labels and metric cutoff. Recall@5 and Recall@10 measure different operating points. A higher Recall@10 on a different dataset does not establish a better retrieval method. A comparison should also state whether a reranker is used.\n\n## Runtime controls\nLatency comparisons must use the same hardware, corpus size, batch size and timing boundary. Indexing cost should be reported separately. These controls have not yet been applied jointly to Aurora and Boreal. A controlled head-to-head evaluation is still required.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 709,
+          "heading": "# Retrieval comparison protocol"
+        },
+        "url": null,
+        "score": 0.032018442622950824,
+        "semantic_score": 0.7030870914459229,
+        "chunk_id": "c092cf278e5f7f9c90520fb7",
+        "retrieved_at": "2026-11-16T06:14:40.621548+00:00"
+      },
+      {
+        "id": "E3",
+        "source_id": "01-aurora-study",
+        "title": "01-aurora-study.md",
+        "text": "# Aurora lexical retrieval study\nThis is a synthetic teaching document, not a published scientific result.\n\n## Experiment\nAurora uses BM25 lexical retrieval. The experiment used Dataset River v1 with 500 English questions. The metric was Recall@5. Aurora achieved 72.0% Recall@5 on Dataset River v1. There was no reranker. Measurements were made on 2025-03-01 using an eight-core CPU.\n\n## Latency\nThe median retrieval latency was 18 ms per query, excluding document indexing. The corpus contained 10,000 passages. No generation model was evaluated in this experiment.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 568,
+          "heading": "# Aurora lexical retrieval study"
+        },
+        "url": null,
+        "score": 0.03200204813108039,
+        "semantic_score": 0.7822073101997375,
+        "chunk_id": "72c2a651c955a09226b0e8bb",
+        "retrieved_at": "2026-11-16T06:14:40.621548+00:00"
+      },
+      {
+        "id": "E4",
+        "source_id": "02-boreal-study",
+        "title": "02-boreal-study.md",
+        "text": "# Boreal semantic retrieval study\nThis is a synthetic teaching document, not a published scientific result.\n\n## Experiment\nBoreal uses a dense embedding retriever. The experiment used Dataset Forest v2 with 800 English questions. The metric was Recall@10. Boreal achieved 84.0% Recall@10 on Dataset Forest v2. A cross-encoder reranker was applied. Measurements were made on 2025-04-15 using a GPU.\n\n## Latency\nThe median retrieval latency was 24 ms per query, excluding document indexing. The corpus contained 50,000 passages. The publication did not measure evidence-grounded answer quality.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 593,
+          "heading": "# Boreal semantic retrieval study"
+        },
+        "url": null,
+        "score": 0.03149801587301587,
+        "semantic_score": 0.7290724515914917,
+        "chunk_id": "2161784bd4e853e14a0b5aa1",
+        "retrieved_at": "2026-11-16T06:14:40.621548+00:00"
+      },
+      {
+        "id": "E5",
+        "source_id": "05-evidence-checking",
+        "title": "05-evidence-checking.md",
+        "text": "# Evidence checking handbook\nThis is a synthetic teaching document.\n\n## Claim-level checks\nA citation must support the associated claim, not merely discuss the same topic. Numerical matching is necessary for literal score claims but does not validate experimental comparability. A system should distinguish supported findings, direct contradictions, and missing information. When essential information is missing, it should state the limitation instead of inventing an answer.\n\n## Project question\nCan explicit checking improve support precision without materially reducing answer completeness? The current demo documents do not contain measured results answering this research question. That claim requires the project's controlled evaluation and human annotations.\n",
+        "location": {
+          "start_line": 1,
+          "end_line": 9,
+          "section_start_char": 0,
+          "section_end_char": 767,
+          "heading": "# Evidence checking handbook"
+        },
+        "url": null,
+        "score": 0.03076923076923077,
+        "semantic_score": 0.5606364607810974,
+        "chunk_id": "91cb92cb5b10ed539ee8963e",
+        "retrieved_at": "2026-11-16T06:14:40.621548+00:00"
+      }
+    ],
+    "unresolved": [
+      "No full results tables or detailed methodology appendices for either study are present in the supplied evidence.",
+      "No common-corpus or controlled head-to-head evaluation results exist in the evidence.",
+      "No citation-support precision or evidence-grounded answer quality measurements are reported for either system."
+    ],
+    "subquestions": [
+      "What are Aurora and Boreal in the Group 30 project, and what scores are reported for each?",
+      "What evaluation methodology, benchmarks, and conditions were used for Aurora's and Boreal's reported scores?",
+      "Are the scores measured on the same benchmark, metric, dataset split, and setting, making them directly comparable?",
+      "What evidence (e.g., full results tables, methodology details, baselines) is still missing to confirm comparability?"
+    ],
+    "evidence_requirements": [
+      "Aurora reported score and its dataset/metric/settings",
+      "Boreal reported score and its dataset/metric/settings",
+      "Protocol requirements for a valid direct comparison",
+      "Whether a controlled head-to-head experiment exists",
+      "Missing evidence such as citation-support precision or common-corpus results"
+    ],
+    "trace": [
+      {
+        "step": 1,
+        "round": 1,
+        "tool": "semantic_search_files",
+        "args": {
+          "q": "Aurora and Boreal reported scores comparison"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ],
+        "result_count": 5,
+        "elapsed_ms": 1422
+      },
+      {
+        "step": 2,
+        "round": 1,
+        "tool": "semantic_search_files",
+        "args": {
+          "q": "Aurora model evaluation benchmark results"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E3",
+          "E1",
+          "E2",
+          "E5",
+          "E4"
+        ],
+        "result_count": 5,
+        "elapsed_ms": 15
+      },
+      {
+        "step": 3,
+        "round": 2,
+        "tool": "view_file",
+        "args": {
+          "path": "01-aurora-study",
+          "start_line": 1,
+          "end_line": 9
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E3"
+        ],
+        "result_count": 1,
+        "elapsed_ms": 0
+      },
+      {
+        "step": 4,
+        "round": 2,
+        "tool": "view_file",
+        "args": {
+          "path": "02-boreal-study",
+          "start_line": 1,
+          "end_line": 9
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E4"
+        ],
+        "result_count": 1,
+        "elapsed_ms": 0
+      }
+    ],
+    "model_calls": [
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 1499,
+        "output_tokens": 202,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.235
+      },
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 3070,
+        "output_tokens": 282,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.328
+      },
+      {
+        "stage": "draft",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 2167,
+        "output_tokens": 644,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 3.063
+      },
+      {
+        "stage": "verify",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 2381,
+        "output_tokens": 999,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 4.172
+      }
+    ],
+    "usage": {
+      "calls": 4,
+      "input_tokens": 9117,
+      "output_tokens": 2127,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "estimated_cost_usd": null,
+      "pricing_date": null,
+      "cost_note": "Token counts include all received usage; failed requests without usage remain unknown. No tariff configured."
+    },
+    "elapsed_seconds": 13.282,
+    "stop_reason": "no_new_evidence",
+    "rounds": 2,
+    "tool_calls": 4,
+    "repair_rounds": 0,
+    "configuration": {
+      "model": "deepseek-flash",
+      "temperature": 0,
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "thinking": "disabled for official DeepSeek API",
+      "structured_output": "json_object",
+      "limits": {
+        "decision_rounds": 6,
+        "tool_calls": 12,
+        "repair_rounds": 2,
+        "elapsed_seconds": 240,
+        "model_calls": 16,
+        "retrieval_top_k": 6,
+        "max_claims": 8,
+        "max_evidence": 30,
+        "final_answer_tokens": 1800
+      },
+      "allow_web": false,
+      "upstream_commit": "ae229ca894c0b80ad84664afcfdde523b5e87057"
+    },
+    "source_snapshots": {},
+    "khoj_iteration_history": [
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_1",
+            "type": "function",
+            "function": {
+              "name": "semantic_search_files",
+              "arguments": "{\"q\": \"Aurora and Boreal reported scores comparison\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_1",
+        "content": "[{\"id\": \"E1\", \"source_id\": \"04-lab-notes\", \"title\": \"04-lab-notes.md\", \"text\": \"# Lab meeting notes\\nThis is a synthetic teaching document.\\n\\n## Draft interpretation\\nThe team initially wrote that Boreal's reported 84.0% score proved it outperformed Aurora's reported 72.0% score. This was an unreviewed interpretation.\\n\\n## Correction\\nThe reviewer rejected that conclusion because the datasets, metric cutoffs, hardware and reranker settings differ. The team agreed to withdraw the superiority claim. No common-corpus follow-up experiment has been completed. Neither study reports the final answer citation-support precision.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 543, \"heading\": \"# Lab meeting notes\"}, \"url\": null, \"score\": 0.03252247488101534, \"semantic_score\": 0.8023483753204346, \"chunk_id\": \"8a6e175c0100e61df61acfb4\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}, {\"id\": \"E2\", \"source_id\": \"03-comparison-protocol\", \"title\": \"03-comparison-protocol.md\", \"text\": \"# Retrieval comparison protocol\\nThis is a synthetic teaching document.\\n\\n## Required controls\\nA direct accuracy comparison requires the same dataset version, question split, corpus, relevance labels and metric cutoff. Recall@5 and Recall@10 measure different operating points. A higher Recall@10 on a different dataset does not establish a better retrieval method. A comparison should also state whether a reranker is used.\\n\\n## Runtime controls\\nLatency comparisons must use the same hardware, corpus size, batch size and timing boundary. Indexing cost should be reported separately. These controls have not yet been applied jointly to Aurora and Boreal. A controlled head-to-head evaluation is still required.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 709, \"heading\": \"# Retrieval comparison protocol\"}, \"url\": null, \"score\": 0.032018442622950824, \"semantic_score\": 0.7030870914459229, \"chunk_id\": \"c092cf278e5f7f9c90520fb7\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}, {\"id\": \"E3\", \"source_id\": \"01-aurora-study\", \"title\": \"01-aurora-study.md\", \"text\": \"# Aurora lexical retrieval study\\nThis is a synthetic teaching document, not a published scientific result.\\n\\n## Experiment\\nAurora uses BM25 lexical retrieval. The experiment used Dataset River v1 with 500 English questions. The metric was Recall@5. Aurora achieved 72.0% Recall@5 on Dataset River v1. There was no reranker. Measurements were made on 2025-03-01 using an eight-core CPU.\\n\\n## Latency\\nThe median retrieval latency was 18 ms per query, excluding document indexing. The corpus contained 10,000 passages. No generation model was evaluated in this experiment.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 568, \"heading\": \"# Aurora lexical retrieval study\"}, \"url\": null, \"score\": 0.03200204813108039, \"semantic_score\": 0.7822073101997375, \"chunk_id\": \"72c2a651c955a09226b0e8bb\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}, {\"id\": \"E4\", \"source_id\": \"02-boreal-study\", \"title\": \"02-boreal-study.md\", \"text\": \"# Boreal semantic retrieval study\\nThis is a synthetic teaching document, not a published scientific result.\\n\\n## Experiment\\nBoreal uses a dense embedding retriever. The experiment used Dataset Forest v2 with 800 English questions. The metric was Recall@10. Boreal achieved 84.0% Recall@10 on Dataset Forest v2. A cross-encoder reranker was applied. Measurements were made on 2025-04-15 using a GPU.\\n\\n## Latency\\nThe median retrieval latency was 24 ms per query, excluding document indexing. The corpus contained 50,000 passages. The publication did not measure evidence-grounded answer quality.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 593, \"heading\": \"# Boreal semantic retrieval study\"}, \"url\": null, \"score\": 0.03149801587301587, \"semantic_score\": 0.7290724515914917, \"chunk_id\": \"2161784bd4e853e14a0b5aa1\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}, {\"id\": \"E5\", \"source_id\": \"05-evidence-checking\", \"title\": \"05-evidence-checking.md\", \"text\": \"# Evidence checking handbook\\nThis is a synthetic teaching document.\\n\\n## Claim-level checks\\nA citation must support the associated claim, not merely discuss the same topic. Numerical matching is necessary for literal score claims but does not validate experimental comparability. A system should distinguish supported findings, direct contradictions, and missing information. When essential information is missing, it should state the limitation instead of inventing an answer.\\n\\n## Project question\\nCan explicit checking improve support precision without materially reducing answer completeness? The current demo documents do not contain measured results answering this research question. That claim requires the project's controlled evaluation and human annotations.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 767, \"heading\": \"# Evidence checking handbook\"}, \"url\": null, \"score\": 0.03076923076923077, \"semantic_score\": 0.5606364607810974, \"chunk_id\": \"91cb92cb5b10ed539ee8963e\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_2",
+            "type": "function",
+            "function": {
+              "name": "semantic_search_files",
+              "arguments": "{\"q\": \"Aurora model evaluation benchmark results\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_2",
+        "content": "[{\"id\": \"E3\", \"source_id\": \"01-aurora-study\", \"title\": \"01-aurora-study.md\", \"text\": \"# Aurora lexical retrieval study\\nThis is a synthetic teaching document, not a published scientific result.\\n\\n## Experiment\\nAurora uses BM25 lexical retrieval. The experiment used Dataset River v1 with 500 English questions. The metric was Recall@5. Aurora achieved 72.0% Recall@5 on Dataset River v1. There was no reranker. Measurements were made on 2025-03-01 using an eight-core CPU.\\n\\n## Latency\\nThe median retrieval latency was 18 ms per query, excluding document indexing. The corpus contained 10,000 passages. No generation model was evaluated in this experiment.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 568, \"heading\": \"# Aurora lexical retrieval study\"}, \"url\": null, \"score\": 0.03200204813108039, \"semantic_score\": 0.7822073101997375, \"chunk_id\": \"72c2a651c955a09226b0e8bb\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}, {\"id\": \"E1\", \"source_id\": \"04-lab-notes\", \"title\": \"04-lab-notes.md\", \"text\": \"# Lab meeting notes\\nThis is a synthetic teaching document.\\n\\n## Draft interpretation\\nThe team initially wrote that Boreal's reported 84.0% score proved it outperformed Aurora's reported 72.0% score. This was an unreviewed interpretation.\\n\\n## Correction\\nThe reviewer rejected that conclusion because the datasets, metric cutoffs, hardware and reranker settings differ. The team agreed to withdraw the superiority claim. No common-corpus follow-up experiment has been completed. Neither study reports the final answer citation-support precision.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 543, \"heading\": \"# Lab meeting notes\"}, \"url\": null, \"score\": 0.03252247488101534, \"semantic_score\": 0.8023483753204346, \"chunk_id\": \"8a6e175c0100e61df61acfb4\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}, {\"id\": \"E2\", \"source_id\": \"03-comparison-protocol\", \"title\": \"03-comparison-protocol.md\", \"text\": \"# Retrieval comparison protocol\\nThis is a synthetic teaching document.\\n\\n## Required controls\\nA direct accuracy comparison requires the same dataset version, question split, corpus, relevance labels and metric cutoff. Recall@5 and Recall@10 measure different operating points. A higher Recall@10 on a different dataset does not establish a better retrieval method. A comparison should also state whether a reranker is used.\\n\\n## Runtime controls\\nLatency comparisons must use the same hardware, corpus size, batch size and timing boundary. Indexing cost should be reported separately. These controls have not yet been applied jointly to Aurora and Boreal. A controlled head-to-head evaluation is still required.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 709, \"heading\": \"# Retrieval comparison protocol\"}, \"url\": null, \"score\": 0.032018442622950824, \"semantic_score\": 0.7030870914459229, \"chunk_id\": \"c092cf278e5f7f9c90520fb7\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}, {\"id\": \"E5\", \"source_id\": \"05-evidence-checking\", \"title\": \"05-evidence-checking.md\", \"text\": \"# Evidence checking handbook\\nThis is a synthetic teaching document.\\n\\n## Claim-level checks\\nA citation must support the associated claim, not merely discuss the same topic. Numerical matching is necessary for literal score claims but does not validate experimental comparability. A system should distinguish supported findings, direct contradictions, and missing information. When essential information is missing, it should state the limitation instead of inventing an answer.\\n\\n## Project question\\nCan explicit checking improve support precision without materially reducing answer completeness? The current demo documents do not contain measured results answering this research question. That claim requires the project's controlled evaluation and human annotations.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 767, \"heading\": \"# Evidence checking handbook\"}, \"url\": null, \"score\": 0.03076923076923077, \"semantic_score\": 0.5606364607810974, \"chunk_id\": \"91cb92cb5b10ed539ee8963e\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}, {\"id\": \"E4\", \"source_id\": \"02-boreal-study\", \"title\": \"02-boreal-study.md\", \"text\": \"# Boreal semantic retrieval study\\nThis is a synthetic teaching document, not a published scientific result.\\n\\n## Experiment\\nBoreal uses a dense embedding retriever. The experiment used Dataset Forest v2 with 800 English questions. The metric was Recall@10. Boreal achieved 84.0% Recall@10 on Dataset Forest v2. A cross-encoder reranker was applied. Measurements were made on 2025-04-15 using a GPU.\\n\\n## Latency\\nThe median retrieval latency was 24 ms per query, excluding document indexing. The corpus contained 50,000 passages. The publication did not measure evidence-grounded answer quality.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 593, \"heading\": \"# Boreal semantic retrieval study\"}, \"url\": null, \"score\": 0.03149801587301587, \"semantic_score\": 0.7290724515914917, \"chunk_id\": \"2161784bd4e853e14a0b5aa1\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_3",
+            "type": "function",
+            "function": {
+              "name": "view_file",
+              "arguments": "{\"path\": \"01-aurora-study\", \"start_line\": 1, \"end_line\": 9}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_3",
+        "content": "[{\"id\": \"E3\", \"source_id\": \"01-aurora-study\", \"title\": \"01-aurora-study.md\", \"text\": \"# Aurora lexical retrieval study\\nThis is a synthetic teaching document, not a published scientific result.\\n\\n## Experiment\\nAurora uses BM25 lexical retrieval. The experiment used Dataset River v1 with 500 English questions. The metric was Recall@5. Aurora achieved 72.0% Recall@5 on Dataset River v1. There was no reranker. Measurements were made on 2025-03-01 using an eight-core CPU.\\n\\n## Latency\\nThe median retrieval latency was 18 ms per query, excluding document indexing. The corpus contained 10,000 passages. No generation model was evaluated in this experiment.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 568, \"heading\": \"# Aurora lexical retrieval study\"}, \"url\": null, \"score\": 0.03200204813108039, \"semantic_score\": 0.7822073101997375, \"chunk_id\": \"72c2a651c955a09226b0e8bb\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_4",
+            "type": "function",
+            "function": {
+              "name": "view_file",
+              "arguments": "{\"path\": \"02-boreal-study\", \"start_line\": 1, \"end_line\": 9}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_4",
+        "content": "[{\"id\": \"E4\", \"source_id\": \"02-boreal-study\", \"title\": \"02-boreal-study.md\", \"text\": \"# Boreal semantic retrieval study\\nThis is a synthetic teaching document, not a published scientific result.\\n\\n## Experiment\\nBoreal uses a dense embedding retriever. The experiment used Dataset Forest v2 with 800 English questions. The metric was Recall@10. Boreal achieved 84.0% Recall@10 on Dataset Forest v2. A cross-encoder reranker was applied. Measurements were made on 2025-04-15 using a GPU.\\n\\n## Latency\\nThe median retrieval latency was 24 ms per query, excluding document indexing. The corpus contained 50,000 passages. The publication did not measure evidence-grounded answer quality.\\n\", \"location\": {\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 593, \"heading\": \"# Boreal semantic retrieval study\"}, \"url\": null, \"score\": 0.03149801587301587, \"semantic_score\": 0.7290724515914917, \"chunk_id\": \"2161784bd4e853e14a0b5aa1\", \"retrieved_at\": \"2026-11-16T06:14:40.621548+00:00\"}]"
+      }
+    ],
+    "checker_is_ground_truth": false,
+    "report": "# Research report\n\nCompare Aurora and Boreal. Are their reported scores directly comparable, and what evidence is still missing?\n\n## Answer\n\nNo. Aurora's 72.0% Recall@5 on Dataset River v1 (500 questions, BM25, no reranker, CPU) and Boreal's 84.0% Recall@10 on Dataset Forest v2 (800 questions, dense retriever with cross-encoder reranker, GPU) differ in dataset, metric cutoff, reranker setting and hardware, so they are not directly comparable; a controlled head-to-head evaluation, common-corpus follow-up, full results tables and citation-support precision measurements are still missing. [E1] [E2] [E3] [E4]\n\n## Supported findings\n\n- Aurora is a BM25 lexical retrieval study reporting 72.0% Recall@5 on Dataset River v1 with 500 English questions, no reranker, and an eight-core CPU. [E3]\n- Boreal is a dense embedding retrieval study reporting 84.0% Recall@10 on Dataset Forest v2 with 800 English questions, a cross-encoder reranker, and a GPU. [E4]\n- A direct accuracy comparison requires the same dataset version, question split, corpus, relevance labels and metric cutoff, and Recall@5 and Recall@10 measure different operating points. [E2]\n- The reviewer rejected the superiority claim because datasets, metric cutoffs, hardware and reranker settings differ, and the team withdrew it. [E1]\n- No common-corpus follow-up experiment has been completed, and the required controls have not yet been applied jointly to Aurora and Boreal; a controlled head-to-head evaluation is still required. [E1] [E2]\n- Neither study reports the final answer citation-support precision, and Boreal's publication did not measure evidence-grounded answer quality. [E1] [E4]\n\n## Unresolved questions\n\n- No full results tables or detailed methodology appendices for either study are present in the supplied evidence.\n- No common-corpus or controlled head-to-head evaluation results exist in the evidence.\n- No citation-support precision or evidence-grounded answer quality measurements are reported for either system.\n\n## Evidence\n\n### [E1] 04-lab-notes.md\n{\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 543, \"heading\": \"# Lab meeting notes\"}\n\n> # Lab meeting notes\n> This is a synthetic teaching document.\n> \n> ## Draft interpretation\n> The team initially wrote that Boreal's reported 84.0% score proved it outperformed Aurora's reported 72.0% score. This was an unreviewed interpretation.\n> \n> ## Correction\n> The reviewer rejected that conclusion because the datasets, metric cutoffs, hardware and reranker settings differ. The team agreed to withdraw the superiority claim. No common-corpus follow-up experiment has been completed. Neither study reports the final answer citation-support precision.\n> \n\n### [E2] 03-comparison-protocol.md\n{\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 709, \"heading\": \"# Retrieval comparison protocol\"}\n\n> # Retrieval comparison protocol\n> This is a synthetic teaching document.\n> \n> ## Required controls\n> A direct accuracy comparison requires the same dataset version, question split, corpus, relevance labels and metric cutoff. Recall@5 and Recall@10 measure different operating points. A higher Recall@10 on a different dataset does not establish a better retrieval method. A comparison should also state whether a reranker is used.\n> \n> ## Runtime controls\n> Latency comparisons must use the same hardware, corpus size, batch size and timing boundary. Indexing cost should be reported separately. These controls have not yet been applied jointly to Aurora and Boreal. A controlled head-to-head evaluation is still required.\n> \n\n### [E3] 01-aurora-study.md\n{\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 568, \"heading\": \"# Aurora lexical retrieval study\"}\n\n> # Aurora lexical retrieval study\n> This is a synthetic teaching document, not a published scientific result.\n> \n> ## Experiment\n> Aurora uses BM25 lexical retrieval. The experiment used Dataset River v1 with 500 English questions. The metric was Recall@5. Aurora achieved 72.0% Recall@5 on Dataset River v1. There was no reranker. Measurements were made on 2025-03-01 using an eight-core CPU.\n> \n> ## Latency\n> The median retrieval latency was 18 ms per query, excluding document indexing. The corpus contained 10,000 passages. No generation model was evaluated in this experiment.\n> \n\n### [E4] 02-boreal-study.md\n{\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 593, \"heading\": \"# Boreal semantic retrieval study\"}\n\n> # Boreal semantic retrieval study\n> This is a synthetic teaching document, not a published scientific result.\n> \n> ## Experiment\n> Boreal uses a dense embedding retriever. The experiment used Dataset Forest v2 with 800 English questions. The metric was Recall@10. Boreal achieved 84.0% Recall@10 on Dataset Forest v2. A cross-encoder reranker was applied. Measurements were made on 2025-04-15 using a GPU.\n> \n> ## Latency\n> The median retrieval latency was 24 ms per query, excluding document indexing. The corpus contained 50,000 passages. The publication did not measure evidence-grounded answer quality.\n> \n\n### [E5] 05-evidence-checking.md\n{\"start_line\": 1, \"end_line\": 9, \"section_start_char\": 0, \"section_end_char\": 767, \"heading\": \"# Evidence checking handbook\"}\n\n> # Evidence checking handbook\n> This is a synthetic teaching document.\n> \n> ## Claim-level checks\n> A citation must support the associated claim, not merely discuss the same topic. Numerical matching is necessary for literal score claims but does not validate experimental comparability. A system should distinguish supported findings, direct contradictions, and missing information. When essential information is missing, it should state the limitation instead of inventing an answer.\n> \n> ## Project question\n> Can explicit checking improve support precision without materially reducing answer completeness? The current demo documents do not contain measured results answering this research question. That claim requires the project's controlled evaluation and human annotations.\n> \n"
+  },
+  "error": null,
+  "progress": [
+    {
+      "stage": "start",
+      "message": "Research started",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 1/6",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "stage": "retrieve",
+      "message": "semantic_search_files · 1/12",
+      "elapsed_seconds": 2.2
+    },
+    {
+      "stage": "retrieve",
+      "message": "semantic_search_files · 2/12",
+      "elapsed_seconds": 3.7
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 2/6",
+      "elapsed_seconds": 3.7
+    },
+    {
+      "stage": "retrieve",
+      "message": "view_file · 3/12",
+      "elapsed_seconds": 6.0
+    },
+    {
+      "stage": "retrieve",
+      "message": "view_file · 4/12",
+      "elapsed_seconds": 6.0
+    },
+    {
+      "stage": "draft",
+      "message": "Drafting individually cited claims",
+      "elapsed_seconds": 6.0
+    },
+    {
+      "stage": "verify",
+      "message": "Checking IDs, numbers, exact quotes and semantic support",
+      "elapsed_seconds": 9.1
+    },
+    {
+      "stage": "complete",
+      "message": "Research complete; inspect citations and unresolved points",
+      "elapsed_seconds": 13.3
+    }
+  ]
+}

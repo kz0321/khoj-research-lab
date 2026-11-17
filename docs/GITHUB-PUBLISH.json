@@ -1,0 +1,26 @@
+{
+  "prepared_on": "2026-11-17",
+  "repository": "https://github.com/kz0321/khoj-research-lab",
+  "visibility": "public",
+  "default_branch": "main",
+  "development_branch": "test",
+  "source_archive": {
+    "filename": "Khoj-Research-Lab-Source-20261117.zip",
+    "sha256": "5c81f1220d27a7e0c268e1ce1d5900e611a4b309ab032afaf7fe31b96d423ca4"
+  },
+  "publication_changes": [
+    "Portable GitHub README and branch workflow",
+    "Student numbers removed from public report; author names retained",
+    "Exact-byte Git attributes; complete canonical corpus and pinned upstream source included",
+    "Frozen 2026-11-16 application source snapshot retained for the historical evaluation",
+    "Delivery manifest refreshed after publication preparation"
+  ],
+  "excluded": [
+    "API credentials and local environment files",
+    "runtime database and user sessions",
+    "downloaded model weights",
+    "Python virtual environment",
+    "raw downloads and temporary files"
+  ],
+  "application_implementation_changed_for_publication": false
+}

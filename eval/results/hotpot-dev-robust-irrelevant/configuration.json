@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "dataset": "hotpotqa",
+    "split": "dev",
+    "selected_task_ids": [
+      "hotpot-5ab95d3d5542996be20204a7"
+    ],
+    "modes": [
+      "verified"
+    ],
+    "repeats": 1,
+    "scenario": "irrelevant",
+    "seed": 20261116,
+    "api": "http://127.0.0.1:8778",
+    "development_perturbation_diagnostic": true,
+    "task_file_sha256": "9c35a48d367ce9af59f536357af32f367722b911a8be89cae2b23e0f8274f58c",
+    "dataset_manifest_sha256": "567810574a5fdfdbe5f2d5a2d23be1382cbf2c84b289c9d76e920cca51643f58",
+    "agent_source_sha256": "878560e6f99a492d865a47ee5be6019340b2396117d8468f009f96c02c62edf7",
+    "live_web": false,
+    "frames_temporal_review_bypassed": false
+  },
+  "runtime_at_start": {
+    "model": "deepseek-flash",
+    "configured": true,
+    "thinking": "disabled for official DeepSeek API",
+    "structured_output": "json_object",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "limits": {
+      "decision_rounds": 6,
+      "tool_calls": 12,
+      "repair_rounds": 2,
+      "elapsed_seconds": 240,
+      "model_calls": 16,
+      "retrieval_top_k": 6,
+      "max_claims": 8,
+      "max_evidence": 30,
+      "final_answer_tokens": 1800
+    },
+    "upstream_commit": "ae229ca894c0b80ad84664afcfdde523b5e87057",
+    "binding": "127.0.0.1",
+    "implementation": "Khoj-derived Windows course runtime (not the full upstream server)"
+  },
+  "created_utc": "2026-11-16T06:17:11.846427+00:00"
+}

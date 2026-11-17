@@ -1,0 +1,77 @@
+{
+  "prepared_at_utc": "2026-11-16T06:06:37.084154+00:00",
+  "llama_cpp": {
+    "release": "b12428",
+    "commit": "b4c0e00a4fcc0287d0bb32fd7cb0d8b286af73ed",
+    "license": "MIT"
+  },
+  "model": {
+    "repository": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "quantization": "Q4_K_M",
+    "alias": "qwen2.5-1.5b-instruct",
+    "license": "Apache-2.0"
+  },
+  "artifacts": [
+    {
+      "kind": "llama.cpp",
+      "backend": "cpu",
+      "path": "runtime/local-model/downloads/llama-b12428-bin-win-cpu-x64.zip",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12428/llama-b12428-bin-win-cpu-x64.zip",
+      "sha256": "4ebc7fb961cf707e3b61396806e62c9e4065e42990cfc31f238eb48264a465b2",
+      "size_bytes": 25212756
+    },
+    {
+      "kind": "llama.cpp",
+      "backend": "vulkan",
+      "path": "runtime/local-model/downloads/llama-b12428-bin-win-vulkan-x64.zip",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12428/llama-b12428-bin-win-vulkan-x64.zip",
+      "sha256": "598b0672b20784752a6fbea3b73523f0905f094326b13b0d734ee47e94e6b986",
+      "size_bytes": 38289478
+    },
+    {
+      "kind": "model",
+      "path": "models/generative/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+      "size_bytes": 1117320736
+    },
+    {
+      "kind": "llama-license",
+      "path": "runtime/local-model/LLAMA-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b4c0e00a4fcc0287d0bb32fd7cb0d8b286af73ed/LICENSE",
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+      "size_bytes": 1078
+    },
+    {
+      "kind": "model-license",
+      "path": "models/generative/QWEN-LICENSE.txt",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/91cad51170dc346986eccefdc2dd33a9da36ead9/LICENSE",
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "size_bytes": 11343
+    },
+    {
+      "kind": "model-card",
+      "path": "models/generative/QWEN-MODEL-CARD.md",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/91cad51170dc346986eccefdc2dd33a9da36ead9/README.md",
+      "sha256": "57c72d4010fb11a98fc8e62dc8ef112b23a7a7525b71e571ca978d35cb3b2eec",
+      "size_bytes": 4856
+    }
+  ],
+  "configuration_note": "Optional local fallback only; app .env was not changed.",
+  "runtime_probe": {
+    "path": "docs/local-model-probe.json",
+    "sha256": "a9a2c1e799d844845eef9d3ac96f7cbb027d55fcdf56eecadffc6c0ee59956ba",
+    "executed_at_utc": "2026-11-16T06:08:30.142919+00:00",
+    "purpose": "Single local transport and structured-output smoke test; not an agent or benchmark score",
+    "http_success": true,
+    "json_parse_success": true,
+    "evidence_id_format_valid": true
+  },
+  "probe_history": {
+    "path": "docs/local-model-probe-history.jsonl",
+    "sha256": "30f71e12d822b3bd585e3dfda586614a10855cde40bd976884e5c2e1275840eb",
+    "note": "First cold call parsed JSON but used numeric evidence IDs; retained as an engine smoke test, not an agent score."
+  },
+  "deployment_note": "Optional engine prepared and tested, then stopped. Default application remains on DeepSeek."
+}

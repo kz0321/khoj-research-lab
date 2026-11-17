@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#133a37">
+  <title>Khoj Research Lab · 证据驱动的个人研究</title>
+  <link rel="stylesheet" href="/static/styles.css?v=20261117-3">
+  <script src="/static/outcome.js?v=20261117-3" defer></script>
+  <script src="/static/app.js?v=20261117-3" defer></script>
+</head>
+<body>
+  <a href="#question" class="skip-link">跳到研究问题</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="资料库和研究历史">
+      <a class="brand" href="/" aria-label="Khoj Research Lab 首页">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M6 5h6v18H6zM16 5h6v7h-6zM16 16h6v7h-6z"/></svg></span>
+        <span><strong>KHOJ</strong><span class="brand-sub">RESEARCH LAB</span></span>
+      </a>
+      <div class="sidebar-rule"></div>
+      <div class="section-label"><span>我的资料库</span><span class="tiny-tag">LOCAL</span></div>
+      <label class="sr-only" for="collection">选择资料库</label>
+      <select id="collection" class="collection-select"><option value="">正在加载资料库…</option></select>
+      <div id="collection-stats" class="collection-stats">文档保存在本机</div>
+      <button id="new-collection" class="quiet-button full-width" type="button"><span aria-hidden="true">＋</span> 新建资料库</button>
+      <label id="drop-zone" class="drop-zone" for="file-input" tabindex="0" role="button" aria-label="上传文档，支持 PDF、Word、Markdown、HTML 和 TXT">
+        <svg class="upload-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m-4 4 4-4 4 4M4 15v5h16v-5"/></svg>
+        <strong id="upload-label">拖入文档，或点击上传</strong>
+        <span>PDF · DOCX · Markdown · HTML · TXT</span>
+      </label>
+      <input id="file-input" type="file" accept=".pdf,.docx,.md,.markdown,.html,.htm,.txt" multiple hidden>
+      <button id="load-demo" class="text-button demo-link" type="button"><span aria-hidden="true">↗</span> 载入示例资料库</button>
+      <div class="sidebar-rule history-rule"></div>
+      <div class="section-label"><span>最近的研究</span><button id="refresh-history" class="icon-button" title="刷新研究历史" aria-label="刷新研究历史" type="button">↻</button></div>
+      <div id="history" class="history-list"><p class="sidebar-empty">完成一次研究后，记录会显示在这里。</p></div>
+      <div class="sidebar-footer">
+        <button id="model-info" class="model-info" type="button" aria-label="查看模型与运行配置"><span id="model-dot" class="status-dot"></span><span><strong id="model-name">正在连接服务</strong><small id="model-caption">本地研究工作台</small></span><span class="info-circle" aria-hidden="true">i</span></button>
+        <p>基于 Khoj · Group 30</p>
+      </div>
+    </aside>
+    <main class="main-panel">
+      <header class="topbar"><div><span class="breadcrumb">个人研究</span><span class="breadcrumb-slash">/</span><strong>研究工作台</strong></div><span class="local-badge"><span></span> 本地部署</span></header>
+      <div class="main-content">
+        <section class="intro" aria-labelledby="page-title">
+          <div class="eyebrow"><span></span> EVIDENCE BEFORE ANSWERS</div>
+          <h1 id="page-title">让每一个结论，<br class="mobile-break">都有据可查。</h1>
+          <p>从文档出发，追踪证据、检查结论，并清楚保留尚未解决的问题。</p>
+        </section>
+        <section class="research-card" aria-label="发起研究">
+          <form id="research-form">
+            <div class="composer-header"><label for="question">你想研究什么？</label><span id="question-count">0 / 3000</span></div>
+            <textarea id="question" rows="4" minlength="3" maxlength="3000" required placeholder="例如：比较资料中两种检索方法的表现。它们的分数能直接比较吗？请说明证据与局限。"></textarea>
+            <div class="prompt-chips" aria-label="示例研究问题">
+              <button type="button" class="prompt-chip" data-prompt="Compare Aurora and Boreal. Are their reported scores directly comparable, and what evidence is still missing?">比较研究方法 <span aria-hidden="true">↗</span></button>
+              <button type="button" class="prompt-chip" data-prompt="Summarize the main findings in this collection. Cite the exact supporting passages, and distinguish supported findings from unresolved questions.">整理核心发现 <span aria-hidden="true">↗</span></button>
+              <button type="button" class="prompt-chip" data-prompt="Identify conflicting claims or different experimental settings in these documents. Explain what can and cannot be concluded from the available evidence.">检查证据冲突 <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="composer-settings">
+              <div class="mode-field"><label for="mode">研究模式</label><select id="mode"><option value="verified">完整 Agent · 证据检查 + 修复</option><option value="multi_step">多步 Agent · 不检查</option><option value="single_rag">单次检索 RAG</option><option value="no_tools">仅语言模型 · 无工具</option><option value="verified_no_repair">检查证据 · 不修复</option></select></div>
+              <label class="web-toggle"><input id="allow-web" type="checkbox"><span class="switch" aria-hidden="true"></span><span>允许联网检索</span></label>
+            </div>
+            <div class="composer-bottom"><p id="mode-help">检索资料后逐条检查结论；证据不足时，尝试补充检索。</p><div class="run-actions"><button id="cancel-run" type="button" class="secondary-button" hidden>停止</button><button id="run-button" class="primary-button" type="submit"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 7 6-7 6V4Z"/></svg><span>开始研究</span></button></div></div>
+          </form>
+        </section>
+        <section id="progress-panel" class="progress-panel" aria-label="研究进度" hidden>
+          <div class="progress-top"><div class="progress-heading"><span class="spinner" id="progress-spinner" aria-hidden="true"></span><strong id="progress-title">正在准备研究</strong></div><span id="elapsed">0s</span></div>
+          <div class="progress-track" aria-hidden="true"><span data-stage="plan">01 <b>规划问题</b></span><span data-stage="search">02 <b>检索证据</b></span><span data-stage="verify">03 <b>核对结论</b></span><span data-stage="done">04 <b>生成报告</b></span></div>
+          <p id="progress-message" role="status" aria-live="polite">正在提交请求…</p>
+        </section>
+        <section id="error-panel" class="error-panel" role="alert" hidden><strong>研究未能完成</strong><p id="error-message"></p></section>
+        <section class="result-section" aria-label="研究结果">
+          <div class="results-header"><div class="result-tabs" role="tablist" aria-label="结果视图"><button id="tab-report" role="tab" aria-selected="true" aria-controls="panel-report" data-tab="report" type="button">研究报告</button><button id="tab-evidence" role="tab" aria-selected="false" aria-controls="panel-evidence" tabindex="-1" data-tab="evidence" type="button">证据台账 <span id="evidence-count" class="tab-count">0</span></button><button id="tab-trace" role="tab" aria-selected="false" aria-controls="panel-trace" tabindex="-1" data-tab="trace" type="button">行动轨迹 <span id="trace-count" class="tab-count">0</span></button></div><div class="export-actions"><button id="export-md" class="text-button" disabled type="button" title="导出 Markdown 报告">↓ 报告</button><button id="export-json" class="text-button" disabled type="button" title="导出完整 JSON 记录">↓ JSON</button></div></div>
+          <div id="summary-metrics" class="summary-metrics" hidden></div>
+          <div id="panel-report" class="tab-panel" role="tabpanel" aria-labelledby="tab-report">
+            <div id="report-empty" class="empty-state"><div class="empty-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 8h17l7 7v25H12zM29 8v9h7M18 24h12M18 30h9"/></svg><span>✓</span></div><h2>从一个值得追问的问题开始</h2><p>选择资料库并提出问题。研究完成后，<br>你可以检查每条结论引用了什么、又遗漏了什么。</p><div class="empty-flow"><span>01 <b>提出问题</b></span><i>→</i><span>02 <b>追踪证据</b></span><i>→</i><span>03 <b>审阅结论</b></span></div></div>
+            <article id="report-content" class="report-content" hidden></article>
+          </div>
+          <div id="panel-evidence" class="tab-panel" role="tabpanel" aria-labelledby="tab-evidence" hidden><div id="evidence-content" class="evidence-content"><p class="panel-empty">研究完成后，候选结论、检查状态与原始证据将显示在这里。</p></div></div>
+          <div id="panel-trace" class="tab-panel" role="tabpanel" aria-labelledby="tab-trace" hidden><div id="trace-content" class="trace-content"><p class="panel-empty">这里会记录工具调用、处理耗时和失败信息。</p></div></div>
+        </section>
+        <footer class="page-footer"><span>COMP7608B · Evidence-Grounded Personal Research</span><span>结论可追溯，局限可见。</span></footer>
+      </div>
+    </main>
+  </div>
+  <dialog id="new-collection-dialog" class="modal"><form id="collection-form"><div class="modal-heading"><h2>新建资料库</h2><button type="button" class="icon-button close-dialog" aria-label="关闭">×</button></div><p>将相关论文、笔记或技术文档放在同一个资料库中。</p><label class="field-label" for="collection-name">资料库名称</label><input id="collection-name" type="text" maxlength="100" required placeholder="例如：检索增强生成 · 阅读笔记"><div class="modal-actions"><button type="button" class="secondary-button close-dialog">取消</button><button type="submit" class="primary-button">创建资料库</button></div></form></dialog>
+  <dialog id="evidence-dialog" class="modal evidence-modal"><div class="modal-heading"><h2 id="evidence-dialog-title">原始证据</h2><button type="button" class="icon-button close-dialog" aria-label="关闭">×</button></div><div id="evidence-dialog-body"></div></dialog>
+  <dialog id="config-dialog" class="modal"><div class="modal-heading"><h2>运行配置</h2><button type="button" class="icon-button close-dialog" aria-label="关闭">×</button></div><div id="config-body"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

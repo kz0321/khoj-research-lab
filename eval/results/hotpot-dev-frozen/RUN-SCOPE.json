@@ -1,0 +1,9 @@
+{
+  "status": "frozen_development_pilot",
+  "n_tasks": 2,
+  "recorded_runs": 10,
+  "actual_repeats": 1,
+  "held_out_results": false,
+  "human_judgments": "not_completed",
+  "purpose": "Functional and cost pilot, not held-out performance claim."
+}

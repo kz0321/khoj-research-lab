@@ -1,0 +1,422 @@
+{
+  "id": "0971fba5a50e4a9a97d29e2efad2d800",
+  "question": "Use public web sources to explain retrieval-augmented generation and identify the 2020 paper that introduced it. What two kinds of memory does the paper combine? Cite the original source.",
+  "collection_id": "demo",
+  "mode": "verified",
+  "status": "completed",
+  "created_at": "2026-11-16T06:30:29.225333+00:00",
+  "request": {
+    "question": "Use public web sources to explain retrieval-augmented generation and identify the 2020 paper that introduced it. What two kinds of memory does the paper combine? Cite the original source.",
+    "collection_id": "demo",
+    "mode": "verified",
+    "allow_web": true,
+    "perturbation": null
+  },
+  "result": {
+    "question": "Use public web sources to explain retrieval-augmented generation and identify the 2020 paper that introduced it. What two kinds of memory does the paper combine? Cite the original source.",
+    "mode": "verified",
+    "answer": "Retrieval-augmented generation (RAG) is a general-purpose fine-tuning recipe for models that combine pre-trained parametric memory and non-parametric memory for language generation: the parametric memory is a pre-trained seq2seq model, and the non-parametric memory is a dense vector index of Wikipedia accessed with a pre-trained neural retriever. The 2020 paper that introduced it is \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\" (arXiv:2005.11401, submitted 22 May 2020, accepted at NeurIPS 2020) by Patrick Lewis et al., and it combines parametric and non-parametric memory.",
+    "claims": [
+      {
+        "id": "A0",
+        "text": "Retrieval-augmented generation (RAG) is a general-purpose fine-tuning recipe for models that combine pre-trained parametric memory and non-parametric memory for language generation: the parametric memory is a pre-trained seq2seq model, and the non-parametric memory is a dense vector index of Wikipedia accessed with a pre-trained neural retriever. The 2020 paper that introduced it is \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\" (arXiv:2005.11401, submitted 22 May 2020, accepted at NeurIPS 2020) by Patrick Lewis et al., and it combines parametric and non-parametric memory.",
+        "evidence_ids": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "status": "supported",
+        "reason": "E1 defines RAG as a general-purpose fine-tuning recipe combining pre-trained parametric and non-parametric memory, with parametric memory a pre-trained seq2seq model and non-parametric memory a dense vector index of Wikipedia accessed with a pre-trained neural retriever. E2 gives the title, arXiv ID, and 22 May 2020 submission. E3 confirms NeurIPS 2020 acceptance. The 'introduced it' framing is consistent with the abstract's 'We introduce RAG models'.",
+        "quotes": [
+          "We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever.",
+          "arXiv:2005.11401\n(cs)\n[Submitted on 22 May 2020 (\nv1\n), last revised 12 Apr 2021 (this version, v4)]\nTitle:\nRetrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "Comments:\nAccepted at NeurIPS 2020"
+        ]
+      },
+      {
+        "id": "C1",
+        "text": "RAG refers to models that combine pre-trained parametric and non-parametric memory for language generation, via a general-purpose fine-tuning recipe.",
+        "evidence_ids": [
+          "E1"
+        ],
+        "status": "supported",
+        "reason": "E1 directly states RAG is a general-purpose fine-tuning recipe for models combining pre-trained parametric and non-parametric memory for language generation.",
+        "quotes": [
+          "We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation."
+        ]
+      },
+      {
+        "id": "C2",
+        "text": "In RAG models the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia accessed with a pre-trained neural retriever.",
+        "evidence_ids": [
+          "E1"
+        ],
+        "status": "supported",
+        "reason": "E1 explicitly identifies parametric memory as a pre-trained seq2seq model and non-parametric memory as a dense vector index of Wikipedia accessed with a pre-trained neural retriever.",
+        "quotes": [
+          "We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever."
+        ]
+      },
+      {
+        "id": "C3",
+        "text": "The paper is titled \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\" (arXiv:2005.11401), authored by Patrick Lewis and 11 other authors.",
+        "evidence_ids": [
+          "E2"
+        ],
+        "status": "supported",
+        "reason": "E2 gives the title and arXiv ID, and states the paper is by Patrick Lewis and 11 other authors (12 total).",
+        "quotes": [
+          "Title:\nRetrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\nAuthors:\nPatrick Lewis\n,\nEthan Perez\n,\nAleksandra Piktus\n,\nFabio Petroni\n,\nVladimir Karpukhin\n,\nNaman Goyal\n,\nHeinrich Küttler\n,\nMike Lewis\n,\nWen-tau Yih\n,\nTim Rocktäschel\n,\nSebastian Riedel\n,\nDouwe Kiela\nView a PDF of the paper titled Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, by Patrick Lewis and 11 other authors"
+        ]
+      },
+      {
+        "id": "C4",
+        "text": "The paper was submitted on 22 May 2020 (v1) and accepted at NeurIPS 2020.",
+        "evidence_ids": [
+          "E2",
+          "E3"
+        ],
+        "status": "supported",
+        "reason": "E2 shows submission on 22 May 2020 (v1); E3 shows 'Accepted at NeurIPS 2020'.",
+        "quotes": [
+          "[Submitted on 22 May 2020 (\nv1\n), last revised 12 Apr 2021 (this version, v4)]",
+          "Comments:\nAccepted at NeurIPS 2020"
+        ]
+      },
+      {
+        "id": "C5",
+        "text": "The two kinds of memory the paper combines are parametric memory and non-parametric memory.",
+        "evidence_ids": [
+          "E1"
+        ],
+        "status": "supported",
+        "reason": "E1 states RAG models combine pre-trained parametric and non-parametric memory.",
+        "quotes": [
+          "models which combine pre-trained parametric and non-parametric memory for language generation"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "source_id": "https://arxiv.org/abs/2005.11401",
+        "title": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "text": "still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and ",
+        "url": "https://arxiv.org/abs/2005.11401",
+        "location": {
+          "start_char": 995,
+          "end_char": 1990
+        },
+        "retrieved_at": "2026-11-16T06:30:42.088488+00:00",
+        "source_sha256": "94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065",
+        "chunk_id": "bdbbc0d90ec7cb234c0366f5"
+      },
+      {
+        "id": "E2",
+        "source_id": "https://arxiv.org/abs/2005.11401",
+        "title": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "text": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Computation and Language\narXiv:2005.11401\n(cs)\n[Submitted on 22 May 2020 (\nv1\n), last revised 12 Apr 2021 (this version, v4)]\nTitle:\nRetrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\nAuthors:\nPatrick Lewis\n,\nEthan Perez\n,\nAleksandra Piktus\n,\nFabio Petroni\n,\nVladimir Karpukhin\n,\nNaman Goyal\n,\nHeinrich Küttler\n,\nMike Lewis\n,\nWen-tau Yih\n,\nTim Rocktäschel\n,\nSebastian Riedel\n,\nDouwe Kiela\nView a PDF of the paper titled Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, by Patrick Lewis and 11 other authors\nView PDF\nHTML (experimental)\nAbstract:\nLarge pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is ",
+        "url": "https://arxiv.org/abs/2005.11401",
+        "location": {
+          "start_char": 0,
+          "end_char": 995
+        },
+        "retrieved_at": "2026-11-16T06:30:42.088488+00:00",
+        "source_sha256": "94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065",
+        "chunk_id": "aaa1af2e5eea98f8c082af6a"
+      },
+      {
+        "id": "E3",
+        "source_id": "https://arxiv.org/abs/2005.11401",
+        "title": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "text": "evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.\nComments:\nAccepted at NeurIPS 2020\nSubjects:\nComputation and Language (cs.CL)\n; Machine Learning (cs.LG)\nCite as:\narXiv:2005.11401\n[cs.CL]\n(or\narXiv:2005.11401v4\n[cs.CL]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2005.11401\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Patrick Lewis [\nview email\n]\n[v1]\nFri, 22 May 2020 21:34:34 UTC (698 KB)\n[v2]\nMon, 7 Dec 2020 16:23:06 UTC (767 KB)\n[v3]\nMon, 29 Mar 2021 10:12:16 UTC (767 KB)\n[v4]\nMon, 12 Apr 2021 15:42:18 UTC (767 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled Retrieval-Augmented Generation for ",
+        "url": "https://arxiv.org/abs/2005.11401",
+        "location": {
+          "start_char": 1990,
+          "end_char": 2985
+        },
+        "retrieved_at": "2026-11-16T06:30:42.088488+00:00",
+        "source_sha256": "94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065",
+        "chunk_id": "e6c85ab9ac227dfc088dea8b"
+      },
+      {
+        "id": "E4",
+        "source_id": "https://arxiv.org/abs/2005.11401",
+        "title": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "text": "and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "url": "https://arxiv.org/abs/2005.11401",
+        "location": {
+          "start_char": 4985,
+          "end_char": 5215
+        },
+        "retrieved_at": "2026-11-16T06:30:42.088488+00:00",
+        "source_sha256": "94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065",
+        "chunk_id": "d9b28536ae6bc2c14f55d9e7"
+      },
+      {
+        "id": "E5",
+        "source_id": "https://arxiv.org/abs/2005.11401",
+        "title": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "text": "Knowledge-Intensive NLP Tasks, by Patrick Lewis and 11 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nCurrent browse context:\ncs.CL\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2020-05\nChange to browse by:\ncs\ncs.LG\nReferences & Citations\nNASA ADS\nGoogle Scholar\nSemantic Scholar\n13 blog links\n(\nwhat is this?\n)\nDBLP\n- CS Bibliography\nlisting\n|\nbibtex\nEthan Perez\nAleksandra Piktus\nFabio Petroni\nVladimir Karpukhin\nNaman Goyal\n…\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code ",
+        "url": "https://arxiv.org/abs/2005.11401",
+        "location": {
+          "start_char": 2985,
+          "end_char": 3985
+        },
+        "retrieved_at": "2026-11-16T06:30:42.088488+00:00",
+        "source_sha256": "94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065",
+        "chunk_id": "2c9e39db911d943b9ed3282c"
+      },
+      {
+        "id": "E6",
+        "source_id": "https://arxiv.org/abs/2005.11401",
+        "title": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "text": "Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values ",
+        "url": "https://arxiv.org/abs/2005.11401",
+        "location": {
+          "start_char": 3985,
+          "end_char": 4985
+        },
+        "retrieved_at": "2026-11-16T06:30:42.088488+00:00",
+        "source_sha256": "94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065",
+        "chunk_id": "052b7d966d9e7288d7a57a87"
+      }
+    ],
+    "unresolved": [],
+    "subquestions": [
+      "What is retrieval-augmented generation (RAG) and how does it work?",
+      "Which 2020 paper introduced RAG, and what two memory types does it combine?"
+    ],
+    "evidence_requirements": [
+      "Definition of RAG",
+      "Paper title, authors, venue, year",
+      "The two memory types and what each is"
+    ],
+    "trace": [
+      {
+        "step": 1,
+        "round": 1,
+        "tool": "search_web",
+        "args": {
+          "query": "retrieval-augmented generation 2020 paper Lewis parametric non-parametric memory arXiv"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [],
+        "result_count": 5,
+        "elapsed_ms": 5406
+      },
+      {
+        "step": 2,
+        "round": 2,
+        "tool": "read_webpage",
+        "args": {
+          "urls": [
+            "https://arxiv.org/abs/2005.11401"
+          ],
+          "query": "What is retrieval-augmented generation, the paper title, authors, year, and the two kinds of memory it combines (parametric and non-parametric) and what each is"
+        },
+        "attempt": 1,
+        "status": "completed",
+        "evidence_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5",
+          "E6"
+        ],
+        "result_count": 6,
+        "elapsed_ms": 453
+      }
+    ],
+    "model_calls": [
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 1752,
+        "output_tokens": 168,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 1.735
+      },
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 2939,
+        "output_tokens": 189,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.062
+      },
+      {
+        "stage": "plan",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 5556,
+        "output_tokens": 304,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 2.453
+      },
+      {
+        "stage": "draft",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 3253,
+        "output_tokens": 558,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 3.188
+      },
+      {
+        "stage": "verify",
+        "attempt": 1,
+        "model": "deepseek-flash",
+        "status": "completed",
+        "input_tokens": 3463,
+        "output_tokens": 877,
+        "returned_model": "deepseek-flash",
+        "finish_reason": "stop",
+        "elapsed_seconds": 3.781
+      }
+    ],
+    "usage": {
+      "calls": 5,
+      "input_tokens": 16963,
+      "output_tokens": 2096,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "estimated_cost_usd": null,
+      "pricing_date": null,
+      "cost_note": "Token counts include all received usage; failed requests without usage remain unknown. No tariff configured."
+    },
+    "elapsed_seconds": 19.094,
+    "stop_reason": "completed",
+    "rounds": 3,
+    "tool_calls": 2,
+    "repair_rounds": 0,
+    "configuration": {
+      "model": "deepseek-flash",
+      "temperature": 0,
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "thinking": "disabled for official DeepSeek API",
+      "structured_output": "json_object",
+      "limits": {
+        "decision_rounds": 6,
+        "tool_calls": 12,
+        "repair_rounds": 2,
+        "elapsed_seconds": 240,
+        "model_calls": 16,
+        "retrieval_top_k": 6,
+        "max_claims": 8,
+        "max_evidence": 30,
+        "final_answer_tokens": 1800
+      },
+      "allow_web": true,
+      "upstream_commit": "ae229ca894c0b80ad84664afcfdde523b5e87057"
+    },
+    "source_snapshots": {
+      "https://arxiv.org/abs/2005.11401": {
+        "text": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\nSkip to main content\nSearch arXiv\nPress Enter to search ·\nAdvanced search\nComputer Science > Computation and Language\narXiv:2005.11401\n(cs)\n[Submitted on 22 May 2020 (\nv1\n), last revised 12 Apr 2021 (this version, v4)]\nTitle:\nRetrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\nAuthors:\nPatrick Lewis\n,\nEthan Perez\n,\nAleksandra Piktus\n,\nFabio Petroni\n,\nVladimir Karpukhin\n,\nNaman Goyal\n,\nHeinrich Küttler\n,\nMike Lewis\n,\nWen-tau Yih\n,\nTim Rocktäschel\n,\nSebastian Riedel\n,\nDouwe Kiela\nView a PDF of the paper titled Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, by Patrick Lewis and 11 other authors\nView PDF\nHTML (experimental)\nAbstract:\nLarge pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.\nComments:\nAccepted at NeurIPS 2020\nSubjects:\nComputation and Language (cs.CL)\n; Machine Learning (cs.LG)\nCite as:\narXiv:2005.11401\n[cs.CL]\n(or\narXiv:2005.11401v4\n[cs.CL]\nfor this version)\nhttps://doi.org/10.48550/arXiv.2005.11401\nFocus to learn more\narXiv-issued DOI via DataCite\nSubmission history\nFrom: Patrick Lewis [\nview email\n]\n[v1]\nFri, 22 May 2020 21:34:34 UTC (698 KB)\n[v2]\nMon, 7 Dec 2020 16:23:06 UTC (767 KB)\n[v3]\nMon, 29 Mar 2021 10:12:16 UTC (767 KB)\n[v4]\nMon, 12 Apr 2021 15:42:18 UTC (767 KB)\nFull-text links:\nAccess Paper:\nView a PDF of the paper titled Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, by Patrick Lewis and 11 other authors\nView PDF\nHTML (experimental)\nTeX Source\nview license\nCurrent browse context:\ncs.CL\n< prev\n|\nnext >\nnew\n|\nrecent\n|\n2020-05\nChange to browse by:\ncs\ncs.LG\nReferences & Citations\nNASA ADS\nGoogle Scholar\nSemantic Scholar\n13 blog links\n(\nwhat is this?\n)\nDBLP\n- CS Bibliography\nlisting\n|\nbibtex\nEthan Perez\nAleksandra Piktus\nFabio Petroni\nVladimir Karpukhin\nNaman Goyal\n…\nexport BibTeX citation\nLoading...\nBibTeX formatted citation\n×\nloading...\nData provided by:\nBookmark\nBibliographic Tools\nBibliographic and Citation Tools\nBibliographic Explorer Toggle\nBibliographic Explorer\n(\nWhat is the Explorer?\n)\nConnected Papers Toggle\nConnected Papers\n(\nWhat is Connected Papers?\n)\nLitmaps Toggle\nLitmaps\n(\nWhat is Litmaps?\n)\nscite.ai Toggle\nscite Smart Citations\n(\nWhat are Smart Citations?\n)\nCode, Data, Media\nCode, Data and Media Associated with this Article\nalphaXiv Toggle\nalphaXiv\n(\nWhat is alphaXiv?\n)\nLinks to Code Toggle\nCatalyzeX Code Finder for Papers\n(\nWhat is CatalyzeX?\n)\nDagsHub Toggle\nDagsHub\n(\nWhat is DagsHub?\n)\nGotitPub Toggle\nGotit.pub\n(\nWhat is GotitPub?\n)\nHuggingface Toggle\nHugging Face\n(\nWhat is Huggingface?\n)\nScienceCast Toggle\nScienceCast\n(\nWhat is ScienceCast?\n)\nDemos\nDemos\nReplicate Toggle\nReplicate\n(\nWhat is Replicate?\n)\nSpaces Toggle\nHugging Face Spaces\n(\nWhat is Spaces?\n)\nSpaces Toggle\nTXYZ.AI\n(\nWhat is TXYZ.AI?\n)\nRelated Papers\nRecommenders and Search Tools\nLink to Influence Flower\nInfluence Flower\n(\nWhat are Influence Flowers?\n)\nCore recommender toggle\nCORE Recommender\n(\nWhat is CORE?\n)\nAuthor\nVenue\nInstitution\nTopic\nAbout arXivLabs\narXivLabs: experimental projects with community collaborators\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.\nHave an idea for a project that will add value for arXiv's community?\nLearn more about arXivLabs\n.\nWhich authors of this paper are endorsers?\n|\nDisable MathJax\n(\nWhat is MathJax?\n)",
+        "sha256": "94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065"
+      }
+    },
+    "khoj_iteration_history": [
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_1",
+            "type": "function",
+            "function": {
+              "name": "search_web",
+              "arguments": "{\"query\": \"retrieval-augmented generation 2020 paper Lewis parametric non-parametric memory arXiv\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_1",
+        "content": "[{\"title\": \"[2005.11401] Retrieval-Augmented Generation for Knowledge ...\", \"url\": \"https://arxiv.org/abs/2005.11401\", \"snippet\": \"May 22, 2020 · We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation.\", \"citable\": false}, {\"title\": \"Retrieval-Augmented Generation for Knowledge ... - NeurIPS\", \"url\": \"https://proceedings.neurips.cc/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf\", \"snippet\": \"We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) — models which combine pre-trained parametric and non-parametric memory for language generation.\", \"citable\": false}, {\"title\": \"Retrieval-Augmented Generation for Knowledge ... - arXiv.orgLewis 2020 - Retrieval Augmented Generation - Chux's NotebookRetrieval-Augmented Generation for Knowledge-Intensive NLP TasksThe original RAG paper (Lewis et al., 2020), explainedRetrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", \"url\": \"https://arxiv.org/pdf/2005.11401v1\", \"snippet\": \"Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on down-stream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their perfor-mance lags behind task-specific ar... See full list on arxiv.org At test/decoding time, RAG-Sequence and RAG-Token require different ways to approximate arg max See full list on arxiv.org Because RAG leverages an encoder-decoder model, it can go beyond extractive question-answering and answer questions with free-form, abstractive text generation. To test RAG’s ability to generate natural language responses in a knowledge-intensive setting, we use the MS-MARCO Natural Language Generation task v2.1 [38]. This task consists of natural ... See full list on arxiv.org In this work, we presented hybrid generation models with access to parametric and non-parametric retrieval-based external memory, in the form of Wikipedia. We showed that our RAG models obtain state-of-the-art performance on open domain question answering. We found that people prefer RAG’s generation over purely parametric BART and find RAG more fa... See full list on arxiv.org EP thanks supports from the NSF Graduate Research Fellowship. See full list on arxiv.org For FEVER classification, we follow the practice from [28], and first re-generate the claim, and then classify using the representation of the final hidden state, before finally marginalizing across documents to obtain the class probabilities. The FEVER task traditionally has two sub-tasks. The first is to classify the claim as either \\\"Supported\\\", ... See full list on arxiv.org We experimented with adding \\\"Null document\\\" mechanism to RAG, similar to REALM [18] in order to model cases where no useful information could be retrieved for a given input. Here, if k documents were retrieved, we would additionally \\\"retrieve\\\" an empty document and predict a logit for the null document, before marginalizing over k + 1 predictions. ... See full list on arxiv.org Lewis 2020 - Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks This paper proposes a way to fine-tune a parametric seq2seq transformers (e.g. GPT) with a non-parametric memory through dense retrieval. We endow pre-trained, parametric-memory generation models with a non-parametric memory through a general-purpose fine-tuning approach which we refer to as retrieval-augmented generation (RAG). Oct 6, 2026 · Retrieval-Augmented Generation was named in a 2020 paper by Patrick Lewis and colleagues. What it proposed, how the original architecture worked, and how today's RAG differs from it. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) — models which combine pre-trained parametric and non-parametric memory for language generation.\", \"citable\": false}, {\"title\": \"Lewis 2020 - Retrieval Augmented Generation - Chux's Notebook\", \"url\": \"https://charleslow.github.io/notebook/book/papers/lewis_2020.html\", \"snippet\": \"Lewis 2020 - Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks This paper proposes a way to fine-tune a parametric seq2seq transformers (e.g. GPT) with a non-parametric memory through dense retrieval.\", \"citable\": false}, {\"title\": \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", \"url\": \"https://papers.nips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf\", \"snippet\": \"We endow pre-trained, parametric-memory generation models with a non-parametric memory through a general-purpose fine-tuning approach which we refer to as retrieval-augmented generation (RAG).\", \"citable\": false}]"
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_2",
+            "type": "function",
+            "function": {
+              "name": "read_webpage",
+              "arguments": "{\"urls\": [\"https://arxiv.org/abs/2005.11401\"], \"query\": \"What is retrieval-augmented generation, the paper title, authors, year, and the two kinds of memory it combines (parametric and non-parametric) and what each is\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_2",
+        "content": "[{\"id\": \"E1\", \"source_id\": \"https://arxiv.org/abs/2005.11401\", \"title\": \"[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", \"text\": \"still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and \", \"url\": \"https://arxiv.org/abs/2005.11401\", \"location\": {\"start_char\": 995, \"end_char\": 1990}, \"retrieved_at\": \"2026-11-16T06:30:42.088488+00:00\", \"source_sha256\": \"94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065\", \"chunk_id\": \"bdbbc0d90ec7cb234c0366f5\"}, {\"id\": \"E2\", \"source_id\": \"https://arxiv.org/abs/2005.11401\", \"title\": \"[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", \"text\": \"[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\\nSkip to main content\\nSearch arXiv\\nPress Enter to search ·\\nAdvanced search\\nComputer Science > Computation and Language\\narXiv:2005.11401\\n(cs)\\n[Submitted on 22 May 2020 (\\nv1\\n), last revised 12 Apr 2021 (this version, v4)]\\nTitle:\\nRetrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\\nAuthors:\\nPatrick Lewis\\n,\\nEthan Perez\\n,\\nAleksandra Piktus\\n,\\nFabio Petroni\\n,\\nVladimir Karpukhin\\n,\\nNaman Goyal\\n,\\nHeinrich Küttler\\n,\\nMike Lewis\\n,\\nWen-tau Yih\\n,\\nTim Rocktäschel\\n,\\nSebastian Riedel\\n,\\nDouwe Kiela\\nView a PDF of the paper titled Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, by Patrick Lewis and 11 other authors\\nView PDF\\nHTML (experimental)\\nAbstract:\\nLarge pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is \", \"url\": \"https://arxiv.org/abs/2005.11401\", \"location\": {\"start_char\": 0, \"end_char\": 995}, \"retrieved_at\": \"2026-11-16T06:30:42.088488+00:00\", \"source_sha256\": \"94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065\", \"chunk_id\": \"aaa1af2e5eea98f8c082af6a\"}, {\"id\": \"E3\", \"source_id\": \"https://arxiv.org/abs/2005.11401\", \"title\": \"[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", \"text\": \"evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.\\nComments:\\nAccepted at NeurIPS 2020\\nSubjects:\\nComputation and Language (cs.CL)\\n; Machine Learning (cs.LG)\\nCite as:\\narXiv:2005.11401\\n[cs.CL]\\n(or\\narXiv:2005.11401v4\\n[cs.CL]\\nfor this version)\\nhttps://doi.org/10.48550/arXiv.2005.11401\\nFocus to learn more\\narXiv-issued DOI via DataCite\\nSubmission history\\nFrom: Patrick Lewis [\\nview email\\n]\\n[v1]\\nFri, 22 May 2020 21:34:34 UTC (698 KB)\\n[v2]\\nMon, 7 Dec 2020 16:23:06 UTC (767 KB)\\n[v3]\\nMon, 29 Mar 2021 10:12:16 UTC (767 KB)\\n[v4]\\nMon, 12 Apr 2021 15:42:18 UTC (767 KB)\\nFull-text links:\\nAccess Paper:\\nView a PDF of the paper titled Retrieval-Augmented Generation for \", \"url\": \"https://arxiv.org/abs/2005.11401\", \"location\": {\"start_char\": 1990, \"end_char\": 2985}, \"retrieved_at\": \"2026-11-16T06:30:42.088488+00:00\", \"source_sha256\": \"94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065\", \"chunk_id\": \"e6c85ab9ac227dfc088dea8b\"}, {\"id\": \"E4\", \"source_id\": \"https://arxiv.org/abs/2005.11401\", \"title\": \"[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", \"text\": \"and only works with partners that adhere to them.\\nHave an idea for a project that will add value for arXiv's community?\\nLearn more about arXivLabs\\n.\\nWhich authors of this paper are endorsers?\\n|\\nDisable MathJax\\n(\\nWhat is MathJax?\\n)\", \"url\": \"https://arxiv.org/abs/2005.11401\", \"location\": {\"start_char\": 4985, \"end_char\": 5215}, \"retrieved_at\": \"2026-11-16T06:30:42.088488+00:00\", \"source_sha256\": \"94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065\", \"chunk_id\": \"d9b28536ae6bc2c14f55d9e7\"}, {\"id\": \"E5\", \"source_id\": \"https://arxiv.org/abs/2005.11401\", \"title\": \"[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", \"text\": \"Knowledge-Intensive NLP Tasks, by Patrick Lewis and 11 other authors\\nView PDF\\nHTML (experimental)\\nTeX Source\\nview license\\nCurrent browse context:\\ncs.CL\\n< prev\\n|\\nnext >\\nnew\\n|\\nrecent\\n|\\n2020-05\\nChange to browse by:\\ncs\\ncs.LG\\nReferences & Citations\\nNASA ADS\\nGoogle Scholar\\nSemantic Scholar\\n13 blog links\\n(\\nwhat is this?\\n)\\nDBLP\\n- CS Bibliography\\nlisting\\n|\\nbibtex\\nEthan Perez\\nAleksandra Piktus\\nFabio Petroni\\nVladimir Karpukhin\\nNaman Goyal\\n…\\nexport BibTeX citation\\nLoading...\\nBibTeX formatted citation\\n×\\nloading...\\nData provided by:\\nBookmark\\nBibliographic Tools\\nBibliographic and Citation Tools\\nBibliographic Explorer Toggle\\nBibliographic Explorer\\n(\\nWhat is the Explorer?\\n)\\nConnected Papers Toggle\\nConnected Papers\\n(\\nWhat is Connected Papers?\\n)\\nLitmaps Toggle\\nLitmaps\\n(\\nWhat is Litmaps?\\n)\\nscite.ai Toggle\\nscite Smart Citations\\n(\\nWhat are Smart Citations?\\n)\\nCode, Data, Media\\nCode, Data and Media Associated with this Article\\nalphaXiv Toggle\\nalphaXiv\\n(\\nWhat is alphaXiv?\\n)\\nLinks to Code Toggle\\nCatalyzeX Code \", \"url\": \"https://arxiv.org/abs/2005.11401\", \"location\": {\"start_char\": 2985, \"end_char\": 3985}, \"retrieved_at\": \"2026-11-16T06:30:42.088488+00:00\", \"source_sha256\": \"94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065\", \"chunk_id\": \"2c9e39db911d943b9ed3282c\"}, {\"id\": \"E6\", \"source_id\": \"https://arxiv.org/abs/2005.11401\", \"title\": \"[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", \"text\": \"Finder for Papers\\n(\\nWhat is CatalyzeX?\\n)\\nDagsHub Toggle\\nDagsHub\\n(\\nWhat is DagsHub?\\n)\\nGotitPub Toggle\\nGotit.pub\\n(\\nWhat is GotitPub?\\n)\\nHuggingface Toggle\\nHugging Face\\n(\\nWhat is Huggingface?\\n)\\nScienceCast Toggle\\nScienceCast\\n(\\nWhat is ScienceCast?\\n)\\nDemos\\nDemos\\nReplicate Toggle\\nReplicate\\n(\\nWhat is Replicate?\\n)\\nSpaces Toggle\\nHugging Face Spaces\\n(\\nWhat is Spaces?\\n)\\nSpaces Toggle\\nTXYZ.AI\\n(\\nWhat is TXYZ.AI?\\n)\\nRelated Papers\\nRecommenders and Search Tools\\nLink to Influence Flower\\nInfluence Flower\\n(\\nWhat are Influence Flowers?\\n)\\nCore recommender toggle\\nCORE Recommender\\n(\\nWhat is CORE?\\n)\\nAuthor\\nVenue\\nInstitution\\nTopic\\nAbout arXivLabs\\narXivLabs: experimental projects with community collaborators\\narXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\\nBoth individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values \", \"url\": \"https://arxiv.org/abs/2005.11401\", \"location\": {\"start_char\": 3985, \"end_char\": 4985}, \"retrieved_at\": \"2026-11-16T06:30:42.088488+00:00\", \"source_sha256\": \"94dadad22d5fc9aa2be955d3989b4fb930d7e4b154bfad44c9e7abbadc81a065\", \"chunk_id\": \"052b7d966d9e7288d7a57a87\"}]"
+      }
+    ],
+    "checker_is_ground_truth": false,
+    "report": "# Research report\n\nUse public web sources to explain retrieval-augmented generation and identify the 2020 paper that introduced it. What two kinds of memory does the paper combine? Cite the original source.\n\n## Answer\n\nRetrieval-augmented generation (RAG) is a general-purpose fine-tuning recipe for models that combine pre-trained parametric memory and non-parametric memory for language generation: the parametric memory is a pre-trained seq2seq model, and the non-parametric memory is a dense vector index of Wikipedia accessed with a pre-trained neural retriever. The 2020 paper that introduced it is \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\" (arXiv:2005.11401, submitted 22 May 2020, accepted at NeurIPS 2020) by Patrick Lewis et al., and it combines parametric and non-parametric memory. [E1] [E2] [E3]\n\n## Supported findings\n\n- RAG refers to models that combine pre-trained parametric and non-parametric memory for language generation, via a general-purpose fine-tuning recipe. [E1]\n- In RAG models the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia accessed with a pre-trained neural retriever. [E1]\n- The paper is titled \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\" (arXiv:2005.11401), authored by Patrick Lewis and 11 other authors. [E2]\n- The paper was submitted on 22 May 2020 (v1) and accepted at NeurIPS 2020. [E2] [E3]\n- The two kinds of memory the paper combines are parametric memory and non-parametric memory. [E1]\n\n## Unresolved questions\n\nNone identified by the system. Checker decisions remain subject to human audit.\n\n## Evidence\n\n### [E1] [2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n{\"start_char\": 995, \"end_char\": 1990}\n\n> still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and \n\nhttps://arxiv.org/abs/2005.11401\n### [E2] [2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n{\"start_char\": 0, \"end_char\": 995}\n\n> [2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n> Skip to main content\n> Search arXiv\n> Press Enter to search ·\n> Advanced search\n> Computer Science > Computation and Language\n> arXiv:2005.11401\n> (cs)\n> [Submitted on 22 May 2020 (\n> v1\n> ), last revised 12 Apr 2021 (this version, v4)]\n> Title:\n> Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n> Authors:\n> Patrick Lewis\n> ,\n> Ethan Perez\n> ,\n> Aleksandra Piktus\n> ,\n> Fabio Petroni\n> ,\n> Vladimir Karpukhin\n> ,\n> Naman Goyal\n> ,\n> Heinrich Küttler\n> ,\n> Mike Lewis\n> ,\n> Wen-tau Yih\n> ,\n> Tim Rocktäschel\n> ,\n> Sebastian Riedel\n> ,\n> Douwe Kiela\n> View a PDF of the paper titled Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, by Patrick Lewis and 11 other authors\n> View PDF\n> HTML (experimental)\n> Abstract:\n> Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is \n\nhttps://arxiv.org/abs/2005.11401\n### [E3] [2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n{\"start_char\": 1990, \"end_char\": 2985}\n\n> evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.\n> Comments:\n> Accepted at NeurIPS 2020\n> Subjects:\n> Computation and Language (cs.CL)\n> ; Machine Learning (cs.LG)\n> Cite as:\n> arXiv:2005.11401\n> [cs.CL]\n> (or\n> arXiv:2005.11401v4\n> [cs.CL]\n> for this version)\n> https://doi.org/10.48550/arXiv.2005.11401\n> Focus to learn more\n> arXiv-issued DOI via DataCite\n> Submission history\n> From: Patrick Lewis [\n> view email\n> ]\n> [v1]\n> Fri, 22 May 2020 21:34:34 UTC (698 KB)\n> [v2]\n> Mon, 7 Dec 2020 16:23:06 UTC (767 KB)\n> [v3]\n> Mon, 29 Mar 2021 10:12:16 UTC (767 KB)\n> [v4]\n> Mon, 12 Apr 2021 15:42:18 UTC (767 KB)\n> Full-text links:\n> Access Paper:\n> View a PDF of the paper titled Retrieval-Augmented Generation for \n\nhttps://arxiv.org/abs/2005.11401\n### [E4] [2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n{\"start_char\": 4985, \"end_char\": 5215}\n\n> and only works with partners that adhere to them.\n> Have an idea for a project that will add value for arXiv's community?\n> Learn more about arXivLabs\n> .\n> Which authors of this paper are endorsers?\n> |\n> Disable MathJax\n> (\n> What is MathJax?\n> )\n\nhttps://arxiv.org/abs/2005.11401\n### [E5] [2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n{\"start_char\": 2985, \"end_char\": 3985}\n\n> Knowledge-Intensive NLP Tasks, by Patrick Lewis and 11 other authors\n> View PDF\n> HTML (experimental)\n> TeX Source\n> view license\n> Current browse context:\n> cs.CL\n> < prev\n> |\n> next >\n> new\n> |\n> recent\n> |\n> 2020-05\n> Change to browse by:\n> cs\n> cs.LG\n> References & Citations\n> NASA ADS\n> Google Scholar\n> Semantic Scholar\n> 13 blog links\n> (\n> what is this?\n> )\n> DBLP\n> - CS Bibliography\n> listing\n> |\n> bibtex\n> Ethan Perez\n> Aleksandra Piktus\n> Fabio Petroni\n> Vladimir Karpukhin\n> Naman Goyal\n> …\n> export BibTeX citation\n> Loading...\n> BibTeX formatted citation\n> ×\n> loading...\n> Data provided by:\n> Bookmark\n> Bibliographic Tools\n> Bibliographic and Citation Tools\n> Bibliographic Explorer Toggle\n> Bibliographic Explorer\n> (\n> What is the Explorer?\n> )\n> Connected Papers Toggle\n> Connected Papers\n> (\n> What is Connected Papers?\n> )\n> Litmaps Toggle\n> Litmaps\n> (\n> What is Litmaps?\n> )\n> scite.ai Toggle\n> scite Smart Citations\n> (\n> What are Smart Citations?\n> )\n> Code, Data, Media\n> Code, Data and Media Associated with this Article\n> alphaXiv Toggle\n> alphaXiv\n> (\n> What is alphaXiv?\n> )\n> Links to Code Toggle\n> CatalyzeX Code \n\nhttps://arxiv.org/abs/2005.11401\n### [E6] [2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n{\"start_char\": 3985, \"end_char\": 4985}\n\n> Finder for Papers\n> (\n> What is CatalyzeX?\n> )\n> DagsHub Toggle\n> DagsHub\n> (\n> What is DagsHub?\n> )\n> GotitPub Toggle\n> Gotit.pub\n> (\n> What is GotitPub?\n> )\n> Huggingface Toggle\n> Hugging Face\n> (\n> What is Huggingface?\n> )\n> ScienceCast Toggle\n> ScienceCast\n> (\n> What is ScienceCast?\n> )\n> Demos\n> Demos\n> Replicate Toggle\n> Replicate\n> (\n> What is Replicate?\n> )\n> Spaces Toggle\n> Hugging Face Spaces\n> (\n> What is Spaces?\n> )\n> Spaces Toggle\n> TXYZ.AI\n> (\n> What is TXYZ.AI?\n> )\n> Related Papers\n> Recommenders and Search Tools\n> Link to Influence Flower\n> Influence Flower\n> (\n> What are Influence Flowers?\n> )\n> Core recommender toggle\n> CORE Recommender\n> (\n> What is CORE?\n> )\n> Author\n> Venue\n> Institution\n> Topic\n> About arXivLabs\n> arXivLabs: experimental projects with community collaborators\n> arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.\n> Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values \n\nhttps://arxiv.org/abs/2005.11401"
+  },
+  "error": null,
+  "progress": [
+    {
+      "stage": "start",
+      "message": "Research started",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 1/6",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "stage": "retrieve",
+      "message": "search_web · 1/12",
+      "elapsed_seconds": 1.7
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 2/6",
+      "elapsed_seconds": 7.1
+    },
+    {
+      "stage": "retrieve",
+      "message": "read_webpage · 2/12",
+      "elapsed_seconds": 9.2
+    },
+    {
+      "stage": "plan",
+      "message": "Decision 3/6",
+      "elapsed_seconds": 9.7
+    },
+    {
+      "stage": "draft",
+      "message": "Drafting individually cited claims",
+      "elapsed_seconds": 12.1
+    },
+    {
+      "stage": "verify",
+      "message": "Checking IDs, numbers, exact quotes and semantic support",
+      "elapsed_seconds": 15.3
+    },
+    {
+      "stage": "complete",
+      "message": "Research complete; inspect citations and unresolved points",
+      "elapsed_seconds": 19.1
+    }
+  ]
+}

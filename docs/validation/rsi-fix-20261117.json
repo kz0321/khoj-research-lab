@@ -1,0 +1,52 @@
+{
+  "verified_at": "2026-11-17T03:47:31.582505+00:00",
+  "date_local": "2026-11-17",
+  "software_tests": {
+    "pytest_passed": 137,
+    "pytest_failed": 0,
+    "pytest_seconds": 2.13,
+    "frontend_passed": 8,
+    "javascript_syntax": "passed"
+  },
+  "live_run": {
+    "id": "85d8a66d37ee494ba415b06d20003943",
+    "url": "http://127.0.0.1:8778/?run=85d8a66d37ee494ba415b06d20003943",
+    "status": "completed",
+    "nonempty_answer": true,
+    "elapsed_seconds": 79.938,
+    "tool_calls": 10,
+    "usage": {
+      "calls": 10,
+      "input_tokens": 84718,
+      "output_tokens": 6740,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "estimated_cost_usd": null,
+      "pricing_date": null,
+      "cost_note": "Token counts include all received usage; failed requests without usage remain unknown. No tariff configured."
+    },
+    "claims_supported_by_model": 7,
+    "claims_total": 7,
+    "human_citation_audit": "not performed",
+    "coverage": "RSIGym and selected RSI surveys; not an exhaustive related-work review"
+  },
+  "original_user_run": "45f1e7137bf340be9c3b3dc6642f369c",
+  "source_sha256": {
+    "app/__init__.py": "47c0af8b2037f9f1d63a9bab4fb02c20a3eb36ba7a374bdc03e35c945d35c99c",
+    "app/agent.py": "dd5f063c2bd77ec1d678a6fc04b9df4c08c57e8aefba250540bb4e9aa6c3c564",
+    "app/config.py": "04f7e089b40ae32939c032c168006526205c1ce4175444f7e204a029fb9791f4",
+    "app/khoj_core.py": "d1769889544dab05b06e599bd8c6e2a3b3daa9a5200c386d272bef229d339998",
+    "app/llm.py": "192f62025c9ae6559b24c1a9985430460295d778e36160dc83f08337b267073f",
+    "app/main.py": "1089dc2a006b61c0c35576db53fd479e267181cf1912d9157dfd5453b67e424a",
+    "app/retrieval.py": "0d64295a5df8ad63a4fa0f9b8c9853d5717bb3f3835314cb615f3a37bd5771d4",
+    "app/schemas.py": "08cc9ff59d988cf32496902598e719d577368172d0d4ca50e948ebc5321e6fb0",
+    "app/static/app.js": "28add0d58f9dfbff39d426a86e282ab7703a17d3bacedf53be29772c21cf6969",
+    "app/static/index.html": "6168717e1e69a05e182394f4f6a35468a140dbe79c4bed3f660f8389db26f6b9",
+    "app/static/outcome.js": "8a9b3c853578464a3d94c32f1e47cc45186a6e97c93e7490ab987165a526c210",
+    "app/static/styles.css": "fb1c297bc47df7491419589ebc0a0c023b7715c12eda28ae069139f4b591f024",
+    "app/store.py": "fa5d1ae2633b5ebd7551fcb3b022b3e98aff9e024f1258eb1963d3526b13d04a",
+    "app/web_tools.py": "5ead6fd0d2081e1cbf479b5389dcb653199cddb32c02cc6188a5c099f5f7500e"
+  },
+  "historical_benchmark": "200-run HotpotQA results are from the unmodified 2026-11-16 archived code; this patch has not rerun that benchmark",
+  "service_running": true
+}

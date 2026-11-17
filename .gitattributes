@@ -1,0 +1,6 @@
+# Frozen source/data manifests validate exact bytes, including line endings.
+* -text
+upstream/** linguist-vendored
+data/** linguist-detectable=false
+eval/results/** linguist-generated
+docs/validation/** linguist-generated

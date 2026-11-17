@@ -1,0 +1,145 @@
+﻿item_id,question,reference_answer,answer,report,answer_correct,required_claims_supported,evidence_sufficient,abstention_correct,failure_category,notes
+79233505d0f64229e842,"Oskar Kokoschka used what style in his painting that features a female Viennese-born composer, author, editor and socialite?",oil on canvas,Expressionist,"Oskar Kokoschka used the Expressionist style in The Bride of the Wind, the painting featuring Alma Mahler. [E5] [E2] [E8] [E6]
+The female Viennese-born composer, author, editor and socialite is Alma Mahler. [E6] [E1]
+Alma Mahler was notably the consort of painter Oskar Kokoschka. [E3]
+The Bride of the Wind (Die Windsbraut) is a 1913-1914 oil on canvas painting by Oskar Kokoschka featuring his lover Alma Mahler. [E2] [E8]
+Oskar Kokoschka is associated with the Expressionist style, as in his Expressionist play Murderer, the Hope of Women. [E5]
+
+[E1] Alma Mahler
+ author, editor and socialite.
+
+[E2] The Bride of the Wind
+The Bride of the Wind (Die Windsbraut) (or The Tempest) is a 1913-1914 oil on canvas painting by Oskar Kokoschka.
+
+[E3] Alma Mahler
+ She became the wife, successively, of composer Gustav Mahler, architect Walter Gropius, and novelist Franz Werfel, as well as the consort of several other prominent men, notably painter Oskar Kokoschka.
+
+[E5] Murderer, the Hope of Women
+Murderer, the Hope of Women is a short Expressionist play written by the painter Oskar Kokoschka.
+
+[E6] Alma Mahler
+Alma Maria Mahler Gropius Werfel (born Alma Margaretha Maria Schindler; 31 August 1879 – 11 December 1964) was a Viennese-born composer.
+
+[E8] The Bride of the Wind
+ Kokoschka's best known work, it is an allegorical picture featuring a self-portrait by the artist, lying alongside his lover Alma Mahler.",,,,,,
+fd73770430ea50c4a000,"Oskar Kokoschka used what style in his painting that features a female Viennese-born composer, author, editor and socialite?",oil on canvas,Expressionism,"Oskar Kokoschka used Expressionism in his painting featuring Alma Mahler. 
+The female Viennese-born composer, author, editor and socialite is Alma Mahler. 
+Oskar Kokoschka painted a portrait of Alma Mahler. 
+Kokoschka's style in that painting is Expressionism. 
+
+",,,,,,
+e1d0880f97b60032fae7,"Oskar Kokoschka used what style in his painting that features a female Viennese-born composer, author, editor and socialite?",oil on canvas,,"Alma Mahler was a Viennese-born composer, author, editor and socialite. [E6] [E1]
+Alma Mahler was notably the consort of painter Oskar Kokoschka. [E3]
+The Bride of the Wind (Die Windsbraut) is a 1913-1914 oil on canvas painting by Oskar Kokoschka. [E2]
+The Bride of the Wind is an allegorical picture featuring a self-portrait by Kokoschka lying alongside his lover Alma Mahler. [E8]
+Kokoschka's short play Murderer, the Hope of Women is described as Expressionist, indicating his association with Expressionism. [E5]
+
+[E1] Alma Mahler
+ author, editor and socialite.
+
+[E2] The Bride of the Wind
+The Bride of the Wind (Die Windsbraut) (or The Tempest) is a 1913-1914 oil on canvas painting by Oskar Kokoschka.
+
+[E3] Alma Mahler
+ She became the wife, successively, of composer Gustav Mahler, architect Walter Gropius, and novelist Franz Werfel, as well as the consort of several other prominent men, notably painter Oskar Kokoschka.
+
+[E5] Murderer, the Hope of Women
+Murderer, the Hope of Women is a short Expressionist play written by the painter Oskar Kokoschka.
+
+[E6] Alma Mahler
+Alma Maria Mahler Gropius Werfel (born Alma Margaretha Maria Schindler; 31 August 1879 – 11 December 1964) was a Viennese-born composer.
+
+[E8] The Bride of the Wind
+ Kokoschka's best known work, it is an allegorical picture featuring a self-portrait by the artist, lying alongside his lover Alma Mahler.",,,,,,
+e6d34e89c6182cf4297a,"Grand Canyon: A Different View includes an essay by which writer, who also serves as the Director of the Creation Research Center at Truett McConnell University?",Kurt Wise,Kurt Wise,"The essayist in Grand Canyon: A Different View who serves as Director of the Creation Research Center at Truett McConnell University is Kurt Wise. [E2] [E3]
+Grand Canyon: A Different View is a 2003 book edited by Tom Vail. [E1]
+The book features 20 essays by creationists, including Kurt Wise. [E3]
+Kurt Patrick Wise is an American young earth creationist who serves as the Director of Creation Research Center at Truett McConnell University. [E2]
+
+[E1] Grand Canyon: A Different View
+Grand Canyon: A Different View is a 2003 book edited by Tom Vail.
+
+[E2] Kurt Wise
+Kurt Patrick Wise (born 1959) is an American young earth creationist who serves as the Director of Creation Research Center at Truett McConnell University.
+
+[E3] Grand Canyon: A Different View
+ The book features a series of photographs of the Grand Canyon illustrating 20 essays by creationists Steve Austin, John Baumgardner, Duane Gish, Ken Ham, Russell Humphreys, Henry Morris, John D. Morris, Andrew A. Snelling, Larry Vardiman, John Whitcomb, and Kurt Wise.",,,,,,
+710a02e084713b87e162,"Oskar Kokoschka used what style in his painting that features a female Viennese-born composer, author, editor and socialite?",oil on canvas,,"Alma Mahler was a Viennese-born composer, author, editor and socialite. [E5] [E1]
+Alma Mahler was notably the consort of painter Oskar Kokoschka. [E4]
+The Bride of the Wind (Die Windsbraut) is a 1913-1914 oil on canvas painting by Oskar Kokoschka. [E3]
+The Bride of the Wind is an allegorical picture featuring a self-portrait by Kokoschka lying alongside his lover Alma Mahler. [E2]
+
+[E1] Alma Mahler
+ author, editor and socialite.
+
+[E2] The Bride of the Wind
+ Kokoschka's best known work, it is an allegorical picture featuring a self-portrait by the artist, lying alongside his lover Alma Mahler.
+
+[E3] The Bride of the Wind
+The Bride of the Wind (Die Windsbraut) (or The Tempest) is a 1913-1914 oil on canvas painting by Oskar Kokoschka.
+
+[E4] Alma Mahler
+ She became the wife, successively, of composer Gustav Mahler, architect Walter Gropius, and novelist Franz Werfel, as well as the consort of several other prominent men, notably painter Oskar Kokoschka.
+
+[E5] Alma Mahler
+Alma Maria Mahler Gropius Werfel (born Alma Margaretha Maria Schindler; 31 August 1879 – 11 December 1964) was a Viennese-born composer.",,,,,,
+985e0bbd084681ca3606,"Oskar Kokoschka used what style in his painting that features a female Viennese-born composer, author, editor and socialite?",oil on canvas,Expressionism,"The supplied evidence does not state the style of Oskar Kokoschka's painting featuring Alma Mahler, so the style cannot be determined from the evidence. 
+Alma Maria Mahler Gropius Werfel (born Alma Margaretha Maria Schindler) was a Viennese-born composer, author, editor and socialite. [E2] [E3]
+Alma Mahler was notably the consort of painter Oskar Kokoschka. [E5]
+The Bride of the Wind (Die Windsbraut), or The Tempest, is a 1913-1914 oil on canvas painting by Oskar Kokoschka. [E4]
+The Bride of the Wind is an allegorical picture featuring a self-portrait by Kokoschka lying alongside his lover Alma Mahler. [E6]
+
+[E2] Alma Mahler
+Alma Maria Mahler Gropius Werfel (born Alma Margaretha Maria Schindler; 31 August 1879 – 11 December 1964) was a Viennese-born composer.
+
+[E3] Alma Mahler
+ author, editor and socialite.
+
+[E4] The Bride of the Wind
+The Bride of the Wind (Die Windsbraut) (or The Tempest) is a 1913-1914 oil on canvas painting by Oskar Kokoschka.
+
+[E5] Alma Mahler
+ She became the wife, successively, of composer Gustav Mahler, architect Walter Gropius, and novelist Franz Werfel, as well as the consort of several other prominent men, notably painter Oskar Kokoschka.
+
+[E6] The Bride of the Wind
+ Kokoschka's best known work, it is an allegorical picture featuring a self-portrait by the artist, lying alongside his lover Alma Mahler.",,,,,,
+fd57b559752ac18ce848,"Grand Canyon: A Different View includes an essay by which writer, who also serves as the Director of the Creation Research Center at Truett McConnell University?",Kurt Wise,Kurt Wise,"The essay in Grand Canyon: A Different View was written by Kurt Wise, who also serves as the Director of the Creation Research Center at Truett McConnell University. [E1]
+Kurt Patrick Wise serves as the Director of Creation Research Center at Truett McConnell University. [E1]
+Grand Canyon: A Different View is a 2003 book edited by Tom Vail. [E6]
+
+[E1] Kurt Wise
+Kurt Patrick Wise (born 1959) is an American young earth creationist who serves as the Director of Creation Research Center at Truett McConnell University.
+
+[E6] Grand Canyon: A Different View
+Grand Canyon: A Different View is a 2003 book edited by Tom Vail.",,,,,,
+05554719965101a97328,"Grand Canyon: A Different View includes an essay by which writer, who also serves as the Director of the Creation Research Center at Truett McConnell University?",Kurt Wise,Kurt Wise,"The essayist in Grand Canyon: A Different View who serves as Director of the Creation Research Center at Truett McConnell University is Kurt Wise. [E2] [E3]
+Grand Canyon: A Different View is a 2003 book edited by Tom Vail. [E1]
+The book features 20 essays by creationists, including Kurt Wise. [E3]
+Kurt Patrick Wise is an American young earth creationist who serves as the Director of Creation Research Center at Truett McConnell University. [E2]
+
+[E1] Grand Canyon: A Different View
+Grand Canyon: A Different View is a 2003 book edited by Tom Vail.
+
+[E2] Kurt Wise
+Kurt Patrick Wise (born 1959) is an American young earth creationist who serves as the Director of Creation Research Center at Truett McConnell University.
+
+[E3] Grand Canyon: A Different View
+ The book features a series of photographs of the Grand Canyon illustrating 20 essays by creationists Steve Austin, John Baumgardner, Duane Gish, Ken Ham, Russell Humphreys, Henry Morris, John D. Morris, Andrew A. Snelling, Larry Vardiman, John Whitcomb, and Kurt Wise.",,,,,,
+47081fe3a40779f00a1b,"Grand Canyon: A Different View includes an essay by which writer, who also serves as the Director of the Creation Research Center at Truett McConnell University?",Kurt Wise,Roger Patterson,"The essayist is Roger Patterson, Director of the Creation Research Center at Truett McConnell University. 
+The writer is Roger Patterson. 
+Roger Patterson serves as Director of the Creation Research Center at Truett McConnell University. 
+
+",,,,,,
+91e9ed6da5a6477537b8,"Grand Canyon: A Different View includes an essay by which writer, who also serves as the Director of the Creation Research Center at Truett McConnell University?",Kurt Wise,Kurt Wise,"The essayist in Grand Canyon: A Different View who also serves as the Director of the Creation Research Center at Truett McConnell University is Kurt Wise. [E2] [E3]
+Grand Canyon: A Different View is a 2003 book edited by Tom Vail. [E1]
+The book features 20 essays by creationists, including Kurt Wise. [E3]
+Kurt Patrick Wise is an American young earth creationist who serves as the Director of Creation Research Center at Truett McConnell University. [E2]
+
+[E1] Grand Canyon: A Different View
+Grand Canyon: A Different View is a 2003 book edited by Tom Vail.
+
+[E2] Kurt Wise
+Kurt Patrick Wise (born 1959) is an American young earth creationist who serves as the Director of Creation Research Center at Truett McConnell University.
+
+[E3] Grand Canyon: A Different View
+ The book features a series of photographs of the Grand Canyon illustrating 20 essays by creationists Steve Austin, John Baumgardner, Duane Gish, Ken Ham, Russell Humphreys, Henry Morris, John D. Morris, Andrew A. Snelling, Larry Vardiman, John Whitcomb, and Kurt Wise.",,,,,,

@@ -1,0 +1,190 @@
+{
+  "counts": {
+    "both_em_correct": 20,
+    "multi_only_em_correct": 6,
+    "verified_only_em_correct": 1,
+    "both_em_incorrect": 13
+  },
+  "cases": [
+    {
+      "task_id": "hotpot-5add6b595542992200553b0c",
+      "transition": "verified_only_em_correct",
+      "question": "Where was the artist behind \"Shit\" born and raised?",
+      "reference_answer": "Atlanta, Georgia",
+      "multi_step_answer": "",
+      "verified_answer": "Atlanta, Georgia",
+      "verified_answer_claim": {
+        "id": "A0",
+        "text": "The artist behind \"Shit,\" Future (Nayvadius DeMun Wilburn), was born and raised in Atlanta, Georgia.",
+        "evidence_ids": [
+          "E1",
+          "E7",
+          "E8"
+        ],
+        "status": "supported",
+        "reason": "E1 identifies Future as the artist behind \"Shit\"; E8 gives his real name as Nayvadius DeMun Wilburn; E7 states Wilburn was born and raised in Atlanta, Georgia. Together these fully entail the claim.",
+        "quotes": [
+          "\"Shit\" (stylized as \"Sh!t\", edited for radio as \"Shhh...\") is a song by American hip hop recording artist Future.",
+          " Born and raised in Atlanta, Georgia, Wilburn first became involved in music as part of the Dungeon Family collective, where he was nicknamed \"the Future\".",
+          "Nayvadius DeMun Wilburn (born November 20, 1983), known professionally as Future, is an American rapper, singer, songwriter, and record producer."
+        ]
+      },
+      "stop_reason": "no_new_evidence",
+      "repair_rounds": 1,
+      "note": "Automatic exact-match disagreement; not a completed human adjudication of semantic correctness or citation support."
+    },
+    {
+      "task_id": "hotpot-5abbf698554299114383a0b5",
+      "transition": "multi_only_em_correct",
+      "question": "Which British first-generation jet-powered medium bomber was used in the South West Pacific theatre of World War II?",
+      "reference_answer": "English Electric Canberra",
+      "multi_step_answer": "English Electric Canberra",
+      "verified_answer": "",
+      "verified_answer_claim": {
+        "id": "A0",
+        "text": "The British first-generation jet-powered medium bomber used in the South West Pacific theatre of World War II was the English Electric Canberra.",
+        "evidence_ids": [
+          "E1",
+          "E3"
+        ],
+        "status": "insufficient",
+        "reason": "E1 confirms the Canberra is a British first-generation jet-powered medium bomber, and E3 mentions a bomber unit seeing action in the South West Pacific theatre and being equipped with Canberra jets, but E3 does not state the Canberra itself was used in the South West Pacific theatre during WWII; the two facts are only juxtaposed, not linked.",
+        "quotes": [
+          "The English Electric Canberra is a British first-generation jet-powered medium bomber that was manufactured during the 1950s.",
+          " It saw action as a bomber unit in the South West Pacific theatre of World War II and, equipped with English Electric Canberra jets, in the Malayan Emergency and the Vietnam War."
+        ]
+      },
+      "stop_reason": "no_new_evidence",
+      "repair_rounds": 1,
+      "note": "Automatic exact-match disagreement; not a completed human adjudication of semantic correctness or citation support."
+    },
+    {
+      "task_id": "hotpot-5adc020a5542994650320c4c",
+      "transition": "multi_only_em_correct",
+      "question": "Are Jeff Ragsdale and Millard Webb both authors?",
+      "reference_answer": "no",
+      "multi_step_answer": "No",
+      "verified_answer": "Yes",
+      "verified_answer_claim": {
+        "id": "A0",
+        "text": "Yes, both Jeff Ragsdale and Millard Webb are authors.",
+        "evidence_ids": [
+          "E2",
+          "E7",
+          "E12"
+        ],
+        "status": "supported",
+        "reason": "E2 states Jeff Ragsdale is an American author; E7 states Millard Webb was an American screenwriter and director, and E12 shows Webb writing a screen adaptation, supporting authorship for both.",
+        "quotes": [
+          "Jeffrey Charles \"Jeff\" Ragsdale ( ) is an American author, documentary filmmaker, actor and stand-up comedian.",
+          "Millard Webb (6 December 1893 – 21 April 1935), was an American screenwriter and director.",
+          " The film was directed by Tom Miranda and Millard Webb, with Webb writing the adaption for the screen."
+        ]
+      },
+      "stop_reason": "no_new_evidence",
+      "repair_rounds": 0,
+      "note": "Automatic exact-match disagreement; not a completed human adjudication of semantic correctness or citation support."
+    },
+    {
+      "task_id": "hotpot-5ae4ad375542995dadf243a4",
+      "transition": "multi_only_em_correct",
+      "question": "The home video game console that was developed by Sony Computer Entertainment is a platform for a racing video game developed by who?",
+      "reference_answer": "Sony Studio Liverpool",
+      "multi_step_answer": "Sony Studio Liverpool",
+      "verified_answer": "SingleTrac",
+      "verified_answer_claim": {
+        "id": "A0",
+        "text": "The racing video game Jet Moto, released for the Sony Computer Entertainment-developed PlayStation console, was developed by SingleTrac.",
+        "evidence_ids": [
+          "E2",
+          "E4"
+        ],
+        "status": "supported",
+        "reason": "E4 states Jet Moto is a 1996 racing game developed by SingleTrac for the PlayStation, and E2 confirms the PlayStation is a home console developed and marketed by Sony Computer Entertainment.",
+        "quotes": [
+          "The PlayStation (officially abbreviated to PS, and commonly known as the PS1 or PSX) is a home video game console developed and marketed by Sony Computer Entertainment.",
+          "Jet Moto (known as Jet Rider in Europe) is a 1996 racing video game developed by SingleTrac and published by Sony Computer Entertainment for the PlayStation video game console and PC."
+        ]
+      },
+      "stop_reason": "completed",
+      "repair_rounds": 0,
+      "note": "Automatic exact-match disagreement; not a completed human adjudication of semantic correctness or citation support."
+    },
+    {
+      "task_id": "hotpot-5abb9ad4554299642a094abe",
+      "transition": "multi_only_em_correct",
+      "question": "Which terrorist group was the cause of the battle in which Mark E. Michell won an award for his actions?",
+      "reference_answer": "al-Qaeda",
+      "multi_step_answer": "al-Qaeda",
+      "verified_answer": "",
+      "verified_answer_claim": {
+        "id": "A0",
+        "text": "The terrorist group that was the cause of the Battle of Qala-i-Jangi, where Mark E. Mitchell won an award for his actions, was al-Qaeda.",
+        "evidence_ids": [
+          "E2",
+          "E7"
+        ],
+        "status": "insufficient",
+        "reason": "E2 confirms Mitchell received the award for actions at the Battle of Qala-i-Jangi, and E7 states the battle followed intervention to overthrow the Taliban, which was accused of harboring al-Qaeda operatives. However, no cited passage states that al-Qaeda was the cause of the battle; the evidence only mentions al-Qaeda operatives being harbored, not that al-Qaeda caused the battle.",
+        "quotes": [
+          "In 2003, he received the award for his actions during the Battle of Qala-i-Jangi, which took place in late November – early December 2001.",
+          "The Battle of Qala-i-Jangi (also incorrectly referred to as the \"Battle of Mazar-i-Sharif\") was a prisoner-of-war camp uprising that took place between November 25 and December 1, 2001, in northern Afghanistan, following the armed intervention by United States-led coalition forces to try to overthrow the Taliban's Islamic Emirate of Afghanistan, which it had accused of harboring al-Qaeda operatives."
+        ]
+      },
+      "stop_reason": "repair_budget",
+      "repair_rounds": 2,
+      "note": "Automatic exact-match disagreement; not a completed human adjudication of semantic correctness or citation support."
+    },
+    {
+      "task_id": "hotpot-5a8a17685542993b751ca9f3",
+      "transition": "multi_only_em_correct",
+      "question": "Which rapper who worked with a star of the film 8 Mile also worked with the artist who played keyboards and wrote songs for Anita Baker??",
+      "reference_answer": "Eminem",
+      "multi_step_answer": "Eminem",
+      "verified_answer": "Luis Resto",
+      "verified_answer_claim": {
+        "id": "A0",
+        "text": "The rapper who worked with an 8 Mile star and also worked with the keyboardist/songwriter for Anita Baker is Luis Resto.",
+        "evidence_ids": [
+          "E1",
+          "E4",
+          "E12"
+        ],
+        "status": "supported",
+        "reason": "E1 identifies Eminem as a star of 8 Mile; E4 states Resto worked closely with rapper Eminem; E12 states Resto played keyboards and co-wrote songs for Anita Baker. Together these establish Resto as the rapper/musician who worked with both an 8 Mile star and Anita Baker.",
+        "quotes": [
+          "8 Mile is a 2002 American drama film written by Scott Silver, directed by Curtis Hanson, and starring Eminem, Mekhi Phifer, Brittany Murphy, Michael Shannon, and Kim Basinger.",
+          "Luis Edgardo Resto (born July 22, 1961) is an American musician, producer and keyboardist who has worked closely with rapper Eminem since his third major-label album \"The Eminem Show\".",
+          " He continued playing keyboards and co-writing songs for a wide variety of artists (including many produced by Don Was), ranging from Anita Baker to Patti Smith to The Highwaymen to Vertical Horizon to Fuel, before beginning a prolific and lengthy collaboration with Eminem in 2001."
+        ]
+      },
+      "stop_reason": "no_new_evidence",
+      "repair_rounds": 0,
+      "note": "Automatic exact-match disagreement; not a completed human adjudication of semantic correctness or citation support."
+    },
+    {
+      "task_id": "hotpot-5ae3a3835542990afbd1e19c",
+      "transition": "multi_only_em_correct",
+      "question": "The driver know for doing backflips off his car lost to which driver in the 2009 NASCAR Nationwide Series?",
+      "reference_answer": "Kyle Busch",
+      "multi_step_answer": "Kyle Busch",
+      "verified_answer": "",
+      "verified_answer_claim": {
+        "id": "A0",
+        "text": "Carl Edwards, known for doing backflips off his car, lost the 2009 NASCAR Nationwide Series to Kyle Busch.",
+        "evidence_ids": [
+          "E1",
+          "E7",
+          "E13"
+        ],
+        "status": "insufficient",
+        "reason": "Numerical literals not found in cited passages: 2009",
+        "quotes": []
+      },
+      "stop_reason": "no_new_evidence",
+      "repair_rounds": 1,
+      "note": "Automatic exact-match disagreement; not a completed human adjudication of semantic correctness or citation support."
+    }
+  ],
+  "source": "Observed frozen outputs; model checker reasons are retained as model outputs, not ground-truth labels."
+}

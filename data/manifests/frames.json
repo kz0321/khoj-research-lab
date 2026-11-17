@@ -1,0 +1,42 @@
+{
+  "dataset": "google/frames-benchmark",
+  "revision": "58d9fb6330f3ab1316d1eca12e5e8ef23dcc22ef",
+  "seed": 20261116,
+  "source_sha256": "4255093c93b595b5b04c7c8dde290b48ec87d72ca0fb0b760d9dd02740d669ff",
+  "source_rows": 824,
+  "unique_questions": 824,
+  "dev": 20,
+  "test": 100,
+  "sampling": "fixed-seed round-robin over complete reasoning label combinations; dev removed before test sampling",
+  "reasoning_type_counts": {
+    "dev": {
+      "Numerical reasoning": 11,
+      "Tabular reasoning": 10,
+      "Post processing": 9,
+      "Temporal reasoning": 7,
+      "Multiple constraints": 11
+    },
+    "test": {
+      "Numerical reasoning": 53,
+      "Multiple constraints": 54,
+      "Temporal reasoning": 52,
+      "Tabular reasoning": 49,
+      "Post processing": 46
+    }
+  },
+  "snapshot_dataset": "parasail-ai/frames-benchmark-wikipedia",
+  "snapshot_revision": "7aae7084416224f1530aaae5b6fda673787f4122",
+  "snapshot_parquet_sha256": "90a3b5bcec47a4f10ffbbe884844e191b83f8c610a3cfcab4793f5beff8f680b",
+  "snapshot_source_count": 2524,
+  "selected_corpus_documents": 395,
+  "distractor_documents": 20,
+  "corpus_sha256": "0227e469af6421561fc95cc1aea9109ebddf51c1c48a64510519eaf8ac746f71",
+  "created_utc": "2026-11-16T05:55:23.152623+00:00",
+  "status": "prepared_not_human_audited_not_benchmark_evaluated",
+  "limitations": [
+    "Third-party October 2024 snapshots are not necessarily the question's original as-of date.",
+    "Question-to-source mappings and answers are outside the searchable corpus.",
+    "Source annotations identify documents, not complete gold supporting spans.",
+    "The source parquet is pinned to the recorded publisher revision and SHA256."
+  ]
+}

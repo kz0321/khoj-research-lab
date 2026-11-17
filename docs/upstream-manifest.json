@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/khoj-ai/khoj",
+  "commit": "ae229ca894c0b80ad84664afcfdde523b5e87057",
+  "license": "AGPL-3.0-or-later",
+  "adapted_module": "app/khoj_core.py",
+  "upstream_source_sha256": {
+    "src/khoj/processor/conversation/utils.py": "4ec95dc3f70b7cc5c3267246a9f28070ba757dfa963a5d805b0f19d70b416e3a",
+    "src/khoj/utils/helpers.py": "a619ace2fa91316f08ec8706fb6e9d3b39c881a5d6066428a16dd03095ef5b13",
+    "src/khoj/processor/content/markdown/markdown_to_entries.py": "c5423628502b637483634dc119c895e97c4d86a695249ad7e5e5baf047308013",
+    "src/khoj/processor/conversation/prompts.py": "e9f50d3d7a1917fc294b89426cbb99d523f49a1d624310c7c43687d68ae84f13",
+    "src/khoj/routers/research.py": "52f900d80f42a2caa6a206a12916777001be41d07e6cbf6e542868867a1ff340"
+  },
+  "adapted_module_sha256": "d1769889544dab05b06e599bd8c6e2a3b3daa9a5200c386d272bef229d339998"
+}

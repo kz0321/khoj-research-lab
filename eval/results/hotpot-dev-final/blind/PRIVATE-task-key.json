@@ -1,0 +1,102 @@
+[
+  {
+    "item_id": "5d4133f40d4c1dca737b",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "9755e2f485444783bfd22fb4f701eb44",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "75f0c172ac2c6b67a429",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "c1585a12f10843799f8bbe1585f840f8",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "914ec368332c89fb0716",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "ca7ba1fb3984400eab900e3980b2bc68",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "c611a9e0407f91161aac",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "29cf5f7f19ef476f880320b4cc44286c",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "64af9e43e30d224f172b",
+    "task_id": "hotpot-5ab95d3d5542996be20204a7",
+    "run_id": "2e38d04d603c486a84b4db0a9b349b71",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "8e5e6a3c0184c706c228",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "5db2880528794520b17fc84a82ce750f",
+    "mode": "no_tools",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "9922d36d1cedcf2f7f47",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "d2cc27dee6d140a893fb254c3a595902",
+    "mode": "single_rag",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "9e45dee1c10a57bc6365",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "6f814bcfe0fd48aca1f7a35a80824a7b",
+    "mode": "multi_step",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": true,
+    "failed": false
+  },
+  {
+    "item_id": "45ca3499b4f4a80fd9b6",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "d21fc8bf51184d859a74ea3fa85a699d",
+    "mode": "verified",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  },
+  {
+    "item_id": "44a8c11fd697415717cb",
+    "task_id": "hotpot-5abfeed15542997ec76fd471",
+    "run_id": "ca2891c75bdc4e72bc71827ef56503c1",
+    "mode": "verified_no_repair",
+    "scenario": "clean",
+    "repeat": 0,
+    "answered": false,
+    "failed": false
+  }
+]

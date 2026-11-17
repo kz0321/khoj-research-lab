@@ -1,0 +1,2 @@
+# Optional dataset-preparation dependency only. Application/evaluation JSONL readers use stdlib.
+pyarrow==22.0.0
