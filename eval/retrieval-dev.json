@@ -1,0 +1,18 @@
+{
+  "documents": [
+    {"id": "harbor", "title": "海港站交接记录", "sentences": ["海港站的雨量传感器每十分钟采样一次。", "海港站更换电池后需要重新校准。", "校准结果由当班人员签字。"]},
+    {"id": "river", "title": "河畔站维护记录", "sentences": ["河畔站的雨量传感器每五分钟采样一次。", "河畔站使用太阳能电池。", "校准结果由当班人员签字。"]},
+    {"id": "delta", "title": "Delta sensor field notes", "sentences": ["The Delta sensor uses a ceramic filter for airborne dust.", "The Delta sensor battery lasts sixteen hours."]},
+    {"id": "zephyr", "title": "Zephyr sensor field notes", "sentences": ["The Zephyr sensor uses a mesh filter for airborne dust.", "Replacement mesh filters ship in pairs."]},
+    {"id": "firmware", "title": "固件兼容清单", "sentences": ["固件R17支持蓝牙传输。", "固件R18支持卫星传输。"]},
+    {"id": "office", "title": "Office log", "sentences": ["The meeting room has sixteen folding chairs.", "The calibration form needs a signature."]}
+  ],
+  "questions": [
+    {"id": "zh-entity", "language": "zh", "query": "海港站雨量传感器采样间隔", "relevant": [["harbor", 0]]},
+    {"id": "zh-question", "language": "zh", "query": "海港站换电池以后要做什么？", "relevant": [["harbor", 1]]},
+    {"id": "zh-compare", "language": "zh", "query": "对比海港站和河畔站的雨量采样频率。", "relevant": [["harbor", 0], ["river", 0]]},
+    {"id": "en-lookup", "language": "en", "query": "How long does the Delta sensor battery last?", "relevant": [["delta", 1]]},
+    {"id": "en-compare", "language": "en", "query": "Compare the airborne dust filters in the Delta and Zephyr sensors.", "relevant": [["delta", 0], ["zephyr", 0]]},
+    {"id": "mixed-lookup", "language": "mixed", "query": "固件R17支持什么传输方式？", "relevant": [["firmware", 0]]}
+  ]
+}

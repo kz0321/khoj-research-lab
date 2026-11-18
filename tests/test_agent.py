@@ -22,11 +22,13 @@ def row(key="a", text="Paris hosted the 2024 event."):
 
 
 class FakeRetriever:
+    settings = config.RETRIEVAL
+
     def __init__(self, responses=None):
         self.responses = deque(responses or [])
         self.calls = []
 
-    def search(self, collection, query, top_k):
+    def search(self, collection, query, top_k, *, diagnostics=None):
         self.calls.append(("search", collection, query))
         response = self.responses.popleft() if self.responses else [row()]
         if isinstance(response, Exception):

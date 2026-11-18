@@ -20,3 +20,4 @@ include = ["app*", "eval*"]
 
 [tool.setuptools.package-data]
 app = ["static/*"]
+eval = ["retrieval-dev.json"]

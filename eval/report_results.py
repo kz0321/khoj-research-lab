@@ -42,6 +42,8 @@ def finalize(directory:Path):
         for key in ["model","embedding_model","limits","upstream_commit"]:
             if key in run_config and run_config[key]!=config["runtime_at_start"].get(key):
                 audit["configuration_mismatches"].append({"key":row["key"],"field":key})
+        if result and run_config.get("retrieval") != config["runtime_at_start"].get("retrieval"):
+            audit["configuration_mismatches"].append({"key": row["key"], "field": "retrieval"})
         if run_config.get("allow_web"):
             audit["configuration_mismatches"].append({"key":row["key"],"field":"allow_web"})
         for event in result.get("model_calls",[]):

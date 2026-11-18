@@ -165,7 +165,9 @@ class ResearchAgent:
                 if inject and perturb.get("kind") == "empty":
                     rows = []
                 elif name == "semantic_search_files":
-                    rows = self.retriever.search(self.request.collection_id, str(args.get("q", "")), config.LIMITS["retrieval_top_k"])
+                    record["retrieval"] = {}
+                    rows = self.retriever.search(self.request.collection_id, str(args.get("q", "")),
+                        config.LIMITS["retrieval_top_k"], diagnostics=record["retrieval"])
                 elif name == "view_file":
                     rows = self.retriever.read_file(self.request.collection_id, str(args.get("path", "")),
                         args.get("start_line"), args.get("end_line"))
@@ -376,6 +378,7 @@ class ResearchAgent:
                   "elapsed_seconds": round(time.monotonic() - self.begin, 3), "stop_reason": self.stop_reason,
                   "rounds": self.rounds, "tool_calls": self.tool_calls, "repair_rounds": self.repairs,
                   "configuration": {"model": config.MODEL, "temperature": 0, "embedding_model": config.EMBEDDING_MODEL,
+                      "retrieval": self.retriever.settings.describe(),
                       "thinking": "disabled for official DeepSeek API", "structured_output": config.STRUCTURED_OUTPUT,
                       "limits": config.LIMITS, "allow_web": self.request.allow_web, "upstream_commit": UPSTREAM_COMMIT},
                   "source_snapshots": self.snapshots,

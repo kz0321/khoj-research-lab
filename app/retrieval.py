@@ -4,14 +4,16 @@ import hashlib
 import io
 import re
 import threading
+import time
 import zipfile
 from pathlib import Path
 from xml.etree import ElementTree
 
 import numpy as np
 from rank_bm25 import BM25Okapi
-from .config import EMBEDDING_MODEL, MODELS
+from .config import EMBEDDING_MODEL, MODELS, RETRIEVAL
 from .khoj_core import markdown_sections
+from .reranking import mixed_tokens, rerank, select_evidence
 
 _model = None
 _embedding_lock = threading.RLock()
@@ -111,9 +113,11 @@ def decode_upload(filename, content):
             "title": Path(filename).name, "text": text, "metadata": metadata}
 
 class Retriever:
-    def __init__(self, store):
+    def __init__(self, store, settings=RETRIEVAL):
         self.store = store
+        self.settings = settings
         self.cache = {}
+        self._index_lock = threading.RLock()
 
     def ingest(self, cid, document):
         if not self.store.collection_exists(cid):
@@ -124,37 +128,69 @@ class Retriever:
         chunks = chunk_document(document)
         if not chunks:
             if document.get("sentences") == []:
-                self.cache.pop(cid, None)
-                return self.store.save_document(cid, document, [], [])
+                return self._save(cid, document, [], [])
             raise ValueError("No nonempty source passages")
         if len(chunks) > 5000:
             raise ValueError("Document exceeds 5000 passages")
         vectors = embed([document["title"][:150] + "\n" + c["text"] for c in chunks])
-        result = self.store.save_document(cid, document, chunks, vectors)
-        self.cache.pop(cid, None)
-        return result
+        return self._save(cid, document, chunks, vectors)
 
-    def search(self, cid, query, top_k=6):
+    def _save(self, cid, document, chunks, vectors):
+        with self._index_lock:
+            result = self.store.save_document(cid, document, chunks, vectors)
+            self.cache.pop(cid, None)
+            return result
+
+    def _index(self, cid, tokenize):
+        with self._index_lock:
+            cached = self.cache.get(cid)
+            if cached is None or cached[0] is not tokenize:
+                rows = self.store.chunks(cid)
+                if not rows:
+                    return None
+                vectors = np.stack([np.frombuffer(r["vector"], dtype=np.float32) for r in rows])
+                bm25 = BM25Okapi([tokenize(r["title"] + " " + r["text"]) or ["_"] for r in rows])
+                cached = (tokenize, (rows, vectors, bm25))
+                self.cache[cid] = cached
+            return cached[1]
+
+    def search(self, cid, query, top_k=6, *, diagnostics=None):
         if not str(query).strip():
             raise ValueError("Search query cannot be empty")
-        if cid not in self.cache:
-            rows = self.store.chunks(cid)
-            if not rows:
-                return []
-            vectors = np.stack([np.frombuffer(r["vector"], dtype=np.float32) for r in rows])
-            bm25 = BM25Okapi([tokens(r["title"] + " " + r["text"]) or ["_"] for r in rows])
-            self.cache[cid] = (rows, vectors, bm25)
-        rows, vectors, bm25 = self.cache[cid]
+        if top_k < 0:
+            raise ValueError("top_k must be nonnegative")
+        settings = self.settings
+        enhanced = settings.mode == "enhanced"
+        tokenize = mixed_tokens if enhanced else tokens
+        trace = diagnostics if diagnostics is not None else {}
+        trace.update(settings.describe(), candidate_count=0, rerank_ms=0)
+        if top_k == 0:
+            return []
+        index = self._index(cid, tokenize)
+        if index is None:
+            return []
+        rows, vectors, bm25 = index
         q = embed([query], query=True)[0]
         dense = vectors @ q
-        sparse = bm25.get_scores(tokens(query))
+        sparse = bm25.get_scores(tokenize(query))
         score = np.zeros(len(rows))
+        pool_size = settings.candidates if enhanced else top_k
+        depth = max(30, pool_size)
         for scores in (dense, sparse):
-            for rank, idx in enumerate(np.argsort(-scores, kind="stable")[:max(30, top_k)]):
+            for rank, idx in enumerate(np.argsort(-scores, kind="stable")[:depth]):
                 score[idx] += 1 / (60 + rank + 1)
-        selected = np.argsort(-score, kind="stable")[:top_k]
-        return [dict({k: v for k, v in rows[i].items() if k != "vector"}, score=float(score[i]),
-                     semantic_score=float(dense[i])) for i in selected]
+        selected = np.argsort(-score, kind="stable")[:pool_size]
+        candidates = [dict({k: v for k, v in rows[i].items() if k != "vector"},
+                           score=float(score[i]), semantic_score=float(dense[i])) for i in selected]
+        trace["candidate_count"] = len(candidates)
+        if not enhanced:
+            return candidates
+        started = time.perf_counter()
+        try:
+            ranked = rerank(query, candidates, bm25.idf)
+            return select_evidence(ranked, top_k, settings.diversity_margin)
+        finally:
+            trace["rerank_ms"] = round((time.perf_counter() - started) * 1000, 3)
 
     def read_file(self, cid, path, start_line=None, end_line=None):
         # Paths are corpus IDs/titles, never arbitrary filesystem paths.

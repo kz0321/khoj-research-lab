@@ -62,6 +62,7 @@ def status():
     return {"model": config.MODEL, "configured": bool(config.API_KEY),
             "thinking": "disabled for official DeepSeek API", "structured_output": config.STRUCTURED_OUTPUT,
             "embedding_model": config.EMBEDDING_MODEL, "limits": config.LIMITS,
+            "retrieval": retriever.settings.describe(),
             "upstream_commit": UPSTREAM_COMMIT, "binding": "127.0.0.1",
             "implementation": "Khoj-derived Windows course runtime (not the full upstream server)"}
 

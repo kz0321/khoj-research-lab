@@ -6,6 +6,8 @@ import numpy as np
 import pytest
 
 from app import retrieval, web_tools
+from app.config import RetrievalSettings
+from app.reranking import mixed_tokens, rerank, select_evidence
 from app.retrieval import Retriever, chunk_document, decode_upload, split_exact
 from app.store import Store
 
@@ -44,6 +46,94 @@ def test_empty_collection_returns_no_evidence(corpus):
     _, retriever = corpus
     assert retriever.search("a", "alpha") == []
     assert retriever.read_file("a", "C:\\Windows\\system.ini") == []
+
+
+def test_mixed_query_shares_terms_with_unspaced_chinese_passage():
+    query = mixed_tokens("香港AI2026")
+    assert query == ["香", "港", "香港", "ai2026"]
+    passage = mixed_tokens("介紹香港AI2026模型")
+    assert set(query) <= set(passage)
+    assert mixed_tokens("naïve GPT_4, v2.1") == ["naïve", "gpt_4", "v2", "1"]
+    assert retrieval.tokens("香港AI2026") == ["香港ai2026"]
+
+
+def test_reranker_rewards_matching_phrase_over_scattered_words():
+    rows = [{"id": "scattered", "title": "", "text": "delta unrelated beta"},
+            {"id": "phrase", "title": "", "text": "the delta beta study"}]
+    ranked = rerank("delta beta", rows, {})
+    assert [row["id"] for row in ranked] == ["phrase", "scattered"]
+
+
+def test_diversity_only_promotes_close_matches_and_keeps_complementary_evidence():
+    def item(key, source, text, score, lexical=1):
+        return dict(id=key, source_id=source, text=text, rerank_score=score, lexical_score=lexical)
+
+    ranked = [item("1", "a", "fact one", .99), item("2", "a", "fact two", .88),
+              item("3", "b", "fact  one", .87), item("4", "c", "no match", .86, 0),
+              item("5", "b", "fact three", .85), item("6", "d", "weak match", .4)]
+    assert [r["id"] for r in select_evidence(ranked, 3, .04)] == ["1", "5", "2"]
+    assert [r["id"] for r in select_evidence(ranked, 2, .01)] == ["1", "2"]
+    assert [r["id"] for r in select_evidence(ranked, 2, 0)] == ["1", "2"]
+
+
+def test_enhanced_pipeline_uses_bounded_pool_and_preserves_citations(corpus):
+    store, _ = corpus
+    enhanced = Retriever(store, RetrievalSettings("enhanced", candidates=6))
+    for i in range(9):
+        enhanced.ingest("a", {"id": str(i), "title": "Record", "text": "alpha 重复"})
+    enhanced.ingest("b", {"id": "0", "title": "Record", "text": "alpha private"})
+    trace = {}
+    result = enhanced.search("a", "重复", top_k=8, diagnostics=trace)
+    assert trace["candidate_count"] == 6
+    assert trace["rerank_ms"] >= 0
+    assert len(result) == 1
+    hit = result[0]
+    original = next(r for r in store.chunks("a") if r["id"] == hit["id"])
+    for field in ("collection_id", "source_id", "location", "text", "id"):
+        assert hit[field] == original[field]
+    enhanced.ingest("a", {"id": hit["source_id"], "title": "Record", "text": "alpha 正确版本"})
+    assert enhanced.search("a", "正确版本")[0]["text"] == "alpha 正确版本"
+    assert enhanced.search("a", "alpha", top_k=0) == []
+    with pytest.raises(ValueError, match="nonnegative"):
+        enhanced.search("a", "alpha", top_k=-1)
+
+
+def test_baseline_keeps_rrf_scores_tie_order_and_duplicates(corpus, monkeypatch):
+    store, _ = corpus
+    baseline = Retriever(store, RetrievalSettings("baseline"))
+    def unexpected(*args):
+        pytest.fail("The baseline must bypass the enhanced scorer")
+    monkeypatch.setattr(retrieval, "rerank", unexpected)
+    for i in range(4):
+        baseline.ingest("a", {"id": str(i), "title": "Record", "text": "alpha 重复"})
+    rows = baseline.search("a", "alpha", top_k=3)
+    assert [r["id"] for r in rows] == [r["id"] for r in store.chunks("a")[:3]]
+    assert [r["score"] for r in rows] == pytest.approx([2 / 61, 2 / 62, 2 / 63])
+    assert all("rerank_score" not in r for r in rows)
+
+
+def test_reranker_failure_is_visible(corpus, monkeypatch):
+    store, _ = corpus
+    enhanced = Retriever(store, RetrievalSettings("enhanced"))
+    enhanced.ingest("a", {"id": "a", "title": "Record", "text": "alpha"})
+    def fail(*args):
+        raise RuntimeError("scoring failed")
+    monkeypatch.setattr(retrieval, "rerank", fail)
+    with pytest.raises(RuntimeError, match="scoring failed"):
+        enhanced.search("a", "alpha")
+
+
+def test_retrieval_metrics_require_gold_sentences_and_count_duplicate_slots():
+    from eval.compare_retrieval import score
+
+    def hit(source, sentence, text):
+        return {"source_id": source, "location": {"sentence_ids": [sentence]}, "text": text}
+
+    rows = [hit("a", 1, "unrelated"), hit("b", 2, "fact"), hit("b", 2, "fact")]
+    assert score(rows, [["a", 0], ["b", 2]]) == pytest.approx({
+        "recall_at_6": 0.5, "reciprocal_rank_at_6": 0.5,
+        "relevant_source_coverage": 0.5, "duplicate_fraction": 1 / 3,
+    })
 
 
 def test_document_replacement_invalidates_cached_retrieval(corpus):

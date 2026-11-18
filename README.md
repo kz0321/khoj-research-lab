@@ -2,6 +2,8 @@
 
 COMP7608B Group 30 · Evidence-Grounded Personal Research with a Tool-Using AI Agent
 
+[Retrieval modes and server comparison guide](docs/RETRIEVAL.md)
+
 这是根据小组 proposal 实现的个人研究助手：导入文档，提出多部分问题，查看有逐条引用的报告、证据检查结果、补检索过程和未解决问题。提供四个主要实验配置及一个禁用修复的消融配置。
 
 本地界面为 <http://127.0.0.1:8778>。完整说明见 [项目报告](docs/PROJECT_REPORT.zh-CN.md)、[PDF 报告](docs/Khoj-Research-Lab-Report.pdf)、[数据与实验](docs/DATASET.md)、[上游改动](docs/UPSTREAM.md)。
