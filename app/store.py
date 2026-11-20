@@ -4,8 +4,11 @@ import hashlib
 import json
 import sqlite3
 import uuid
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
+
+import numpy as np
 from .config import RUNTIME
 
 def now():
@@ -28,14 +31,22 @@ class Store:
             CREATE TABLE IF NOT EXISTS chunks(id TEXT PRIMARY KEY,collection_id TEXT,source_id TEXT,
                 title TEXT,text TEXT,location TEXT,url TEXT,vector BLOB);
             CREATE INDEX IF NOT EXISTS chunks_collection ON chunks(collection_id);
+            CREATE INDEX IF NOT EXISTS chunks_source ON chunks(collection_id,source_id);
+            CREATE INDEX IF NOT EXISTS chunks_title ON chunks(collection_id,title);
             CREATE TABLE IF NOT EXISTS runs(id TEXT PRIMARY KEY,question TEXT,collection_id TEXT,
                 mode TEXT,status TEXT,created_at TEXT,request TEXT,result TEXT,error TEXT);
             """)
 
+    @contextmanager
     def connect(self):
         db = sqlite3.connect(self.path, timeout=30)
         db.row_factory = sqlite3.Row
-        return db
+        try:
+            # sqlite3's context manager commits/rolls back but does not close.
+            with db:
+                yield db
+        finally:
+            db.close()
 
     def collections(self):
         with self.connect() as db:
@@ -55,9 +66,22 @@ class Store:
         return cid
 
     def save_document(self, cid, document, chunks, vectors):
+        vectors = np.asarray(vectors, dtype=np.float32)
+        if chunks and (vectors.ndim != 2 or vectors.shape[0] != len(chunks)
+                       or vectors.shape[1] == 0 or not np.isfinite(vectors).all()):
+            raise ValueError("Embedding vectors must be finite and match every passage")
+        if not chunks and vectors.size:
+            raise ValueError("Embedding vectors supplied without passages")
         did = document.get("id") or hashlib.sha256(document["title"].encode()).hexdigest()[:20]
         digest = document_digest(document)
         with self.connect() as db:
+            # Serialize the dimension check with the replacement, including
+            # concurrent imports through another Retriever instance.
+            db.execute("BEGIN IMMEDIATE")
+            if chunks:
+                previous = db.execute("SELECT length(vector) FROM chunks WHERE collection_id=? LIMIT 1", (cid,)).fetchone()
+                if previous and previous[0] != vectors.shape[1] * 4:
+                    raise ValueError("Embedding dimensions differ from this collection; rebuild it in a new collection")
             db.execute("DELETE FROM chunks WHERE collection_id=? AND source_id=?", (cid, did))
             db.execute("INSERT OR REPLACE INTO documents VALUES(?,?,?,?,?,?,?)",
                 (did, cid, document["title"], document["text"], document.get("url"),
@@ -85,8 +109,21 @@ class Store:
             row["location"] = json.loads(row["location"])
         return rows
 
-    def document_chunks(self, cid, source_id):
-        return [r for r in self.chunks(cid) if r["source_id"] == source_id]
+    def document_chunks(self, cid, source_id, *, match_title=False):
+        # File reading needs only the requested source, never its embeddings.
+        fields = "id,collection_id,source_id,title,text,location,url"
+        query = f"SELECT {fields} FROM chunks WHERE collection_id=? AND source_id=?"
+        params = (cid, source_id)
+        if match_title:
+            # Separate indexed branches: an OR can make SQLite scan every
+            # chunk in the collection. UNION also removes ID/title overlaps.
+            query += f" UNION SELECT {fields} FROM chunks WHERE collection_id=? AND title=?"
+            params += (cid, source_id)
+        with self.connect() as db:
+            rows = [dict(r) for r in db.execute(query + " ORDER BY id", params)]
+        for row in rows:
+            row["location"] = json.loads(row["location"])
+        return rows
 
     def create_run(self, request):
         rid = uuid.uuid4().hex

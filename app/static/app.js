@@ -5,7 +5,8 @@
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const state = { collections: [], config: {}, runId: null, result: null, polling: null,
-  timer: null, startedAt: null, isRunning: false, uploadBusy: false, toastTimer: null, historyExpanded: false, outcomes: new Map() };
+  timer: null, startedAt: null, isRunning: false, uploadBusy: false, toastTimer: null, historyExpanded: false, outcomes: new Map(),
+  viewVersion: 0, cancelRequested: false };
 const modeHelp = {
   verified: "检索资料后逐条检查结论；证据不足时，尝试补充检索。",
   multi_step: "允许多轮工具调用；候选结论不经过独立的证据检查。",
@@ -36,6 +37,9 @@ function readableError(value) {
   if (Array.isArray(value)) return value.map(v => v.msg || text(v)).join("；");
   if (value && typeof value === "object") return value.message || value.error || text(value);
   const message = String(value || "发生未知错误，请稍后重试。");
+  if (/Configure LLM_API_KEY|LLM_API_KEY is not configured/i.test(message)) return "生成模型尚未配置。请在项目的 .env 文件中设置模型服务地址、模型名和 API 密钥，重启服务后再开始研究。";
+  if (/OVERAGE_REQUEST_LIMIT_EXCEEDED|ServiceQuotaExceededException|reached the limit for overages/i.test(message)) return "模型服务的上游用量已达到限制。请在服务商控制台确认可用额度或联系服务商处理，再重新发起研究。\n" + message;
+  if (/nonempty choices list|choices\[0\]\.message|streaming delta|message\.content must be nonempty/i.test(message)) return "模型服务返回了不完整或不兼容的响应，未生成有效报告。请检查该服务的非流式对话接口是否正常。\n" + message;
   if (/insufficient.?balance|HTTP 402/i.test(message)) return `模型服务账户余额不足，请补充额度或切换可用的模型配置后重试。\n${message}`;
   return message;
 }
@@ -134,6 +138,8 @@ async function uploadFiles(files) {
   if (!files?.length || state.uploadBusy) return;
   const collectionId = $("#collection").value;
   if (!collectionId) { toast("请先创建资料库，或载入示例资料库。", true); return; }
+  if (files.length > 20) { toast("每批最多上传 20 份文档，请分批上传。", true); return; }
+  if ([...files].some(file => file.size > 10_000_000)) { toast("每份文档不能超过 10 MB，请缩小文件后重试。", true); return; }
   const unsupported = [...files].filter(file => !/\.(pdf|docx|md|markdown|html|htm|txt)$/i.test(file.name));
   if (unsupported.length) { toast("目前支持 PDF、Word (.docx)、Markdown、HTML 和 TXT 文档。", true); return; }
   state.uploadBusy = true;
@@ -164,11 +170,18 @@ async function loadDemo() {
 }
 function setQuestion(value) { $("#question").value = value; updateQuestionCount(); }
 function updateQuestionCount() { $("#question-count").textContent = `${$("#question").value.length} / 3000`; }
+function beginRunView(id = null) {
+  state.viewVersion += 1;
+  state.runId = id;
+  state.cancelRequested = false;
+  clearTimeout(state.polling); clearInterval(state.timer);
+  return state.viewVersion;
+}
 function setRunning(running) {
   state.isRunning = running;
   $("#run-button").disabled = running;
   $("#run-button span").textContent = running ? "研究进行中" : "开始研究";
-  $("#cancel-run").hidden = !running; $("#cancel-run").disabled = false;
+  $("#cancel-run").hidden = !running; $("#cancel-run").disabled = !state.runId || state.cancelRequested;
   $("#mode").disabled = running; $("#allow-web").disabled = running;
   $("#collection").disabled = running;
   $("#progress-spinner").hidden = !running;
@@ -192,6 +205,7 @@ async function startResearch(event) {
   const mode = $("#mode").value; const collectionId = $("#collection").value;
   if (mode !== "no_tools" && !collectionId) { toast("请选择资料库，或先载入示例资料。", true); return; }
   if (state.uploadBusy) { toast("文档还在建立索引，请稍后再开始。", true); return; }
+  const version = beginRunView();
   resetResults(); selectTab("report"); setRunning(true);
   $("#progress-panel").hidden = false;
   $("#progress-title").textContent = "正在准备研究";
@@ -200,12 +214,19 @@ async function startResearch(event) {
   try {
     const payload = await jsonPost("/api/research", { question, collection_id: collectionId || "demo",
       mode, allow_web: $("#allow-web").checked });
+    if (version !== state.viewVersion) return;
     state.runId = payload.id || payload.run_id;
     if (!state.runId) throw new Error("服务未返回研究任务编号。");
+    $("#cancel-run").disabled = false;
     history.replaceState(null, "", `?run=${encodeURIComponent(state.runId)}`);
     await loadHistory();
-    await pollRun();
-  } catch (error) { showError(error.message); setRunning(false); }
+    if (version === state.viewVersion) await pollRun(0, version);
+  } catch (error) {
+    if (version !== state.viewVersion) return;
+    showError(error.message); setRunning(false);
+    $("#progress-title").textContent = "研究未能启动";
+    $("#progress-message").textContent = "请处理下方提示后重新提交。";
+  }
 }
 function startTimer() {
   clearInterval(state.timer);
@@ -229,12 +250,13 @@ function updateProgress(run) {
   else { $("#progress-title").textContent = run.status === "queued" ? "任务已提交，等待开始" : "正在研究问题"; }
   if (Array.isArray(run.trace)) renderTrace(run.trace);
 }
-async function pollRun(failures = 0) {
+async function pollRun(failures = 0, version = state.viewVersion) {
+  if (version !== state.viewVersion) return;
   const targetId = state.runId;
   if (!targetId) return;
   try {
     const run = await api(`/api/runs/${encodeURIComponent(targetId)}`);
-    if (targetId !== state.runId) return;
+    if (version !== state.viewVersion || targetId !== state.runId) return;
     updateProgress(run);
     if (run.status === "completed") {
       setRunning(false); state.result = run.result || run; renderResult(state.result, run.status);
@@ -249,21 +271,28 @@ async function pollRun(failures = 0) {
       if (run.status === "failed") showError(readableError(run.error));
       await loadHistory();
     } else {
-      state.polling = setTimeout(() => pollRun(), 1500);
+      state.polling = setTimeout(() => pollRun(0, version), 1500);
     }
   } catch (error) {
-    if (targetId !== state.runId) return;
+    if (version !== state.viewVersion || targetId !== state.runId) return;
     if (failures < 3) {
       $("#progress-message").textContent = "连接暂时中断，正在重新连接…";
-      state.polling = setTimeout(() => pollRun(failures + 1), 2500);
+      state.polling = setTimeout(() => pollRun(failures + 1, version), 2500);
     } else { setRunning(false); showError(`${error.message} 任务可能仍在服务端运行，可从最近的研究重新打开。`); }
   }
 }
 async function cancelResearch() {
-  if (!state.runId) return;
+  if (!state.runId || state.cancelRequested) return;
+  const targetId = state.runId, version = state.viewVersion;
+  state.cancelRequested = true;
   $("#cancel-run").disabled = true;
-  try { await jsonPost(`/api/runs/${encodeURIComponent(state.runId)}/cancel`, {}); $("#progress-message").textContent = "停止请求已发送，等待当前操作退出…"; }
-  catch (error) { toast(error.message, true); $("#cancel-run").disabled = false; }
+  try {
+    await jsonPost(`/api/runs/${encodeURIComponent(targetId)}/cancel`, {});
+    if (version === state.viewVersion && state.isRunning) $("#progress-message").textContent = "停止请求已发送，等待当前操作退出…";
+  } catch (error) {
+    if (version !== state.viewVersion) return;
+    state.cancelRequested = false; toast(error.message, true); $("#cancel-run").disabled = false;
+  }
 }
 function showError(message) {
   $("#error-panel").hidden = false; $("#error-message").textContent = message;
@@ -476,15 +505,16 @@ function selectTab(name, focus = false) {
 }
 async function exportRun(format) {
   if (!state.runId) return;
+  const targetId = state.runId, version = state.viewVersion;
   const button = $(`#export-${format}`); button.disabled = true;
   try {
-    const response = await fetch(`/api/runs/${encodeURIComponent(state.runId)}/export?format=${encodeURIComponent(format)}`);
+    const response = await fetch(`/api/runs/${encodeURIComponent(targetId)}/export?format=${encodeURIComponent(format)}`);
     if (!response.ok) throw new Error(`导出失败（HTTP ${response.status}）。`);
     const blob = await response.blob(); const url = URL.createObjectURL(blob); const link = el("a");
-    link.href = url; link.download = `research-${state.runId}.${format}`; document.body.append(link); link.click(); link.remove();
+    link.href = url; link.download = `research-${targetId}.${format}`; document.body.append(link); link.click(); link.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   } catch (error) { toast(error.message, true); }
-  finally { button.disabled = false; }
+  finally { if (version === state.viewVersion) button.disabled = false; }
 }
 async function loadHistory() {
   try {
@@ -509,9 +539,16 @@ async function loadHistory() {
 }
 async function openRun(id) {
   if (state.isRunning && id !== state.runId) { toast("请等待或停止当前研究，再打开其他记录。"); return; }
+  if (state.isRunning && id === state.runId) return;
+  const version = beginRunView(id);
+  resetResults();
+  $("#progress-panel").hidden = false;
+  $("#progress-title").textContent = "正在载入研究记录";
+  $("#progress-message").textContent = "正在读取保存的结果…";
   try {
     const run = await api(`/api/runs/${encodeURIComponent(id)}`);
-    clearTimeout(state.polling); resetResults(); state.runId = id; selectTab("report");
+    if (version !== state.viewVersion) return;
+    selectTab("report");
     history.replaceState(null, "", `?run=${encodeURIComponent(id)}`);
     if (run.question) setQuestion(run.question);
     if (run.mode && modeHelp[run.mode]) { $("#mode").value = run.mode; $("#mode-help").textContent = modeHelp[run.mode]; }
@@ -521,7 +558,7 @@ async function openRun(id) {
     state.startedAt = run.created_at ? Date.parse(run.created_at) : Date.now();
     if (!Number.isFinite(state.startedAt)) state.startedAt = Date.now();
     $("#progress-panel").hidden = false;
-    if (["queued", "running"].includes(run.status)) { setRunning(true); startTimer(); await pollRun(); }
+    if (["queued", "running"].includes(run.status)) { setRunning(true); startTimer(); await pollRun(0, version); }
     else {
       setRunning(false);
       if (run.result) { state.result = run.result; renderResult(run.result, run.status); }
@@ -533,7 +570,7 @@ async function openRun(id) {
       if (run.status === "failed") showError(readableError(run.error));
     }
     await loadHistory();
-  } catch (error) { toast(error.message, true); }
+  } catch (error) { if (version === state.viewVersion) toast(error.message, true); }
 }
 
 $("#research-form").addEventListener("submit", startResearch);

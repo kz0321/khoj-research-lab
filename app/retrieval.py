@@ -6,6 +6,7 @@ import re
 import threading
 import time
 import zipfile
+from collections import OrderedDict
 from pathlib import Path
 from xml.etree import ElementTree
 
@@ -113,10 +114,13 @@ def decode_upload(filename, content):
             "title": Path(filename).name, "text": text, "metadata": metadata}
 
 class Retriever:
-    def __init__(self, store, settings=RETRIEVAL):
+    def __init__(self, store, settings=RETRIEVAL, *, max_cached_collections=8):
+        if max_cached_collections < 1:
+            raise ValueError("max_cached_collections must be positive")
         self.store = store
         self.settings = settings
-        self.cache = {}
+        self.cache = OrderedDict()
+        self.max_cached_collections = max_cached_collections
         self._index_lock = threading.RLock()
 
     def ingest(self, cid, document):
@@ -148,10 +152,13 @@ class Retriever:
                 rows = self.store.chunks(cid)
                 if not rows:
                     return None
-                vectors = np.stack([np.frombuffer(r["vector"], dtype=np.float32) for r in rows])
+                vectors = np.stack([np.frombuffer(r.pop("vector"), dtype=np.float32) for r in rows])
                 bm25 = BM25Okapi([tokenize(r["title"] + " " + r["text"]) or ["_"] for r in rows])
                 cached = (tokenize, (rows, vectors, bm25))
                 self.cache[cid] = cached
+            self.cache.move_to_end(cid)
+            while len(self.cache) > self.max_cached_collections:
+                self.cache.popitem(last=False)
             return cached[1]
 
     def search(self, cid, query, top_k=6, *, diagnostics=None):
@@ -194,12 +201,12 @@ class Retriever:
 
     def read_file(self, cid, path, start_line=None, end_line=None):
         # Paths are corpus IDs/titles, never arbitrary filesystem paths.
-        rows = self.store.chunks(cid)
-        candidates = [r for r in rows if r["source_id"] == path or r["title"] == path]
+        candidates = self.store.document_chunks(cid, path, match_title=True)
         if start_line is not None:
             end_line = min(end_line or start_line + 49, start_line + 49)
             candidates = [r for r in candidates if r["location"].get("end_line", 10**9) >= start_line
                           and r["location"].get("start_line", 0) <= end_line]
         candidates.sort(key=lambda r: (r["location"].get("page", 0),r["location"].get("start_line", 0),
-            min(r["location"].get("sentence_ids", [0])),r["location"].get("start_char", 0)))
+            min(r["location"].get("sentence_ids", [0])),
+            r["location"].get("start_char", r["location"].get("section_start_char", 0)), r["id"]))
         return [{k: v for k, v in r.items() if k != "vector"} for r in candidates[:8]]

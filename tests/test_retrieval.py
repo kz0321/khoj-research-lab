@@ -146,6 +146,22 @@ def test_document_replacement_invalidates_cached_retrieval(corpus):
     assert "corrected" in new["text"] and "old version" not in new["text"]
 
 
+def test_index_cache_evicts_least_recent_collection_without_changing_results(corpus):
+    store, _ = corpus
+    retriever = Retriever(store, max_cached_collections=2)
+    for cid in ("a", "b", "c"):
+        store.create_collection(cid, cid)
+        retriever.ingest(cid, {"title": "Facts", "text": "alpha " + cid})
+    expected = retriever.search("a", "alpha")
+    retriever.search("b", "alpha")
+    assert retriever.search("a", "alpha") == expected
+    retriever.search("c", "alpha")
+    assert list(retriever.cache) == ["a", "c"]
+    retriever.search("b", "alpha")
+    assert list(retriever.cache) == ["c", "b"]
+    assert retriever.search("a", "alpha") == expected
+
+
 def test_chunk_identity_changes_if_sentence_locations_change(corpus):
     store, retriever = corpus
     retriever.ingest("a", {"id": "d", "title": "Alpha", "text": "alpha evidence", "sentences": [{"id": 3, "text": "alpha evidence"}]})

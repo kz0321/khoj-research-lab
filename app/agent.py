@@ -88,6 +88,7 @@ class ResearchAgent:
         self.trace = []
         self.iterations = []
         self.rounds = self.tool_calls = self.repairs = 0
+        self.format_repairs = 0
         self.subquestions = []
         self.needs = []
         self.web_results = []
@@ -251,7 +252,7 @@ class ResearchAgent:
         # Repeated results from differently worded queries are not new progress.
         return len(self.evidence), frozenset(r["url"] for r in self.web_results if r.get("url"))
 
-    def draft(self):
+    def draft(self, repair=None):
         self.check_budget()
         self.progress("draft", "Drafting individually cited claims")
         no_tools = self.request.mode == "no_tools"
@@ -264,9 +265,17 @@ class ResearchAgent:
                        "Put incomplete coverage and unsuccessful searches in unresolved. Do not turn papers that "
                        "were not retrieved into a checklist of negative claims that the answer must establish.")
         system += "\nShared output policy for every experimental mode: for a factoid question, answer must contain only the short entity, value, yes/no or phrase requested, not an explanatory paragraph. For open questions, use a concise direct conclusion. Use at most 6 claims with unique IDs C1,C2,..., never A0. Reply in the question's language."
-        return self.client.structured("draft", system,
-            {"question": self.request.question, "subquestions": self.subquestions,
-             "evidence": list(self.evidence.values()) if not no_tools else []}, Draft, config.LIMITS["final_answer_tokens"])
+        payload = {"question": self.request.question, "subquestions": self.subquestions,
+                   "evidence": list(self.evidence.values()) if not no_tools else []}
+        if repair is not None:
+            system += ("\nCorrect the previous draft using the original evidence and validation feedback. "
+                       "The previous draft and feedback are not evidence. Set answer_statement EXACTLY equal "
+                       "to answer for an open question. For a factoid, include the entire answer verbatim in "
+                       "the statement. Cite only passages that actually support each claim. Remove unsupported "
+                       "claims instead of inventing facts. The corrected draft will be independently checked again.")
+            payload["correction"] = repair
+        return self.client.structured("repair_draft" if repair is not None else "draft", system,
+                                      payload, Draft, config.LIMITS["final_answer_tokens"])
 
     def verify(self, draft):
         self.check_budget()
@@ -277,10 +286,12 @@ class ResearchAgent:
         results, candidates = {}, []
         for claim in claims:
             issue = deterministic_issue(claim, self.evidence)
-            if claim.id == "A0" and draft.answer.casefold() not in claim.text.casefold():
+            answer_mismatch = claim.id == "A0" and draft.answer.casefold() not in claim.text.casefold()
+            if answer_mismatch:
                 issue = "The answer must appear literally in the verified answer statement."
             if issue:
-                results[claim.id] = {**claim.model_dump(), "status": "insufficient", "reason": issue, "quotes": []}
+                results[claim.id] = {**claim.model_dump(), "status": "insufficient", "reason": issue, "quotes": [],
+                                     "validation_issue": "answer_mismatch" if answer_mismatch else "evidence_validation"}
             else:
                 candidates.append(claim)
         followup = []
@@ -297,16 +308,20 @@ class ResearchAgent:
                     continue
                 ids = v.evidence_ids
                 status, reason = v.status, v.reason
+                validation_issue = None
                 if status in ("supported", "contradicted"):
                     valid = bool(ids) and len(ids) == len(v.quotes) and all(
                         eid in claim.evidence_ids and eid in self.evidence and quote.strip() and
                         quote in self.evidence[eid]["text"] for eid, quote in zip(ids, v.quotes))
                     if not valid:
                         status, reason = "insufficient", "Checker citation/quotation validation failed. " + reason
+                        validation_issue = "citation_quote_mismatch"
                     elif status == "supported" and deterministic_issue(type(claim)(id=claim.id, text=claim.text, evidence_ids=ids), self.evidence):
                         status, reason = "insufficient", "Numbers not supported by the checker's selected passages."
                 results[claim.id] = {**claim.model_dump(), "evidence_ids": ids if status == "supported" else claim.evidence_ids,
                                      "status": status, "reason": reason, "quotes": v.quotes}
+                if validation_issue:
+                    results[claim.id]["validation_issue"] = validation_issue
         return [results[c.id] for c in claims], followup
 
     def run(self):
@@ -339,6 +354,16 @@ class ResearchAgent:
                    and self.rounds < config.LIMITS["decision_rounds"]
                    and self.tool_calls < config.LIMITS["tool_calls"]):
                 self.repairs += 1
+                formatting = [c for c in claims if c.get("validation_issue") in {"answer_mismatch", "citation_quote_mismatch"}]
+                if formatting and self.format_repairs == 0:
+                    # A citation/answer formatting failure can be corrected
+                    # without new evidence. Spend one existing repair round,
+                    # then require the full verifier again; never bypass it.
+                    self.format_repairs += 1
+                    self.progress("repair", "Correcting answer/citation formatting against existing evidence")
+                    draft = self.draft(repair={"previous_draft": draft.model_dump(), "failed_checks": formatting})
+                    claims, followup = self.verify(draft)
+                    continue
                 before = self.discovery_progress()
                 decision = self.decide(repair={"failed_claims": [c for c in claims if c["status"] != "supported"],
                                               "unresolved": draft.unresolved, "suggested_queries": followup})
@@ -359,10 +384,13 @@ class ResearchAgent:
             unresolved += [c["text"] + " — " + c["reason"] for c in claims if c["status"] != "supported"]
             if not answer and not unresolved:
                 unresolved.append("Available evidence did not support a complete answer.")
-            if not answer and self.stop_reason == "completed":
-                self.stop_reason = "repair_disabled" if mode == "verified_no_repair" else "insufficient_evidence"
-            elif self.repairs >= config.LIMITS["repair_rounds"] and any(c["status"] != "supported" for c in claims):
-                self.stop_reason = "repair_budget"
+            if self.stop_reason == "completed":
+                if mode == "verified_no_repair" and not answer:
+                    self.stop_reason = "repair_disabled"
+                elif self.repairs >= config.LIMITS["repair_rounds"] and (not answer or any(c["status"] != "supported" for c in claims)):
+                    self.stop_reason = "repair_budget"
+                elif not answer:
+                    self.stop_reason = "insufficient_evidence"
         else:
             answer = draft.answer
             claims = [{**c.model_dump(), "status": "unverified", "reason": "Verification disabled in this experimental configuration", "quotes": []} for c in draft.claims]
@@ -377,9 +405,11 @@ class ResearchAgent:
                   "trace": self.trace, "model_calls": self.client.events, "usage": self.client.usage_summary(),
                   "elapsed_seconds": round(time.monotonic() - self.begin, 3), "stop_reason": self.stop_reason,
                   "rounds": self.rounds, "tool_calls": self.tool_calls, "repair_rounds": self.repairs,
+                  "format_repair_rounds": self.format_repairs,
                   "configuration": {"model": config.MODEL, "temperature": 0, "embedding_model": config.EMBEDDING_MODEL,
+                      "agent_policy": config.AGENT_POLICY,
                       "retrieval": self.retriever.settings.describe(),
-                      "thinking": "disabled for official DeepSeek API", "structured_output": config.STRUCTURED_OUTPUT,
+                      "thinking": config.thinking_policy(), "structured_output": config.STRUCTURED_OUTPUT,
                       "limits": config.LIMITS, "allow_web": self.request.allow_web, "upstream_commit": UPSTREAM_COMMIT},
                   "source_snapshots": self.snapshots,
                   "khoj_iteration_history": construct_iteration_history(self.iterations),

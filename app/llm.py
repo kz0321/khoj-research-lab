@@ -16,6 +16,37 @@ def redact(message):
         value = value.replace(config.API_KEY, "[REDACTED]")
     return re.sub(r"\bsk-[A-Za-z0-9_-]{12,}", "[REDACTED]", value)[:500]
 
+
+def completion_content(data):
+    """Validate the provider envelope before passing text to the JSON schema."""
+    choices = data.get("choices")
+    if not isinstance(choices, list) or not choices or not isinstance(choices[0], dict):
+        raise ModelError("Model response must contain a nonempty choices list")
+    choice = choices[0]
+    message = choice.get("message")
+    # Some compatible gateways flatten the complete assistant message into
+    # the choice itself. Do not mistake an incremental delta for a message.
+    if "message" not in choice and choice.get("role") == "assistant" and "delta" not in choice:
+        message = choice
+    if not isinstance(message, dict):
+        if "delta" in choice:
+            raise ModelError("Model returned a streaming delta; a complete non-streaming message is required")
+        raise ModelError("Model response is missing choices[0].message")
+    if message.get("refusal"):
+        raise ModelError("Model refused the request: " + redact(message["refusal"]))
+    content = message.get("content")
+    if not isinstance(content, str) or not content.strip():
+        raise ModelError("Model response message.content must be nonempty text")
+    # A gateway may add plain-language commentary. Accept only one complete
+    # JSON fence on its own lines, with no other code fence or JSON object /
+    # array in the surrounding commentary. Schema validation still owns
+    # the contents; never guess JSON boundaries or repair incomplete JSON.
+    fenced = re.fullmatch(r"(?:[^`{}\[\]]*\r?\n)?```(?:json)?[ \t]*\r?\n(.*?)\r?\n```(?:\r?\n[^`{}\[\]]*)?",
+                         content.strip(), re.DOTALL | re.IGNORECASE)
+    if fenced:
+        content = fenced.group(1)
+    return content, choice.get("finish_reason")
+
 class ModelClient:
     def __init__(self, deadline, cancelled=lambda: False):
         self.deadline, self.cancelled = deadline, cancelled
@@ -24,13 +55,14 @@ class ModelClient:
         self.events = []
 
     def structured(self, stage, system, payload, schema, max_tokens=1800):
-        if not config.API_KEY:
+        if not config.model_configured():
             raise ModelError("LLM_API_KEY is not configured in .env")
         format_instruction = "\nReturn only a JSON object matching this schema: " + json.dumps(schema.model_json_schema())
         request = {"model": config.MODEL, "messages": [
             {"role": "system", "content": system + format_instruction},
             {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}],
-            "temperature": 0, "max_tokens": max_tokens, "response_format": {"type": "json_object"}}
+            "temperature": 0, "max_tokens": max_tokens, "stream": False,
+            "response_format": {"type": "json_object"}}
         if config.STRUCTURED_OUTPUT == "json_schema":
             request["response_format"] = {"type": "json_schema", "json_schema": {
                 "name": schema.__name__, "schema": schema.model_json_schema(), "strict": True}}
@@ -67,9 +99,10 @@ class ModelClient:
                     raise ModelError(f"Model HTTP {response.status_code}: " + redact(response.text))
                 if not isinstance(data, dict):
                     raise ModelError("Model returned an invalid response object")
-                event.update(returned_model=data.get("model"), finish_reason=data["choices"][0].get("finish_reason"))
-                content = data["choices"][0]["message"]["content"]
-                if data["choices"][0].get("finish_reason") == "length":
+                event["returned_model"] = data.get("model")
+                content, finish_reason = completion_content(data)
+                event["finish_reason"] = finish_reason
+                if finish_reason == "length":
                     raise ModelError("Model output reached max_tokens before completing the structured result")
                 parsed = schema.model_validate_json(content)
                 if self.cancelled():

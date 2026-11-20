@@ -10,6 +10,8 @@ COMP7608B Group 30 · Evidence-Grounded Personal Research with a Tool-Using AI A
 
 2026-11-17 的联网研究与无答案反馈修复见 [更新记录](docs/UPDATES-2026-11-17.md)。原报告中的 200 次实验属于 2026-11-16 冻结版本；本次修复未改写历史结果。
 
+2026-11-19 更新：优化数据库读写、检索缓存、上传响应和研究任务管理，完善页面请求与模型接口兼容，并增加一次性草稿格式纠正及重新验证。新增本地一键检查、文档读取性能与检索兼容性检查脚本。
+
 ## 从 GitHub 部署
 
 ```powershell
@@ -125,11 +127,14 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\start.ps1
 ```powershell
 .\.venv\Scripts\python.exe scripts/doctor.py
 .\.venv\Scripts\python.exe -m pytest -q
+node --test tests/frontend_outcome.test.cjs tests/frontend_requests.test.cjs
 .\.venv\Scripts\python.exe -m eval.check_data
 .\.venv\Scripts\python.exe -m eval.run --dataset hotpotqa --split dev --limit 2 --output eval/results/my-dev-pilot
 ```
 
 最后一条会真实调用当前模型，在开发集的两道题上运行五种配置。完整实验、官方 HotpotQA 评分、双人盲评、配对 bootstrap、扰动和数据许可见 `docs/DATASET.md`。没有人工标注时，引用支持率等字段保留为空，不能用验证器自己的判断替代人工标准。
+
+安装 Python 依赖和 Node.js 24 后，可在本机运行 `scripts/check.ps1` 一次检查依赖、Python 测试、前端测试和数据完整性，不调用生成模型、不下载嵌入模型。示例 `.env` 中的占位密钥会被识别为“未配置”，不会创建研究任务。
 
 ## 常见问题
 

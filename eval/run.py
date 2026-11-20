@@ -194,7 +194,7 @@ def main():
         previous_configuration.setdefault("development_perturbation_diagnostic",False)
         if previous_configuration!=config:
             parser.error("Output directory has a different frozen configuration; choose a new --output directory")
-        for key in ["model","embedding_model","retrieval","limits","upstream_commit","thinking","structured_output"]:
+        for key in ["model","embedding_model","retrieval","agent_policy","limits","upstream_commit","thinking","structured_output"]:
             if prior.get("runtime_at_start",{}).get(key)!=health.get(key):
                 parser.error(f"Runtime {key} changed since configuration freeze; choose a new --output directory")
     else:

@@ -13,7 +13,7 @@ ROOT=Path(__file__).resolve().parent.parent
 def build(destination):
     files=[]
     skip_parts={'.git','.venv','__pycache__','.pytest_cache','.preparation-tools','node_modules'}
-    for folder in ['app','scripts','tests','docs','eval','data/demo','data/evaluation','data/manifests','data/licenses','upstream/khoj','reproducibility']:
+    for folder in ['.github','app','scripts','tests','docs','eval','data/demo','data/evaluation','data/manifests','data/licenses','upstream/khoj','reproducibility']:
         for p in (ROOT/folder).rglob('*'):
             rel=p.relative_to(ROOT)
             if p.is_file() and not skip_parts.intersection(rel.parts) and p.name not in ('.env','.env.local','proposal-extracted.txt') and p.suffix not in ('.zip','.pyc'):
@@ -37,7 +37,7 @@ def build(destination):
     candidates = [v for k,v in settings.items() if any(t in k.upper() for t in ('API_KEY','TOKEN','SECRET'))]
     candidates += [v for k,v in os.environ.items() if any(t in k.upper() for t in ('API_KEY','TOKEN','SECRET'))]
     for candidate in candidates:
-        if candidate and len(candidate)>15:
+        if candidate and len(candidate)>15 and candidate not in {'replace-with-your-own-api-key', 'local-not-a-secret'}:
             secrets.add(candidate.encode())
     manifest=[]
     destination.parent.mkdir(parents=True,exist_ok=True)

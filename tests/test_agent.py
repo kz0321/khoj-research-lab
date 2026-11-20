@@ -274,6 +274,64 @@ def test_repair_disabled_ablation_abstains_without_extra_retrieval():
     assert result["stop_reason"] != "completed"
 
 
+def test_answer_format_can_be_repaired_without_new_evidence_and_is_reverified():
+    agent, model = make_agent([
+        ("plan", SEARCH), ("plan", {"done": True}),
+        ("draft", {**ANSWER, "answer_statement": "The host was a French city."}),
+        ("repair_draft", ANSWER),
+        ("verify", {"verdicts": [verdict(claim_id="A0")]}),
+    ])
+    result = agent.run()
+    assert result["answer"] == "Paris"
+    assert result["tool_calls"] == 1
+    assert result["repair_rounds"] == result["format_repair_rounds"] == 1
+    assert model.payloads[3]["correction"]["failed_checks"][0]["validation_issue"] == "answer_mismatch"
+    assert not model.script
+
+
+def test_format_repair_never_bypasses_quotation_validation(monkeypatch):
+    monkeypatch.setitem(config.LIMITS, "repair_rounds", 1)
+    bad_verdict = verdict(claim_id="A0", quotes=["Paris ... 2024"])
+    agent, model = make_agent([
+        ("plan", SEARCH), ("plan", {"done": True}), ("draft", ANSWER),
+        ("verify", {"verdicts": [bad_verdict]}),
+        ("repair_draft", ANSWER), ("verify", {"verdicts": [bad_verdict]}),
+    ])
+    result = agent.run()
+    assert result["answer"] == ""
+    assert result["claims"][0]["status"] == "insufficient"
+    assert result["stop_reason"] == "repair_budget"
+    assert result["format_repair_rounds"] == result["repair_rounds"] == 1
+    assert result["tool_calls"] == 1
+    assert not model.script
+
+
+@pytest.mark.parametrize("mode,repair_cap", [("verified_no_repair", 2), ("verified", 0)])
+def test_format_repair_respects_ablation_and_zero_budget(monkeypatch, mode, repair_cap):
+    monkeypatch.setitem(config.LIMITS, "repair_rounds", repair_cap)
+    agent, model = make_agent([
+        ("plan", SEARCH), ("plan", {"done": True}),
+        ("draft", {**ANSWER, "answer_statement": "A different statement."}),
+    ], mode=mode)
+    result = agent.run()
+    assert result["answer"] == ""
+    assert result["repair_rounds"] == result["format_repair_rounds"] == 0
+    assert not model.script
+
+
+def test_format_repair_is_attempted_only_once_before_bounded_retrieval():
+    bad = {**ANSWER, "answer_statement": "A different statement."}
+    agent, model = make_agent([
+        ("plan", SEARCH), ("plan", {"done": True}), ("draft", bad),
+        ("repair_draft", bad), ("repair_plan", {"actions": []}),
+    ])
+    result = agent.run()
+    assert result["answer"] == ""
+    assert result["format_repair_rounds"] == 1 and result["repair_rounds"] == 2
+    assert result["stop_reason"] == "no_new_evidence"
+    assert not model.script
+
+
 def test_no_tools_baseline_does_not_retrieve_or_verify():
     retriever = FakeRetriever([AssertionError("Must never retrieve")])
     agent, model = make_agent([("draft", {"answer": "Paris"})], mode="no_tools", retriever=retriever)
@@ -546,6 +604,76 @@ def test_invalid_response_envelope_counts_unknown_usage(monkeypatch):
         client.structured("draft", "system", {}, Draft)
     assert client.usage["calls"] == client.usage["failed_attempts"] == 1
     assert client.usage["unknown_usage_attempts"] == 1
+
+
+@pytest.mark.parametrize("choices,issue", [
+    ([], "nonempty choices"),
+    ([None], "nonempty choices"),
+    ([{}], "missing choices"),
+    ([{"delta": {"content": '{"answer":"Partial"}'}}], "streaming delta"),
+    ([{"message": {"content": None}}], "nonempty text"),
+    ([{"message": {"content": " "}}], "nonempty text"),
+    ([{"message": {"refusal": "Cannot answer", "content": None}}], "refused"),
+])
+def test_malformed_provider_messages_fail_clearly_without_retry_and_preserve_usage(monkeypatch, choices, issue):
+    calls = fake_http_client(monkeypatch, [httpx.Response(200, json={
+        "choices": choices, "usage": {"prompt_tokens": 12, "completion_tokens": 3}})])
+    client = ModelClient(time.monotonic() + 60)
+    with pytest.raises(ModelError, match=issue):
+        client.structured("draft", "system", {}, Draft)
+    assert len(calls) == client.usage["failed_attempts"] == 1
+    assert client.usage["input_tokens"] == 12
+    assert client.usage["output_tokens"] == 3
+
+
+def test_model_explicitly_requests_nonstreaming_completion(monkeypatch):
+    captured = []
+    class Client:
+        def __init__(self, **kwargs):
+            pass
+        def __enter__(self):
+            return self
+        def __exit__(self, *args):
+            pass
+        def post(self, url, **kwargs):
+            captured.append(kwargs["json"])
+            return completion()
+    monkeypatch.setattr("app.llm.httpx.Client", Client)
+    monkeypatch.setattr(config, "API_KEY", "dummy-unit-test-key")
+    client = ModelClient(time.monotonic() + 60)
+    assert client.structured("draft", "system", {}, Draft).answer == "Paris"
+    assert captured[0]["stream"] is False
+    assert client.usage["unknown_usage_attempts"] == 0
+
+
+@pytest.mark.parametrize("flattened", [False, True])
+@pytest.mark.parametrize("content", ['{"answer":"Paris"}', '```json\n{"answer":"Paris"}\n```',
+                                     'Here is the structured response.\n\n```json\n{"answer":"Paris"}\n```',
+                                     '```json\n{"answer":"Paris"}\n```\nThis is the requested response.',
+                                     '```\r\n{"answer":"Paris"}\r\n```'])
+def test_complete_gateway_messages_preserve_schema_validation_and_usage(monkeypatch, flattened, content):
+    message = {"role": "assistant", "content": content}
+    choice = message if flattened else {"message": message, "finish_reason": "stop"}
+    calls = fake_http_client(monkeypatch, [httpx.Response(200, json={
+        "object": "chat.completion", "choices": [choice],
+        "usage": {"prompt_tokens": 71, "completion_tokens": 10}})])
+    client = ModelClient(time.monotonic() + 60)
+    assert client.structured("draft", "system", {}, Draft).answer == "Paris"
+    assert len(calls) == 1
+    assert client.usage["input_tokens"] == 71 and client.usage["output_tokens"] == 10
+
+
+@pytest.mark.parametrize("content", ['Explanation: ```json\n{"answer":"Paris"}\n```',
+    '```json\n{"answer":"Paris"}\n```\n{"answer":"London"}', '```json\n{"answer":\n```',
+    '{"answer":"London"}\n```json\n{"answer":"Paris"}\n```',
+    '```json\n{"answer":"London"}\n```\n```json\n{"answer":"Paris"}\n```',
+    '```json\n{"claims":[{"id":"C1"}]}\n```'])
+def test_gateway_fence_handling_does_not_extract_or_repair_invalid_output(monkeypatch, content):
+    calls = fake_http_client(monkeypatch, [completion(content)])
+    client = ModelClient(time.monotonic() + 60)
+    with pytest.raises(ModelError):
+        client.structured("draft", "system", {}, Draft)
+    assert len(calls) == 1
 
 
 @pytest.mark.parametrize("late_condition", ["time", "cancel"])

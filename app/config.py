@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 from pathlib import Path
+from urllib.parse import urlparse
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -15,6 +16,16 @@ BASE_URL = os.getenv("LLM_BASE_URL", "https://api.deepseek.com").rstrip("/")
 API_KEY = os.getenv("LLM_API_KEY", "")
 STRUCTURED_OUTPUT = os.getenv("LLM_STRUCTURED_OUTPUT", "json_object")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5")
+AGENT_POLICY = "verified-format-repair-v1"
+
+
+def model_configured():
+    """The example credential must not appear as a usable model configuration."""
+    return bool(API_KEY.strip()) and API_KEY.strip() != "replace-with-your-own-api-key"
+
+
+def thinking_policy():
+    return "disabled for official DeepSeek API" if urlparse(BASE_URL).hostname == "api.deepseek.com" else "provider default"
 
 
 @dataclass(frozen=True)
