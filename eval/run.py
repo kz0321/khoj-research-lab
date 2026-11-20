@@ -13,6 +13,7 @@ import statistics
 import time
 import urllib.error
 import urllib.request
+import urllib.parse
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -29,11 +30,15 @@ def read_jsonl(path: Path):
 
 
 def request_json(api: str, path: str, payload=None, timeout=120):
-    request = urllib.request.Request(api.rstrip("/")+path,
+    url = api.rstrip("/") + path
+    request = urllib.request.Request(url,
         data=json.dumps(payload).encode("utf-8") if payload is not None else None,
         headers={"Content-Type":"application/json"}, method="POST" if payload is not None else "GET")
+    host = urllib.parse.urlparse(url).hostname
+    opener = (urllib.request.build_opener(urllib.request.ProxyHandler({}))
+              if host in {"127.0.0.1", "localhost", "::1"} else urllib.request.build_opener())
     try:
-        with urllib.request.urlopen(request, timeout=timeout) as response:
+        with opener.open(request, timeout=timeout) as response:
             return json.load(response)
     except urllib.error.HTTPError as error:
         body = error.read().decode("utf-8",errors="replace")[:2000]

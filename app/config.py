@@ -16,7 +16,7 @@ BASE_URL = os.getenv("LLM_BASE_URL", "https://api.deepseek.com").rstrip("/")
 API_KEY = os.getenv("LLM_API_KEY", "")
 STRUCTURED_OUTPUT = os.getenv("LLM_STRUCTURED_OUTPUT", "json_object")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5")
-AGENT_POLICY = "verified-format-repair-v1"
+AGENT_POLICY = "verified-targeted-repair-v2"
 
 
 def model_configured():

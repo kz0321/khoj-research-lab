@@ -12,6 +12,8 @@ COMP7608B Group 30 · Evidence-Grounded Personal Research with a Tool-Using AI A
 
 2026-11-19 更新：优化数据库读写、检索缓存、上传响应和研究任务管理，完善页面请求与模型接口兼容，并增加一次性草稿格式纠正及重新验证。新增本地一键检查、文档读取性能与检索兼容性检查脚本。
 
+2026-11-20 更新：执行预选 8 题四类扰动实验全量评测，修复评测回环代理 502、A0 数值千分位误杀、修复状态机反馈衔接及文件读取非行分页缺陷；量化增强检索模式提升，并将 Agent 策略升级为 `verified-targeted-repair-v2`。详见 [更新记录](docs/UPDATES-2026-11-20.md)。
+
 ## 从 GitHub 部署
 
 ```powershell

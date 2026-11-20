@@ -321,3 +321,20 @@ def test_run_storage_round_trip(corpus):
     assert store.get_run(run_id)["status"] == "queued"
     store.save_run(run_id, "completed", {"answer": "alpha"})
     assert store.get_run(run_id)["result"]["answer"] == "alpha"
+
+def test_read_file_extension_and_sentence_pagination_fallback(corpus):
+    store, retriever = corpus
+    sentences = [{"id": i, "text": f"Fact sentence {i}."} for i in range(16)]
+    doc = {"id": "doc-long", "title": "LongDocument.md", "text": "\n".join(s["text"] for s in sentences), "sentences": sentences}
+    retriever.ingest("a", doc)
+
+    # 1. Test case-insensitive title and missing extension fallback
+    first_window = retriever.read_file("a", "longdocument", start_line=1, end_line=8)
+    assert len(first_window) == 8
+    assert "Fact sentence 0." in first_window[0]["text"]
+
+    # 2. Test reading beyond the 8th chunk via sentence/chunk pagination
+    second_window = retriever.read_file("a", "LongDocument.md", start_line=9, end_line=16)
+    assert len(second_window) == 8
+    assert "Fact sentence 8." in second_window[0]["text"]
+    assert first_window[0]["id"] != second_window[0]["id"]

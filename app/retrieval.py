@@ -201,12 +201,40 @@ class Retriever:
 
     def read_file(self, cid, path, start_line=None, end_line=None):
         # Paths are corpus IDs/titles, never arbitrary filesystem paths.
-        candidates = self.store.document_chunks(cid, path, match_title=True)
-        if start_line is not None:
-            end_line = min(end_line or start_line + 49, start_line + 49)
-            candidates = [r for r in candidates if r["location"].get("end_line", 10**9) >= start_line
-                          and r["location"].get("start_line", 0) <= end_line]
-        candidates.sort(key=lambda r: (r["location"].get("page", 0),r["location"].get("start_line", 0),
+        path_str = str(path).strip()
+        candidates = self.store.document_chunks(cid, path_str, match_title=True)
+        # Fallback: if not found, try matching with/without common extensions
+        if not candidates and "." in path_str:
+            candidates = self.store.document_chunks(cid, path_str.rsplit(".", 1)[0], match_title=True)
+        if not candidates:
+            for ext in (".md", ".txt", ".html", ".docx", ".pdf"):
+                candidates = self.store.document_chunks(cid, path_str + ext, match_title=True)
+                if candidates:
+                    break
+
+        candidates.sort(key=lambda r: (
+            r["location"].get("page", 0),
+            r["location"].get("start_line", 0),
             min(r["location"].get("sentence_ids", [0])),
-            r["location"].get("start_char", r["location"].get("section_start_char", 0)), r["id"]))
+            r["location"].get("start_char", r["location"].get("section_start_char", 0)),
+            r["id"]
+        ))
+
+        has_lines = any("start_line" in r["location"] for r in candidates)
+        if has_lines:
+            if start_line is not None:
+                end_line = min(end_line or start_line + 49, start_line + 49)
+                filtered = [r for r in candidates if r["location"].get("end_line", 10**9) >= start_line
+                            and r["location"].get("start_line", 0) <= end_line]
+                if filtered:
+                    candidates = filtered
+        else:
+            # Sentence-based or page-based chunks: allow pagination via start_line/end_line
+            # as chunk/sentence offset instead of permanently returning only the first 8 chunks
+            if start_line is not None and len(candidates) > 8:
+                offset = max(0, start_line - 1)
+                chunk_window = min(8, max(1, (end_line - start_line + 1) if end_line else 8))
+                if offset < len(candidates):
+                    candidates = candidates[offset:offset + chunk_window]
+
         return [{k: v for k, v in r.items() if k != "vector"} for r in candidates[:8]]

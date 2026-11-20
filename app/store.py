@@ -117,7 +117,7 @@ class Store:
         if match_title:
             # Separate indexed branches: an OR can make SQLite scan every
             # chunk in the collection. UNION also removes ID/title overlaps.
-            query += f" UNION SELECT {fields} FROM chunks WHERE collection_id=? AND title=?"
+            query += f" UNION SELECT {fields} FROM chunks WHERE collection_id=? AND title=? COLLATE NOCASE"
             params += (cid, source_id)
         with self.connect() as db:
             rows = [dict(r) for r in db.execute(query + " ORDER BY id", params)]

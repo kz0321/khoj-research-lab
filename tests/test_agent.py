@@ -42,6 +42,7 @@ class FakeRetriever:
 
 class ScriptedModel:
     def __init__(self, script):
+        self.systems = []
         self.script = deque(script)
         self.events = []
         self.payloads = []
@@ -52,6 +53,7 @@ class ScriptedModel:
         assert stage == expected, f"Expected {expected}, got {stage}"
         self.events.append({"stage": stage, "status": "completed"})
         self.payloads.append(payload)
+        self.systems.append(system)
         return schema.model_validate(response)
 
     def usage_summary(self):
@@ -724,3 +726,81 @@ def test_model_retry_obeys_shared_call_cap(monkeypatch):
 def test_error_redaction_removes_configured_secret(monkeypatch):
     monkeypatch.setattr(config, "API_KEY", "unit-test-secret-never-real")
     assert "unit-test-secret-never-real" not in redact("Authorization unit-test-secret-never-real")
+
+def test_a0_numeric_formatting_variations_pass_without_format_repair():
+    agent, model = make_agent([("verify", {"verdicts": [verdict(
+        claim_id="A0",
+        quotes=["The prototype achieved a throughput of 1,500 requests per second with 20% loss."],
+    )]})])
+    agent.add_evidence([row(text="The prototype achieved a throughput of 1,500 requests per second with 20% loss.")])
+    claims, _ = agent.verify(Draft(
+        answer="1,500 requests per second",
+        answer_statement="The prototype achieved 1500 requests per second.",
+        answer_evidence_ids=["E1"],
+        claims=[],
+    ))
+    assert claims[0]["status"] == "supported"
+    assert "validation_issue" not in claims[0]
+    assert len(model.events) == 1
+
+
+def test_a0_percent_spacing_normalization_keeps_entity_guard():
+    agent, model = make_agent([("verify", {"verdicts": [verdict(
+        claim_id="A0", quotes=["Success rate reached 20%."],
+    )]})])
+    agent.add_evidence([row(text="Success rate reached 20%.")])
+    claims, _ = agent.verify(Draft(
+        answer="20 %", answer_statement="Success rate reached 20%.", answer_evidence_ids=["E1"], claims=[],
+    ))
+    assert claims[0]["status"] == "supported"
+    claims_bad, _ = agent.verify(Draft(
+        answer="London", answer_statement="Paris hosted the 2024 event.", answer_evidence_ids=["E1"], claims=[],
+    ))
+    assert claims_bad[0]["status"] == "insufficient"
+    assert claims_bad[0]["validation_issue"] == "answer_mismatch"
+
+
+def test_reasoning_repair_revises_conclusion_when_no_new_evidence_found():
+    agent, model = make_agent([
+        ("plan", SEARCH), ("plan", {"done": True}),
+        ("draft", {"answer": "Yes", "answer_statement": "Yes, both occurred.", "answer_evidence_ids": ["E1"], "claims": []}),
+        ("verify", {"verdicts": [verdict(claim_id="A0", status="insufficient", ids=["E1"], quotes=[])]}),
+        ("repair_plan", {"actions": []}),
+        ("repair_draft", {"answer": "No", "answer_statement": "No, only one occurred.", "answer_evidence_ids": ["E1"], "claims": []}),
+        ("verify", {"verdicts": [verdict(claim_id="A0", status="supported", ids=["E1"])]}),
+    ])
+    result = agent.run()
+    assert result["answer"] == "No"
+    assert result["reasoning_repair_rounds"] == 1
+    assert result["format_repair_rounds"] == 0
+    assert not model.script
+
+
+def test_reasoning_repair_does_not_fabricate_when_initial_answer_is_empty():
+    agent, model = make_agent([
+        ("plan", SEARCH), ("plan", {"done": True}),
+        ("draft", {"answer": "", "claims": [], "unresolved": ["Missing evidence."]}),
+        ("repair_plan", {"actions": []}),
+    ])
+    result = agent.run()
+    assert result["answer"] == ""
+    assert result["reasoning_repair_rounds"] == 0
+    assert result["stop_reason"] == "no_new_evidence"
+    assert not model.script
+
+
+def test_evidence_repair_passes_feedback_and_forbids_disabled_web():
+    agent, model = make_agent([
+        ("plan", SEARCH), ("plan", {"done": True}),
+        ("draft", {"answer": "", "claims": [{"id": "C1", "text": "Wrong.", "evidence_ids": ["E1"]}], "unresolved": ["Need host."]}),
+        ("verify", {"verdicts": [verdict(claim_id="C1", status="insufficient", ids=["E1"], quotes=[])]}),
+        ("repair_plan", {"actions": [{"name": "semantic_search_files", "args": {"q": "host announcement"}}]}),
+        ("draft", {**ANSWER, "answer_evidence_ids": ["E2"]}),
+        ("verify", {"verdicts": [verdict(claim_id="A0", ids=["E2"])]}),
+    ], allow_web=False, retriever=FakeRetriever([[row("a", "An event was held in 2024.")], [row("b")]]))
+    result = agent.run()
+    assert result["answer"] == "Paris"
+    assert "Never call search_web" in model.systems[0]
+    assert "REPAIR mode" in model.systems[4]
+    assert "previous_feedback" in model.payloads[5]
+    assert not model.script
